@@ -1,0 +1,173 @@
+01-Aug-2019 07:51:26.644 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+01-Aug-2019 07:51:26.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+01-Aug-2019 07:51:26.646 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-54-generic
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+01-Aug-2019 07:51:26.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+01-Aug-2019 07:51:26.648 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+01-Aug-2019 07:51:26.649 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+01-Aug-2019 07:51:26.862 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Aug-2019 07:51:26.870 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Aug-2019 07:51:26.897 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Aug-2019 07:51:26.898 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Aug-2019 07:51:26.898 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 677 ms
+01-Aug-2019 07:51:26.928 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Aug-2019 07:51:26.928 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+01-Aug-2019 07:51:26.965 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+01-Aug-2019 07:51:27.162 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Aug-2019 07:51:27.164 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+01-Aug-2019 07:51:27.165 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+01-Aug-2019 07:51:28.414 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+01-Aug-2019 07:51:28.419 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+01-Aug-2019 07:51:28.465 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+01-Aug-2019 07:51:28.477 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [1,512] ms
+01-Aug-2019 07:51:28.478 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+01-Aug-2019 07:51:29.030 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:51:29.076 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [598] ms
+01-Aug-2019 07:51:29.076 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/auaold]
+01-Aug-2019 07:51:29.138 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+01-Aug-2019 07:51:37.539 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+01-Aug-2019 07:51:37.539 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+01-Aug-2019 07:51:37.540 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+01-Aug-2019 07:51:37.903 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:51:37.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/auaold] has finished in [8,855] ms
+01-Aug-2019 07:51:37.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+01-Aug-2019 07:51:59.820 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:10.125 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [32,192] ms
+01-Aug-2019 07:52:10.125 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+01-Aug-2019 07:52:11.896 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:12.199 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [2,073] ms
+01-Aug-2019 07:52:12.199 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+01-Aug-2019 07:52:25.313 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+01-Aug-2019 07:52:25.571 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:25.574 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+01-Aug-2019 07:52:25.574 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+01-Aug-2019 07:52:26.699 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [14,500] ms
+01-Aug-2019 07:52:26.699 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+01-Aug-2019 07:52:26.820 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:26.833 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [134] ms
+01-Aug-2019 07:52:26.833 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+01-Aug-2019 07:52:26.899 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:26.900 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [67] ms
+01-Aug-2019 07:52:26.900 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/college]
+01-Aug-2019 07:52:26.939 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+01-Aug-2019 07:52:31.155 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+01-Aug-2019 07:52:31.155 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+01-Aug-2019 07:52:31.155 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+01-Aug-2019 07:52:31.155 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+01-Aug-2019 07:52:31.155 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+01-Aug-2019 07:52:31.155 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+01-Aug-2019 07:52:31.265 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:31.965 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/college] has finished in [5,065] ms
+01-Aug-2019 07:52:31.966 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+01-Aug-2019 07:52:43.575 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:43.591 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [11,625] ms
+01-Aug-2019 07:52:43.591 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+01-Aug-2019 07:52:49.519 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:49.557 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [5,966] ms
+01-Aug-2019 07:52:49.558 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+01-Aug-2019 07:52:51.654 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Aug-2019 07:52:51.695 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [2,137] ms
+01-Aug-2019 07:52:51.968 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Aug-2019 07:52:52.042 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+01-Aug-2019 07:52:52.047 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 85148 ms
+01-Aug-2019 08:28:13.865 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Aug-2019 08:28:14.321 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Aug-2019 08:28:14.423 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Aug-2019 08:28:17.047 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+01-Aug-2019 08:28:17.377 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+01-Aug-2019 08:28:17.378 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+01-Aug-2019 08:28:18.064 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Aug-2019 08:28:18.218 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+01-Aug-2019 08:28:18.334 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Aug-2019 08:28:18.335 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

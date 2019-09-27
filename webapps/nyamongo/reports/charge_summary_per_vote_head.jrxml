@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="vw_student_charges" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8939a205-51de-41a1-b5ff-d8a43e552b9c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Times New Roman" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Times New Roman" fontSize="12"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filterid" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgid" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgwhere" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="organd" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="vote_head_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT vw_sstudents_grades.degree_level_name, vw_sstudents_grades.wage_factor, sponsor_type_name, sponsor_name, vw_sstudents_grades.school_name, school_id, nationality, nationality_country, sex, vw_sstudents_grades.student_id, vw_sstudents_grades.student_name, vw_sstudents_grades.degree_name, approved, vw_scharges.credit_charge, vw_scharges.session_id, vw_scharges.vote_head_name, vw_scharges.amount, vw_scharges.vote_head_id, vw_sstudents_grades.credit, tuition_fees, department_name
+FROM vw_sstudents_grades
+INNER JOIN vw_scharges ON vw_sstudents_grades.session_id = vw_scharges.session_id
+INNER JOIN vw_sponsors ON vw_sstudents_grades.sponsor_id = vw_sponsors.sponsor_id
+WHERE approved = true AND vw_sstudents_grades.session_id='$P!{filterid}'
+AND vw_scharges.vote_head_id = $P!{vote_head_id};]]>
+	</queryString>
+	<field name="degree_level_name" class="java.lang.String"/>
+	<field name="wage_factor" class="java.lang.Float"/>
+	<field name="sponsor_type_name" class="java.lang.String"/>
+	<field name="sponsor_name" class="java.lang.String"/>
+	<field name="school_name" class="java.lang.String"/>
+	<field name="school_id" class="java.lang.String"/>
+	<field name="nationality" class="java.lang.String"/>
+	<field name="nationality_country" class="java.lang.String"/>
+	<field name="sex" class="java.lang.String"/>
+	<field name="student_id" class="java.lang.String"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="degree_name" class="java.lang.String"/>
+	<field name="approved" class="java.lang.Boolean"/>
+	<field name="credit_charge" class="java.lang.Double"/>
+	<field name="session_id" class="java.lang.String"/>
+	<field name="vote_head_name" class="java.lang.String"/>
+	<field name="amount" class="java.lang.Double"/>
+	<field name="vote_head_id" class="java.lang.Integer"/>
+	<field name="credit" class="java.lang.Double"/>
+	<field name="tuition_fees" class="java.lang.Double"/>
+	<field name="department_name" class="java.lang.String"/>
+	<variable name="total_charges" class="java.lang.Double">
+		<variableExpression><![CDATA[]]></variableExpression>
+		<initialValueExpression><![CDATA[0.00]]></initialValueExpression>
+	</variable>
+	<variable name="vote_head" class="java.lang.String">
+		<variableExpression><![CDATA[$F{vote_head_name}]]></variableExpression>
+	</variable>
+	<group name="sessionCharges">
+		<groupExpression><![CDATA[$F{student_id}]]></groupExpression>
+		<groupFooter>
+			<band height="83">
+				<crosstab>
+					<reportElement x="0" y="0" width="802" height="83" uuid="7028f658-c218-4218-bd3b-5b84b669dcd3"/>
+					<crosstabHeaderCell>
+						<cellContents>
+							<staticText>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="61" height="29" uuid="3ac694dd-6a1e-471f-9464-fae821f9f3e1"/>
+								<textElement verticalAlignment="Bottom">
+									<font fontName="Times New Roman" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Student ID]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Crosstab Data Text" x="61" y="0" width="65" height="29" uuid="671ea667-0f1b-4300-8c22-f439c868eae7"/>
+								<textElement verticalAlignment="Bottom">
+									<font fontName="Times New Roman" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Student Name]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Crosstab Data Text" x="126" y="0" width="70" height="29" uuid="ebd46def-f0f4-4509-8b1e-116960514045"/>
+								<textElement verticalAlignment="Bottom">
+									<font fontName="Times New Roman" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sponsoring Div]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Crosstab Data Text" x="196" y="1" width="81" height="29" uuid="9dab5062-7145-485a-bff2-e1f6313d1fe0"/>
+								<textElement verticalAlignment="Bottom">
+									<font fontName="Times New Roman" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sponsoring Org]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Crosstab Data Text" x="277" y="0" width="57" height="29" uuid="d59a1f64-7bbb-47dc-923e-78c04338adc4"/>
+								<textElement verticalAlignment="Bottom">
+									<font fontName="Times New Roman" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Wage Factor]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabHeaderCell>
+					<rowGroup name="student_id" width="61" totalPosition="End">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{student_id}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents backcolor="#F0F8FF" mode="Opaque">
+								<box>
+									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textField>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="61" height="25" uuid="018812c6-7d55-4384-b3dd-2c9dd9cefca3"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<leftPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement>
+										<font fontName="Times New Roman" size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{student_id}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents backcolor="#BFE1FF" mode="Opaque">
+								<box>
+									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="42" height="25" uuid="662d359f-b30c-4bef-8d67-fa2988cbcdb2"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="Times New Roman" size="8"/>
+									</textElement>
+									<text><![CDATA[Totals]]></text>
+								</staticText>
+							</cellContents>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<rowGroup name="student_name" width="65">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{student_name}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents>
+								<textField>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="65" height="25" uuid="991e59f6-402e-43c1-896e-307c310935a6"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<leftPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement>
+										<font fontName="Times New Roman" size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{student_name}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents/>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<rowGroup name="sponsor_type" width="70">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{sponsor_type_name}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents>
+								<textField>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="70" height="25" uuid="9d187f4e-70b5-4c08-9b35-12919dbf88da"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<leftPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement>
+										<font fontName="Times New Roman" size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{sponsor_type}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents/>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<rowGroup name="sponsor_name" width="81">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{sponsor_name}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents>
+								<textField>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="81" height="25" uuid="bd2fa178-1685-4264-8b84-6b37781a686f"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<leftPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement>
+										<font fontName="Times New Roman" size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{sponsor_name}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents/>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<rowGroup name="wage_factor" width="57">
+						<bucket class="java.lang.Double">
+							<bucketExpression><![CDATA[$F{wage_factor}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents>
+								<textField>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="57" height="25" uuid="4f550b05-5518-4b6a-aa50-ebb8e6d5cef6"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<leftPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement>
+										<font fontName="Times New Roman" size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{wage_factor}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents/>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<columnGroup name="vote_head_name" height="30" totalPosition="End">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{vote_head_name}]]></bucketExpression>
+						</bucket>
+						<crosstabColumnHeader>
+							<cellContents backcolor="#F0F8FF" mode="Opaque">
+								<box>
+									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textField>
+									<reportElement style="Crosstab Data Text" x="0" y="0" width="82" height="30" uuid="c4ed02de-43a2-4441-a8c1-7197b9c5ac24"/>
+									<textElement>
+										<font fontName="Times New Roman" size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{vote_head_name}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabColumnHeader>
+						<crosstabTotalColumnHeader>
+							<cellContents backcolor="#BFE1FF" mode="Opaque">
+								<box>
+									<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+							</cellContents>
+						</crosstabTotalColumnHeader>
+					</columnGroup>
+					<measure name="amountMeasure" class="java.lang.Double">
+						<measureExpression><![CDATA[$F{amount}]]></measureExpression>
+					</measure>
+					<crosstabCell width="82" height="25">
+						<cellContents>
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="82" height="25" uuid="450fc7f0-f69f-451b-999f-5e6e257017fe"/>
+								<textElement>
+									<font fontName="Times New Roman" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{amountMeasure}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="82" height="25" rowTotalGroup="student_id">
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="82" height="25" uuid="29aca2aa-9c8e-4de0-a5d1-097c15d931b8"/>
+								<textElement>
+									<font fontName="Times New Roman" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{amountMeasure}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" columnTotalGroup="vote_head_name">
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" rowTotalGroup="student_id" columnTotalGroup="vote_head_name">
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="student_name">
+						<cellContents/>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="student_name" columnTotalGroup="vote_head_name">
+						<cellContents/>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="sponsor_type">
+						<cellContents/>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="sponsor_type" columnTotalGroup="vote_head_name">
+						<cellContents/>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="sponsor_name">
+						<cellContents/>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="sponsor_name" columnTotalGroup="vote_head_name">
+						<cellContents/>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="wage_factor">
+						<cellContents/>
+					</crosstabCell>
+					<crosstabCell rowTotalGroup="wage_factor" columnTotalGroup="vote_head_name">
+						<cellContents/>
+					</crosstabCell>
+				</crosstab>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="66" y="0" width="282" height="34" uuid="3514b9fa-10af-4b89-88ed-20e0f79f11f0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Student Session Charges Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="43" width="84" height="17" forecolor="#000000" uuid="fd930f02-e450-435d-a0e3-8ecc784ca48f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Session ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="89" y="45" width="128" height="15" uuid="2944bcae-8cca-4647-bc83-97326cb87304"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{session_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="1" y="70" width="84" height="13" forecolor="#000000" uuid="d5a04031-700c-4274-ba1a-502bd7b14fe3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[School Name]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="90" y="70" width="128" height="13" uuid="1dcd87b8-cb3e-4820-b757-cc29d4967354"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{school_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="2" y="88" width="84" height="13" forecolor="#000000" uuid="50a978df-4bbb-4d7d-b052-cc33f0d60090"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Department Name]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="89" y="88" width="128" height="13" uuid="ae96d350-357c-4665-97a0-0b833c12ec07"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{department_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="841" height="24" forecolor="#C0F1E5" backcolor="#F2EBDF" uuid="9125a11c-45bd-4fc1-abea-b876eac55bc3"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="771" y="1" width="40" height="20" forecolor="#736343" uuid="0efda0da-d3a3-40e9-ae3e-90fe7c551978"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="691" y="1" width="80" height="20" forecolor="#736343" uuid="861b1bb4-0f40-4b69-9023-d38ec0e1a470"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE, d MMMMM yyyy HH:mm:ss Z">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="619d60b7-02f8-482c-914e-fd01b60ac5eb"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

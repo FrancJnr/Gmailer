@@ -1,0 +1,1418 @@
+09-May-2019 07:57:56.166 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+09-May-2019 07:57:56.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+09-May-2019 07:57:56.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+09-May-2019 07:57:56.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2019 07:57:56.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-47-generic
+09-May-2019 07:57:56.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2019 07:57:56.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2019 07:57:56.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12
+09-May-2019 07:57:56.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2019 07:57:56.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+09-May-2019 07:57:56.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+09-May-2019 07:57:56.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+09-May-2019 07:57:56.170 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2019 07:57:56.684 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-May-2019 07:57:56.817 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 07:57:56.828 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 07:57:56.829 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 07:57:56.830 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2526 ms
+09-May-2019 07:57:56.900 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2019 07:57:56.900 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+09-May-2019 07:57:57.089 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+09-May-2019 07:57:57.375 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 07:57:57.377 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+09-May-2019 07:57:57.377 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+09-May-2019 07:57:59.928 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+09-May-2019 07:57:59.937 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+09-May-2019 07:58:00.042 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+09-May-2019 07:58:00.254 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [3,164] ms
+09-May-2019 07:58:00.254 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+09-May-2019 07:58:02.423 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:58:02.610 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [2,356] ms
+09-May-2019 07:58:02.610 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/colleges]
+09-May-2019 07:58:08.719 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:58:08.741 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/colleges] has finished in [6,131] ms
+09-May-2019 07:58:08.741 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+09-May-2019 07:58:14.666 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:58:15.837 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: could not open file "base/42881/93864": Permission denied
+09-May-2019 07:58:15.838 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+09-May-2019 07:58:15.843 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [7,101] ms
+09-May-2019 07:58:15.843 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+09-May-2019 07:58:16.098 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:58:16.122 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [279] ms
+09-May-2019 07:58:16.122 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+09-May-2019 07:58:27.801 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 07:58:27.803 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 07:58:58.485 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+09-May-2019 07:58:58.947 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:58:58.950 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 07:58:58.950 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 07:58:59.135 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 07:58:59.137 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 07:58:59.138 SEVERE [localhost-startStop-1] org.baraza.DB.BDB.connectDB Cannot connect to this database : java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: role "babcock_admin" does not exist)
+09-May-2019 07:58:59.153 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [43,031] ms
+09-May-2019 07:58:59.154 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+09-May-2019 07:59:00.176 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:59:00.572 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [1,417] ms
+09-May-2019 07:59:00.572 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+09-May-2019 07:59:00.990 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:59:01.148 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [575] ms
+09-May-2019 07:59:01.148 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+09-May-2019 07:59:20.633 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:59:20.694 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [19,546] ms
+09-May-2019 07:59:20.694 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+09-May-2019 07:59:32.453 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:59:32.485 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [11,790] ms
+09-May-2019 07:59:32.485 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+09-May-2019 07:59:34.022 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 07:59:34.041 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,556] ms
+09-May-2019 07:59:34.059 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-May-2019 07:59:34.082 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 07:59:34.090 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 97259 ms
+09-May-2019 08:10:26.395 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "vw_sprimary_major_students" does not exist
+  Position: 90
+09-May-2019 08:10:26.396 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery SQL SELECT student_id, student_name, sex, specialization_name, no_approval, sstudent_id
+FROM vw_sprimary_major_students
+WHERE (school_id = 'THSM')
+ORDER BY sstudent_id
+09-May-2019 08:14:16.979 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 129
+09-May-2019 08:14:16.980 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.makeQuery SQL SELECT student_id, student_name, sex, specialization_name, no_approval, sstudent_id
+FROM vw_spri_specialization_students
+WHERE (department_id = 'PhD in Lead')
+ORDER BY sstudent_id
+09-May-2019 08:34:55.822 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 126
+09-May-2019 08:34:55.822 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery SQL SELECT student_id, student_name, sex, specialization_name, student_degree_id
+FROM vw_students_primary_specializations
+WHERE (department_id = 'PhD in Lead')
+ORDER BY student_degree_id
+09-May-2019 08:36:18.043 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1494
+09-May-2019 08:36:18.906 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:36:31.757 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1494
+09-May-2019 08:36:31.772 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:36:33.233 SEVERE [http-nio-8080-exec-6] net.sf.jasperreports.engine.fill.JRFillSubreport.prepare Fill 1: exception
+ net.sf.jasperreports.engine.JRException: Error executing SQL statement for: coursecheckpass.
+	at net.sf.jasperreports.engine.query.JRJdbcQueryExecuter.createDatasource(JRJdbcQueryExecuter.java:344)
+	at net.sf.jasperreports.engine.fill.JRFillDataset.createQueryDatasource(JRFillDataset.java:1129)
+	at net.sf.jasperreports.engine.fill.JRFillDataset.initDatasource(JRFillDataset.java:696)
+	at net.sf.jasperreports.engine.fill.BaseReportFiller.setParameters(BaseReportFiller.java:437)
+	at net.sf.jasperreports.engine.fill.JRBaseFiller.fill(JRBaseFiller.java:548)
+	at net.sf.jasperreports.engine.fill.BaseReportFiller.fill(BaseReportFiller.java:396)
+	at net.sf.jasperreports.engine.fill.JRFillSubreport.fillSubreport(JRFillSubreport.java:732)
+	at net.sf.jasperreports.engine.fill.JRSubreportRunnable.run(JRSubreportRunnable.java:59)
+	at net.sf.jasperreports.engine.fill.AbstractThreadSubreportRunner.run(AbstractThreadSubreportRunner.java:221)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "course_passed" does not exist
+  Position: 69
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:118)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:107)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:107)
+	at net.sf.jasperreports.engine.query.JRJdbcQueryExecuter.createDatasource(JRJdbcQueryExecuter.java:310)
+	... 11 more
+
+09-May-2019 08:48:43.635 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1510
+09-May-2019 08:48:43.880 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:48:54.089 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1518
+09-May-2019 08:48:54.093 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:48:58.654 INFO [http-nio-8080-exec-1] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1494
+09-May-2019 08:48:58.667 INFO [http-nio-8080-exec-1] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:50:14.352 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1
+09-May-2019 08:50:14.453 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:50:18.440 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2
+09-May-2019 08:50:18.443 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:50:21.883 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.setParams Filter = filterid key = 4
+09-May-2019 08:50:21.918 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 08:50:23.365 INFO [http-nio-8080-exec-7] org.baraza.reports.BWebReport.setParams Filter = filterid key = 4
+09-May-2019 08:50:23.570 INFO [http-nio-8080-exec-7] org.baraza.reports.BWebReport.getReport entityid | 2014015
+09-May-2019 10:00:00.705 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record request_type_id : org.postgresql.util.PSQLException: ERROR: null value in column "subject" violates not-null constraint
+  Detail: Failing row contains (3, null, 7, 0, null, null, 2019-05-09 10:00:00.559983, f, null, f, null, I am no sure which course to do, null).
+09-May-2019 10:00:00.705 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.saveNewRec The error code 0
+09-May-2019 10:22:41.235 INFO [http-nio-8080-exec-5] org.baraza.web.BWeb.setOperation SELECT ins_sstudent('LEAD2019.1', 'S2019029', '0')
+09-May-2019 10:38:27.170 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 10:38:27.171 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 10:38:27.821 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1e86396f]) and a value of type [java.lang.Class] (value [class vw_sstudents_CROSSTAB0_1556784615300_972192]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+09-May-2019 10:38:27.873 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1e86396f]) and a value of type [java.lang.Class] (value [class vw_sstudents_CROSSTAB0_1556784615300_972192]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+09-May-2019 10:38:27.874 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1e86396f]) and a value of type [java.lang.Class] (value [class qgradeviewc_1541064825138_175221]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+09-May-2019 10:38:27.874 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1e86396f]) and a value of type [java.lang.Class] (value [class qgradeviewc_1541064825138_175221]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+09-May-2019 10:38:27.979 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1e86396f]) and a value of type [java.lang.Class] (value [class qgradeviewd_1556620536541_451652]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+09-May-2019 10:38:27.980 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1e86396f]) and a value of type [java.lang.Class] (value [class vw_sstudents_CROSSTAB0_1556784615300_972192]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+09-May-2019 10:38:27.981 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1e86396f]) and a value of type [java.lang.Class] (value [class qgradeviewc_1541064825138_175221]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+09-May-2019 10:38:36.896 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 10:38:36.935 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 10:38:47.898 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 10:38:47.898 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 10:38:49.640 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 10:38:49.644 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 11:00:33.146 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "employers" does not exist
+  Position: 155
+09-May-2019 11:00:33.146 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery SQL SELECT employerid, companyname, email, address, zipcode, town, street, premises, countrycodeid, telno, faxno, firstpasswd, details, approved, org_id
+FROM employers
+WHERE (employerid = '5065') AND (org_id = '0')
+ORDER BY employerid
+09-May-2019 11:01:29.369 SEVERE [http-nio-8080-exec-20] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "employers" does not exist
+  Position: 155
+09-May-2019 11:01:29.369 SEVERE [http-nio-8080-exec-20] org.baraza.DB.BQuery.makeQuery SQL SELECT employerid, companyname, email, address, zipcode, town, street, premises, countrycodeid, telno, faxno, firstpasswd, details, approved, org_id
+FROM employers
+WHERE (employerid = '5065') AND (org_id = '0')
+ORDER BY employerid
+09-May-2019 11:02:27.671 SEVERE [http-nio-8080-exec-15] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "employers" does not exist
+  Position: 155
+09-May-2019 11:02:27.671 SEVERE [http-nio-8080-exec-15] org.baraza.DB.BQuery.makeQuery SQL SELECT employerid, companyname, email, address, zipcode, town, street, premises, countrycodeid, telno, faxno, firstpasswd, details, approved, org_id
+FROM employers
+WHERE (employerid = '5065') AND (org_id = '0')
+ORDER BY employerid
+09-May-2019 11:21:39.126 SEVERE [http-nio-8080-exec-18] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "vwemployeejobs" does not exist
+  Position: 120
+09-May-2019 11:21:39.127 SEVERE [http-nio-8080-exec-18] org.baraza.DB.BQuery.makeQuery SQL SELECT employeejobid, jobdescription, studentname, email, applicationdate, details, studentid, employerid, org_id
+FROM vwemployeejobs
+WHERE (employerid = '5065') AND (org_id = '0')
+ORDER BY studentid
+09-May-2019 11:33:25.407 SEVERE [http-nio-8080-exec-17] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "vwemployeejobs" does not exist
+  Position: 120
+09-May-2019 11:33:25.407 SEVERE [http-nio-8080-exec-17] org.baraza.DB.BQuery.makeQuery SQL SELECT employeejobid, jobdescription, studentname, email, applicationdate, details, studentid, employerid, org_id
+FROM vwemployeejobs
+WHERE (employerid = '5065') AND (org_id = '0')
+ORDER BY studentid
+09-May-2019 11:39:39.063 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "vw_employee_jobs" does not exist
+  Position: 127
+09-May-2019 11:39:39.063 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery SQL SELECT employee_job_id, job_description, student_name, email, application_date, details, student_id, employer_id, org_id
+FROM vw_employee_jobs
+WHERE (employer_id = '5065') AND (org_id = '0')
+ORDER BY student_id
+09-May-2019 11:39:44.887 SEVERE [http-nio-8080-exec-18] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "employers" does not exist
+  Position: 160
+09-May-2019 11:39:44.891 SEVERE [http-nio-8080-exec-18] org.baraza.DB.BQuery.makeQuery SQL SELECT employer_id, company_name, email, address, zipcode, town, street, premises, country_code_id, telno, faxno, first_passwd, details, approved, org_id
+FROM employers
+WHERE (employer_id = '5065') AND (org_id = '0')
+ORDER BY employer_id
+09-May-2019 11:39:48.491 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "departmentview" does not exist
+  Position: 76
+09-May-2019 11:39:48.491 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery SQL SELECT Department_id, department_name, school_id, school_name, org_id
+FROM departmentview
+WHERE (school_id = 'PGS') AND (org_id = '0')
+ORDER BY Department_id
+09-May-2019 11:40:54.648 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "departmentview" does not exist
+  Position: 68
+09-May-2019 11:40:54.648 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery SQL SELECT Department_id, department_name, school_id, school_name
+FROM departmentview
+WHERE (school_id = 'PGS')
+ORDER BY Department_id
+09-May-2019 11:40:56.322 SEVERE [http-nio-8080-exec-19] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "departmentview" does not exist
+  Position: 68
+09-May-2019 11:40:56.322 SEVERE [http-nio-8080-exec-19] org.baraza.DB.BQuery.makeQuery SQL SELECT Department_id, department_name, school_id, school_name
+FROM departmentview
+WHERE (school_id = 'PGS')
+ORDER BY Department_id
+09-May-2019 11:41:37.583 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "major" does not exist
+  Position: 29
+09-May-2019 11:41:37.583 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery SQL SELECT specialization_name, major, specialization_id, Department_id, department_name, org_id
+FROM vw_specializations
+WHERE (Department_id = 'ADMIN') AND (org_id = '0')
+ORDER BY specialization_id
+09-May-2019 11:43:12.903 SEVERE [http-nio-8080-exec-18] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "is_current" does not exist
+  Position: 179
+09-May-2019 11:43:12.903 SEVERE [http-nio-8080-exec-18] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, content_type_name, no_gpa, major_content_id, specialization_id, org_id
+FROM vw_major_contents
+WHERE (specialization_id = '71') AND (is_current = true) AND (org_id = '0')
+ORDER BY course_id
+09-May-2019 11:43:16.733 SEVERE [http-nio-8080-exec-25] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "is_current" does not exist
+  Position: 179
+09-May-2019 11:43:16.733 SEVERE [http-nio-8080-exec-25] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, content_type_name, no_gpa, major_content_id, specialization_id, org_id
+FROM vw_major_contents
+WHERE (specialization_id = '89') AND (is_current = true) AND (org_id = '0')
+ORDER BY course_id
+09-May-2019 11:45:10.458 SEVERE [http-nio-8080-exec-16] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "prereqview" does not exist
+  Position: 71
+09-May-2019 11:45:10.458 SEVERE [http-nio-8080-exec-16] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, option_level, grade_name, org_id
+FROM prereqview
+WHERE (course_id = 'ACCT 610') AND (org_id = '0')
+09-May-2019 11:45:14.488 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "departmentview" does not exist
+  Position: 150
+09-May-2019 11:45:14.488 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BQuery.makeQuery SQL SELECT school_id, school_name, department_name, philosopy, vision, mission, objectives, exposures, oppotunities, details, Department_id, org_id
+FROM departmentview
+WHERE (Department_id = 'BUAD') AND (org_id = '0')
+ORDER BY Department_id
+09-May-2019 11:47:22.800 SEVERE [http-nio-8080-exec-19] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "employers" does not exist
+  Position: 160
+09-May-2019 11:47:22.801 SEVERE [http-nio-8080-exec-19] org.baraza.DB.BQuery.makeQuery SQL SELECT employer_id, company_name, email, address, zipcode, town, street, premises, country_code_id, telno, faxno, first_passwd, details, approved, org_id
+FROM employers
+WHERE (employer_id = '5065') AND (org_id = '0')
+ORDER BY employer_id
+09-May-2019 12:30:13.002 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "countrys" does not exist
+  Position: 38
+09-May-2019 12:30:13.003 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery SQL SELECT country_id, country_name FROM countrys WHERE (org_id=0) ORDER BY country_name
+09-May-2019 12:32:31.235 SEVERE [http-nio-8080-exec-25] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "countrys" does not exist
+  Position: 38
+09-May-2019 12:32:31.235 SEVERE [http-nio-8080-exec-25] org.baraza.DB.BQuery.makeQuery SQL SELECT country_id, country_name FROM countrys WHERE (org_id=0) ORDER BY country_name
+09-May-2019 12:34:39.208 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "country_id" does not exist
+  Position: 8
+09-May-2019 12:34:39.208 SEVERE [http-nio-8080-exec-14] org.baraza.DB.BQuery.makeQuery SQL SELECT country_id, country_name FROM sys_countrys ORDER BY country_name
+09-May-2019 12:35:19.190 SEVERE [http-nio-8080-exec-17] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "country_name" does not exist
+  Position: 24
+09-May-2019 12:35:19.190 SEVERE [http-nio-8080-exec-17] org.baraza.DB.BQuery.makeQuery SQL SELECT sys_country_id, country_name FROM sys_countrys ORDER BY country_name
+09-May-2019 12:35:20.487 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "country_name" does not exist
+  Position: 24
+09-May-2019 12:35:20.488 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery SQL SELECT sys_country_id, country_name FROM sys_countrys ORDER BY country_name
+09-May-2019 12:45:54.954 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "vw_employee_jobs" does not exist
+  Position: 127
+09-May-2019 12:45:54.954 SEVERE [http-nio-8080-exec-30] org.baraza.DB.BQuery.makeQuery SQL SELECT employee_job_id, job_description, student_name, email, application_date, details, student_id, employer_id, org_id
+FROM vw_employee_jobs
+WHERE (employer_id = '5065') AND (org_id = '0')
+ORDER BY student_id
+09-May-2019 14:23:25.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+09-May-2019 14:23:25.403 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+09-May-2019 14:23:25.403 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-47-generic
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2019 14:23:25.404 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2019 14:23:25.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2019 14:23:25.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+09-May-2019 14:23:25.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+09-May-2019 14:23:25.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+09-May-2019 14:23:25.405 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2019 14:23:25.466 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-May-2019 14:23:25.473 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 14:23:25.482 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 14:23:25.483 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 14:23:25.484 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 392 ms
+09-May-2019 14:23:25.503 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2019 14:23:25.504 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+09-May-2019 14:23:25.511 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+09-May-2019 14:23:25.550 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 14:23:25.552 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+09-May-2019 14:23:25.552 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+09-May-2019 14:23:26.523 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+09-May-2019 14:23:26.529 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+09-May-2019 14:23:26.547 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+09-May-2019 14:23:26.560 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [1,049] ms
+09-May-2019 14:23:26.560 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+09-May-2019 14:23:26.992 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:27.069 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [509] ms
+09-May-2019 14:23:27.069 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/colleges]
+09-May-2019 14:23:29.428 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:29.447 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/colleges] has finished in [2,378] ms
+09-May-2019 14:23:29.448 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+09-May-2019 14:23:31.271 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:31.361 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: could not open file "base/42881/93864": Permission denied
+09-May-2019 14:23:31.361 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+09-May-2019 14:23:31.363 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [1,915] ms
+09-May-2019 14:23:31.364 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+09-May-2019 14:23:31.478 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:31.504 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [139] ms
+09-May-2019 14:23:31.504 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+09-May-2019 14:23:32.551 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 14:23:32.553 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 14:23:36.039 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+09-May-2019 14:23:36.098 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:36.104 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 14:23:36.105 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 14:23:36.133 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 14:23:36.134 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 14:23:36.135 SEVERE [localhost-startStop-1] org.baraza.DB.BDB.connectDB Cannot connect to this database : java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: role "babcock_admin" does not exist)
+09-May-2019 14:23:36.144 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [4,640] ms
+09-May-2019 14:23:36.144 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+09-May-2019 14:23:36.239 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:36.248 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [104] ms
+09-May-2019 14:23:36.249 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+09-May-2019 14:23:36.301 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:36.302 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [53] ms
+09-May-2019 14:23:36.302 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+09-May-2019 14:23:37.880 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:37.907 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [1,604] ms
+09-May-2019 14:23:37.907 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+09-May-2019 14:23:41.047 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:41.072 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [3,165] ms
+09-May-2019 14:23:41.073 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+09-May-2019 14:23:42.732 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 14:23:42.761 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,689] ms
+09-May-2019 14:23:42.765 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-May-2019 14:23:42.771 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 14:23:42.773 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 17289 ms
+09-May-2019 15:21:31.605 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeQuery Database executeQuery error : org.postgresql.util.PSQLException: ERROR: column "email" of relation "entitys" does not exist
+  Position: 33
+09-May-2019 15:27:52.042 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeQuery Database executeQuery error : org.postgresql.util.PSQLException: ERROR: column "email" of relation "entitys" does not exist
+  Position: 33
+09-May-2019 15:28:22.274 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeQuery Database executeQuery error : org.postgresql.util.PSQLException: ERROR: column "email" of relation "entitys" does not exist
+  Position: 33
+09-May-2019 15:30:34.357 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BDB.executeQuery Database executeQuery error : org.postgresql.util.PSQLException: ERROR: column "email" of relation "entitys" does not exist
+  Position: 33
+09-May-2019 16:17:09.184 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 16:17:09.232 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 16:17:15.730 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Exception starting Context with name [/aua]
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/aua]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3859)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1410)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1619)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1392)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1364)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Servlet mapping specifies an unknown servlet name [CWebDashboard]
+	at org.apache.catalina.core.StandardContext.addServletMappingDecoded(StandardContext.java:3213)
+	at org.apache.catalina.core.StandardContext.addServletMappingDecoded(StandardContext.java:3204)
+	at org.apache.catalina.startup.ContextConfig.configureContext(ContextConfig.java:1376)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1156)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:769)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5176)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 11 more
+
+09-May-2019 16:17:15.731 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 16:17:37.246 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 16:17:37.248 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.deploy.NamingResourcesImpl.cleanUp Failed to retrieve JNDI naming context for container [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/aua]] so no cleanup was performed for that container
+ javax.naming.NameNotFoundException: Name [comp/env] is not bound in this Context. Unable to find [comp].
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:816)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:173)
+	at org.apache.catalina.deploy.NamingResourcesImpl.cleanUp(NamingResourcesImpl.java:1020)
+	at org.apache.catalina.deploy.NamingResourcesImpl.stopInternal(NamingResourcesImpl.java:1002)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:226)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5514)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:226)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:142)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1419)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1619)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1392)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1364)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:17:38.869 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:18:00.695 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 16:18:00.695 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 16:18:02.115 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:18:02.118 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 16:19:50.892 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 16:19:50.893 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 16:19:52.483 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:19:52.486 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 16:49:48.127 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 16:49:48.127 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 16:49:52.281 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:49:52.284 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 16:51:08.671 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+09-May-2019 16:51:08.671 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 16:51:10.143 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:51:10.146 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 16:55:29.370 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:55:29.386 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:55:29.392 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2019 16:55:29.586 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+09-May-2019 16:55:29.675 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+09-May-2019 16:55:29.676 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+09-May-2019 16:55:29.737 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:55:29.739 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:55:29.795 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:55:29.796 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:55:35.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+09-May-2019 16:55:35.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+09-May-2019 16:55:35.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-47-generic
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2019 16:55:35.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2019 16:55:35.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2019 16:55:35.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2019 16:55:35.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2019 16:55:35.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+09-May-2019 16:55:35.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+09-May-2019 16:55:35.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+09-May-2019 16:55:35.594 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2019 16:55:35.849 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:55:35.870 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 16:55:35.881 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:55:35.882 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 16:55:35.883 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1109 ms
+09-May-2019 16:55:35.930 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2019 16:55:35.930 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+09-May-2019 16:55:35.946 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+09-May-2019 16:55:36.007 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:55:36.009 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+09-May-2019 16:55:36.011 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+09-May-2019 16:55:37.266 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+09-May-2019 16:55:37.272 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+09-May-2019 16:55:37.343 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+09-May-2019 16:55:37.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [1,470] ms
+09-May-2019 16:55:37.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+09-May-2019 16:55:38.063 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:38.111 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [694] ms
+09-May-2019 16:55:38.111 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/colleges]
+09-May-2019 16:55:41.542 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:41.565 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/colleges] has finished in [3,454] ms
+09-May-2019 16:55:41.565 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+09-May-2019 16:55:44.259 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:44.810 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: could not open file "base/42881/93864": Permission denied
+09-May-2019 16:55:44.811 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+09-May-2019 16:55:44.815 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [3,250] ms
+09-May-2019 16:55:44.816 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+09-May-2019 16:55:44.951 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:44.994 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [178] ms
+09-May-2019 16:55:44.995 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+09-May-2019 16:55:45.102 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:55:45.103 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:55:49.467 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+09-May-2019 16:55:49.511 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:49.516 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 16:55:49.516 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 16:55:49.545 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:55:49.546 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:55:49.546 SEVERE [localhost-startStop-1] org.baraza.DB.BDB.connectDB Cannot connect to this database : java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: role "babcock_admin" does not exist)
+09-May-2019 16:55:49.554 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [4,560] ms
+09-May-2019 16:55:49.554 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+09-May-2019 16:55:49.669 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:49.688 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [134] ms
+09-May-2019 16:55:49.688 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+09-May-2019 16:55:49.821 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:49.851 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [163] ms
+09-May-2019 16:55:49.851 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+09-May-2019 16:55:52.874 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:52.890 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [3,039] ms
+09-May-2019 16:55:52.890 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+09-May-2019 16:55:54.395 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:54.402 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [1,511] ms
+09-May-2019 16:55:54.402 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+09-May-2019 16:55:56.055 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:55:56.069 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,666] ms
+09-May-2019 16:55:56.086 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:55:56.120 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:55:56.125 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 20241 ms
+09-May-2019 16:57:33.966 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 16:57:35.612 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:57:35.616 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 16:58:56.123 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:58:56.139 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:58:56.146 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2019 16:58:56.212 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+09-May-2019 16:58:56.218 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+09-May-2019 16:58:56.218 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+09-May-2019 16:58:56.248 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:58:56.250 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:58:56.252 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:58:56.252 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:59:01.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+09-May-2019 16:59:01.355 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-47-generic
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+09-May-2019 16:59:01.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+09-May-2019 16:59:01.357 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2019 16:59:01.670 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:59:01.699 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 16:59:01.707 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:59:01.708 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2019 16:59:01.709 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1208 ms
+09-May-2019 16:59:01.735 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2019 16:59:01.735 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+09-May-2019 16:59:01.747 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+09-May-2019 16:59:01.847 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:59:01.849 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+09-May-2019 16:59:01.849 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+09-May-2019 16:59:02.331 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+09-May-2019 16:59:02.336 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+09-May-2019 16:59:02.375 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+09-May-2019 16:59:02.399 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [651] ms
+09-May-2019 16:59:02.399 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+09-May-2019 16:59:02.918 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:02.994 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [595] ms
+09-May-2019 16:59:02.994 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/colleges]
+09-May-2019 16:59:05.577 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:05.583 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/colleges] has finished in [2,589] ms
+09-May-2019 16:59:05.583 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+09-May-2019 16:59:07.946 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:08.065 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: could not open file "base/42881/93864": Permission denied
+09-May-2019 16:59:08.066 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+09-May-2019 16:59:08.067 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [2,484] ms
+09-May-2019 16:59:08.067 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+09-May-2019 16:59:08.152 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:08.154 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [87] ms
+09-May-2019 16:59:08.154 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+09-May-2019 16:59:08.206 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:59:08.207 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:59:10.747 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+09-May-2019 16:59:10.805 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:10.808 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 16:59:10.809 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+09-May-2019 16:59:10.815 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:59:10.816 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+09-May-2019 16:59:10.816 SEVERE [localhost-startStop-1] org.baraza.DB.BDB.connectDB Cannot connect to this database : java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: role "babcock_admin" does not exist)
+09-May-2019 16:59:10.823 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [2,669] ms
+09-May-2019 16:59:10.824 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+09-May-2019 16:59:10.886 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:10.888 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [64] ms
+09-May-2019 16:59:10.888 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+09-May-2019 16:59:10.946 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:10.948 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [59] ms
+09-May-2019 16:59:10.948 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+09-May-2019 16:59:12.438 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:12.442 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [1,494] ms
+09-May-2019 16:59:12.442 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+09-May-2019 16:59:14.085 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:14.090 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [1,648] ms
+09-May-2019 16:59:14.090 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+09-May-2019 16:59:14.911 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 16:59:14.914 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [824] ms
+09-May-2019 16:59:14.917 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-May-2019 16:59:14.923 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 16:59:14.926 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 13217 ms
+09-May-2019 17:03:14.634 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 17:03:16.794 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 17:03:16.799 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 17:04:44.369 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+09-May-2019 17:04:45.940 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-May-2019 17:04:45.943 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+09-May-2019 17:06:06.621 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+09-May-2019 17:06:06.848 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 17:06:06.855 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2019 17:06:07.568 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+09-May-2019 17:06:08.226 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+09-May-2019 17:06:08.227 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+09-May-2019 17:06:08.285 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+09-May-2019 17:06:08.287 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2019 17:06:08.288 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+09-May-2019 17:06:08.289 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

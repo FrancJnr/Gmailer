@@ -1,0 +1,475 @@
+<APP password="change_password" org="org_id" name="UMIS">
+	<MENU role="finance" name="UMIS Finance">
+		<MENU name="Approvals">
+			<MENU icon="fa fa-circle-o font-black-sharp" name="Applications">2</MENU>
+			<MENU icon="fa fa-circle-o font-black-sharp" name="Registrations">214</MENU>
+		</MENU>
+		<MENU role="finance" name="Students">
+			<MENU icon="fa fa-circle-o font-black-sharp" name="Students">11</MENU>
+			<MENU icon="fa fa-circle-o font-black-sharp" name="Charges">12</MENU>
+		</MENU>
+	</MENU>
+	<DESK access="open" w="700" h="500" name="Dashboard" key="1">
+		<DASHBOARD w="700" name="Dashboard" class="fa fa-group font-blue-sharp">
+			<TILE noorg="true" access="records" name="Number of Students" table="vw_students">
+				<TEXTFIELD w="75" icon="fa fa-group font-green-sharp" fnct="COALESCE(count(student_id), 0)" title="Total Students">total_students</TEXTFIELD>
+			</TILE>
+			<TILE noorg="true" access="finance" name="Pending Approvals" where="finance_approval=false" table="vw_sstudents">
+				<TEXTFIELD w="75" icon="fa fa-file-text font-green-sharp" fnct="COALESCE(count(sstudent_id), 0)" title="Pending Approvals">pending_Approvals</TEXTFIELD>
+			</TILE>
+		</DASHBOARD>
+		<CDASHBOARD w="700" name="Dashboard" class="fa fa-group font-blue-sharp">
+			<TILE noorg="true" access="records" name="Number of Students" table="vw_students">
+				<TEXTFIELD w="75" icon="fa fa-group font-green-sharp" fnct="COALESCE(count(student_id), 0)" title="Total Students">total_students</TEXTFIELD>
+			</TILE>
+			<TILE noorg="true" access="finance" name="Pending Approvals" where="finance_approval=false" table="vw_sstudents">
+				<TEXTFIELD w="75" icon="fa fa-file-text font-green-sharp" fnct="COALESCE(count(sstudent_id), 0)" title="Pending Approvals">pending_Approvals</TEXTFIELD>
+			</TILE>
+		</CDASHBOARD>
+	</DESK>
+	<DESK w="695" h="585" name="Accepted" key="7">
+		<GRID noorg="true" updatetable="registrations" keyfield="registration_id" limit="100" name="Accepted Registrations" where="(is_accepted=true) AND (reported=false)" table="registrations">
+			<TEXTFIELD w="80" title="Reg. ID">registration_id</TEXTFIELD>
+			<TEXTFIELD w="100" title="Application Date">application_date</TEXTFIELD>
+			<TEXTFIELD w="100" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="100" title="Middle name">other_names</TEXTFIELD>
+			<TEXTFIELD w="100" title="Last Name">maiden_name</TEXTFIELD>
+			<TEXTFIELD w="40" title="Sex">sex</TEXTFIELD>
+			<TEXTFIELD w="40" title="ID">existing_id</TEXTFIELD>
+			<TEXTFIELD edit="true" w="40" title="Reported">reported</TEXTFIELD>
+		</GRID>
+	</DESK>
+	<DESK w="720" h="560" name="Students" key="11">
+		<GRID keyfield="student_id" limit="200" name="Students" orderby="student_id desc" table="vw_students">
+			<TEXTFIELD w="20" title="Student ID">student_id</TEXTFIELD>
+			<TEXTFIELD w="40" title="Student Name">student_name</TEXTFIELD>
+			<TEXTFIELD w="20" title="Gender">gender</TEXTFIELD>
+			<TEXTFIELD w="20" title="Tel. No">tel_no</TEXTFIELD>
+			<TEXTFIELD w="60" title="Address">address</TEXTFIELD>
+			<TEXTFIELD w="40" title="School">school_name</TEXTFIELD>
+			<TEXTFIELD w="30" title="Country">nationality_country</TEXTFIELD>
+			<TEXTFIELD w="20" title="Account No.">account_number</TEXTFIELD>
+			<TEXTFIELD w="40" title="Denomination">denomination_name</TEXTFIELD>
+			<GRID keyfield="student_degree_id" name="Student's Degree" linkfield="student_id" table="vw_student_degrees">
+				<TEXTFIELD w="140" title="Degree">degree_name</TEXTFIELD>
+				<TEXTFIELD w="140" title="Cohort">cohort_name</TEXTFIELD>
+				<TEXTFIELD w="140" title="Site">site_name</TEXTFIELD>
+				<CHECKBOX w="40" title="Completed">completed</CHECKBOX>
+			</GRID>
+			<GRID noorg="true" keyfield="transfered_credit_id" name="Transfered Credits" linkfield="student_id" table="vw_transfered_credits">
+				<TEXTFIELD w="140" title="Degree">degree_name</TEXTFIELD>
+				<TEXTFIELD w="140" title="Course Title">course_title</TEXTFIELD>
+				<TEXTFIELD w="140" title="Credit Hours">credit_hours</TEXTFIELD>
+				<TEXTFIELD w="40" title="Narrative">narrative</TEXTFIELD>
+			</GRID>
+			<GRID noorg="true" keyfield="sponsor_id" name="Sponsor Details" linkfield="student_id" table="vw_students">
+				<TEXTFIELD w="140" title="Sponsoring Division">sponsor_type_name</TEXTFIELD>
+				<TEXTFIELD w="140" title="Employing Organisation">sponsor_name</TEXTFIELD>
+				<TEXTFIELD w="140" title="Address">sponsor_address</TEXTFIELD>
+				<TEXTFIELD w="40" title="Country">sponsor_country_name</TEXTFIELD>
+				<TEXTFIELD w="40" title="Town">sponsor_town</TEXTFIELD>
+				<TEXTFIELD w="40" title="Tel No">sponsor_telno</TEXTFIELD>
+				<TEXTFIELD w="40" title="Email">sponsor_email</TEXTFIELD>
+				<TEXTFIELD w="40" title="Wage factor">wage_factor</TEXTFIELD>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="750" h="500" name="Sessions" type="vert" key="12">
+		<GRID noorg="true" keyfield="session_id" name="Sessions" orderby="session_start desc" where="pre_session=false AND active=true" table="vw_sessions">
+			<TEXTFIELD w="40" title="Sessions ID">session_id</TEXTFIELD>
+			<TEXTFIELD w="40" title="Start">session_start</TEXTFIELD>
+			<TEXTFIELD w="40" title="Last Drop">slast_drop</TEXTFIELD>
+			<TEXTFIELD w="40" title="End">session_end</TEXTFIELD>
+			<TEXTFIELD w="60" title="cohort">cohort_name</TEXTFIELD>
+			<CHECKBOX w="20" title="Active">active</CHECKBOX>
+			<ACTIONS>
+				<ACTION fnct="compute_student_charge">compute session charges</ACTION>
+			</ACTIONS>
+			<GRID noorg="true" updatetable="sponsors" keyfield="sponsor_id" name="Charge sheet " linkfield="session_id" table="vw_charge_sheet">
+				<TEXTFIELD w="100" title="Sponsor">sponsor_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Country">sponsor_country_name</TEXTFIELD>
+				<EDITFIELD w="75" title="Wage Factor">wage_factor</EDITFIELD>
+			</GRID>
+			<GRID noorg="true" keyfield="sstudent_id" name="Student Full Charge" where="( fees is not null OR fees!='0')" linkfield="session_id" table="vw_student_session_charges">
+				<TEXTFIELD w="20" title="Student ID">student_id</TEXTFIELD>
+				<TEXTFIELD w="40" title="Student Name">Student_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Employing Organisation">sponsor_name</TEXTFIELD>
+				<TEXTFIELD w="40" title="Accomodation Charge(USD)">accomodation_charge</TEXTFIELD>
+				<TEXTFIELD w="40" title="Session Fees (USD)">fees</TEXTFIELD>
+				<TEXTFIELD w="40" title="Total Charge (USD)">total_charges</TEXTFIELD>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="810" h="590" name="Session Students Open" type="vert" key="17">
+		<GRID noorg="true" keyfield="session_id" name="Trimester" orderby="session_id desc" table="vw_sessions">
+			<TEXTFIELD w="240" title="Trimester ID">session_id</TEXTFIELD>
+			<TEXTFIELD w="240" title="Start">session_start</TEXTFIELD>
+			<TEXTFIELD w="240" title="End">session_end</TEXTFIELD>
+			<GRID auditid="sys_audit_trail_id" keyfield="sstudent_id" limit="100" name="Q. Students" linkfield="session_id" table="vw_sstudents">
+				<TEXTFIELD w="10" title="Student ID">student_id</TEXTFIELD>
+				<TEXTFIELD w="40" title="Student">student_name</TEXTFIELD>
+				<TEXTFIELD w="20" title="Account Number">account_number</TEXTFIELD>
+				<TEXTFIELD w="10" title="Units Charge">unit_charges</TEXTFIELD>
+				<TEXTFIELD w="10" title="Lab Charge">lab_charge</TEXTFIELD>
+				<TEXTFIELD w="20" title="Course Charges">additional_charges</TEXTFIELD>
+				<TEXTFIELD w="20" title="Fees">fees_charge</TEXTFIELD>
+				<TEXTFIELD w="20" title="Residence Charge">residence_charge</TEXTFIELD>
+				<TEXTFIELD w="20" title="Account Credit">curr_balance</TEXTFIELD>
+				<TEXTFIELD w="20" title="Close">finalised</TEXTFIELD>
+				<ACTIONS>
+					<ACTION phase="2" fnct="approve_finance">Open Finance</ACTION>
+				</ACTIONS>
+				<GRID keyfield="grade_id" name="Student Course List" table="vw_student_grades">
+					<TEXTFIELD w="10" title="Student ID">student_id</TEXTFIELD>
+					<TEXTFIELD w="20" title="Student">student_name</TEXTFIELD>
+					<TEXTFIELD w="10" title="Course ID">course_id</TEXTFIELD>
+					<TEXTFIELD w="100" title="Course Title">course_title</TEXTFIELD>
+					<TEXTFIELD w="100" title="Instructor">instructor_name</TEXTFIELD>
+					<TEXTFIELD w="10" title="Units">charge_hours</TEXTFIELD>
+					<TEXTFIELD w="5" title="Unit Charge">unit_fees</TEXTFIELD>
+					<TEXTFIELD w="5" title="Lab Fees">lab_fees</TEXTFIELD>
+					<TEXTFIELD w="10" title="Course Charge">additional_charges</TEXTFIELD>
+					<TEXTFIELD w="5" title="Dropped">dropped</TEXTFIELD>
+				</GRID>
+				<GRID noorg="true" keyfield="approval_id" name="Approval List" linkfield="sstudent_id" table="approval_list">
+					<TEXTFIELD w="40" title="Approved By">approved_by</TEXTFIELD>
+					<TEXTFIELD w="40" title="Approval Type">approval_type</TEXTFIELD>
+					<TEXTFIELD w="40" title="Approve Date">approve_date</TEXTFIELD>
+					<TEXTFIELD w="40" title="Client IP">client_id</TEXTFIELD>
+				</GRID>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="810" h="590" name="Session Exam Clearance" type="vert" key="18">
+		<GRID noorg="true" keyfield="session_id" name="Trimester" orderby="session_id desc" where="(active = true)" table="vw_sessions">
+			<TEXTFIELD w="240" title="Trimester ID">session_id</TEXTFIELD>
+			<TEXTFIELD w="240" title="Start">session_start</TEXTFIELD>
+			<TEXTFIELD w="240" title="End">session_end</TEXTFIELD>
+			<GRID auditid="sys_audit_trail_id" keyfield="sstudent_id" limit="100" name="Q. Students" where="(finance_approval=true)" linkfield="session_id" table="vw_sstudents">
+				<TEXTFIELD w="50" title="Student ID">student_id</TEXTFIELD>
+				<TEXTFIELD w="140" title="Student">student_name</TEXTFIELD>
+				<TEXTFIELD w="50" title="Account Number">account_number</TEXTFIELD>
+				<TEXTFIELD w="50" title="Exam Balance">exam_clear_balance</TEXTFIELD>
+				<CHECKBOX w="40" title="Close">finalised</CHECKBOX>
+				<CHECKBOX w="40" title="Exam Clearance">exam_clear</CHECKBOX>
+				<ACTIONS>
+					<ACTION phase="3" fnct="approve_finance">Exam Clearance</ACTION>
+				</ACTIONS>
+				<GRID keyfield="grade_id" name="Student Course List" table="vw_student_grades">
+					<TEXTFIELD w="10" title="Student ID">student_id</TEXTFIELD>
+					<TEXTFIELD w="20" title="Student">student_name</TEXTFIELD>
+					<TEXTFIELD w="10" title="Course ID">course_id</TEXTFIELD>
+					<TEXTFIELD w="100" title="Course Title">course_title</TEXTFIELD>
+					<TEXTFIELD w="100" title="Instructor">instructor_name</TEXTFIELD>
+					<TEXTFIELD w="10" title="Units">charge_hours</TEXTFIELD>
+					<TEXTFIELD w="5" title="Unit Charge">unit_fees</TEXTFIELD>
+					<TEXTFIELD w="5" title="Lab Fees">lab_fees</TEXTFIELD>
+					<TEXTFIELD w="10" title="Course Charge">additional_charges</TEXTFIELD>
+					<TEXTFIELD w="5" title="Dropped">dropped</TEXTFIELD>
+				</GRID>
+				<GRID noorg="true" keyfield="approval_id" name="Approval List" linkfield="sstudent_id" table="approval_list">
+					<TEXTFIELD w="40" title="Approved By">approved_by</TEXTFIELD>
+					<TEXTFIELD w="40" title="Approval Type">approval_type</TEXTFIELD>
+					<TEXTFIELD w="40" title="Approve Date">approve_date</TEXTFIELD>
+					<TEXTFIELD w="40" title="Client IP">client_id</TEXTFIELD>
+				</GRID>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Degree Levels Report" type="horl" key="104">
+		<JASPER filtered="false" reportfile="degreelevels.jasper" name="Degree Levels"></JASPER>
+		<JASPER filtered="false" reportfile="sublevel.jasper" name="Degree Sub Levels"></JASPER>
+	</DESK>
+	<DESK w="700" h="500" name="Charges" type="horl" key="150">
+		<FILTER name="Charges" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="sessions" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER reportfile="vw_sub_charges.jasper" name="Charges"></JASPER>
+			<JASPER reportfile="qresidenceview.jasper" name="Residence"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Calendar" type="horl" key="151">
+		<FILTER name="Calendar" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="qcalendarview.jasper" name="Calendar"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="750" h="500" name="Trimester Charges" type="horl" key="158">
+		<FILTER name="Trimester Charges" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="sessions" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<DRILLDOWN keyfield="sub_level_id" name="Sub Level" filtername="sub_level_id" listfield="sub_level_name" table="sub_levels"></DRILLDOWN>
+			<JASPER reportfile="studentchargeview.jasper" name="Charges - Normal Session"></JASPER>
+			<JASPER reportfile="studentchargeviewb.jasper" name="Charges - Intersesion"></JASPER>
+			<JASPER reportfile="additionalcharges.jasper" name="Additional Charges"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Trimester Withdrawal" type="horl" key="159">
+		<FILTER name="Trimester Withdrawal" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="studentchargevieww.jasper" name="Students - Normal Session"></JASPER>
+			<JASPER filtered="true" reportfile="studentchargeviewwb.jasper" name="Students Charges - Intersesion"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="800" h="600" name="Course Registration" type="vert" key="162">
+		<FILTER split="250" w="700" h="750" name="Course Registration" type="vert">
+			<FILTERGRID noorg="true" keyfield="session_id" name="Trimesters" orderby="session_id desc" table="vw_sessions">
+				<TEXTFIELD w="240" title="Trimester ID">session_id</TEXTFIELD>
+				<TEXTFIELD w="240" title="Start">session_start</TEXTFIELD>
+				<TEXTFIELD w="240" title="End">session_end</TEXTFIELD>
+				<FILTERGRID noorg="true" updatetable="sstudents" keyfield="sstudent_id" name="Student List" linkfield="session_id" table="vw_sstudents">
+					<TEXTFIELD w="25" title="Student ID">student_id</TEXTFIELD>
+					<TEXTFIELD w="35" title="Student Name">student_name</TEXTFIELD>
+					<TEXTFIELD w="35" title="Degree">degree_name</TEXTFIELD>
+					<TEXTFIELD w="20" title="Finance Approval">finance_approval</TEXTFIELD>
+					<TEXTFIELD w="20" title="Close Application">finalised</TEXTFIELD>
+				</FILTERGRID>
+			</FILTERGRID>
+			<JASPER filtered="true" reportfile="studentdetailsa.jasper" name="Student Details" printcopies="1"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Course List" type="horl" key="217">
+		<FILTER name="Course List" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="courselist.jasper" name="Course List - Normal Session"></JASPER>
+			<JASPER filtered="true" reportfile="courselistb.jasper" name="Course List - Intersesion"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Withdrawn Courses List" type="horl" key="223">
+		<FILTER name="Withdrawn Courses List" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="withdrawncourses.jasper" name="Withdrawn Courses List"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Trimester Residence" type="horl" key="445">
+		<FILTER name="Trimester Students Residence" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester " listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="qstudentresidenceviewa.jasper" name="Trimester Students Residence Summary"></JASPER>
+			<JASPER filtered="true" reportfile="qstudentresidenceview.jasper" name="Trimester Students Residence"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="800" h="600" name="Class List" type="horl" key="154">
+		<FILTER split="250" w="700" h="750" name="Class List" type="vert">
+			<FILTERGRID noorg="true" keyfield="session_id" name="Trimester" orderby="session_id desc" table="vw_sessions">
+				<TEXTFIELD w="240" title="Trimester ID">session_id</TEXTFIELD>
+				<TEXTFIELD w="240" title="Start">session_start</TEXTFIELD>
+				<FILTERGRID keyfield="scourse_id" name="S Courses" orderby="department_name" linkfield="session_id" table="vw_scourses">
+					<TEXTFIELD w="40" title="Code">course_id</TEXTFIELD>
+					<TEXTFIELD w="40" title="Course">course_title</TEXTFIELD>
+					<TEXTFIELD w="40" title="Instructor">instructor_name</TEXTFIELD>
+					<TEXTFIELD w="40" title="Class">class_option</TEXTFIELD>
+					<TEXTFIELD w="40" title="Department">department_name</TEXTFIELD>
+				</FILTERGRID>
+			</FILTERGRID>
+			<JASPER filtered="true" reportfile="qgradeviewc.jasper" name="Class Enrolment List" printcopies="1"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Registration Statistics" type="horl" key="169">
+		<FILTER name="Registration Statistics" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester " listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="quarterstats.jasper" name="Registration Statistics"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Payment Audit" type="horl" key="172">
+		<FILTER name="Payment Audit" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="paymentaudit.jasper" name="Payment Audit"></JASPER>
+			<JASPER filtered="true" reportfile="paymentaudita.jasper" name="Payment Audit - Export"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="800" h="600" name="Students Exam Pass" type="horl" key="403">
+		<FILTER split="250" w="700" h="750" name="Exam Pass" type="vert">
+			<FILTERGRID noorg="true" keyfield="session_id" name="Trimester" orderby="session_id desc" table="vw_sessions">
+				<TEXTFIELD w="240" title="Trimester ID">session_id</TEXTFIELD>
+				<TEXTFIELD w="240" title="Start">session_start</TEXTFIELD>
+				<FILTERGRID updatetable="sstudents" keyfield="sstudent_id" name="Student List" orderby="department_name, student_name" where="(approved = true) " linkfield="session_id" table="vw_sstudent_majors">
+					<TEXTFIELD w="25" title="Student ID">student_id</TEXTFIELD>
+					<TEXTFIELD w="35" title="Student Name">student_name</TEXTFIELD>
+					<TEXTFIELD w="35" title="Degree">degree_name</TEXTFIELD>
+					<TEXTFIELD w="20" title="Department">department_name</TEXTFIELD>
+				</FILTERGRID>
+			</FILTERGRID>
+			<JASPER filtered="true" reportfile="studentpass.jasper" name="Exam PASS" printcopies="1"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Exam Cleared List" type="horl" key="405">
+		<FILTER name="Exam Cleared List" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="session_year" name="Year" orderby="session_year desc" listfield="session_year" table="vw_years">
+				<DRILLDOWN noorg="true" wherefield="session_year" keyfield="session_id" name="Trimester" listfield="session" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER filtered="true" reportfile="qstudentviewcf.jasper" name="Fees Un-Cleared List"></JASPER>
+			<JASPER filtered="true" reportfile="qstudentviewcg.jasper" name="Fees Cleared List"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="500" name="Charge Summary" type="horl" key="425">
+		<FILTER name="Charge Summary" location="250" type="horl">
+			<DRILLDOWN noorg="true" keyfield="quarteryear" name="Year" orderby="quarteryear desc" listfield="quarteryear" table="yearview">
+				<DRILLDOWN noorg="true" wherefield="quarteryear" keyfield="session_id" name="Trimesters" listfield="quarter" table="vw_sessions"></DRILLDOWN>
+			</DRILLDOWN>
+			<JASPER reportfile="charge_summary.jasper" name="Charge Summary"></JASPER>
+		</FILTER>
+	</DESK>
+	<DESK w="700" h="550" name="Pending" key="2">
+		<GRID noorg="true" keyfield="application_id" name="Applications" orderby="application_id desc" where="(paid=false)" tab.count="count(application_id)" table="vw_applications">
+			<TEXTFIELD w="25" title="#ID">application_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Last Name">middle_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Phone No">primary_telephone</TEXTFIELD>
+			<TEXTFIELD w="75" title="Status">status</TEXTFIELD>
+			<CHECKBOX w="50" title="Paid">paid</CHECKBOX>
+			<FILES new="false" edit="false" keyfield="sys_file_id" linkfield="table_id" params="table_name" repository="/repository/webdav/files/" delete="false" password="baraza" filetable="applications" name="Sponsor Letter" where="(table_name='applications' AND narrative='sponsor_slip' OR narrative='bank_slip')" table="sys_files" username="repository">
+				<TEXTFIELD w="75" title="File ID">sys_file_id</TEXTFIELD>
+				<TEXTFIELD w="175" title="File Name">file_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="File Type">file_type</TEXTFIELD>
+				<TEXTFIELD w="75" title="File Size">file_size</TEXTFIELD>
+				<TEXTFIELD w="75" title="Narrative">narrative</TEXTFIELD>
+			</FILES>
+			<FORM keyfield="org_id" name="Applications" table="applications">
+				<CHECKBOX w="150" h="20" x="10" y="130" title="Finance Approve">finance_approved</CHECKBOX>
+				<TEXTAREA w="430" h="20" x="10" y="310" title="Narrative">narrative</TEXTAREA>
+			</FORM>
+		</GRID>
+		<GRID noorg="true" keyfield="application_id" name="Approved" orderby="application_id desc" where="(paid=true)" tab.count="count(application_id)" table="vw_applications">
+			<TEXTFIELD w="25" title="#ID">application_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Last Name">middle_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Phone No">primary_telephone</TEXTFIELD>
+			<CHECKBOX w="50" title="Paid">paid</CHECKBOX>
+		</GRID>
+		<GRID noorg="true" keyfield="application_id" name="Rejected" orderby="application_id desc" where="( status='Rejected' )" tab.count="count(application_id)" table="vw_applications">
+			<TEXTFIELD w="25" title="#ID">application_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Last Name">middle_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Phone No">primary_telephone</TEXTFIELD>
+			<CHECKBOX w="50" title="Paid">paid</CHECKBOX>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="550" name="Registration Approvals" key="214">
+		<GRID noorg="true" keyfield="session_id" name="Registration Approvals" where="active=true" table="vw_sessions">
+			<TEXTFIELD w="75" title="Session">session_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Start Date ">session_start</TEXTFIELD>
+			<TEXTFIELD w="75" title="End Date ">session_end</TEXTFIELD>
+			<CHECKBOX w="75" title="Active ">active</CHECKBOX>
+			<GRID noorg="true" keyfield="sstudent_id" name="Pending Approvals" where=" finance_approval IS NULL" tab.count="count(student_id)" linkfield="session_id" table="vw_sstudents">
+				<TEXTFIELD w="75" title="Student ID">student_id</TEXTFIELD>
+				<TEXTFIELD w="150" title="Student Name">student_name</TEXTFIELD>
+				<TEXTFIELD w="50" title="Gender">gender</TEXTFIELD>
+				<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+				<TEXTFIELD w="75" title="Telno">tel_no</TEXTFIELD>
+				<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+				<TEXTFIELD w="75" title="Country">nationality_country</TEXTFIELD>
+				<CHECKBOX w="75" title="On Probation">on_probation</CHECKBOX>
+				<ACTIONS>
+					<ACTION fnct="finance_approval">Approve</ACTION>
+					<ACTION fnct="reject_approval">Reject</ACTION>
+				</ACTIONS>
+				<GRID noorg="true" keyfield="sponsor_id" name="Student Sponsor" linkfield="sstudent_id" table="vw_sstudents">
+					<TEXTFIELD w="150" title="Sponsor Division ">sponsor_type_name</TEXTFIELD>
+					<TEXTFIELD w="100" title=" Name">sponsor_name</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Address">sponsor_address</TEXTFIELD>
+					<TEXTFIELD w="75" title="Street">sponsor_street</TEXTFIELD>
+					<TEXTFIELD w="75" title="Postal Code">sponsor_postal_code</TEXTFIELD>
+					<TEXTFIELD w="75" title="Town">sponsor_town</TEXTFIELD>
+					<TEXTFIELD w="75" title="Telno">sponsor_telno</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Email">sponsor_email</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Country ">sponsor_country_name</TEXTFIELD>
+				</GRID>
+				<FILES noorg="true" password="baraza" keyfield="sys_file_id" filetable="students" name="Sponsor Letter" where="(table_name='students')" linkfield="student_id" params="table_name" repository="/repository/webdav/files/" table="sys_files" username="repository">
+					<USERFIELD w="75" title="Student ID">student_id</USERFIELD>
+					<TEXTFIELD w="175" title="File Name">file_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="File Type">file_type</TEXTFIELD>
+					<TEXTFIELD w="75" title="File Size">file_size</TEXTFIELD>
+				</FILES>
+				<GRID noorg="true" keyfield="degree_id" name="Student Degree" linkfield="sstudent_id" table="vw_sstudents">
+					<TEXTFIELD w="75" title="School">school_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Degree Level">degree_level_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Programme">degree_name</TEXTFIELD>
+				</GRID>
+			</GRID>
+			<GRID noorg="true" keyfield="sstudent_id" name="Rejected" where="finance_approval=false" tab.count="count(sstudent_id)" linkfield="session_id" table="vw_sstudents">
+				<TEXTFIELD w="75" title="Student ID">student_id</TEXTFIELD>
+				<TEXTFIELD w="150" title="Student Name">student_name</TEXTFIELD>
+				<TEXTFIELD w="50" title="Gender">gender</TEXTFIELD>
+				<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+				<TEXTFIELD w="75" title="Telno">tel_no</TEXTFIELD>
+				<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+				<TEXTFIELD w="75" title="Country">nationality_country</TEXTFIELD>
+				<CHECKBOX w="75" title="On Probation">on_probation</CHECKBOX>
+				<ACTIONS>
+					<ACTION fnct="finance_approval">Approve</ACTION>
+				</ACTIONS>
+				<GRID noorg="true" keyfield="session_id" name="Student Sponsor" linkfield="sstudent_id" table="vw_sstudents">
+					<TEXTFIELD w="150" title="Sponsor Division ">sponsor_type_name</TEXTFIELD>
+					<TEXTFIELD w="100" title=" Name">sponsor_name</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Address">sponsor_address</TEXTFIELD>
+					<TEXTFIELD w="75" title="Street">sponsor_street</TEXTFIELD>
+					<TEXTFIELD w="75" title="Postal Code">sponsor_postal_code</TEXTFIELD>
+					<TEXTFIELD w="75" title="Town">sponsor_town</TEXTFIELD>
+					<TEXTFIELD w="75" title="Telno">sponsor_telno</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Email">sponsor_email</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Country ">sponsor_country_name</TEXTFIELD>
+				</GRID>
+				<GRID noorg="true" keyfield="degree_id" name="Student Degree" linkfield="student_id" table="vw_student_degrees">
+					<TEXTFIELD w="75" title="School Name">school_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Degree ID">degree_id</TEXTFIELD>
+					<TEXTFIELD w="75" title="Degree Level Name">degree_level_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Department Name">department_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Degree Name">degree_name</TEXTFIELD>
+				</GRID>
+			</GRID>
+			<GRID noorg="true" keyfield="sstudent_id" name="Approved" where="finance_approval=true" tab.count="count(student_id)" linkfield="session_id" table="vw_sstudents">
+				<TEXTFIELD w="75" title="Student ID">student_id</TEXTFIELD>
+				<TEXTFIELD w="150" title="Student Name">student_name</TEXTFIELD>
+				<TEXTFIELD w="50" title="Gender">gender</TEXTFIELD>
+				<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+				<TEXTFIELD w="75" title="Telno">tel_no</TEXTFIELD>
+				<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+				<TEXTFIELD w="75" title="Country">nationality_country</TEXTFIELD>
+				<CHECKBOX w="75" title="On Probation">on_probation</CHECKBOX>
+				<ACTIONS>
+					<ACTION fnct="revoke_finance_approval">Revoke</ACTION>
+				</ACTIONS>
+				<GRID noorg="true" keyfield="session_id" name="Student Sponsor" linkfield="sstudent_id" table="vw_sstudents">
+					<TEXTFIELD w="150" title="Sponsor Division ">sponsor_type_name</TEXTFIELD>
+					<TEXTFIELD w="100" title=" Name">sponsor_name</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Address">sponsor_address</TEXTFIELD>
+					<TEXTFIELD w="75" title="Street">sponsor_street</TEXTFIELD>
+					<TEXTFIELD w="75" title="Postal Code">sponsor_postal_code</TEXTFIELD>
+					<TEXTFIELD w="75" title="Town">sponsor_town</TEXTFIELD>
+					<TEXTFIELD w="75" title="Telno">sponsor_telno</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Email">sponsor_email</TEXTFIELD>
+					<TEXTFIELD w="75" title=" Country ">sponsor_country_name</TEXTFIELD>
+				</GRID>
+				<GRID noorg="true" keyfield="degree_id" name="Student Degree" linkfield="student_id" table="vw_student_degrees">
+					<TEXTFIELD w="75" title="School Name">school_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Degree ID">degree_id</TEXTFIELD>
+					<TEXTFIELD w="75" title="Degree Level Name">degree_level_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Department Name">department_name</TEXTFIELD>
+					<TEXTFIELD w="75" title="Degree Name">degree_name</TEXTFIELD>
+				</GRID>
+			</GRID>
+		</GRID>
+	</DESK>
+</APP>

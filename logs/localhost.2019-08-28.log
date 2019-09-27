@@ -1,0 +1,1355 @@
+28-Aug-2019 09:40:41.826 SEVERE [http-nio-8080-exec-84] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [38]
+
+35: 	}
+36: 
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB("java:/comp/env/jdbc/database");
+41: 	Dashboard dash = new Dashboard();
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:41:42.226 SEVERE [http-nio-8080-exec-75] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [467] in the jsp file: [/a_students.jsp]
+user_id cannot be resolved to a variable
+464: 		2017 &copy; Open Baraza. <a href="http://dewcis.com">Dew Cis Solutions Ltd.</a> All Rights Reserved
+465: 	</div>
+466: 	<div class="scroll-to-top">
+467: 				<input type="hidden" id="users_name" value='<%= user_id %>' >
+468: 
+469: 		<i class="icon-arrow-up"></i>
+470: 	</div>
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [467] in the jsp file: [/a_students.jsp]
+user_id cannot be resolved to a variable
+464: 		2017 &copy; Open Baraza. <a href="http://dewcis.com">Dew Cis Solutions Ltd.</a> All Rights Reserved
+465: 	</div>
+466: 	<div class="scroll-to-top">
+467: 				<input type="hidden" id="users_name" value='<%= user_id %>' >
+468: 
+469: 		<i class="icon-arrow-up"></i>
+470: 	</div>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:42:06.772 SEVERE [http-nio-8080-exec-84] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [38]
+
+35: 	}
+36: 
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB("java:/comp/env/jdbc/database");
+41: 	Dashboard dash = new Dashboard();
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:46:27.258 SEVERE [http-nio-8080-exec-79] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [38]
+
+35: 	}
+36: 
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB("java:/comp/env/jdbc/database");
+41: 	Dashboard dash = new Dashboard();
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:47:29.830 SEVERE [http-nio-8080-exec-75] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [43] in the jsp file: [/a_students.jsp]
+pic cannot be resolved
+40:      
+41:    String user_id = web.getUserID();
+42: 	try{
+43: 	String image_url = pic.fetchImageUrl(request, context);
+44: 	System.out.println(image_url);
+45: 	}catch(Exception e){
+46: 		System.out.println(e);
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [43] in the jsp file: [/a_students.jsp]
+pic cannot be resolved
+40:      
+41:    String user_id = web.getUserID();
+42: 	try{
+43: 	String image_url = pic.fetchImageUrl(request, context);
+44: 	System.out.println(image_url);
+45: 	}catch(Exception e){
+46: 		System.out.println(e);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:48:03.544 SEVERE [http-nio-8080-exec-83] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [38]
+
+35: 	}
+36: 
+37: 	 BWeb web = new BWeb(dbconfig, xmlfile, context);
+38:      web.init(request);
+39:      web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 
+41:    String user_id = web.getUserID();
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:51:26.540 SEVERE [http-nio-8080-exec-79] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [38]
+
+35: 	}
+36: 
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB("java:/comp/env/jdbc/database");
+41: 	Dashboard dash = new Dashboard();
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:51:57.750 SEVERE [http-nio-8080-exec-75] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [38]
+
+35: 	}
+36: 
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB("java:/comp/env/jdbc/database");
+41: 	Dashboard dash = new Dashboard();
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:53:37.831 SEVERE [http-nio-8080-exec-81] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [34]
+
+31:    }
+32:    BWeb web = new BWeb(dbconfig, xmlfile, context);
+33:    web.init(request);
+34:    web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+35:    String user_id = web.getUserID();
+36:    String application_id = " ";
+37: 
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.web.BWeb.setMainPage(BWeb.java:322)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:183)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:54:28.824 SEVERE [http-nio-8080-exec-76] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [34]
+
+31:    }
+32:    BWeb web = new BWeb(dbconfig, xmlfile, context);
+33:    web.init(request);
+34:    web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+35:    String user_id = web.getUserID();
+36:    String application_id = " ";
+37: 
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.web.BWeb.setMainPage(BWeb.java:322)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:183)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:55:01.056 SEVERE [http-nio-8080-exec-82] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [33]
+
+30:    		reportPath = projectDir + ps + "reports" + ps;
+31:    }
+32:    BWeb web = new BWeb(dbconfig, xmlfile, context);
+33:    web.init(request);
+34:    web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+35:    String user_id = web.getUserID();
+36:    String application_id = " ";
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:182)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:55:02.262 SEVERE [http-nio-8080-exec-75] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [33]
+
+30:    		reportPath = projectDir + ps + "reports" + ps;
+31:    }
+32:    BWeb web = new BWeb(dbconfig, xmlfile, context);
+33:    web.init(request);
+34:    web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+35:    String user_id = web.getUserID();
+36:    String application_id = " ";
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:182)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:55:52.437 SEVERE [http-nio-8080-exec-84] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [33]
+
+30:    		reportPath = projectDir + ps + "reports" + ps;
+31:    }
+32:    BWeb web = new BWeb(dbconfig, xmlfile, context);
+33:    web.init(request);
+34:    web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+35:    String user_id = web.getUserID();
+36:    String application_id = " ";
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:182)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:55:54.980 SEVERE [http-nio-8080-exec-82] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [33]
+
+30:    		reportPath = projectDir + ps + "reports" + ps;
+31:    }
+32:    BWeb web = new BWeb(dbconfig, xmlfile, context);
+33:    web.init(request);
+34:    web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+35:    String user_id = web.getUserID();
+36:    String application_id = " ";
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:182)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:56:50.525 SEVERE [http-nio-8080-exec-76] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [38]
+
+35: 	}
+36: 
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB("java:/comp/env/jdbc/database");
+41: 	Dashboard dash = new Dashboard();
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:137)
+	at org.baraza.DB.BUser.makeUser(BUser.java:74)
+	at org.baraza.DB.BUser.<init>(BUser.java:61)
+	at org.baraza.DB.BDB.setUser(BDB.java:144)
+	at org.baraza.web.BWeb.setUser(BWeb.java:299)
+	at org.baraza.web.BWeb.init(BWeb.java:131)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 09:57:44.619 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 09:57:44.619 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Aug-2019 09:57:57.615 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Aug-2019 09:57:57.616 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Aug-2019 09:57:57.620 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@64df0120')
+28-Aug-2019 09:58:00.780 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:00.780 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:00.780 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:00.780 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:00.780 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:00.781 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:00.781 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:00.781 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.269 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.269 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.270 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.270 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.270 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.271 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.271 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.271 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.271 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.271 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.272 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:18.272 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 09:58:23.256 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+28-Aug-2019 09:58:23.256 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 10:11:06.528 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 10:11:06.528 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Aug-2019 10:11:12.467 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Aug-2019 10:11:12.468 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Aug-2019 10:11:12.470 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@586de53e')
+28-Aug-2019 10:11:14.970 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:14.970 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:14.970 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:14.971 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:14.971 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:14.971 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:14.971 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:14.971 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.933 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.933 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.933 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.933 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.933 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.933 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.934 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.934 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.934 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.934 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.934 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:24.934 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 10:11:27.691 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+28-Aug-2019 10:11:27.692 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 10:43:39.748 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [1,170] in the jsp file: [/a_students.jsp]
+Syntax error on token "=", Expression expected after this token
+1167: <script>
+1168: 	
+1169: $(document).ready(function(){
+1170: var user_id = <%=user_id=%>;
+1171:   $.ajax({
+1172:    url:"./dashboard?user_id="user_id,
+1173:    method:"GET",
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [1,170] in the jsp file: [/a_students.jsp]
+Syntax error on token "=", Expression expected after this token
+1167: <script>
+1168: 	
+1169: $(document).ready(function(){
+1170: var user_id = <%=user_id=%>;
+1171:   $.ajax({
+1172:    url:"./dashboard?user_id="user_id,
+1173:    method:"GET",
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 10:44:14.838 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [1,170] in the jsp file: [/a_students.jsp]
+Syntax error on token "=", Expression expected after this token
+1167: <script>
+1168: 	
+1169: $(document).ready(function(){
+1170: // var user_id = <%=user_id=%>;
+1171:   $.ajax({
+1172:    url:"./dashboard?",
+1173:    method:"GET",
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [1,170] in the jsp file: [/a_students.jsp]
+Syntax error on token "=", Expression expected after this token
+1167: <script>
+1168: 	
+1169: $(document).ready(function(){
+1170: // var user_id = <%=user_id=%>;
+1171:   $.ajax({
+1172:    url:"./dashboard?",
+1173:    method:"GET",
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 11:23:25.665 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 11:23:25.665 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Aug-2019 11:23:36.909 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Aug-2019 11:23:36.910 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Aug-2019 11:23:36.915 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@20afb6cd')
+28-Aug-2019 11:23:40.149 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:40.149 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:40.149 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:40.149 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:40.149 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:40.149 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:40.150 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:40.150 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.782 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.783 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.783 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.783 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.783 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.783 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.783 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.783 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.784 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.784 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.784 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:23:55.784 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 11:24:00.342 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+28-Aug-2019 11:24:00.342 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 12:22:05.777 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 12:22:05.777 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Aug-2019 12:22:58.559 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Aug-2019 12:22:58.560 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Aug-2019 12:22:58.564 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@20afb6cd')
+28-Aug-2019 12:23:01.834 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:01.834 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:01.834 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:01.834 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:01.834 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:01.834 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:01.834 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:01.835 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.689 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.689 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.690 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.690 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.690 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.691 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.691 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.691 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.691 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.692 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.692 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:16.692 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:23:23.425 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+28-Aug-2019 12:23:23.426 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 12:26:35.468 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 12:26:35.468 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Aug-2019 12:37:40.892 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Aug-2019 12:37:40.892 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Aug-2019 12:37:40.893 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@397fa86')
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:37:47.386 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.458 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.459 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.459 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.459 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:35.459 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:39:50.306 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+28-Aug-2019 12:39:50.306 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 12:54:55.268 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 12:54:55.268 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Aug-2019 12:55:07.938 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Aug-2019 12:55:07.938 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Aug-2019 12:55:07.939 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@51bac67a')
+28-Aug-2019 12:55:10.275 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:10.275 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:10.275 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:10.275 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:10.275 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:10.276 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:10.276 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:10.276 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.383 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.383 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.383 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.383 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:22.384 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 12:55:29.962 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+28-Aug-2019 12:55:29.963 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 13:04:03.237 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 13:04:03.237 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Aug-2019 14:46:08.927 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Aug-2019 14:46:08.927 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Aug-2019 14:46:08.928 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5cef9720')
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:13.636 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.059 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.059 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.059 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.059 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:40.060 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+28-Aug-2019 14:46:44.669 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+28-Aug-2019 14:46:44.670 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 16:03:57.846 SEVERE [http-nio-8080-exec-41] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SavePhoto] in context with path [/ueab] threw exception
+ java.lang.NullPointerException
+	at org.baraza.web.BWeb.savePicture(BWeb.java:1375)
+	at org.baraza.web.BWeb.updateMultiPart(BWeb.java:1349)
+	at com.dewcis.SavePhoto.doGet(SavePhoto.java:52)
+	at com.dewcis.SavePhoto.doPost(SavePhoto.java:20)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 16:16:58.033 SEVERE [http-nio-8080-exec-50] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SavePhoto] in context with path [/ueab] threw exception
+ java.lang.NullPointerException
+	at org.baraza.web.BWeb.savePicture(BWeb.java:1376)
+	at org.baraza.web.BWeb.updateMultiPart(BWeb.java:1349)
+	at com.dewcis.SavePhoto.doGet(SavePhoto.java:52)
+	at com.dewcis.SavePhoto.doPost(SavePhoto.java:20)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 16:25:46.337 SEVERE [http-nio-8080-exec-57] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SavePhoto] in context with path [/ueab] threw exception
+ java.lang.NullPointerException
+	at org.baraza.web.BWeb.savePicture(BWeb.java:1379)
+	at org.baraza.web.BWeb.updateMultiPart(BWeb.java:1352)
+	at com.dewcis.SavePhoto.doGet(SavePhoto.java:52)
+	at com.dewcis.SavePhoto.doPost(SavePhoto.java:20)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 16:34:49.811 SEVERE [http-nio-8080-exec-68] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SavePhoto] in context with path [/ueab] threw exception
+ java.lang.NullPointerException
+	at org.baraza.web.BWeb.savePicture(BWeb.java:1380)
+	at org.baraza.web.BWeb.updateMultiPart(BWeb.java:1353)
+	at com.dewcis.SavePhoto.doGet(SavePhoto.java:52)
+	at com.dewcis.SavePhoto.doPost(SavePhoto.java:20)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Aug-2019 21:55:20.211 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Aug-2019 21:55:20.212 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

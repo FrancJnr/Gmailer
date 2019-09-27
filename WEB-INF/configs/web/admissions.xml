@@ -1,0 +1,142 @@
+<APP password="change_password"  name="UMIS" color="blue">
+	<MENU name="General Information">
+		<MENU icon="fa fa-university font-blue-sharp" name="School Information">2</MENU>
+		<MENU name="Application">
+
+			<MENU icon="icon-book-open font-blue-sharp" name="Application Form" >1</MENU>
+
+		</MENU>
+	</MENU>
+	<DESK noorg="true" w="700" h="500" name="Application Form" key="1">
+		<FORM noorg="true" keyfield="registration_id" name="Registrations" table="registrations">
+			<COMBOBOX w="430" x="10" h="20" lpfield="denomination_name" y="440" lptable="denominations" title="Denomination ID">denomination_id</COMBOBOX>
+			<COMBOBOX w="430" x="10" h="20" lpfield="sys_country_name" y="400" lptable="sys_countrys" title="Nationality ID" lpkey="sys_country_id">nationality_id</COMBOBOX>
+			<COMBOBOX w="430" x="10" h="20" lpfield="sponsor_name" y="1270" lptable="sponsors" title="Sponsor name">sponsor_id</COMBOBOX>
+			<COMBOBOX w="430" x="10" h="20" lpfield="site_name" y="1270" lptable="sites" title="Site name">site_id</COMBOBOX>
+			<COMBOBOX w="430" x="10" h="20" lpfield="degree_id" y="1270" lptable="vw_degrees" where="school_id='PGS'" lpkey="degree_name" title="pgs">degree_id</COMBOBOX>
+			<COMBOBOX w="430" x="10" h="20" lpfield="degree_id" y="1270" lptable="vw_degrees" where="school_id='THSM'" lpkey="degree_name" title="thsm">degree_id</COMBOBOX>
+
+		</FORM>
+		<FORM noorg="true" keyfield="application_id" name="applications" table="applications">
+			<TEXTFIELD w="150" x="10" h="20" y="30" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="150" x="290" h="20" y="30" title="Last Name">middle_name</TEXTFIELD>
+			<TEXTFIELD w="150" x="10" h="20" y="50" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="430" x="10" h="20" y="70" title="Email">email</TEXTFIELD>
+		</FORM>
+			<GRID noorg="true" keyfield="entry_form_id" name="Applied Forms" user="entity_id" table="vw_entry_forms">
+			<TEXTFIELD w="350" title="Form Name">form_name</TEXTFIELD>
+			<TEXTTIMESTAMP w="150" title="Application Date">application_date</TEXTTIMESTAMP>
+			<TEXTFIELD w="75" title="Status">approve_status</TEXTFIELD>
+			<BROWSER noorg="true" baseurl="http://localhost:8080/aua/register.jsp?" blankpage="true" action="ENTRYFORM" linkfield="actionvalue" title="Form">entry_form_id</BROWSER>
+			<FILES password="enter" keyfield="sys_file_id" filetable="entry_forms" name="Documents" where="(table_name='entry_forms')" linkfield="table_id" params="table_name" repository="http://localhost:8080/repository/webdav/files/" table="sys_files" username="root">
+				<TEXTFIELD w="75" title="File ID">sys_file_id</TEXTFIELD>
+				<TEXTFIELD w="175" title="File Name">file_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="File Type">file_type</TEXTFIELD>
+				<TEXTFIELD w="75" title="File Size">file_size</TEXTFIELD>
+			</FILES>
+
+		</GRID>
+	</DESK>
+	<DESK noorg="true" w="700" h="500" name="School" key="2" >
+		<GRID noorg="true" keyfield="school_id" name="School" orderby="school_id" table="schools">
+			<TEXTFIELD w="75" title="School ID">school_id</TEXTFIELD>
+			<TEXTFIELD w="250" title="School">school_name</TEXTFIELD>
+			<GRID noorg="true" reporttitle="school_name" keyfield="department_id" name="Department" orderby="department_id" linkfield="school_id" table="vw_departments">
+				<TEXTFIELD w="75" title="Department ID">department_id</TEXTFIELD>
+				<TEXTFIELD w="250" title="Department">department_name</TEXTFIELD>
+				<GRID noorg="true" reporttitle="department_name" keyfield="major_id" name="Majors" linkfield="department_id" table="vw_majors">
+					<TEXTFIELD w="250" title="Majors Name">major_name</TEXTFIELD>
+					<CHECKBOX w="75" format="boolean" title="Core" ischar="true">major</CHECKBOX>
+					<GRID noorg="true" keyfield="major_content_id" name="Majors Contents" orderby="course_id" where="(active = true)" linkfield="major_id" table="vw_major_contents">
+						<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+						<TEXTFIELD w="250" title="Course Title">course_title</TEXTFIELD>
+						<TEXTFIELD w="75" title="Credit Hours">credit_hours</TEXTFIELD>
+						<TEXTFIELD w="75" title="Content Type">content_type_name</TEXTFIELD>
+						<CHECKBOX w="75" format="boolean" title="No GPA" ischar="true">no_gpa</CHECKBOX>
+						<FORMVIEW noorg="true" keyfield="major_content_id" w="570" name="Courses Details" lw="100" linkfield="major_content_id" table="vw_major_contents">
+							<TEXTFIELD w="40" title="Course ID">course_id</TEXTFIELD>
+							<TEXTFIELD w="70" title="Course Title">course_title</TEXTFIELD>
+							<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+							<TEXTFIELD w="70" title="Year Taken">year_taken</TEXTFIELD>
+							<TEXTFIELD w="70" title="Details">course_details</TEXTFIELD>
+							<GRID noorg="true" keyfield="prerequisite_id" name="Prerequisite" table="vw_prerequisite">
+								<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+								<TEXTFIELD w="300" title="Course Title">course_title</TEXTFIELD>
+								<TEXTFIELD w="75" title="Level">option_level</TEXTFIELD>
+								<TEXTFIELD w="75" title="Grade">grade_id</TEXTFIELD>
+							</GRID>
+						</FORMVIEW>
+					</GRID>
+				</GRID>
+				<GRID noorg="true" keyfield="course_id" name="Courses Listing" orderby="course_id" where="(is_current = true)" linkfield="department_id" table="courses">
+					<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+					<TEXTFIELD w="250" title="Course Title">course_title</TEXTFIELD>
+					<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+					<CHECKBOX w="75" format="boolean" title="No GPA" ischar="true">no_gpa</CHECKBOX>
+					<FORMVIEW noorg="true" keyfield="course_id" w="570" name="Courses Details" lw="100" linkfield="course_id" table="courses">
+						<TEXTFIELD w="40" title="Course ID">course_id</TEXTFIELD>
+						<TEXTFIELD w="70" title="Course Title">course_title</TEXTFIELD>
+						<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+						<TEXTFIELD w="70" title="Year Taken">year_taken</TEXTFIELD>
+						<TEXTFIELD w="70" title="Details">details</TEXTFIELD>
+						<GRID noorg="true" name="Prerequisite" linkfield="course_id" table="vw_prereq">
+							<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+							<TEXTFIELD w="300" title="Course Title">course_title</TEXTFIELD>
+							<TEXTFIELD w="75" title="Level">option_level</TEXTFIELD>
+							<TEXTFIELD w="75" title="Grade">grade_id</TEXTFIELD>
+						</GRID>
+					</FORMVIEW>
+				</GRID>
+				<FORMVIEW noorg="true" keyfield="department_id" w="570" name="Department Details" lw="100" linkfield="department_id" table="vw_departments">
+					<TEXTFIELD title="School ID">school_id</TEXTFIELD>
+					<TEXTFIELD title="School Name">school_name</TEXTFIELD>
+					<TEXTFIELD title="Department Name">department_name</TEXTFIELD>
+					<TEXTFIELD title="Philosopy">philosopy</TEXTFIELD>
+					<TEXTFIELD title="Vision">vision</TEXTFIELD>
+					<TEXTFIELD title="Mission">mission</TEXTFIELD>
+					<TEXTFIELD title="Objectives">objectives</TEXTFIELD>
+					<TEXTFIELD title="Exposures">exposures</TEXTFIELD>
+					<TEXTFIELD title="Oppotunities">oppotunities</TEXTFIELD>
+					<TEXTFIELD title="Details">details</TEXTFIELD>
+				</FORMVIEW>
+			</GRID>
+			<FORMVIEW noorg="true" keyfield="school_id" w="550" name="School Details" lw="120" linkfield="school_id" table="schools">
+				<TEXTFIELD title="School ID">school_id</TEXTFIELD>
+				<TEXTFIELD title="School Name">school_name</TEXTFIELD>
+				<TEXTFIELD title="Philosopy">philosopy</TEXTFIELD>
+				<TEXTFIELD title="Vision">vision</TEXTFIELD>
+				<TEXTFIELD title="Mission">mission</TEXTFIELD>
+				<TEXTFIELD title="Objectives">objectives</TEXTFIELD>
+				<TEXTFIELD title="Details">details</TEXTFIELD>
+			</FORMVIEW>
+		</GRID>
+	</DESK>
+
+	<DESK w="700" h="550" name="Applications" key="828">
+		<GRID noorg="true" keyfield="application_id" name="Applications" table="vw_applications" user="entity_id" updatetable="applications">
+		<TEXTFIELD w="25" title="#ID">application_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+		<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+		<TEXTFIELD w="75" title="Middle  Name">middle_name</TEXTFIELD>
+		<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+		<TEXTFIELD w="75" title="Phone No">primary_telephone</TEXTFIELD>
+		<CHECKBOX w="50" title="Emailed">emailed</CHECKBOX>
+		<TEXTFIELD w="50" title="is_paid">paid</TEXTFIELD>
+		<EDITFIELD w="175" title="Form Data">form_data</EDITFIELD>
+		<FILES password="baraza" keyfield="sys_file_id" filetable="applications" name="Documents" where="(table_name='applications')" linkfield="table_id" params="table_name" repository="/repository/webdav/files/" table="sys_files" username="repository">
+			<TEXTFIELD w="75" title="File ID">sys_file_id</TEXTFIELD>
+			<TEXTFIELD w="175" title="File Name">file_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="File Type">file_type</TEXTFIELD>
+			<TEXTFIELD w="75" title="File Size">file_size</TEXTFIELD>
+			<TEXTFIELD w="75" title="narrative">narrative</TEXTFIELD>
+		</FILES>
+	</GRID>
+</DESK>
+
+<DESK w="700" h="550" name="Applications" key="900">
+	<FORM noorg="true" keyfield="application_id" name="Applications" table="applications">
+	<TEXTFIELD w="175" title="Form Data">form_data</TEXTFIELD>
+  </FORM>
+</DESK>
+
+</APP>

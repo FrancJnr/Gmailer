@@ -1,0 +1,214 @@
+<APP auth.table="instructors" password="change_password" org="org_id" auth.id="instructor_id" name="UMIS" auth.name="instructor_id">
+	<MENU name="Information">
+		<MENU name="General Information">
+			<MENU name="Company Profile">1</MENU>
+			<MENU name="University Schools">10</MENU>
+		</MENU>
+		<MENU name="Candidate Details">
+			<MENU name="View Applications">20</MENU>
+		</MENU>
+	</MENU>
+	<DESK w="700" h="500" name="Company Details" key="1">
+		<GRID keyfield="employer_id" name="Company Details" user="employer_id" table="employers">
+			<TEXTFIELD w="15" title="Post New Vacancy" addlink="11">employer_id</TEXTFIELD>
+			<TEXTFIELD w="15" title="Employer ID">employer_id</TEXTFIELD>
+			<TEXTFIELD w="15" title="Company Name">company_name</TEXTFIELD>
+			<TEXTFIELD w="15" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="15" title="Address">address</TEXTFIELD>
+			<TEXTFIELD w="15" title="Zip Code">zipcode</TEXTFIELD>
+			<TEXTFIELD w="15" title="Town">town</TEXTFIELD>
+			<TEXTFIELD w="15" title="Street">street</TEXTFIELD>
+			<TEXTFIELD w="15" title="Premises">premises</TEXTFIELD>
+			<TEXTFIELD w="15" title="Country Code">country_code_id</TEXTFIELD>
+			<TEXTFIELD w="15" title="Tel No.">telno</TEXTFIELD>
+			<TEXTFIELD w="15" title="Fax No.">faxno</TEXTFIELD>
+			<TEXTFIELD w="15" title="Details">details</TEXTFIELD>
+			<CHECKBOX w="15" format="boolean" title="Approved" ischar="true">approved</CHECKBOX>
+			<FORM canedit="true" name="Employers" autofield="employer_id" cols="2" table="employers">
+				<TEXTFIELD w="15" title="Company Name" span="true">company_name</TEXTFIELD>
+				<TEXTFIELD w="15" title="Email" span="true">email</TEXTFIELD>
+				<TEXTAREA w="15" rows="2" title="Address" span="true">address</TEXTAREA>
+				<TEXTFIELD w="15" title="Zip Code" span="true">zipcode</TEXTFIELD>
+				<TEXTFIELD w="15" title="Town" span="true">town</TEXTFIELD>
+				<TEXTFIELD w="15" title="Street" span="true">street</TEXTFIELD>
+				<TEXTFIELD w="15" title="Premises" span="true">premises</TEXTFIELD>
+				<COMBOBOX noorg="true" w="15" lpfield="sys_country_name" lptable="sys_countrys" title="Country" lpkey="sys_country_id" span="true">country_code_id</COMBOBOX>
+				<TEXTFIELD w="15" title="Tel No." span="true">telno</TEXTFIELD>
+				<TEXTFIELD w="15" title="Fax No." span="true">faxno</TEXTFIELD>
+				<TEXTAREA w="15" title="Details" span="true">details</TEXTAREA>
+				<USERFIELD>employer_id</USERFIELD>
+			</FORM>
+			<GRID keyfield="employer_job_id" name="Jobs Posted" linkfield="employer_id" user="employer_id" table="employer_jobs">
+				<TEXTFIELD w="100" title="Job Title">job_description</TEXTFIELD>
+				<TEXTFIELD w="30" title="Open Positions">positions</TEXTFIELD>
+				<TEXTFIELD w="40" format="date" title="Date Posted">post_date</TEXTFIELD>
+				<TEXTFIELD w="40" format="date" title="Close Date">close_date</TEXTFIELD>
+				<CHECKBOX w="30" format="boolean" title="Closed" ischar="true">closed</CHECKBOX>
+				<TEXTFIELD w="150" title="Qualifications">qualifications</TEXTFIELD>
+				<TEXTFIELD w="150" title="Details">details</TEXTFIELD>
+				<FORM canedit="true" keyfield="employer_job_id" name="Edit Vacancy" linkfield="employer_id" table="employer_jobs">
+					<TEXTFIELD w="15" title="Job Title">job_description</TEXTFIELD>
+					<TEXTFIELD w="15" title="Open Positions">positions</TEXTFIELD>
+					<TEXTDATE w="15" title="Date Posted (DD/MM/YYYY)">post_date</TEXTDATE>
+					<TEXTDATE w="15" title="Close Date (DD/MM/YYYY)">close_date</TEXTDATE>
+					<CHECKBOX w="15" title="Closed">closed</CHECKBOX>
+					<TEXTAREA w="15" title="Qualifications">qualifications</TEXTAREA>
+					<TEXTAREA w="15" title="Details">details</TEXTAREA>
+				</FORM>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="School" key="10">
+		<GRID keyfield="school_id" name="School" orderby="school_id" table="schools">
+			<TEXTFIELD w="75" title="School ID">school_id</TEXTFIELD>
+			<TEXTFIELD w="250" title="School">school_name</TEXTFIELD>
+			<GRID noorg="true" reporttitle="school_name" keyfield="Department_id" name="Department" orderby="Department_id" linkfield="school_id" table="vw_departments">
+				<TEXTFIELD w="75" title="Department ID">Department_id</TEXTFIELD>
+				<TEXTFIELD w="250" title="Department">department_name</TEXTFIELD>
+				<GRID reporttitle="department_name" keyfield="specialization_id" name="specializations" linkfield="Department_id" table="vw_specializations">
+					<TEXTFIELD w="250" title="specializations Name">specialization_name</TEXTFIELD>
+					<GRID keyfield="major_content_id" name="specializations Contents" orderby="course_id" linkfield="specialization_id" table="vw_major_contents">
+						<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+						<TEXTFIELD w="250" title="Course Title">course_title</TEXTFIELD>
+						<TEXTFIELD w="75" title="Credit Hours">credit_hours</TEXTFIELD>
+						<TEXTFIELD w="75" title="Content Type">content_type_name</TEXTFIELD>
+						<CHECKBOX w="75" format="boolean" title="No GPA" ischar="true">no_gpa</CHECKBOX>
+						<GRID display="form" keyfield="major_content_id" w="570" name="Courses Details" lw="100" linkfield="major_content_id" table="vw_major_contents">
+							<TEXTFIELD w="40" title="Course ID">course_id</TEXTFIELD>
+							<TEXTFIELD w="70" title="Course Title">course_title</TEXTFIELD>
+							<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+							<TEXTFIELD w="70" title="Year Taken">year_taken</TEXTFIELD>
+							<TEXTFIELD w="70" title="Details">course_details</TEXTFIELD>
+							<GRID keyfield="prerequisite_id" name="Prerequisite" linkfield="major_content_id" table="vw_major_prereq">
+								<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+								<TEXTFIELD w="300" title="Course Title">course_title</TEXTFIELD>
+								<TEXTFIELD w="75" title="Level">option_level</TEXTFIELD>
+								<TEXTFIELD w="75" title="Grade">grade_name</TEXTFIELD>
+							</GRID>
+						</GRID>
+					</GRID>
+				</GRID>
+				<GRID keyfield="course_id" name="Courses Listing" orderby="course_id" where="(is_current = true)" linkfield="Department_id" table="courses">
+					<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+					<TEXTFIELD w="250" title="Course Title">course_title</TEXTFIELD>
+					<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+					<CHECKBOX w="75" format="boolean" title="No GPA" ischar="true">no_gpa</CHECKBOX>
+					<GRID display="form" keyfield="course_id" w="570" name="Courses Details" lw="100" linkfield="course_id" table="courses">
+						<TEXTFIELD w="40" title="Course ID">course_id</TEXTFIELD>
+						<TEXTFIELD w="70" title="Course Title">course_title</TEXTFIELD>
+						<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+						<TEXTFIELD w="70" title="Year Taken">year_taken</TEXTFIELD>
+						<TEXTFIELD w="70" title="Details">details</TEXTFIELD>
+						<GRID name="Prerequisite" linkfield="course_id" table="prereqview">
+							<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+							<TEXTFIELD w="300" title="Course Title">course_title</TEXTFIELD>
+							<TEXTFIELD w="75" title="Level">option_level</TEXTFIELD>
+							<TEXTFIELD w="75" title="Grade">grade_name</TEXTFIELD>
+						</GRID>
+					</GRID>
+				</GRID>
+				<GRID display="form" keyfield="Department_id" w="570" name="Department Details" lw="100" linkfield="Department_id" table="vw_departments">
+					<TEXTFIELD title="School ID">school_id</TEXTFIELD>
+					<TEXTFIELD title="School Name">school_name</TEXTFIELD>
+					<TEXTFIELD title="Department Name">department_name</TEXTFIELD>
+					<TEXTFIELD title="Philosopy">philosopy</TEXTFIELD>
+					<TEXTFIELD title="Vision">vision</TEXTFIELD>
+					<TEXTFIELD title="Mission">mission</TEXTFIELD>
+					<TEXTFIELD title="Objectives">objectives</TEXTFIELD>
+					<TEXTFIELD title="Exposures">exposures</TEXTFIELD>
+					<TEXTFIELD title="Oppotunities">oppotunities</TEXTFIELD>
+					<TEXTFIELD title="Details">details</TEXTFIELD>
+				</GRID>
+			</GRID>
+			<GRID display="form" keyfield="school_id" w="550" name="School Details" lw="120" linkfield="school_id" table="schools">
+				<TEXTFIELD title="School ID">school_id</TEXTFIELD>
+				<TEXTFIELD title="School Name">school_name</TEXTFIELD>
+				<TEXTFIELD title="Philosopy">philosopy</TEXTFIELD>
+				<TEXTFIELD title="Vision">vision</TEXTFIELD>
+				<TEXTFIELD title="Mission">mission</TEXTFIELD>
+				<TEXTFIELD title="Objectives">objectives</TEXTFIELD>
+				<TEXTFIELD title="Details">details</TEXTFIELD>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="View Jobs Posted" key="50">
+		<GRID keyfield="employer_job_id" name="View Jobs Posted" user="employer_id" table="employer_jobs">
+			<TEXTFIELD w="15" title="Job Title">job_description</TEXTFIELD>
+			<TEXTFIELD w="15" title="Open Positions">positions</TEXTFIELD>
+			<TEXTFIELD w="100" format="date" title="Date Posted">post_date</TEXTFIELD>
+			<TEXTFIELD w="100" format="date" title="Close Date">close_date</TEXTFIELD>
+			<CHECKBOX w="15" format="boolean" title="Closed" ischar="true">closed</CHECKBOX>
+			<TEXTFIELD w="150" title="Qualifications">qualifications</TEXTFIELD>
+			<TEXTFIELD w="150" title="Details">details</TEXTFIELD>
+			<FORM canedit="true" name="Edit Vacancy" autofield="employer_job_id" linkfield="employer_job_id" table="employer_jobs">
+				<TEXTFIELD w="15" title="Employer">employer_id</TEXTFIELD>
+				<TEXTFIELD w="15" title="Job Title">job_description</TEXTFIELD>
+				<TEXTFIELD w="15" title="Open Positions">positions</TEXTFIELD>
+				<TEXTDATE w="15" title="Date Posted (DD/MM/YYYY)">post_date</TEXTDATE>
+				<TEXTDATE w="15" title="Close Date (DD/MM/YYYY)">close_date</TEXTDATE>
+				<CHECKBOX w="15" title="Closed">closed</CHECKBOX>
+				<TEXTAREA w="15" title="Qualifications">qualifications</TEXTAREA>
+				<TEXTAREA w="15" title="Details">details</TEXTAREA>
+			</FORM>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Job Applications" key="20">
+		<GRID keyfield="student_id" name="Job Applications" user="employer_id" table="vw_employee_jobs">
+			<TEXTFIELD w="15" title="Job ID">employee_job_id</TEXTFIELD>
+			<TEXTFIELD w="100" title="Job Title">job_description</TEXTFIELD>
+			<TEXTFIELD w="100" title="Applicant Name">student_name</TEXTFIELD>
+			<TEXTFIELD w="100" title="E-mail">email</TEXTFIELD>
+			<TEXTFIELD w="100" format="date" title="Application Date">application_date</TEXTFIELD>
+			<TEXTFIELD w="150" title="Details">details</TEXTFIELD>
+			<GRID name="View CV" linkfield="student_id" table="vw_cv">
+				<TEXTFIELD w="100" title="CV Phase Name">cv_phase_name</TEXTFIELD>
+				<TEXTFIELD w="500" title="Details">details</TEXTFIELD>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="View CV" key="60">
+		<GRID name="View CV" linkfield="student_id" table="vw_cv">
+			<TEXTFIELD w="100" title="CV Phase Name">cv_phase_name</TEXTFIELD>
+			<TEXTFIELD w="500" title="Details">details</TEXTFIELD>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Employers" key="10">
+		<FORM canedit="true" name="Employers" autofield="employer_id" table="employers">
+			<TEXTFIELD w="15" title="Company Name">company_name</TEXTFIELD>
+			<TEXTFIELD w="15" title="Email">email</TEXTFIELD>
+			<TEXTAREA w="15" title="Address">address</TEXTAREA>
+			<TEXTFIELD w="15" title="Zip Code">zipcode</TEXTFIELD>
+			<TEXTFIELD w="15" title="Town">town</TEXTFIELD>
+			<TEXTFIELD w="15" title="Street">street</TEXTFIELD>
+			<TEXTFIELD w="15" title="Premises">premises</TEXTFIELD>
+			<COMBOBOX w="15" lpfield="country_name" lptable="countrys" title="Country" lpkey="country_id">country_code_id</COMBOBOX>
+			<TEXTFIELD w="15" title="Tel No.">telno</TEXTFIELD>
+			<TEXTFIELD w="15" title="Fax No.">faxno</TEXTFIELD>
+			<TEXTAREA w="15" title="Details">details</TEXTAREA>
+			<USERFIELD>employer_id</USERFIELD>
+		</FORM>
+	</DESK>
+	<DESK w="700" h="500" name="Add Vacancy" key="11">
+		<FORM inputfield="employer_id" name="Add Vacancy" autofield="employer_job_id" table="employer_jobs">
+			<TEXTFIELD w="15" title="Job Title">job_description</TEXTFIELD>
+			<TEXTFIELD w="15" title="Open Positions">positions</TEXTFIELD>
+			<TEXTDATE w="15" title="Date Posted (DD/MM/YYYY)">post_date</TEXTDATE>
+			<TEXTDATE w="15" title="Close Date (DD/MM/YYYY)">close_date</TEXTDATE>
+			<CHECKBOX w="15" title="Closed">closed</CHECKBOX>
+			<TEXTAREA w="15" title="Qualifications">qualifications</TEXTAREA>
+			<TEXTAREA w="15" title="Details">details</TEXTAREA>
+		</FORM>
+	</DESK>
+	<DESK w="700" h="500" name="Edit Vacancy" key="12">
+		<FORM canedit="true" name="Edit Vacancy" autofield="employer_job_id" linkfield="employer_job_id" table="employer_jobs">
+			<TEXTFIELD w="15" title="Employer">employer_id</TEXTFIELD>
+			<TEXTFIELD w="15" title="Job Title">job_description</TEXTFIELD>
+			<TEXTFIELD w="15" title="Open Positions">positions</TEXTFIELD>
+			<TEXTDATE w="15" title="Date Posted (DD/MM/YYYY)">post_date</TEXTDATE>
+			<TEXTDATE w="15" title="Close Date (DD/MM/YYYY)">close_date</TEXTDATE>
+			<CHECKBOX w="15" title="Closed">closed</CHECKBOX>
+			<TEXTAREA w="15" title="Qualifications">qualifications</TEXTAREA>
+			<TEXTAREA w="15" title="Details">details</TEXTAREA>
+		</FORM>
+	</DESK>
+</APP>

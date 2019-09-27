@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="vw_student_degreesb" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="b49cfe4e-8c91-47c4-b73f-0eb81abb240f">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="32"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="reportpath" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filterid" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT *
+FROM vw_student_degrees
+WHERE student_degree_id='$P!{filterid}';]]>
+	</queryString>
+	<field name="cohort_id" class="java.lang.Integer"/>
+	<field name="cohort_name" class="java.lang.String"/>
+	<field name="max_number" class="java.lang.Integer"/>
+	<field name="start_date" class="java.sql.Date"/>
+	<field name="end_date" class="java.sql.Date"/>
+	<field name="is_active" class="java.lang.Boolean"/>
+	<field name="site_id" class="java.lang.String"/>
+	<field name="site_name" class="java.lang.String"/>
+	<field name="degree_level_id" class="java.lang.String"/>
+	<field name="degree_level_name" class="java.lang.String"/>
+	<field name="school_id" class="java.lang.String"/>
+	<field name="degree_id" class="java.lang.String"/>
+	<field name="degree_name" class="java.lang.String"/>
+	<field name="religion_id" class="java.lang.String"/>
+	<field name="religion_name" class="java.lang.String"/>
+	<field name="denomination_id" class="java.lang.String"/>
+	<field name="denomination_name" class="java.lang.String"/>
+	<field name="sponsor_type_id" class="java.lang.Integer"/>
+	<field name="sponsor_type_name" class="java.lang.String"/>
+	<field name="sponsor_id" class="java.lang.Integer"/>
+	<field name="sponsor_name" class="java.lang.String"/>
+	<field name="sponsor_address" class="java.lang.String"/>
+	<field name="sponsor_street" class="java.lang.String"/>
+	<field name="sponsor_postal_code" class="java.lang.String"/>
+	<field name="sponsor_town" class="java.lang.String"/>
+	<field name="sponsor_telno" class="java.lang.String"/>
+	<field name="sponsor_email" class="java.lang.String"/>
+	<field name="sponsor_country_id" class="java.lang.String"/>
+	<field name="sponsor_country_name" class="java.lang.String"/>
+	<field name="wage_factor" class="java.lang.Float"/>
+	<field name="school_name" class="java.lang.String"/>
+	<field name="student_id" class="java.lang.String"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="zipcode" class="java.lang.String"/>
+	<field name="town" class="java.lang.String"/>
+	<field name="address_country" class="java.lang.String"/>
+	<field name="tel_no" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="staff" class="java.lang.Boolean"/>
+	<field name="onhold" class="java.lang.Boolean"/>
+	<field name="student_edit" class="java.lang.String"/>
+	<field name="disabilitys_details" class="java.lang.String"/>
+	<field name="passport" class="java.lang.Boolean"/>
+	<field name="national_id" class="java.lang.Boolean"/>
+	<field name="identification_no" class="java.lang.String"/>
+	<field name="picture_file" class="java.lang.String"/>
+	<field name="balance_time" class="java.sql.Timestamp"/>
+	<field name="curr_balance" class="java.lang.Float"/>
+	<field name="account_number" class="java.lang.String"/>
+	<field name="nationality" class="java.lang.String"/>
+	<field name="nationality_country" class="java.lang.String"/>
+	<field name="sex" class="java.lang.String"/>
+	<field name="marital_status" class="java.lang.String"/>
+	<field name="birth_date" class="java.sql.Date"/>
+	<field name="alumnae" class="java.lang.Boolean"/>
+	<field name="post_contacts" class="java.lang.Boolean"/>
+	<field name="on_probation" class="java.lang.Boolean"/>
+	<field name="off_campus" class="java.lang.Boolean"/>
+	<field name="current_contact" class="java.lang.String"/>
+	<field name="current_email" class="java.lang.String"/>
+	<field name="current_tel" class="java.lang.String"/>
+	<field name="org_id" class="java.lang.Integer"/>
+	<field name="student_degree_id" class="java.lang.Integer"/>
+	<field name="completed" class="java.lang.Boolean"/>
+	<field name="started" class="java.sql.Date"/>
+	<field name="cleared" class="java.lang.Boolean"/>
+	<field name="clear_date" class="java.sql.Date"/>
+	<field name="graduated" class="java.lang.Boolean"/>
+	<field name="graduate_date" class="java.sql.Date"/>
+	<field name="graduation_apply" class="java.lang.Boolean"/>
+	<field name="drop_out" class="java.lang.Boolean"/>
+	<field name="transfer_in" class="java.lang.Boolean"/>
+	<field name="transfer_out" class="java.lang.Boolean"/>
+	<field name="details" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="marital" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText" x="59" y="3" width="412" height="40" forecolor="#000000" backcolor="#FFFFFF" uuid="22224e4b-807e-4238-94c7-18eaaf27c35d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Student Degree Report]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement key="line" x="2" y="46" width="531" height="2" uuid="6c3f48a2-f424-4de2-9e52-3ae811d94b22"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="119" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="83" y="46" width="111" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="66a7fa91-83bb-473f-8a43-9ebaca5383d6"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{school_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="2" y="46" width="75" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="83bacff2-86ca-4876-9e2b-6e9af51cd9d4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[School Name :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="70" y="5" width="93" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="dfc10887-37cc-4886-b0c3-edb66166347b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="2" y="5" width="65" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="ec4a8971-7050-472f-a016-d1020dbda5d4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Student ID :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="256" y="5" width="236" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="94a6a3d9-7ef1-4609-8b09-b02bc12afca9"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="172" y="5" width="81" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="a288bb3e-19e0-4075-8b16-1865d3a6b00b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Student Name :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="345" y="26" width="148" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="534702e9-e3aa-4e7b-8086-fdb94a237231"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nationality_country}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="272" y="26" width="67" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="0ad39f13-7cd5-4cb2-b847-11e7da0abe45"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Nationality :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="37" y="26" width="46" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="fabc328d-8bea-4b1a-9614-d2af63d62a3d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="2" y="26" width="27" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="e3c7210a-d33e-449e-938d-49d575753edd"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Sex :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="197" y="26" width="46" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="c6c8660d-316b-4035-b282-14ad88f4e6ea"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{marital_status}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="112" y="26" width="81" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="59a41fdc-c69e-4b0d-94e1-55be2ab449e4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Marital Status :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="271" y="46" width="96" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="528074cd-7c9e-4d08-907a-b1093a2ecd71"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{degree_level_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="195" y="46" width="73" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="6e28b458-4877-438e-8277-f84b0362137c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Degree Level :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="56" y="65" width="51" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="b1c1721d-fdd3-4eae-bbb3-0a45a285a29b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{degree_id}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="114" y="65" width="180" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="7acfe2c2-5585-4473-acd0-15442b266087"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{degree_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="5" y="65" width="44" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="a0fe94f6-d27a-46ee-ab85-d017e4081857"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Degree :]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" x="347" y="65" width="85" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="7151240d-eea2-4a2d-b7dd-fcd1f88bf1d6"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{started}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" positionType="Float" x="297" y="65" width="46" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="4c775811-aa6e-422c-94c7-27f6cdf6924f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Started :]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="437" y="65" width="94" height="17" forecolor="#000000" backcolor="#FFFFFF" uuid="2a4b0f19-6482-4528-aa5a-04c6f4476b33"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{completed}.booleanValue() ? "Completed" : "Not Completed")]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-1" x="0" y="87" width="533" height="29" uuid="74b3dc75-bb8e-4bba-aa44-e072e5d2d783"/>
+				<subreportParameter name="student_degree_id">
+					<subreportParameterExpression><![CDATA[$F{student_degree_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{reportpath} + "coursecheckpass.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="325" y="4" width="170" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="ebce4d2b-6281-40d5-908d-f3ebdfb203f1"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="499" y="4" width="36" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="5f1f00d6-4366-45e1-b457-c5b029da5c60"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line" x="0" y="3" width="535" height="1" uuid="9f605938-c6c9-438e-8317-ff2206493a55"/>
+			</line>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="6" width="209" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="f6e24842-573e-468a-bb04-af3c2ffd00d2"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

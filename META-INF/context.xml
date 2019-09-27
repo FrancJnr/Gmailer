@@ -1,0 +1,21 @@
+<Context crossContext="true" reloadable="true">
+
+	<Resource name="mail/Session" auth="Container" type="javax.mail.Session" 
+		mail.smtp.host="localhost" mail.smtp.auth="false" mail.smtp.user="postgres" 
+		password="baraza" mail.from="root@localhost"/>
+
+	<Realm className="org.apache.catalina.realm.JDBCRealm"
+		driverName="org.postgresql.Driver" connectionURL="jdbc:postgresql://localhost/colleges"
+		connectionName="postgres" connectionPassword="baraza"
+		userTable="tomcat_users" userNameCol="user_name" userCredCol="Entity_password"
+		userRoleTable="tomcat_users" roleNameCol="entity_role">
+		<CredentialHandler className="org.apache.catalina.realm.MessageDigestCredentialHandler" algorithm="md5" />
+	</Realm>
+
+	<Resource maxTotal="250" maxIdle="15" maxWaitMillis="10000" removeAbandonedTimeout="100" 
+		removeAbandonedOnBorrow="true" auth="Container" type="javax.sql.DataSource"
+		name="jdbc/database" driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost/colleges" 
+		username="postgres" password="baraza">
+	</Resource>
+
+</Context>

@@ -1,0 +1,370 @@
+02-Sep-2019 09:01:55.050 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Sep-2019 09:01:55.050 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Sep-2019 09:01:55.051 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@20afb6cd')
+02-Sep-2019 09:02:02.067 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:02.067 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:02.067 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:02.067 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:02.067 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:02.067 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:02.068 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:02.068 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.200 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.201 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.201 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.201 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:02:49.201 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 09:03:03.161 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+02-Sep-2019 09:03:03.161 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 11:19:28.319 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Sep-2019 11:19:28.319 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Sep-2019 11:19:37.957 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Sep-2019 11:19:37.957 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Sep-2019 11:19:37.958 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@28eacabb')
+02-Sep-2019 11:19:40.207 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:40.207 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:40.207 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:40.207 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:40.207 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:40.207 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:40.208 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:40.208 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.668 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.668 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.668 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.668 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.668 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.668 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.668 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.669 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.669 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.669 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.669 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:51.669 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 11:19:55.249 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+02-Sep-2019 11:19:55.249 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 14:11:06.603 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Sep-2019 14:11:06.604 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Sep-2019 14:55:48.922 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Sep-2019 14:55:48.922 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Sep-2019 14:55:48.923 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7f913338')
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:55:53.809 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.461 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.461 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.461 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:13.462 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 14:56:19.988 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+02-Sep-2019 14:56:19.988 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 15:01:57.869 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Sep-2019 15:01:57.869 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+02-Sep-2019 16:09:57.829 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+02-Sep-2019 16:09:57.829 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+02-Sep-2019 16:09:57.831 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2c4bdf0a')
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_students.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_admissions.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_alumnae.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_lecturers.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/c_ueab.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_statement.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_guardians.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:09:59.929 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/a_industry.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.580 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_passwordchange.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.581 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/jsondata] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.581 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.581 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/show_report] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.581 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.582 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_print.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.582 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.report.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.582 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/grid_export] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.583 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/ajax] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.583 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_export.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.583 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/b_searchlist.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:12.583 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/form.exel.jsp] only the HTTP methods [DELETE POST GET PUT] are covered. All other methods are uncovered.
+02-Sep-2019 16:10:16.417 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+02-Sep-2019 16:10:16.418 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 16:11:58.023 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [BJSONData] in context with path [/aua] threw exception
+ java.lang.NullPointerException
+	at org.baraza.DB.BJSONQuery.getJSONData(BJSONQuery.java:60)
+	at org.baraza.web.BJSONData.doGet(BJSONData.java:109)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 16:12:33.683 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [BJSONData] in context with path [/aua] threw exception
+ java.lang.NullPointerException
+	at org.baraza.DB.BJSONQuery.getJSONData(BJSONQuery.java:60)
+	at org.baraza.web.BJSONData.doGet(BJSONData.java:109)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 16:17:49.384 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [BJSONData] in context with path [/aua] threw exception
+ java.lang.NullPointerException
+	at org.baraza.DB.BJSONQuery.getJSONData(BJSONQuery.java:60)
+	at org.baraza.web.BJSONData.doGet(BJSONData.java:109)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 16:41:01.746 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [BJSONData] in context with path [/aua] threw exception
+ java.lang.NullPointerException
+	at org.baraza.DB.BJSONQuery.getJSONData(BJSONQuery.java:60)
+	at org.baraza.web.BJSONData.doGet(BJSONData.java:109)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 16:44:05.077 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [BJSONData] in context with path [/aua] threw exception
+ java.lang.NullPointerException
+	at org.baraza.DB.BJSONQuery.getJSONData(BJSONQuery.java:60)
+	at org.baraza.web.BJSONData.doGet(BJSONData.java:109)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 16:45:05.362 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [BJSONData] in context with path [/aua] threw exception
+ java.lang.NullPointerException
+	at org.baraza.DB.BJSONQuery.getJSONData(BJSONQuery.java:60)
+	at org.baraza.web.BJSONData.doGet(BJSONData.java:109)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+02-Sep-2019 17:14:31.099 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+02-Sep-2019 17:14:31.099 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

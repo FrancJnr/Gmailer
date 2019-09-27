@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="admissions" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="453" leftMargin="28" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="81fb2e84-f44f-4fe0-bb90-6ab7f22b5286">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="19"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="YWRtaXNzaW9uX2Jhc2lzICwxNSw1NywzMjQ1MDhlYi0xYmQzLTQxMjMtYTlmMS1jZThmNzkwYWU2&#xA;NjQ7dndfc3R1ZGVudHMgLDE5Miw1NywwMjgxMWU5ZC00OWZjLTQ4MTctYjE5OC1jNjM5YThmM2U5&#xA;NTI7dndfc3R1ZGVudF9zcGVjaWFsaXphdGlvbnMgLDM5NiwxNSxmOGU4MWVmMy0xYmMyLTQ5OTQt&#xA;YTk3NC0xYjc0Mjk4MzYxMzE7"/>
+	<parameter name="filterid" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT vw_student_specializations.student_id,
+	vw_student_specializations.student_name,
+	vw_student_specializations.school_name,
+	vw_student_specializations.degree_name,
+	vw_student_specializations.specialization_name,
+	vw_students.admission_status_id,
+	admission_status_name,
+	admission_basis.admission_basis
+FROM vw_student_specializations
+	INNER JOIN vw_students ON
+	 vw_students.student_id = vw_student_specializations.student_id
+	LEFT JOIN admission_basis ON
+	 admission_basis.student_id = vw_students.student_id
+WHERE
+	 vw_student_specializations.student_id = '$P!{filterid}']]>
+	</queryString>
+	<field name="student_id" class="java.lang.String"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="school_name" class="java.lang.String"/>
+	<field name="degree_name" class="java.lang.String"/>
+	<field name="specialization_name" class="java.lang.String"/>
+	<field name="admission_status_id" class="java.lang.Integer"/>
+	<field name="admission_status_name" class="java.lang.String"/>
+	<field name="admission_basis" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="186" splitType="Stretch">
+			<staticText>
+				<reportElement x="161" y="18" width="79" height="19" uuid="84108454-ab96-48a9-bea9-816127a18bab"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[AUA			]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="37" width="220" height="29" uuid="705d58ca-286a-430f-9f98-79bbed7ed113"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Adventist University of Africa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="66" width="287" height="65" uuid="bd1632ed-5bfa-4d44-90fe-4420c326205d"/>
+				<textElement textAlignment="Right" markup="styled">
+					<font fontName="Arial" size="9" isBold="false"/>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="4.0"/>
+				</textElement>
+				<text><![CDATA[Private Bag Mbagathi
+                                                                                                                                     00503 Nairobi, Kenya
+                                                                                                                       Tel (254) 206603073/6603306
+
+                                                                                                                                                                                       Fax: (254) 20 660 3150
+                                                                                                                                                                                 Email: registrar@aua.ac.ke
+                                                                                                                                                                                          WEB: www.aua.ac.ke
+		 Location:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="134" width="208" height="20" uuid="d40af906-f8d2-41e1-9410-98dc98b86893"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Advent Hill, Magadi Road, Ongata Rongai]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy" isBlankWhenNull="true">
+				<reportElement x="13" y="166" width="284" height="20" uuid="e15f4888-77bc-4a9c-a24e-5be9738916a8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="160" height="131" uuid="535af605-0065-4f57-84bb-54ce3dc3ac80"/>
+				<imageExpression><![CDATA["/opt/projects/tomcat8.5/webapps/aua/docs/aua_logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="48" y="0" width="149" height="20" uuid="63f1131c-a758-4765-b002-2debc841dcea"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[LETTER OF ADMISSION  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="42" width="272" height="20" uuid="d2b6350e-bd1d-44b7-ab15-8176f731582e"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEAR BROTHER/SISTER,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="204" y="2" width="159" height="20" uuid="048e3ba7-8666-460b-b27c-4a7155244906"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="440" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="16" width="547" height="46" isPrintWhenDetailOverflows="true" uuid="1175411d-342d-48a5-97c2-83170a395ee4"/>
+				<textElement markup="html">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Congratulations! This is to notify you that you have been admitted into the"+ $F{degree_name} +"degree program at the Adventist University of Africa (AUA). You have been admitted into the program under a"+ $F{admission_status_name} +" Status. You will remain in this status until you fulfil the following requirements: "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="122" width="550" height="318" uuid="5a61c2e0-1d0e-4861-87ab-7179cbad371d"/>
+				<text><![CDATA[You have six (6) months to fulfil all the requirements. Failure to do so will result in your admission being withdrawn.
+
+The normal duration of the program shall be two and a half years with an intensive integration of online and classroom contact during a specific period each year. The first session of class begins with the face-to-face followed by online delivery. The commencement of the face-to face and online phase will be communicated to you later by the Admission Officer. You are to report at Valley View University Techiman campus, Ghana the day before classes begin for orientation and registration.
+
+You have been offered admission based on the documents you submitted. If we discover any discrepancy in your documents at any point, you will be asked to withdraw from the program and the university. PLEASE NOTE that you need a minimum CGPA of 2.75 on a 4.00-point scale to qualify for graduation at the end of the program.
+
+For you to secure your admission, you are required to pay a non-refundable commitment fee of $200 as soon as possible. Please, know that when you report for the face to face session, this commitment fee will count towards your tuition fee but if you fail to report, the commitment fee is not refunded. Please scan your payment receipt and mail to kererip@aua.ac.ke with a copy to admissions@aua.ac.ke and ganud@aua.ac.ke.
+
+We believe that the AUA experience with its spiritual and multi-national professors, who combine rich academic and teaching experience, will enrich and prepare you to engage in a more professional and competent ministry.
+
+Welcome to a new experience and may the Lord abundantly bless you in your choice of AUA.
+
+
+Sincerely, ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<image>
+				<reportElement x="13" y="10" width="336" height="41" uuid="3b6d5124-e609-4af3-8a21-1e7124d1a082"/>
+				<imageExpression><![CDATA["/opt/projects/tomcat8.5/webapps/aua/docs/application_letter_signature.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="4" width="340" height="40" uuid="3ebd94d1-21c0-47c3-a8a1-259bbadef4cc"/>
+				<text><![CDATA[Angela E. Nwaomah, Ph.D
+Registrar ]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="registrationslip" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f77b3cca-2a12-4527-bf6a-570618becef8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/baraza/projects/aua/reports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="studentid" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT student_id, student_name, session_id, degree_name, registrar_approval, student_dean_approval, ict_approval, residence_approval, approved FROM vw_sstudents
+
+WHERE student_id=$P{studentid}]]>
+	</queryString>
+	<field name="student_id" class="java.lang.String"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="session_id" class="java.lang.String"/>
+	<field name="degree_name" class="java.lang.String"/>
+	<field name="registrar_approval" class="java.lang.Boolean"/>
+	<field name="student_dean_approval" class="java.lang.Boolean"/>
+	<field name="ict_approval" class="java.lang.Boolean"/>
+	<field name="residence_approval" class="java.lang.Boolean"/>
+	<field name="approved" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="124" y="0" width="356" height="20" uuid="b016d554-6a80-488e-b050-ab815e857c7c"/>
+				<text><![CDATA[Registration Slip]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="68" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="12" width="100" height="20" uuid="809f5315-0abf-4a11-8621-da6d63d249ce"/>
+				<textFieldExpression><![CDATA[$F{session_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="48" width="100" height="20" uuid="a39f843c-670d-4773-be8c-ab92d971f5d6"/>
+				<textFieldExpression><![CDATA[$F{student_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="48" width="100" height="20" uuid="da2e144c-88b8-4cc0-87b2-1d2e1ed9286f"/>
+				<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="12" width="100" height="20" uuid="7c0bf57a-ccdd-41cd-bac8-c0cf6bcadc59"/>
+				<textFieldExpression><![CDATA[$F{degree_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="12" width="100" height="20" uuid="2e96cb13-862d-4f32-8ea8-e841a9b06a0a"/>
+				<text><![CDATA[Session ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="14" width="100" height="20" uuid="9ad1d88e-2c75-4dfb-b5cf-b6786ed01943"/>
+				<text><![CDATA[Degree Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="48" width="100" height="20" uuid="7f3ae9fd-d117-4b2e-afef-40f925410b38"/>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="48" width="100" height="20" uuid="66cb7f0b-c81b-4983-b4f5-536a090f8360"/>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<subreport>
+				<reportElement x="92" y="25" width="319" height="100" uuid="685b320a-3a83-4fc6-ac26-fe6eb82eff6e"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "registeredcourses.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="176" height="20" uuid="0c0d6182-7139-44ee-8267-afdbc4900ea2"/>
+				<text><![CDATA[registrar_approval]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="34" y="25" width="176" height="20" uuid="c855433e-e428-4fda-9140-81454155b7e8"/>
+				<textFieldExpression><![CDATA[$F{student_dean_approval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="5" width="136" height="20" uuid="07559285-7a8f-4538-a5d8-ca0d8d6bcd3d"/>
+				<textFieldExpression><![CDATA[$F{ict_approval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="30" width="136" height="20" uuid="43f4e8e5-fa71-4636-a2d3-828c1b46cd11"/>
+				<textFieldExpression><![CDATA[$F{residence_approval}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

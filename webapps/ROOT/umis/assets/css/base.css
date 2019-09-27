@@ -1,0 +1,23 @@
+@import url("../fonts/proxima/fonts.min.css"); 			/* Main Fonts */
+@import url("animate.min.css"); 							/* Animate */
+@import url("bootstrap.min.css"); 							/* Main Bootstrap */
+@import url("menu.css");											/* Menu styles */
+@import url("style.css");											/* Main theme styles */
+@import url("responsive.css");									/* Responsive */
+@import url("../fonts/elegant_font/elegant_font.min.css");	/* Icon pack */
+@import url("../fonts/icon_font/pe-icon-7-stroke.min.css");	/* Icon pack */
+@import url("../fonts/fontella/css/fontello.min.css");				/* Icon pack */
+@import url("../fonts/edu_fonts/edu_fonts.min.css");				/* Icon pack */
+@import url("magnific-popup.css");						/* Lightbox & dialog script */
+@import url("custom.css");										/* Your custom css (We reccomend use it for a faster and simplified item updates) */
+
+/*
+How to change colors
+1) uncomment one of the color variation below
+2) change the header images
+
+DONE!
+*/
+/* @import url("color-green.css");					     Color variation Green */
+/* @import url("color-purple.css");					  	 Color variation Purple */
+/* @import url("color-red.css");					         Color variation Green */

@@ -1,0 +1,363 @@
+<APP auth.table="students" password="change_password" org="org_id" auth.id="student_id" name="UMIS" auth.name="student_id">
+	<MENU title="Alumnae">
+		<MENU icon="fa fa-graduation-cap font-black-sharp" name="My profile">2</MENU>
+		<MENU icon="fa fa-university font-black-sharp" name="University Info">10</MENU>
+		<MENU icon="fa fa-file font-black-sharp" name="My Cv">23</MENU>
+		<MENU icon="fa fa-question-circle font-black-sharp" name="Queries" table="student_requests">31</MENU>
+		<MENU icon="fa fa-folder-open font-black-sharp" name="Academic Records">
+			<MENU icon="fa fa-circle-o font-black-sharp" name="Session GPA">19</MENU>
+			<MENU icon="fa fa-circle-o font-black-sharp" name="Transcript">21</MENU>
+			<MENU icon="fa fa-circle-o font-black-sharp" name="Graduation">85</MENU>
+		</MENU>
+		<MENU icon="fa fa-users font-black-sharp" name="Alumnae Membership">90</MENU>
+		<MENU icon="fa fa-calendar font-black-sharp" name="Events">95</MENU>
+	</MENU>
+	<DESK access="open" w="700" h="500" name="Dashboard" key="1">
+		<DASHBOARD noorg="true" w="700" name="Dashboard" class="fa fa-group font-blue-sharp">
+			<TILELIST noorg="true" where="(actioned = true)" title="Queries Status" class="glyphicon glyphicon-user" user="student_id" table="vw_student_requests">
+				<TEXTLINK jumpview="31:0" w="75" icon="fa fa-group font-blue-sharp" title="Subject">subject</TEXTLINK>
+				<TEXTFIELD w="75" icon="fa fa-group font-blue-sharp" title="Reply">reply</TEXTFIELD>
+			</TILELIST>
+			<TILELIST noorg="true" where="(publish = true)" title="News" class="glyphicon glyphicon-user" table="vw_alumnae_news">
+				<TEXTLINK jumpview="31:0" w="75" icon="fa fa-group font-blue-sharp" title="Subject">title</TEXTLINK>
+				<TEXTFIELD w="75" icon="fa fa-group font-blue-sharp" title="News">news</TEXTFIELD>
+			</TILELIST>
+		</DASHBOARD>
+	</DESK>
+	<DESK noorg="true" w="700" h="500" name="My Details" key="2">
+		<FORMVIEW new="false" noorg="true" keyfield="student_id" w="550" name="My Details" lw="120" params="school_id" user="student_id" table="vw_students">
+			<TEXTFIELD w="75" title="Student ID">student_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Student Name">student_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="School">school_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Religion">religion_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Denomination">denomination_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Sex">gender</TEXTFIELD>
+			<TEXTFIELD w="75" title="Marital Status">marital</TEXTFIELD>
+			<TEXTFIELD w="75" title="Nationality">nationality_country</TEXTFIELD>
+			<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+			<TEXTFIELD w="75" title="Town">town</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Phone Number">tel_no</TEXTFIELD>
+			<FORM new="false" noorg="true" keyfield="student_id" name="Update Details" where="(student_edit='allow')" table="students">
+				<TEXTFIELD w="150" h="20" x="290" y="130" title="Email">email</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="290" y="50" title="Address">address</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="10" y="70" title="Zipcode">zipcode</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="290" y="70" title="Town">town</TEXTFIELD>
+				<COMBOBOX noorg="true" w="150" h="20" lpfield="sys_country_name" x="10" y="90" lptable="sys_countrys" title="Country" lpkey="sys_country_id">country_code_id</COMBOBOX>
+				<TEXTFIELD w="150" h="20" x="290" y="90" title="Tel No">tel_no</TEXTFIELD>
+				<CHECKBOX w="50" h="20" x="290" y="110" lw="70" title="National ID">national_id</CHECKBOX>
+				<CHECKBOX w="50" h="20" x="440" y="110" lw="70" title="Passport">passport</CHECKBOX>
+				<TEXTFIELD w="150" h="20" x="10" y="130" title="Identification No">identification_no</TEXTFIELD>
+				<TEXTAREA w="430" h="40" x="10" y="290" title="if yes, give details">disabilitys_details</TEXTAREA>
+			</FORM>
+		</FORMVIEW>
+		<FORMVIEW noorg="true" keyfield="student_id" w="550" name="Degree" lw="120" user="student_id" table="vw_student_specializations">
+			<TEXTFIELD w="75" title="Level">degree_level_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Degree">degree_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Cohort">cohort_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Site">site_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Specialization">specialization_name</TEXTFIELD>
+		</FORMVIEW>
+	</DESK>
+	<DESK w="700" h="500" name="School" key="10">
+		<GRID noorg="true" keyfield="school_id" name="Schools" orderby="school_name" table="schools">
+			<TEXTLINK w="40" title="School ID">school_id</TEXTLINK>
+			<TEXTFIELD w="240" title="School Name">school_name</TEXTFIELD>
+			<GRID noorg="true" keyfield="degree_id" name="Degrees" orderby="degree_id" linkfield="school_id" table="vw_degrees">
+				<TEXTLINK w="40" title="Degree ID">degree_id</TEXTLINK>
+				<TEXTFIELD w="40" title="Degree Name">degree_name</TEXTFIELD>
+				<TEXTFIELD w="40" title="Degree Level">degree_level_name</TEXTFIELD>
+				<GRID noorg="true" keyfield="specialization_id" name="Specializations" linkfield="degree_id" table="vw_specializations">
+					<TEXTLINK w="75" title="Specialization #ID">specialization_id</TEXTLINK>
+					<TEXTFIELD w="75" title="Specialization">specialization_name</TEXTFIELD>
+					<FORMVIEW noorg="true" keyfield="major_content_id" w="570" name="Courses Details" lw="100" linkfield="major_content_id" table="vw_major_contents">
+						<TEXTFIELD w="40" title="Course ID">course_id</TEXTFIELD>
+						<TEXTFIELD w="70" title="Course Title">course_title</TEXTFIELD>
+						<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+						<TEXTFIELD w="70" title="Year Taken">year_taken</TEXTFIELD>
+						<TEXTFIELD w="70" title="Details">course_details</TEXTFIELD>
+						<GRID noorg="true" keyfield="prerequisite_id" name="Prerequisite" table="vw_prerequisite">
+							<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+							<TEXTFIELD w="300" title="Course Title">course_title</TEXTFIELD>
+							<TEXTFIELD w="75" title="Level">option_level</TEXTFIELD>
+							<TEXTFIELD w="75" title="Grade">grade_id</TEXTFIELD>
+						</GRID>
+					</FORMVIEW>
+				</GRID>
+			</GRID>
+			<FORMVIEW noorg="true" keyfield="school_id" w="550" name="School Details" lw="120" linkfield="school_id" table="schools">
+				<TEXTFIELD title="School ID">school_id</TEXTFIELD>
+				<TEXTFIELD title="School Name">school_name</TEXTFIELD>
+				<TEXTFIELD title="Philosopy">philosopy</TEXTFIELD>
+				<TEXTFIELD title="Vision">vision</TEXTFIELD>
+				<TEXTFIELD title="Mission">mission</TEXTFIELD>
+				<TEXTFIELD title="Objectives">objectives</TEXTFIELD>
+				<TEXTFIELD title="Details">details</TEXTFIELD>
+			</FORMVIEW>
+			<GRID noorg="true" keyfield="course_id" name="Courses Listing" orderby="course_id" linkfield="school_id" table="vw_courses">
+				<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+				<TEXTFIELD w="250" title="Course Title">course_title</TEXTFIELD>
+				<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+				<CHECKBOX w="75" format="boolean" title="No GPA" ischar="true">no_gpa</CHECKBOX>
+				<FORMVIEW noorg="true" keyfield="course_id" w="570" name="Courses Details" lw="100" linkfield="course_id" table="courses">
+					<TEXTFIELD w="40" title="Course ID">course_id</TEXTFIELD>
+					<TEXTFIELD w="70" title="Course Title">course_title</TEXTFIELD>
+					<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+					<TEXTFIELD w="70" title="Year Taken">year_taken</TEXTFIELD>
+					<TEXTFIELD w="70" title="Details">details</TEXTFIELD>
+					<GRID noorg="true" name="Prerequisite" linkfield="course_id" table="vw_prereq">
+						<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+						<TEXTFIELD w="300" title="Course Title">course_title</TEXTFIELD>
+						<TEXTFIELD w="75" title="Level">option_level</TEXTFIELD>
+						<TEXTFIELD w="75" title="Grade">grade_id</TEXTFIELD>
+					</GRID>
+				</FORMVIEW>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Course List" key="21">
+		<GRID noorg="true" name="Course List" user="student_id" table="vw_student_grades">
+			<TEXTFIELD w="75" title="Sesion ID">session_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+			<TEXTFIELD w="200" title="Course Title">course_title</TEXTFIELD>
+			<TEXTFIELD w="120" title="Instuctor">instructor_name</TEXTFIELD>
+			<TEXTFIELD w="50" title="Credit">credit</TEXTFIELD>
+			<TEXTFIELD w="50" title="Grade">grade_name</TEXTFIELD>
+			<TEXTFIELD w="50" format="double" title="GP">gpa</TEXTFIELD>
+		</GRID>
+		<GRID noorg="true" name="Transfered Credits" user="student_id" table="vw_transfered_credits">
+			<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+			<TEXTFIELD w="200" title="Course Title">course_title</TEXTFIELD>
+			<TEXTFIELD w="50" title="Credit Hours">credit_hours</TEXTFIELD>
+		</GRID>
+	</DESK>
+	<DESK noorg="true" w="700" h="500" name="Select Courses" key="24">
+		<GRID noorg="true" keyfield="scourse_id" name="Select Courses" orderby="course_id" user="student_id" table="vw_scourse_check_pass">
+			<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+			<TEXTFIELD w="160" title="Course Title">course_title</TEXTFIELD>
+			<TEXTFIELD w="75" title="Option">class_option</TEXTFIELD>
+			<TEXTFIELD w="25" title="Credit Hours">credit_hours</TEXTFIELD>
+			<CHECKBOX w="40" format="boolean" title="No. GPA" ischar="true">no_gpa</CHECKBOX>
+			<FORMVIEW noorg="true" keyfield="scourse_id" w="570" name="Courses Details" lw="100" linkfield="scourse_id" table="vw_scourses">
+				<TEXTFIELD w="40" title="Course ID">course_id</TEXTFIELD>
+				<TEXTFIELD w="70" title="Course Title">course_title</TEXTFIELD>
+				<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+				<TEXTFIELD w="70" title="Year Taken">year_taken</TEXTFIELD>
+				<TEXTFIELD w="70" title="Details">details</TEXTFIELD>
+			</FORMVIEW>
+			<ACTIONS>
+				<ACTION fnct="ins_scourses">Select</ACTION>
+			</ACTIONS>
+		</GRID>
+	</DESK>
+	<DESK noorg="true" w="700" h="500" name="Check Listing" key="26">
+		<GRID noorg="true" name="Check Listing" user="student_id" table="vw_course_check_lists">
+			<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+			<TEXTFIELD w="150" title="Course Title">course_title</TEXTFIELD>
+			<TEXTFIELD w="70" title="Hours">credit_hours</TEXTFIELD>
+			<CHECKBOX w="75" format="boolean" title="Course Passed" ischar="true">course_passed</CHECKBOX>
+			<CHECKBOX w="75" format="boolean" title="Prereq. Passed" ischar="true">prereq_passed</CHECKBOX>
+			<TEXTFIELD subreport="8" w="70" title="Details">course_id</TEXTFIELD>
+		</GRID>
+	</DESK>
+	<DESK noorg="true" w="700" h="500" name="Course List" key="27">
+		<GRID user_field="session_id" noorg="true" keyfield="scourse_id" name="Session Courses" where="(active=true)" user_fnct="get_student_session" linkfield="session_id" table="vw_scourses">
+			<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+			<TEXTFIELD w="150" title="Course Title">course_title</TEXTFIELD>
+			<TEXTDECIMAL w="75" title="Credit Hours">credit_hours</TEXTDECIMAL>
+			<CHECKBOX w="60" title="No Gpa">no_gpa</CHECKBOX>
+			<TEXTFIELD w="75" title="Year Taken">year_taken</TEXTFIELD>
+			<TEXTFIELD w="75" title="Instructor Name">instructor_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Class Option">class_option</TEXTFIELD>
+		</GRID>
+		<GRID noorg="true" keyfield="course_id" name="Additional Courses" table="vw_courses">
+			<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+			<TEXTFIELD w="150" title="Course Title">course_title</TEXTFIELD>
+			<TEXTDECIMAL w="75" title="Credit Hours">credit_hours</TEXTDECIMAL>
+			<CHECKBOX w="60" title="No Gpa">no_gpa</CHECKBOX>
+			<TEXTFIELD w="75" title="Year Taken">year_taken</TEXTFIELD>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Post" key="31">
+		<GRID noorg="true" keyfield="student_request_id" name="My Queries" user="student_id" table="vw_student_requests">
+			<CHECKBOX w="50" title="Actioned">actioned</CHECKBOX>
+			<TIMESTAMP w="100" title="Date Sent">date_sent</TIMESTAMP>
+			<TEXTFIELD w="100" title="Subject">subject</TEXTFIELD>
+			<TEXTFIELD w="250" title="Reply">reply</TEXTFIELD>
+			<FORM new="true" edit="false" keyfield="student_request_id" name="Query/Request" table="student_requests">
+				<USERFIELD>student_id</USERFIELD>
+				<COMBOBOX noorg="true" w="75" lpfield="request_type_name" lptable="request_types" title="Request Types">request_type_id</COMBOBOX>
+				<TEXTFIELD w="250" title="Subject">subject</TEXTFIELD>
+				<TEXTAREA title="Issue/Request">narrative</TEXTAREA>
+			</FORM>
+		</GRID>
+	</DESK>
+	<DESK noorg="true" w="700" h="500" name="Graduation" key="85">
+		<GRID noorg="true" keyfield="student_degree_id" name="Completion Letter" where="(graduation_apply = true) AND (completed = true)" user="student_id" table="vw_student_degrees">
+			<TEXTFIELD w="40" title="Student ID">student_id</TEXTFIELD>
+			<TEXTFIELD w="40" title="Student Name">student_name</TEXTFIELD>
+			<TEXTFIELD w="40" title="Sex">sex</TEXTFIELD>
+			<TEXTFIELD w="40" title="School">school_name</TEXTFIELD>
+			<TEXTFIELD w="40" title="Nationality">Nationality</TEXTFIELD>
+			<TEXTFIELD w="140" title="Degree">degree_name</TEXTFIELD>
+			<TEXTFIELD w="45" title="Completed">completed</TEXTFIELD>
+			<JASPER reportfile="degree_comp_letter.jasper" name="Completion Letter" linkfield="filterid" showpdf="true"></JASPER>
+		</GRID>
+	</DESK>
+	<DESK noorg="true" w="700" h="500" name="Session List" key="19">
+		<GRID noorg="true" keyfield="sstudent_id" name="Session List" where="(major_approval = true)" user="student_id" table="vw_student_session_summary">
+			<TEXTLINK w="75" title="Session">session_id</TEXTLINK>
+			<TEXTFIELD w="75" title="Hours">credit</TEXTFIELD>
+			<TEXTFIELD w="75" format="double" title="gpa">gpa</TEXTFIELD>
+			<TEXTFIELD w="75" title="C. Hours">cumm_credit</TEXTFIELD>
+			<TEXTFIELD w="75" format="double" title="C. gpa">cumm_gpa</TEXTFIELD>
+			<GRID noorg="true" name="Session Course List" linkfield="sstudent_id" table="vw_sgrades">
+				<TEXTFIELD w="75" title="Session ID">session_id</TEXTFIELD>
+				<TEXTFIELD w="75" title="Course ID">course_id</TEXTFIELD>
+				<TEXTFIELD w="200" title="Course Title">course_title</TEXTFIELD>
+				<TEXTFIELD w="120" title="Instuctor">instructor_name</TEXTFIELD>
+				<TEXTFIELD w="50" title="Credit">credit</TEXTFIELD>
+				<TEXTFIELD w="50" title="Grade">grade_name</TEXTFIELD>
+				<TEXTFIELD w="50" format="double" title="GP">gpa</TEXTFIELD>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="650" name="Alumanae CV" key="23">
+		<FORMVIEW new="false" noorg="true" keyfield="entity_id" w="550" name="My Details" lw="120" user="student_id" table="vw_alumnaes">
+			<TEXTFIELD w="75" title="Student ID">student_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Student Name">student_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="School">school_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Religion">religion_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Denomination">denomination_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Sex">gender</TEXTFIELD>
+			<TEXTFIELD w="75" title="Marital Status">marital</TEXTFIELD>
+			<TEXTFIELD w="75" title="Nationality">nationality_country</TEXTFIELD>
+			<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+			<TEXTFIELD w="75" title="Town">town</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Phone Number">tel_no</TEXTFIELD>
+			<JASPER filtered="true" reportfile="cv_applicant_2.jasper" name="CV"></JASPER>
+			<GRID noorg="true" keyfield="education_id" name="Education" orderby="date_from desc" linkfield="entity_id" table="vw_education">
+				<TEXTFIELD w="75" title="Education Class Name">education_class_name</TEXTFIELD>
+				<TEXTDATE w="75" title="Date From">date_from</TEXTDATE>
+				<TEXTDATE w="75" title="Date To">date_to</TEXTDATE>
+				<TEXTFIELD w="75" title="Name Of Institution">name_of_school</TEXTFIELD>
+				<TEXTFIELD w="75" title="Certification">examination_taken</TEXTFIELD>
+				<TEXTFIELD w="75" title="Grades Obtained">grades_obtained</TEXTFIELD>
+				<FORM keyfield="education_id" name="Education" linkfield="entity_id" table="education">
+					<COMBOBOX noorg="true" w="430" h="20" lpfield="education_class_name" x="10" orderby="education_class_id" y="10" lptable="education_class" title="Education Class">education_class_id</COMBOBOX>
+					<TEXTDATE w="150" h="20" x="10" y="30" title="Date From" required="true">date_from</TEXTDATE>
+					<TEXTDATE w="150" h="20" x="290" y="30" title="Date To">date_to</TEXTDATE>
+					<TEXTFIELD w="430" h="20" x="10" y="50" title="Name of Institution" required="true">name_of_school</TEXTFIELD>
+					<TEXTFIELD w="430" h="20" x="10" y="70" placeholder="Certification or Degree: e.g. Msc Computer Science" title="Certification or Degree">examination_taken</TEXTFIELD>
+					<TEXTFIELD w="150" h="20" x="10" y="90" placeholder="Grades Obtained: e.g. Upper second-class honours" title="Grades Obtained">grades_obtained</TEXTFIELD>
+					<TEXTAREA w="430" h="70" x="10" y="110" title="Details">details</TEXTAREA>
+				</FORM>
+			</GRID>
+			<GRID noorg="true" keyfield="employment_id" name="Employment" orderby="date_from desc" linkfield="entity_id" table="vw_employment">
+				<TEXTDATE w="75" title="Date From">date_from</TEXTDATE>
+				<TEXTDATE w="75" title="Date To">date_to</TEXTDATE>
+				<TEXTFIELD w="75" title="Employers Name">employers_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Position Held">position_held</TEXTFIELD>
+				<FORM keyfield="employment_id" name="Employment" linkfield="entity_id" table="employment">
+					<TEXTDATE w="150" h="20" x="10" y="10" title="Date From">date_from</TEXTDATE>
+					<TEXTDATE w="150" h="20" x="290" y="10" title="Date To">date_to</TEXTDATE>
+					<TEXTFIELD w="430" h="20" x="10" y="30" title="Employers Name">employers_name</TEXTFIELD>
+					<TEXTFIELD w="430" h="20" x="10" y="50" title="Position Held">position_held</TEXTFIELD>
+					<TEXTAREA w="430" h="70" x="10" y="70" title="Details">details</TEXTAREA>
+				</FORM>
+			</GRID>
+			<GRID noorg="true" keyfield="skill_id" name="Skills" linkfield="entity_id" table="vw_skills">
+				<TEXTFIELD w="75" title="Skill Type Name">skill_type_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Skill Level">skill_level_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Training Institution">training_institution</TEXTFIELD>
+				<FORM keyfield="skill_id" name="Skills" linkfield="entity_id" table="skills">
+					<COMBOBOX cmb_fnct="(skill_category_name || ' - ' || skill_type_name)" noorg="true" w="430" h="20" lpfield="skill_type_name" x="10" y="10" lptable="vw_skill_types" title="Skill Type">skill_type_id</COMBOBOX>
+					<COMBOBOX noorg="true" w="430" h="20" lpfield="skill_level_name" x="10" y="50" lptable="skill_levels" title="Skill Level ID">skill_level</COMBOBOX>
+					<TEXTFIELD w="430" h="20" x="10" y="50" title="Training Institution">training_institution</TEXTFIELD>
+					<TEXTAREA w="430" h="70" x="10" y="70" title="Details">details</TEXTAREA>
+				</FORM>
+			</GRID>
+			<GRID noorg="true" keyfield="cv_seminar_id" name="Seminars" linkfield="entity_id" table="vw_cv_seminars">
+				<TEXTFIELD w="75" title="Seminar Name">cv_seminar_name</TEXTFIELD>
+				<TEXTDATE w="75" title="Seminar Date">cv_seminar_date</TEXTDATE>
+				<FORM keyfield="cv_seminar_id" name="Cv Seminars" linkfield="entity_id" table="cv_seminars">
+					<TEXTFIELD w="430" h="20" x="10" y="10" title="Seminar Name">cv_seminar_name</TEXTFIELD>
+					<TEXTDATE w="150" h="20" x="10" y="30" title="Seminar Date">cv_seminar_date</TEXTDATE>
+					<TEXTAREA w="430" h="70" x="10" y="50" title="Details">details</TEXTAREA>
+				</FORM>
+			</GRID>
+			<GRID noorg="true" keyfield="cv_project_id" name="Projects" linkfield="entity_id" table="vw_cv_projects">
+				<TEXTFIELD w="75" title="Project Name">cv_project_name</TEXTFIELD>
+				<TEXTDATE w="75" title="Project Date">cv_project_date</TEXTDATE>
+				<FORM keyfield="cv_project_id" name="Projects" linkfield="entity_id" table="cv_projects">
+					<TEXTFIELD w="430" h="20" x="10" y="10" title="Project Name">cv_project_name</TEXTFIELD>
+					<TEXTDATE w="150" h="20" x="10" y="30" title="Project Date">cv_project_date</TEXTDATE>
+					<TEXTAREA w="430" h="70" x="10" y="50" title="Details">details</TEXTAREA>
+				</FORM>
+			</GRID>
+			<GRID noorg="true" keyfield="cv_referee_id" name="Referees" linkfield="entity_id" table="vw_cv_referees">
+				<TEXTFIELD w="75" title="Cv Referee Name">cv_referee_name</TEXTFIELD>
+				<FORM keyfield="cv_referee_id" name="Referees" linkfield="entity_id" table="cv_referees">
+					<TEXTFIELD w="150" h="20" x="10" y="30" title="Referee Name">cv_referee_name</TEXTFIELD>
+					<TEXTAREA w="430" h="70" x="10" y="50" title="Referee Address">cv_referee_address</TEXTAREA>
+					<TEXTAREA w="430" h="70" x="10" y="120" title="Details">details</TEXTAREA>
+				</FORM>
+			</GRID>
+		</FORMVIEW>
+	</DESK>
+	<DESK w="700" h="550" name="Completed Students" key="90">
+		<GRID noorg="true" keyfield="student_id" name="Members" where="alumnae=true" table="vw_alumanes">
+			<TEXTFIELD w="40" title="Alumnae ID">student_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Alumnae Name">student_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+			<TEXTFIELD w="75" title="Tel No">tel_no</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Nationality ">nationality_country</TEXTFIELD>
+			<TEXTFIELD w="40" title="Sex">gender</TEXTFIELD>
+			<TEXTDATE w="75" title="Graduation Date">graduate_date</TEXTDATE>
+			<TEXTDATE w="75" title="Member Since">alumnae_join_date</TEXTDATE>
+			<TEXTFIELD w="100" title="Membership Status ">membership_status</TEXTFIELD>
+			<ACTIONS>
+				<ACTION fnct="renew_alumnae_member">Renew membership</ACTION>
+			</ACTIONS>
+		</GRID>
+		<GRID noorg="true" keyfield="student_id" name="Completed Students" where="graduated=true AND alumnae=false" table="vw_student_degrees">
+			<TEXTFIELD w="75" title="School Name">school_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Cohort">cohort_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Student ID">student_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Student Name">student_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+			<TEXTFIELD w="75" title="Tel No">tel_no</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Nationality ">nationality_country</TEXTFIELD>
+			<TEXTFIELD w="75" title="Sex">gender</TEXTFIELD>
+			<TEXTDATE w="75" title="Graduation Date">graduate_date</TEXTDATE>
+			<ACTIONS>
+				<ACTION fnct="add_alumnae_member">Admit as an alumnae</ACTION>
+			</ACTIONS>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="550" name="Events" key="95">
+		<GRID keyfield="alumnae_news_id" name="Alumnae News" table="vw_alumnae_news">
+			<TEXTFIELD w="75" title="#ID">alumnae_news_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Title">title</TEXTFIELD>
+			<TEXTDATE w="75" title="Start Date">start_date</TEXTDATE>
+			<TEXTDATE w="75" title="End Date">end_date</TEXTDATE>
+			<SPINTIME w="75" title="Start Time">start_time</SPINTIME>
+			<SPINTIME w="75" title="End Time">end_time</SPINTIME>
+			<CHECKBOX w="75" title="Published">publish</CHECKBOX>
+			<ACTIONS>
+				<ACTION fnct="publish_news">Publish News</ACTION>
+			</ACTIONS>
+			<FORM keyfield="alumnae_news_id" name="Alumnae News" table="alumnae_news">
+				<TEXTFIELD w="75" title="Title">title</TEXTFIELD>
+				<TEXTDATE w="150" h="20" x="10" y="10" title="Start Date">start_date</TEXTDATE>
+				<TEXTDATE w="150" h="20" x="290" y="10" title="End Date">end_date</TEXTDATE>
+				<SPINTIME w="150" h="20" x="10" y="30" title="Start Time">start_time</SPINTIME>
+				<SPINTIME w="150" h="20" x="290" y="30" title="End Time">end_time</SPINTIME>
+				<TEXTAREA w="430" h="70" x="10" y="70" title="News">news</TEXTAREA>
+			</FORM>
+		</GRID>
+	</DESK>
+</APP>

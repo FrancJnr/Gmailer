@@ -1,0 +1,439 @@
+25-Apr-2019 08:59:48.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-47-generic
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+25-Apr-2019 08:59:48.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+25-Apr-2019 08:59:48.752 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+25-Apr-2019 08:59:48.984 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+25-Apr-2019 08:59:49.032 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+25-Apr-2019 08:59:49.045 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+25-Apr-2019 08:59:49.047 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+25-Apr-2019 08:59:49.048 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 833 ms
+25-Apr-2019 08:59:49.094 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+25-Apr-2019 08:59:49.094 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+25-Apr-2019 08:59:49.103 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+25-Apr-2019 08:59:50.157 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 08:59:50.268 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [1,164] ms
+25-Apr-2019 08:59:50.268 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/colleges]
+25-Apr-2019 08:59:58.960 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 08:59:59.068 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/colleges] has finished in [8,800] ms
+25-Apr-2019 08:59:59.068 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+25-Apr-2019 09:00:03.742 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:04.978 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: could not open file "base/42881/93864": Permission denied
+25-Apr-2019 09:00:04.979 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+25-Apr-2019 09:00:04.994 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [5,926] ms
+25-Apr-2019 09:00:04.995 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+25-Apr-2019 09:00:05.202 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:05.229 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [235] ms
+25-Apr-2019 09:00:05.248 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+25-Apr-2019 09:00:06.266 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Apr-2019 09:00:06.267 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Apr-2019 09:00:10.637 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+25-Apr-2019 09:00:10.705 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:10.708 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+25-Apr-2019 09:00:10.708 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+25-Apr-2019 09:00:10.732 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Apr-2019 09:00:10.733 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+25-Apr-2019 09:00:10.734 SEVERE [localhost-startStop-1] org.baraza.DB.BDB.connectDB Cannot connect to this database : java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: role "babcock_admin" does not exist)
+25-Apr-2019 09:00:10.742 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [5,512] ms
+25-Apr-2019 09:00:10.742 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+25-Apr-2019 09:00:10.847 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:10.851 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [109] ms
+25-Apr-2019 09:00:10.851 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+25-Apr-2019 09:00:10.931 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:10.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [81] ms
+25-Apr-2019 09:00:10.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+25-Apr-2019 09:00:14.597 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:14.602 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [3,670] ms
+25-Apr-2019 09:00:14.602 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+25-Apr-2019 09:00:17.806 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:17.824 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [3,221] ms
+25-Apr-2019 09:00:17.824 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+25-Apr-2019 09:00:19.700 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Apr-2019 09:00:19.712 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,888] ms
+25-Apr-2019 09:00:19.733 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+25-Apr-2019 09:00:19.785 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+25-Apr-2019 09:00:19.790 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 30742 ms
+25-Apr-2019 09:25:29.867 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:26:28.436 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:33:07.715 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:34:25.845 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:35:00.099 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:36:43.296 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:36:52.987 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:37:18.876 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 09:46:00.825 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name student_edit was not found in this ResultSet.
+25-Apr-2019 10:57:23.016 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 110
+25-Apr-2019 10:57:23.017 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, instructor_name, class_option, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_curr_scourses
+WHERE (department_id = 'ADMIN') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 10:57:28.191 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 110
+25-Apr-2019 10:57:28.191 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, instructor_name, class_option, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_curr_scourses
+WHERE (department_id = 'BTS') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 10:59:31.256 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 110
+25-Apr-2019 10:59:31.256 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, instructor_name, class_option, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_scourses
+WHERE (department_id = 'ADMIN') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 11:00:14.256 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "instructor_name" does not exist
+  Position: 45
+25-Apr-2019 11:00:14.256 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, instructor_name, class_option, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_courses
+WHERE (department_id = 'ADMIN') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 11:00:54.966 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "class_option" does not exist
+  Position: 45
+25-Apr-2019 11:00:54.966 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, class_option, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_courses
+WHERE (department_id = 'ADMIN') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 11:01:03.909 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "class_option" does not exist
+  Position: 45
+25-Apr-2019 11:01:03.910 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, class_option, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_courses
+WHERE (department_id = 'ADMIN') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 11:03:42.291 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "class_option" does not exist
+  Position: 45
+25-Apr-2019 11:03:42.291 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, class_option, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_courses
+WHERE (department_id = 'BUAD') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 11:04:18.411 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "scourse_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_courses.course_id".
+  Position: 67
+25-Apr-2019 11:04:18.411 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_courses
+WHERE (department_id = 'BUAD') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 11:04:29.180 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "scourse_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_courses.course_id".
+  Position: 67
+25-Apr-2019 11:04:29.180 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_courses
+WHERE (department_id = 'BUAD') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 11:05:38.410 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "scourse_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_courses.course_id".
+  Position: 68
+25-Apr-2019 11:05:38.410 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, year_taken, details, scourse_id
+FROM vw_courses
+WHERE (scourse_id = 'ACCT 610')
+ORDER BY scourse_id
+25-Apr-2019 11:06:17.353 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "scourse_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_courses.course_id".
+  Position: 68
+25-Apr-2019 11:06:17.353 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, year_taken, details, scourse_id
+FROM vw_courses
+WHERE (scourse_id = 'ACCT 610')
+ORDER BY scourse_id
+25-Apr-2019 11:06:18.467 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "scourse_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_courses.course_id".
+  Position: 68
+25-Apr-2019 11:06:18.467 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, year_taken, details, scourse_id
+FROM vw_courses
+WHERE (scourse_id = 'ACCT 610')
+ORDER BY scourse_id
+25-Apr-2019 11:07:31.142 INFO [http-nio-8080-exec-9] org.baraza.web.BWeb.setOperations SELECT sel_courses('ACCT 610', 'S2019029', 'BUAD') 
+25-Apr-2019 11:07:31.283 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: column "sstudent_id" is of type integer but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Where: PL/pgSQL function sel_courses(character varying,character varying,character varying) line 10 at SQL statement
+25-Apr-2019 11:21:25.468 INFO [http-nio-8080-exec-6] org.baraza.web.BWeb.setOperations SELECT sel_courses('ACCT 610', 'S2019029', 'BUAD') 
+25-Apr-2019 11:21:26.050 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: control reached end of function without RETURN
+  Where: PL/pgSQL function sel_courses(character varying,character varying,character varying)
+25-Apr-2019 11:22:11.517 INFO [http-nio-8080-exec-3] org.baraza.web.BWeb.setOperations SELECT sel_courses('ACCT 610', 'S2019029', 'BUAD') 
+25-Apr-2019 11:31:27.175 INFO [http-nio-8080-exec-1] org.baraza.web.BWeb.setOperations SELECT sel_courses('AFTR 668', 'S2019029', 'BTS') 
+25-Apr-2019 11:35:05.918 INFO [http-nio-8080-exec-2] org.baraza.web.BWeb.setOperations SELECT sel_courses('AFTR 668', 'S2019029', 'BTS') 
+25-Apr-2019 11:35:12.528 INFO [http-nio-8080-exec-8] org.baraza.web.BWeb.setOperation SELECT ins_sstudent('LEAD2019.1', 'S2019029', '0')
+25-Apr-2019 11:35:12.933 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: column "sponsor_id" does not exist
+  Where: PL/pgSQL function bf_add_charge() line 20 at IF
+SQL statement "INSERT INTO sstudents(session_id, student_degree_id, study_level, curr_balance, charges, finance_narrative, payment_type)
+			VALUES ($1, mydegree_id, my_study_level, my_curr_balance, my_late_fees, my_narrative, 1)"
+PL/pgSQL function ins_sstudent(character varying,character varying,character varying) line 81 at SQL statement
+25-Apr-2019 11:37:08.515 INFO [http-nio-8080-exec-4] org.baraza.web.BWeb.setOperation SELECT ins_sstudent('LEAD2019.1', 'S2019029', '0')
+25-Apr-2019 11:37:26.930 INFO [http-nio-8080-exec-1] org.baraza.web.BWeb.setOperations SELECT sel_courses('AFTR 668', 'S2019029', 'BTS') 
+25-Apr-2019 11:59:39.730 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "course_id" does not exist
+  Position: 8
+25-Apr-2019 11:59:39.730 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, no_gpa, year_taken, instructor_name, class_option, session_id
+FROM vw_course_selections
+WHERE (session_id = 'LEAD2019.1')
+ORDER BY course_id
+25-Apr-2019 12:01:01.589 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "instructor_name" does not exist
+  Position: 67
+25-Apr-2019 12:01:01.589 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, no_gpa, year_taken, instructor_name, class_option, session_id
+FROM vw_course_selections
+WHERE (session_id = 'LEAD2019.1')
+ORDER BY course_id
+25-Apr-2019 12:01:36.381 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "session_id" does not exist
+  Position: 67
+25-Apr-2019 12:01:36.382 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, no_gpa, year_taken, session_id
+FROM vw_course_selections
+WHERE (session_id = 'LEAD2019.1')
+ORDER BY course_id
+25-Apr-2019 12:29:58.466 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "session_id" does not exist
+  Position: 67
+25-Apr-2019 12:29:58.466 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, credit_hours, no_gpa, year_taken, session_id
+FROM vw_course_selections
+WHERE (session_id = 'LEAD2019.1')
+ORDER BY course_id
+25-Apr-2019 12:55:27.744 INFO [http-nio-8080-exec-9] org.baraza.web.BWeb.setOperation SELECT ins_sstudent('LEAD2019.1', 'S2019029', '0')
+25-Apr-2019 14:36:33.657 INFO [http-nio-8080-exec-2] org.baraza.web.BWeb.setOperation SELECT ins_sstudent('LEAD2019.1', 'S2019029', '0')
+25-Apr-2019 14:37:10.207 INFO [http-nio-8080-exec-7] org.baraza.web.BWeb.setOperation SELECT ins_sstudent('LEAD2019.1', 'S2019029', '0')
+25-Apr-2019 14:38:51.656 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "course_id" does not exist
+  Position: 8
+25-Apr-2019 14:38:51.656 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, course_type_name, credit_hours, no_gpa, year_taken, scourse_id, session_id
+FROM vw_course_selections
+WHERE (session_id = 'LEAD2019.1')
+ORDER BY scourse_id
+25-Apr-2019 14:39:20.150 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "scourse_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_course_selections.course_id".
+  Position: 85
+25-Apr-2019 14:39:20.150 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery SQL SELECT course_id, course_title, course_type_name, credit_hours, no_gpa, year_taken, scourse_id, session_id
+FROM vw_course_selections
+WHERE (session_id = 'LEAD2019.1')
+ORDER BY scourse_id
+25-Apr-2019 14:46:55.668 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 67
+25-Apr-2019 14:46:55.668 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, department_id
+FROM vw_scourses
+WHERE (department_id = 'ADMIN') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 14:46:58.401 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 67
+25-Apr-2019 14:46:58.401 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, department_id
+FROM vw_scourses
+WHERE (department_id = 'BIBL') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 14:47:01.182 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "department_id" does not exist
+  Position: 67
+25-Apr-2019 14:47:01.182 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, department_id
+FROM vw_scourses
+WHERE (department_id = 'CHAP') AND (degree_level_id = 'MA')
+ORDER BY year_taken, course_id
+25-Apr-2019 15:01:39.142 INFO [http-nio-8080-exec-9] org.baraza.web.BWeb.setOperations SELECT sel_courses('CHAP 633', 'S2019029', 'CHAP') 
+25-Apr-2019 15:01:39.171 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying = integer
+  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+  Where: PL/pgSQL function sel_courses(character varying,character varying,character varying) line 12 at IF
+25-Apr-2019 15:02:17.865 INFO [http-nio-8080-exec-3] org.baraza.web.BWeb.setOperations SELECT sel_courses('CHAP 633', 'S2019029', 'CHAP') 
+25-Apr-2019 15:02:17.869 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "CHAP 633"
+  Where: SQL statement "SELECT ($1::int IN (SELECT scourse_id from course_selections where sstudent_id =v_sstudent_id))"
+PL/pgSQL function sel_courses(character varying,character varying,character varying) line 12 at IF
+25-Apr-2019 15:02:55.501 INFO [http-nio-8080-exec-1] org.baraza.web.BWeb.setOperations SELECT sel_courses('1257', 'S2019029', 'CHAP') 
+25-Apr-2019 15:02:55.505 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: column "scourse_id" is of type integer but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Where: PL/pgSQL function sel_courses(character varying,character varying,character varying) line 17 at SQL statement
+25-Apr-2019 15:04:27.059 INFO [http-nio-8080-exec-7] org.baraza.web.BWeb.setOperations SELECT sel_courses('1257', 'S2019029', 'CHAP') 
+25-Apr-2019 15:05:39.931 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT sel_courses('1257', 'S2019029', 'CHAP') 
+25-Apr-2019 15:12:05.468 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "degree_id" does not exist
+  Position: 135
+25-Apr-2019 15:12:05.468 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_scourses
+WHERE (active=true) AND (degree_id = '1521')
+ORDER BY year_taken, course_id
+25-Apr-2019 15:13:41.592 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "student_id" does not exist
+  Position: 94
+25-Apr-2019 15:13:41.592 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id, student_id
+FROM vw_scourses
+WHERE (active=true) AND (student_id = 'S2019029') AND (degree_id = '1521')
+ORDER BY year_taken, course_id
+25-Apr-2019 15:16:34.516 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "student_id" does not exist
+  Position: 94
+25-Apr-2019 15:16:34.516 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery SQL SELECT year_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id, student_id
+FROM vw_scourses
+WHERE (active=true) AND (student_id = 'S2019029') AND (session_id = '1521')
+ORDER BY year_taken, course_id
+25-Apr-2019 15:24:01.612 INFO [http-nio-8080-exec-9] org.baraza.web.BWeb.setOperations SELECT sel_courses('1257', 'S2019029', '') 
+25-Apr-2019 15:24:05.348 INFO [http-nio-8080-exec-7] org.baraza.web.BWeb.setOperations SELECT sel_courses('5', 'S2019029', '') 
+25-Apr-2019 15:24:09.314 INFO [http-nio-8080-exec-3] org.baraza.web.BWeb.setOperations SELECT sel_courses('2', 'S2019029', '') 
+25-Apr-2019 15:24:12.438 INFO [http-nio-8080-exec-5] org.baraza.web.BWeb.setOperations SELECT sel_courses('4', 'S2019029', '') 
+25-Apr-2019 15:24:15.527 INFO [http-nio-8080-exec-1] org.baraza.web.BWeb.setOperations SELECT sel_courses('3', 'S2019029', '') 
+25-Apr-2019 15:24:18.672 INFO [http-nio-8080-exec-9] org.baraza.web.BWeb.setOperations SELECT sel_courses('1', 'S2019029', '') 
+25-Apr-2019 15:42:06.791 INFO [http-nio-8080-exec-1] org.baraza.web.BWeb.setOperations SELECT sel_courses('1', 'S2019029', '') 
+25-Apr-2019 16:32:28.011 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "degree_level_id" does not exist
+  Position: 213
+25-Apr-2019 16:32:28.011 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery SQL SELECT cohort_name, m_defense_fees, reg_fees, exam_fees, ict_fee, lab_fees, library_fees, project_fees, general_fees, research_fees, scharge_id, session_id
+FROM vw_scharges
+WHERE (session_id = 'LEAD2019.1') AND (degree_level_id ='MA')
+ORDER BY scharge_id
+25-Apr-2019 16:32:29.786 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "degree_level_id" does not exist
+  Position: 212
+25-Apr-2019 16:32:29.787 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.makeQuery SQL SELECT cohort_name, credit_charge, reg_fees, exam_fees, ict_fee, lab_fees, library_fees, project_fees, general_fees, research_fees, scharge_id, session_id
+FROM vw_scharges
+WHERE (session_id = 'LEAD2019.1') AND (degree_level_id != 'MA')
+ORDER BY scharge_id
+25-Apr-2019 16:32:30.457 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+25-Apr-2019 16:32:31.872 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+25-Apr-2019 16:45:51.622 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "yar_taken" does not exist
+  Hint: Perhaps you meant to reference the column "vw_scourses.year_taken".
+  Position: 8
+25-Apr-2019 16:45:51.623 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery SQL SELECT yar_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_scourses
+WHERE (active=true AND course_type_id !=2)
+ORDER BY year_taken, course_id
+25-Apr-2019 16:51:56.950 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "yar_taken" does not exist
+  Hint: Perhaps you meant to reference the column "vw_scourses.year_taken".
+  Position: 8
+25-Apr-2019 16:51:56.950 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery SQL SELECT yar_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_scourses
+WHERE (active=true AND course_type_id !=2)
+ORDER BY year_taken, course_id
+25-Apr-2019 16:51:58.729 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "yar_taken" does not exist
+  Hint: Perhaps you meant to reference the column "vw_scourses.year_taken".
+  Position: 8
+25-Apr-2019 16:51:58.729 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery SQL SELECT yar_taken, course_id, course_title, credit_hours, no_gpa, scourse_id, department_id
+FROM vw_scourses
+WHERE (active=true AND course_type_id !=2)
+ORDER BY year_taken, course_id
+25-Apr-2019 16:53:12.278 INFO [http-nio-8080-exec-8] org.baraza.web.BWeb.setOperations SELECT sel_courses('6', 'S2019029', '') 
+25-Apr-2019 17:16:55.567 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+25-Apr-2019 17:16:55.848 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+25-Apr-2019 17:16:56.055 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+25-Apr-2019 17:17:00.022 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@38d5cf0c]) and a value of type [java.lang.Class] (value [class vw_scharges_1554890739613_622101]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+25-Apr-2019 17:17:00.476 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+25-Apr-2019 17:17:00.954 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+25-Apr-2019 17:17:00.955 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+25-Apr-2019 17:17:01.268 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+25-Apr-2019 17:17:01.520 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+25-Apr-2019 17:17:02.553 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+25-Apr-2019 17:17:02.554 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

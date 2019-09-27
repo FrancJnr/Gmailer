@@ -1,0 +1,7 @@
+.table-scrollable{
+
+}
+table-scrollable tr:nth-child(odd){
+  background-color: black;
+  color: ;
+}

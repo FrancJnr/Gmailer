@@ -1,0 +1,350 @@
+20-Feb-2019 07:11:09.136 INFO [http-nio-80-exec-24] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+20-Feb-2019 09:56:34.124 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 09:56:39.908 INFO [http-nio-80-exec-28] org.baraza.web.BWeb.setOperations SELECT application_finance_approval('62', '0', '') 
+20-Feb-2019 09:57:12.201 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 09:57:14.665 SEVERE [http-nio-80-exec-19] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 09:57:18.610 SEVERE [http-nio-80-exec-26] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 09:57:22.504 SEVERE [http-nio-80-exec-30] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 09:57:26.100 SEVERE [http-nio-80-exec-19] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:14:38.882 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:14:46.311 SEVERE [http-nio-80-exec-26] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:15:12.351 SEVERE [http-nio-80-exec-23] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:15:43.653 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:15:49.691 SEVERE [http-nio-80-exec-20] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:15:54.042 SEVERE [http-nio-80-exec-24] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:16:59.129 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:17:21.807 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:17:47.034 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:18:17.944 SEVERE [http-nio-80-exec-23] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:20:17.156 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 10:22:24.802 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:37:09.966 INFO [http-nio-80-exec-27] org.baraza.web.BWeb.setOperations SELECT application_finance_approval('64', '0', '') 
+20-Feb-2019 11:37:28.035 SEVERE [http-nio-80-exec-24] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:37:31.208 SEVERE [http-nio-80-exec-19] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:37:35.023 SEVERE [http-nio-80-exec-23] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:37:40.632 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:37:45.322 SEVERE [http-nio-80-exec-27] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:38:01.167 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:38:57.100 SEVERE [http-nio-80-exec-26] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:39:05.235 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:39:30.129 SEVERE [http-nio-80-exec-27] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:39:48.781 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:39:53.878 SEVERE [http-nio-80-exec-23] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:40:01.279 SEVERE [http-nio-80-exec-19] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:40:21.368 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:44:22.597 INFO [http-nio-80-exec-24] org.baraza.web.BWeb.setOperations SELECT reject_application_finance_approval('63', '0', '') 
+20-Feb-2019 11:44:35.384 INFO [http-nio-80-exec-23] org.baraza.web.BWeb.setOperations SELECT revoke_application_finance_approval('64', '0', '') 
+20-Feb-2019 11:44:35.389 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: function revoke_application_finance_approval(unknown, unknown, unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 8
+20-Feb-2019 11:46:10.010 INFO [http-nio-80-exec-28] org.baraza.web.BWeb.setOperations SELECT ins_new_student('113', '0', '1') 
+20-Feb-2019 11:50:48.627 SEVERE [http-nio-80-exec-24] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:51:12.374 INFO [http-nio-80-exec-19] org.baraza.web.BWeb.setOperations SELECT application_finance_approval('65', '0', '') 
+20-Feb-2019 11:52:43.598 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:53:10.449 SEVERE [http-nio-80-exec-24] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:53:24.981 SEVERE [http-nio-80-exec-26] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:53:26.472 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:53:43.307 SEVERE [http-nio-80-exec-19] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:53:43.637 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:53:44.124 SEVERE [http-nio-80-exec-19] org.baraza.DB.BDB.executeQuery Database executeQuery error : org.postgresql.util.PSQLException: This statement has been closed.
+20-Feb-2019 11:53:44.124 SEVERE [http-nio-80-exec-19] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: This ResultSet is closed.
+20-Feb-2019 11:53:52.576 SEVERE [http-nio-80-exec-20] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:53:58.221 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:54:03.611 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:56:09.928 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:56:19.601 SEVERE [http-nio-80-exec-26] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:56:20.024 SEVERE [http-nio-80-exec-26] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record file_size : org.postgresql.util.PSQLException: This statement has been closed.
+20-Feb-2019 11:56:20.025 SEVERE [http-nio-80-exec-26] org.baraza.DB.BQuery.saveNewRec The error code 0
+20-Feb-2019 11:56:20.025 SEVERE [http-nio-80-exec-26] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: This ResultSet is closed.
+20-Feb-2019 11:56:45.652 SEVERE [http-nio-80-exec-23] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:58:54.125 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:58:57.618 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:59:02.525 SEVERE [http-nio-80-exec-30] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:59:20.489 SEVERE [http-nio-80-exec-19] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:59:25.981 SEVERE [http-nio-80-exec-24] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 11:59:55.745 SEVERE [http-nio-80-exec-26] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 12:02:10.320 SEVERE [http-nio-80-exec-30] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 13:23:39.011 SEVERE [http-nio-80-exec-28] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 13:23:52.213 SEVERE [http-nio-80-exec-23] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 13:23:57.012 SEVERE [http-nio-80-exec-30] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 13:24:00.394 SEVERE [http-nio-80-exec-26] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 13:24:03.821 SEVERE [http-nio-80-exec-24] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 13:28:54.753 SEVERE [http-nio-80-exec-19] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 13:31:15.731 SEVERE [http-nio-80-exec-21] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 14:38:28.571 INFO [http-nio-80-exec-28] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+20-Feb-2019 14:49:31.857 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1500
+20-Feb-2019 14:49:32.012 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 14:49:49.723 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1473
+20-Feb-2019 14:49:49.738 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 14:50:30.135 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1484
+20-Feb-2019 14:50:30.144 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 14:54:46.981 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 14:54:46.990 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 14:56:15.321 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = filterid key = 948
+20-Feb-2019 14:56:15.329 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 15:01:13.857 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 15:01:13.870 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 15:01:27.687 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 15:01:27.693 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 15:01:46.142 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 15:01:46.149 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 15:01:53.281 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 15:01:53.286 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 15:01:59.120 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 15:01:59.120 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 15:58:46.590 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 15:58:46.635 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:00:27.721 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 16:00:27.732 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:01:37.277 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 16:01:37.284 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:01:55.454 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 459
+20-Feb-2019 16:01:55.462 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:02:57.563 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1478
+20-Feb-2019 16:02:57.569 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:04:10.165 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:04:10.172 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:12:15.205 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:12:15.215 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:20:07.672 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:20:07.681 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:22:50.874 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:22:50.884 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:24:02.743 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:24:02.748 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:28:08.331 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:28:08.339 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:36:38.319 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:36:38.327 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:37:44.112 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:37:44.118 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:43:55.083 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:43:55.089 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:45:08.140 INFO [http-nio-80-exec-21] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+20-Feb-2019 16:45:20.977 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:45:20.985 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:45:21.190 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:45:21.190 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:56:24.883 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:56:24.889 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 16:56:25.239 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 16:56:25.239 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 17:08:18.196 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1370
+20-Feb-2019 17:08:18.205 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 17:32:18.561 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1484
+20-Feb-2019 17:32:18.567 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 17:33:13.555 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1484
+20-Feb-2019 17:33:13.562 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 17:34:47.418 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1497
+20-Feb-2019 17:34:47.424 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 17:49:35.997 INFO [http-nio-80-exec-23] org.baraza.web.BWeb.setOperations SELECT approve_course('3', '0', '2019 PH') 
+20-Feb-2019 17:49:36.515 INFO [http-nio-80-exec-23] org.baraza.web.BWeb.setOperations SELECT approve_course('4', '0', '2019 PH') 
+20-Feb-2019 17:49:36.553 INFO [http-nio-80-exec-23] org.baraza.web.BWeb.setOperations SELECT approve_course('5', '0', '2019 PH') 
+20-Feb-2019 17:49:51.305 INFO [http-nio-80-exec-27] org.baraza.web.BWeb.setOperations SELECT ins_session('2019 PH', '0', '') 
+20-Feb-2019 17:50:03.714 INFO [http-nio-80-exec-23] org.baraza.web.BWeb.setOperations SELECT ins_new_student('112', '0', '1') 
+20-Feb-2019 17:52:28.914 INFO [http-nio-80-exec-26] org.baraza.web.BWeb.setOperations SELECT open_session('2019 PH', '0', '') 
+20-Feb-2019 17:55:19.551 INFO [http-nio-80-exec-23] org.baraza.web.BWeb.setOperations SELECT ins_new_student('102', '0', '1') 
+20-Feb-2019 17:57:00.465 INFO [http-nio-80-exec-30] org.baraza.web.BWeb.setOperation SELECT ins_sstudent('2019 PH', 'S2019011', '0')
+20-Feb-2019 17:57:50.571 SEVERE [http-nio-80-exec-31] org.baraza.utils.BWebdav.<init> File list error : com.github.sardine.impl.SardineException: Unexpected response (404 )
+20-Feb-2019 17:59:23.257 INFO [http-nio-80-exec-21] org.baraza.web.BWeb.setOperation SELECT ins_sclose('2019 PH', 'S2019011', '0')
+20-Feb-2019 18:03:21.448 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:21.449 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:03:21.450 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:26.188 SEVERE [http-nio-80-exec-20] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:26.190 SEVERE [http-nio-80-exec-20] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:03:26.191 SEVERE [http-nio-80-exec-20] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:26.192 SEVERE [http-nio-80-exec-20] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying = integer
+  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+  Position: 62
+20-Feb-2019 18:03:29.620 SEVERE [http-nio-80-exec-27] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:29.621 SEVERE [http-nio-80-exec-27] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:03:29.622 SEVERE [http-nio-80-exec-27] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:29.623 SEVERE [http-nio-80-exec-27] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying = integer
+  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+  Position: 62
+20-Feb-2019 18:03:31.275 SEVERE [http-nio-80-exec-28] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:31.277 SEVERE [http-nio-80-exec-28] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:03:31.278 SEVERE [http-nio-80-exec-28] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:31.279 SEVERE [http-nio-80-exec-28] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying = integer
+  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+  Position: 62
+20-Feb-2019 18:03:33.888 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:33.890 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:03:33.891 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:33.892 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying = integer
+  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+  Position: 62
+20-Feb-2019 18:03:59.019 SEVERE [http-nio-80-exec-26] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:03:59.020 SEVERE [http-nio-80-exec-26] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:03:59.021 SEVERE [http-nio-80-exec-26] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:04:01.897 INFO [http-nio-80-exec-24] org.baraza.web.BWeb.setOperations SELECT finance_approval('1', '0', '2019 PH') 
+20-Feb-2019 18:04:30.992 SEVERE [http-nio-80-exec-24] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:04:30.994 SEVERE [http-nio-80-exec-24] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:04:30.995 SEVERE [http-nio-80-exec-24] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:04:36.840 INFO [http-nio-80-exec-31] org.baraza.web.BWeb.setOperations SELECT student_approvals('1', '0', '1') 
+20-Feb-2019 18:04:43.959 SEVERE [http-nio-80-exec-20] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:04:43.961 SEVERE [http-nio-80-exec-20] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:04:43.962 SEVERE [http-nio-80-exec-20] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:04:55.870 SEVERE [http-nio-80-exec-27] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:04:55.872 SEVERE [http-nio-80-exec-27] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:04:55.873 SEVERE [http-nio-80-exec-27] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:05:05.925 SEVERE [http-nio-80-exec-30] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:05:05.927 SEVERE [http-nio-80-exec-30] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:05:05.929 SEVERE [http-nio-80-exec-30] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:05:57.372 INFO [http-nio-80-exec-27] org.baraza.web.BWeb.setOperations SELECT student_approvals('1', '0', '2') 
+20-Feb-2019 18:06:43.256 SEVERE [http-nio-80-exec-30] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:06:43.258 SEVERE [http-nio-80-exec-30] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:06:43.259 SEVERE [http-nio-80-exec-30] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:06:46.909 INFO [http-nio-80-exec-26] org.baraza.web.BWeb.setOperations SELECT student_approvals('1', '0', '4') 
+20-Feb-2019 18:06:53.572 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:06:53.574 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:06:53.575 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:07:29.028 INFO [http-nio-80-exec-21] org.baraza.web.BWeb.setOperations SELECT reject_student_approval('1', '0', '6') 
+20-Feb-2019 18:07:46.251 SEVERE [http-nio-80-exec-26] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:07:46.253 SEVERE [http-nio-80-exec-26] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:07:46.254 SEVERE [http-nio-80-exec-26] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:07:58.922 INFO [http-nio-80-exec-24] org.baraza.web.BWeb.setOperations SELECT student_approvals('1', '0', '3') 
+20-Feb-2019 18:10:57.685 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 68
+20-Feb-2019 18:10:57.687 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:10:57.688 SEVERE [http-nio-80-exec-23] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "PH"
+  Position: 69
+20-Feb-2019 18:16:30.673 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2018ECDCHAP1
+20-Feb-2019 18:16:30.674 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 0
+20-Feb-2019 18:16:30.714 INFO [http-nio-80-exec-31] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:17:37.335 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2018ECDCHAP2
+20-Feb-2019 18:17:37.336 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.setParams Filter = school_id key = PGS
+20-Feb-2019 18:17:37.347 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:17:39.431 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2018ECDCHAP2
+20-Feb-2019 18:17:39.431 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = school_id key = PGS
+20-Feb-2019 18:17:39.437 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:17:59.511 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017 Dmin
+20-Feb-2019 18:17:59.511 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = school_id key = PGS
+20-Feb-2019 18:17:59.517 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:18:01.490 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017 Dmin
+20-Feb-2019 18:18:01.490 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = school_id key = PGS
+20-Feb-2019 18:18:01.492 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:19:50.950 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.setParams Filter = filterid key = 5638
+20-Feb-2019 18:19:51.004 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:20:19.899 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2008 BU
+20-Feb-2019 18:20:19.916 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:20:22.307 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2008 BU
+20-Feb-2019 18:20:22.314 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:11.153 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017 ECD MBA
+20-Feb-2019 18:21:11.154 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:11.158 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:15.749 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017 ECD MBA
+20-Feb-2019 18:21:15.750 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:15.756 INFO [http-nio-80-exec-23] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:18.573 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017 ECD MBA
+20-Feb-2019 18:21:18.573 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:18.585 INFO [http-nio-80-exec-27] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:22.368 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017 ECD MBA
+20-Feb-2019 18:21:22.368 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:22.373 INFO [http-nio-80-exec-28] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:26.268 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017 Dmin
+20-Feb-2019 18:21:26.269 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.setParams Filter = school_id key = PGS
+20-Feb-2019 18:21:26.275 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:39.308 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2016 ECD. 3
+20-Feb-2019 18:21:39.309 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:39.314 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:43.573 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2016 ECD. 3
+20-Feb-2019 18:21:43.573 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:43.579 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:53.017 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2016 ECD. 3
+20-Feb-2019 18:21:53.017 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:53.021 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:21:58.791 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2016 ECD. 3
+20-Feb-2019 18:21:58.792 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 16
+20-Feb-2019 18:21:58.797 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:25:17.785 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017ECDCHAP
+20-Feb-2019 18:25:17.785 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.setParams Filter = school_id key = 0
+20-Feb-2019 18:25:17.792 INFO [http-nio-80-exec-26] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:25:20.252 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017ECDCHAP
+20-Feb-2019 18:25:20.253 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = school_id key = 0
+20-Feb-2019 18:25:20.256 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:25:26.105 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017ECDCHAP
+20-Feb-2019 18:25:26.105 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.setParams Filter = school_id key = 0
+20-Feb-2019 18:25:26.107 INFO [http-nio-80-exec-24] org.baraza.reports.BWebReport.getReport entityid | 0
+20-Feb-2019 18:25:27.316 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2017ECDCHAP
+20-Feb-2019 18:25:27.316 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.setParams Filter = school_id key = 0
+20-Feb-2019 18:25:27.321 INFO [http-nio-80-exec-30] org.baraza.reports.BWebReport.getReport entityid | 0

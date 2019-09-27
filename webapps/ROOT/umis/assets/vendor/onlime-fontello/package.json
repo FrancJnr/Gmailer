@@ -1,0 +1,26 @@
+{
+  "name": "onlime-fontello",
+  "description": "fontello icons bower package",
+  "version": "1.0.0",
+  "keywords": ["font", "fontello", "icon", "font"],
+  "homepage": "",
+  "author": {
+    "name": "Philip Iezzi",
+    "email": "github@onlime.ch",
+    "web": "https://www.onlime.ch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onlime/onlime-fontello"
+  },
+  "licenses": [
+    {
+      "type": "SIL OFL 1.1",
+      "url": "http://scripts.sil.org/OFL"
+    },
+    {
+      "type": "MIT License",
+      "url": "http://opensource.org/licenses/mit-license.html"
+    }
+  ]
+}

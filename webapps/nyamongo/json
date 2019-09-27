@@ -1,0 +1,99 @@
+[
+	{
+		"name":"denomination_id",
+		"type":11,
+		"title":"Denomination ID",
+		"list":"[
+			{\"denomination_id\":\"ANGL\",\"denomination_name\":\"Anglican Church\"},
+			{\"denomination_id\":\"BAPT\",\"denomination_name\":\"Baptist\"},
+			{\"denomination_id\":\"BUDH\",\"denomination_name\":\"Budhist\"},
+			{\"denomination_id\":\"CHRI\",\"denomination_name\":\"Christian with no Denomination\"},
+			{\"denomination_id\":\"DELI\",\"denomination_name\":\"Deliverance\"},
+			{\"denomination_id\":\"EVAN\",\"denomination_name\":\"Evangelical\"},
+			{\"denomination_id\":\"FRIE\",\"denomination_name\":\"Friends\"},
+			{\"denomination_id\":\"HIND\",\"denomination_name\":\"Hindu\"},
+			{\"denomination_id\":\"LUTH\",\"denomination_name\":\"Lutheran\"},
+			{\"denomination_id\":\"METH\",\"denomination_name\":\"Methodist\"},
+			{\"denomination_id\":\"MOSL\",\"denomination_name\":\"Muslim\"},
+			{\"denomination_id\":\"NASF\",\"denomination_name\":\"NASFAT\"},
+			{\"denomination_id\":\"ORTH\",\"denomination_name\":\"Orthodox\"},
+			{\"denomination_id\":\"OTHR\",\"denomination_name\":\"Others\"},
+			{\"denomination_id\":\"PENT\",\"denomination_name\":\"Pentecostal\"},
+			{\"denomination_id\":\"PRES\",\"denomination_name\":\"Presbytarian\"},
+			{\"denomination_id\":\"RCCG\",\"denomination_name\":\"RCCG\"},
+			{\"denomination_id\":\"REDG\",\"denomination_name\":\"Redeemed Gospel\"},
+			{\"denomination_id\":\"CATH\",\"denomination_name\":\"Roman Catholic\"},
+			{\"denomination_id\":\"SDAC\",\"denomination_name\":\"Seventh Day Adventist\"},
+			{\"denomination_id\":\"TRAD\",\"denomination_name\":\"Traditional\"}
+
+				]"
+
+	}
+]
+
+{
+	"name":"denomination_id",
+	"type":11,
+	"title":"Denomination ID",
+	"list":"[
+	{\"denomination_id\":\"ANGL\",\"denomination_name\":\"Anglican Church\"},
+	{\"denomination_id\":\"BAPT\",\"denomination_name\":\"Baptist\"},
+	{\"denomination_id\":\"BUDH\",\"denomination_name\":\"Budhist\"},
+	{\"denomination_id\":\"CHRI\",\"denomination_name\":\"Christian with no Denomination\"},
+	{\"denomination_id\":\"DELI\",\"denomination_name\":\"Deliverance\"},
+	{\"denomination_id\":\"EVAN\",\"denomination_name\":\"Evangelical\"},
+	{\"denomination_id\":\"FRIE\",\"denomination_name\":\"Friends\"},
+	{\"denomination_id\":\"HIND\",\"denomination_name\":\"Hindu\"},
+	{\"denomination_id\":\"LUTH\",\"denomination_name\":\"Lutheran\"},
+	{\"denomination_id\":\"METH\",\"denomination_name\":\"Methodist\"},
+	{\"denomination_id\":\"MOSL\",\"denomination_name\":\"Muslim\"},
+	{\"denomination_id\":\"NASF\",\"denomination_name\":\"NASFAT\"},
+	{\"denomination_id\":\"ORTH\",\"denomination_name\":\"Orthodox\"},
+	{\"denomination_id\":\"OTHR\",\"denomination_name\":\"Others\"},
+	{\"denomination_id\":\"PENT\",\"denomination_name\":\"Pentecostal\"},
+	{\"denomination_id\":\"PRES\",\"denomination_name\":\"Presbytarian\"},
+	{\"denomination_id\":\"RCCG\",\"denomination_name\":\"RCCG\"},
+	{\"denomination_id\":\"REDG\",\"denomination_name\":\"Redeemed Gospel\"},
+	{\"denomination_id\":\"CATH\",\"denomination_name\":\"Roman Catholic\"},
+	{\"denomination_id\":\"SDAC\",\"denomination_name\":\"Seventh Day Adventist\"},
+	{\"denomination_id\":\"TRAD\",\"denomination_name\":\"Traditional\"}
+	]"
+	
+}
+
+[
+	{"denomination_id":"ANGL","denomination_name":"Anglican Church"},
+	{"denomination_id":"BAPT","denomination_name":"Baptist"},
+	{"denomination_id":"BUDH","denomination_name":"Budhist"},
+	{"denomination_id":"CHRI","denomination_name":"Christian with no Denomination"},
+	{"denomination_id":"DELI","denomination_name":"Deliverance"},
+	{"denomination_id":"EVAN","denomination_name":"Evangelical"},
+	{"denomination_id":"FRIE","denomination_name":"Friends"},
+	{"denomination_id":"HIND","denomination_name":"Hindu"},
+	{"denomination_id":"LUTH","denomination_name":"Lutheran"},
+	{"denomination_id":"METH","denomination_name":"Methodist"},
+	{"denomination_id":"MOSL","denomination_name":"Muslim"},
+	{"denomination_id":"NASF","denomination_name":"NASFAT"},
+	{"denomination_id":"ORTH","denomination_name":"Orthodox"},
+	{"denomination_id":"OTHR","denomination_name":"Others"},
+	{"denomination_id":"PENT","denomination_name":"Pentecostal"},
+	{"denomination_id":"PRES","denomination_name":"Presbytarian"},
+	{"denomination_id":"RCCG","denomination_name":"RCCG"},
+	{"denomination_id":"REDG","denomination_name":"Redeemed Gospel"},
+	{"denomination_id":"CATH","denomination_name":"Roman Catholic"},
+	{"denomination_id":"SDAC","denomination_name":"Seventh Day Adventist"},
+	{"denomination_id":"TRAD","denomination_name":"Traditional"}
+]
+
+
+var countries = ['France', 'UK', 'Spain','Belgium','Holland'],
+    select = document.getElementById( 'countries' );
+
+for( country in countries ) {
+    
+    select.add( new Option( countries[country] ) );
+    
+};
+
+<select id="countries"></select>
+

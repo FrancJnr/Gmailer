@@ -1,0 +1,3 @@
+<APPLIST dbpassword="Baraza2011" dbtemplate="baraza" dbpath="jdbc:postgresql://localhost/postgres" dbclass="org.postgresql.Driver" dbusername="postgres" mode="run">
+	<APP auth="entity" dbpassword="inventUMIS" dbpath="jdbc:postgresql://localhost/aua" dbname="aua" path="aua" xmlfile="umis.xml" dbclass="org.postgresql.Driver" dbusername="root">AUA</APP>
+</APPLIST>

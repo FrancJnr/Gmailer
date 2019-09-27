@@ -1,0 +1,30 @@
+bundles:
+  fontello:
+    - fontello
+
+  lib:
+    - lib
+
+packages:
+  fontello:
+    depends:
+      - lib
+
+    entries:
+      - client/fontello
+      - server/fontello
+
+  lib:
+    entries:
+      client/lib
+
+    vendor:
+      - lodash
+      - jquery
+      - event-wire
+      - babelfish
+      - knockout
+      - fs: ./lib/system/dummy.js
+      # template helpers
+      - pug-runtime
+      - jade/lib/runtime

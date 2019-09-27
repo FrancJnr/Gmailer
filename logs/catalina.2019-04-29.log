@@ -1,0 +1,675 @@
+29-Apr-2019 08:22:55.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-47-generic
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12
+29-Apr-2019 08:22:55.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+29-Apr-2019 08:22:55.943 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+29-Apr-2019 08:22:55.943 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+29-Apr-2019 08:22:55.943 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+29-Apr-2019 08:22:55.943 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Apr-2019 08:22:55.943 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Apr-2019 08:22:55.943 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Apr-2019 08:22:55.943 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+29-Apr-2019 08:22:55.944 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Apr-2019 08:22:55.944 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+29-Apr-2019 08:22:55.944 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+29-Apr-2019 08:22:55.944 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+29-Apr-2019 08:22:55.944 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+29-Apr-2019 08:22:56.151 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 08:22:56.161 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+29-Apr-2019 08:22:56.177 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 08:22:56.179 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+29-Apr-2019 08:22:56.179 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 735 ms
+29-Apr-2019 08:22:56.226 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Apr-2019 08:22:56.226 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+29-Apr-2019 08:22:56.234 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+29-Apr-2019 08:22:57.188 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:22:57.314 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [1,080] ms
+29-Apr-2019 08:22:57.315 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/colleges]
+29-Apr-2019 08:23:01.631 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:01.674 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/colleges] has finished in [4,358] ms
+29-Apr-2019 08:23:01.674 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+29-Apr-2019 08:23:04.898 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:06.253 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: could not open file "base/42881/93864": Permission denied
+29-Apr-2019 08:23:06.254 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+29-Apr-2019 08:23:06.259 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [4,584] ms
+29-Apr-2019 08:23:06.259 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+29-Apr-2019 08:23:06.747 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:06.761 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [502] ms
+29-Apr-2019 08:23:06.762 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+29-Apr-2019 08:23:08.879 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+29-Apr-2019 08:23:08.880 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.catalina.realm.JDBCRealm.open(JDBCRealm.java:670)
+	at org.apache.catalina.realm.JDBCRealm.startInternal(JDBCRealm.java:733)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5155)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+29-Apr-2019 08:23:17.013 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+29-Apr-2019 08:23:17.058 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:17.061 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+29-Apr-2019 08:23:17.061 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+29-Apr-2019 08:23:17.079 WARNING [localhost-startStop-1] org.postgresql.core.v3.ConnectionFactoryImpl.log SQLException occurred while connecting to umisdb:5432
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+29-Apr-2019 08:23:17.080 SEVERE [localhost-startStop-1] org.postgresql.Driver.connect Connection error: 
+ org.postgresql.util.PSQLException: FATAL: role "babcock_admin" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2566)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:131)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:210)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:452)
+	at org.postgresql.Driver.connect(Driver.java:254)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.baraza.DB.BDB.connectDB(BDB.java:100)
+	at org.baraza.DB.BDB.<init>(BDB.java:92)
+	at org.baraza.web.BWebRegister.init(BWebRegister.java:32)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+29-Apr-2019 08:23:17.080 SEVERE [localhost-startStop-1] org.baraza.DB.BDB.connectDB Cannot connect to this database : java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: role "babcock_admin" does not exist)
+29-Apr-2019 08:23:17.086 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [10,324] ms
+29-Apr-2019 08:23:17.086 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+29-Apr-2019 08:23:17.160 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:17.179 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [93] ms
+29-Apr-2019 08:23:17.179 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+29-Apr-2019 08:23:17.244 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:17.245 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [66] ms
+29-Apr-2019 08:23:17.245 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+29-Apr-2019 08:23:20.225 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:20.231 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [2,985] ms
+29-Apr-2019 08:23:20.231 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+29-Apr-2019 08:23:25.149 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:25.403 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [5,172] ms
+29-Apr-2019 08:23:25.404 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+29-Apr-2019 08:23:26.881 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+29-Apr-2019 08:23:26.894 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,490] ms
+29-Apr-2019 08:23:26.914 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 08:23:26.937 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 08:23:26.940 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 30760 ms
+29-Apr-2019 08:55:24.952 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "vw_student_majors" does not exist
+  Position: 74
+29-Apr-2019 08:55:24.952 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery SQL SELECT student_id, student_name, sex, major_name, student_degree_id
+FROM vw_student_majors
+WHERE (degree_level_id = 'PGD') or (degree_level_id = 'MAS') or (degree_level_id = 'PhD') or (degree_level_id = 'PHD')
+ORDER BY student_degree_id
+29-Apr-2019 08:55:35.487 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: function get_instructor_school(unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 8
+29-Apr-2019 08:55:37.792 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: function get_instructor_school(unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 8
+29-Apr-2019 08:55:42.589 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: function get_instructor_school(unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 8
+29-Apr-2019 08:57:24.530 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 08:57:24.531 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 08:57:24.532 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 08:57:31.892 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 08:57:31.893 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 08:57:31.893 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 08:57:32.664 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 08:57:32.664 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 08:57:32.664 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 08:57:34.690 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 08:57:34.691 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 08:57:34.691 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:00:23.104 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:00:23.104 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 09:00:23.105 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:16:20.681 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "sstdent_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_sstudents.sstudent_id".
+  Position: 24
+29-Apr-2019 09:16:20.681 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery SQL SELECT (COALESCE(count(sstdent_id), 0)) as pending_Approvals
+FROM vw_sstudents
+WHERE finance_approval=false
+29-Apr-2019 09:21:49.367 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:21:49.367 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 09:21:49.368 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:48:42.547 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:48:42.549 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 09:48:42.550 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:48:43.692 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:48:43.692 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 09:48:43.692 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:48:44.515 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 09:48:44.516 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 09:48:44.516 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 10:07:57.215 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 10:07:57.215 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 10:07:57.216 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 10:10:58.073 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 83
+29-Apr-2019 10:10:58.074 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 10:10:58.075 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 10:10:59.516 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 83
+29-Apr-2019 10:10:59.516 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 10:10:59.516 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 10:11:00.575 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 83
+29-Apr-2019 10:11:00.576 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 10:11:00.576 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 10:11:23.219 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 83
+29-Apr-2019 10:11:23.219 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 72
+29-Apr-2019 10:11:23.220 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 71
+29-Apr-2019 10:11:42.898 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 80
+29-Apr-2019 10:11:42.898 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 69
+29-Apr-2019 10:11:42.898 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 68
+29-Apr-2019 10:12:54.825 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:12:54.825 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 69
+29-Apr-2019 10:12:54.825 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 68
+29-Apr-2019 10:12:56.538 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:12:56.538 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 69
+29-Apr-2019 10:12:56.539 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 68
+29-Apr-2019 10:12:58.043 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:12:58.044 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 69
+29-Apr-2019 10:12:58.044 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 68
+29-Apr-2019 10:13:02.488 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:13:02.489 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 69
+29-Apr-2019 10:13:02.489 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 68
+29-Apr-2019 10:13:04.920 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:13:04.920 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 69
+29-Apr-2019 10:13:04.921 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 68
+29-Apr-2019 10:14:18.372 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:14:18.373 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:14:18.373 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:14:19.726 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:14:19.726 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:14:19.726 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:15:52.162 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:15:52.163 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:15:52.163 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:15:53.972 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:15:53.972 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:15:53.973 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:01.879 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5618', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:16:02.444 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5619', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:16:02.467 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5620', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:16:04.887 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:04.887 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:04.887 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:07.611 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:07.612 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:07.613 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:09.098 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:09.098 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:09.099 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:11.487 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:11.488 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:11.488 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:15.923 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:15.923 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:15.924 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:24.384 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:24.385 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:16:24.385 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:09.987 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:09.987 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:09.987 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:23.690 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:23.690 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:23.690 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:29.860 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:29.860 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:29.860 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:33.992 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5621', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:25:38.038 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:38.039 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:25:38.039 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:13.236 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:13.236 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:13.236 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:31.063 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:31.064 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:31.064 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:32.146 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:32.146 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:32.146 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:33.275 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:33.275 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:33.275 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:36.629 INFO [http-nio-8080-exec-6] org.baraza.web.BWeb.setOperations SELECT finance_approval('5618', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:26:37.158 INFO [http-nio-8080-exec-6] org.baraza.web.BWeb.setOperations SELECT finance_approval('5619', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:26:37.548 INFO [http-nio-8080-exec-6] org.baraza.web.BWeb.setOperations SELECT finance_approval('5620', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:26:38.018 INFO [http-nio-8080-exec-6] org.baraza.web.BWeb.setOperations SELECT finance_approval('5621', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:26:39.101 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:39.102 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:26:39.102 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:23.366 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:23.366 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:23.367 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:24.376 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:24.376 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:24.377 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:25.694 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:25.694 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:25.695 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:26.674 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:26.675 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:26.675 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:27.638 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:27.638 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:27.638 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:31.352 INFO [http-nio-8080-exec-4] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5618', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:31.676 INFO [http-nio-8080-exec-4] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5619', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:32.011 INFO [http-nio-8080-exec-4] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5620', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:32.848 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:32.849 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:32.849 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:37.314 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT finance_approval('5618', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:37.718 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT finance_approval('5619', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:38.054 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT finance_approval('5620', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:41.707 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:41.708 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:41.709 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:45.405 INFO [http-nio-8080-exec-8] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5618', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:45.738 INFO [http-nio-8080-exec-8] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5619', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:46.069 INFO [http-nio-8080-exec-8] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5620', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:46.402 INFO [http-nio-8080-exec-8] org.baraza.web.BWeb.setOperations SELECT revoke_finance_approval('5621', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:46.827 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:46.827 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:46.827 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:52.699 INFO [http-nio-8080-exec-10] org.baraza.web.BWeb.setOperations SELECT reject_approval('5618', '0', '2019 ECDCHAP') 
+29-Apr-2019 10:29:54.778 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:54.779 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:29:54.780 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:30:14.798 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 84
+29-Apr-2019 10:30:14.799 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 84
+29-Apr-2019 10:30:14.799 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near ".1"
+  Position: 84
+29-Apr-2019 10:30:24.373 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:30:24.373 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:30:24.373 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: syntax error at or near "ECDCHAP"
+  Position: 81
+29-Apr-2019 10:44:09.284 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "degree_level_id" does not exist
+  Position: 213
+29-Apr-2019 10:44:09.285 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.makeQuery SQL SELECT cohort_name, m_defense_fees, reg_fees, exam_fees, ict_fee, lab_fees, library_fees, project_fees, general_fees, research_fees, scharge_id, session_id
+FROM vw_scharges
+WHERE (session_id = 'LEAD2019.1') AND (degree_level_id ='MA')
+ORDER BY scharge_id
+29-Apr-2019 10:44:12.335 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "degree_level_id" does not exist
+  Position: 215
+29-Apr-2019 10:44:12.335 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery SQL SELECT cohort_name, m_defense_fees, reg_fees, exam_fees, ict_fee, lab_fees, library_fees, project_fees, general_fees, research_fees, scharge_id, session_id
+FROM vw_scharges
+WHERE (session_id = '2019 ECDCHAP') AND (degree_level_id ='MA')
+ORDER BY scharge_id
+29-Apr-2019 10:44:14.501 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "degree_level_id" does not exist
+  Position: 214
+29-Apr-2019 10:44:14.502 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery SQL SELECT cohort_name, credit_charge, reg_fees, exam_fees, ict_fee, lab_fees, library_fees, project_fees, general_fees, research_fees, scharge_id, session_id
+FROM vw_scharges
+WHERE (session_id = '2019 ECDCHAP') AND (degree_level_id != 'MA')
+ORDER BY scharge_id
+29-Apr-2019 10:44:16.604 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 10:44:23.146 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 10:46:10.208 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 10:46:10.218 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 10:46:36.810 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 10:46:36.815 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 10:47:47.343 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 10:47:47.346 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 10:49:40.974 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 10:49:40.978 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 10:49:45.071 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "yearview" does not exist
+  Position: 38
+29-Apr-2019 10:49:45.072 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery SQL SELECT quarteryear, quarteryear FROM yearview ORDER BY quarteryear desc
+29-Apr-2019 10:52:27.911 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 10:52:27.915 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 10:55:37.962 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "degree_level_id" does not exist
+  Position: 213
+29-Apr-2019 10:55:37.962 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.makeQuery SQL SELECT cohort_name, m_defense_fees, reg_fees, exam_fees, ict_fee, lab_fees, library_fees, project_fees, general_fees, research_fees, scharge_id, session_id
+FROM vw_scharges
+WHERE (session_id = 'LEAD2019.1') AND (degree_level_id ='MA')
+ORDER BY scharge_id
+29-Apr-2019 11:07:34.327 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 11:07:34.383 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 11:07:37.234 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 11:07:37.343 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 11:50:21.689 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "total" does not exist
+  Position: 47
+29-Apr-2019 11:50:21.689 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.makeQuery SQL SELECT meal_id, session_id, meal_price, unit, total, date_taken, org_id
+FROM meals
+WHERE (org_id = '0')
+ORDER BY meal_id
+29-Apr-2019 12:01:53.749 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "session_id" does not exist
+  Position: 17
+29-Apr-2019 12:01:53.749 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery SQL SELECT meal_id, session_id, meal_price, unit, total, date_taken, org_id
+FROM meals
+WHERE (org_id = '0')
+ORDER BY meal_id
+29-Apr-2019 12:17:50.880 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "session_id" does not exist
+  Position: 17
+29-Apr-2019 12:17:50.880 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BQuery.makeQuery SQL SELECT meal_id, session_id, meal_price, unit, total, date_taken, org_id
+FROM meals
+WHERE (org_id = '0')
+ORDER BY meal_id
+29-Apr-2019 12:17:52.300 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "session_id" does not exist
+  Position: 17
+29-Apr-2019 12:17:52.300 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.makeQuery SQL SELECT meal_id, session_id, meal_price, unit, total, date_taken, org_id
+FROM meals
+WHERE (org_id = '0')
+ORDER BY meal_id
+29-Apr-2019 12:18:21.559 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "session_id" does not exist
+  Position: 17
+29-Apr-2019 12:18:21.559 SEVERE [http-nio-8080-exec-11] org.baraza.DB.BQuery.makeQuery SQL SELECT meal_id, session_id, meal_price, unit, total, date_taken, org_id
+FROM meals
+WHERE (org_id = '0')
+ORDER BY meal_id
+29-Apr-2019 12:23:51.392 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "mel_id" does not exist
+  Hint: Perhaps you meant to reference the column "vw_meals.meal_id".
+  Position: 8
+29-Apr-2019 12:23:51.392 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.makeQuery SQL SELECT mel_id, session_id, meal_price, unit, total, date_taken, meal_id, org_id
+FROM vw_meals
+WHERE (org_id = '0')
+ORDER BY meal_id
+29-Apr-2019 13:19:09.678 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:19:11.450 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:20:21.137 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:20:21.153 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:20:32.738 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:20:32.745 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:22:12.699 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:22:12.803 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:22:29.785 INFO [http-nio-8080-exec-11] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:22:29.787 INFO [http-nio-8080-exec-11] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:25:04.465 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:25:04.468 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:25:13.395 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:25:13.398 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:26:06.298 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:26:06.304 INFO [http-nio-8080-exec-9] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:26:14.325 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:26:14.327 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:26:47.587 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:26:47.589 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:28:04.735 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:28:04.737 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:31:43.150 INFO [http-nio-8080-exec-11] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:31:43.195 INFO [http-nio-8080-exec-11] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:35:59.281 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:35:59.284 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:36:57.739 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:36:57.825 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:37:04.408 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.setParams Filter = filterid key = LEAD2019.1
+29-Apr-2019 13:37:04.410 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:38:36.317 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:38:36.347 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:40:10.099 INFO [http-nio-8080-exec-11] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:40:10.243 INFO [http-nio-8080-exec-11] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:40:14.208 INFO [http-nio-8080-exec-7] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:40:14.352 INFO [http-nio-8080-exec-7] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:40:29.008 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:40:29.051 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:40:33.683 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:40:33.686 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:41:27.446 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:41:27.451 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 13:43:06.717 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+29-Apr-2019 13:43:06.719 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.getReport entityid | 0
+29-Apr-2019 18:29:35.778 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 18:29:38.344 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 18:29:38.508 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+29-Apr-2019 18:29:45.740 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_residence_bookings_1555509409539_457966]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.961 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_meal_session_charge_summary_1556534209145_928016]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.962 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_meal_session_charge_summary_1556534209145_928016]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.962 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_meal_session_charge_summary_1556534209145_928016]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.963 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_meal_session_charge_summary_1556534570102_298642]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.963 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_residence_bookings_1555509409539_457966]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.964 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_residence_bookings_1555509409539_457966]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.964 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_meal_session_charge_summary_1556533493530_904192]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.965 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_meal_session_charge_summary_1556534150768_938030]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:45.965 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c9446ca]) and a value of type [java.lang.Class] (value [class vw_student_charges_1555399178141_277425]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+29-Apr-2019 18:29:46.463 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+29-Apr-2019 18:29:47.293 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+29-Apr-2019 18:29:47.294 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+29-Apr-2019 18:29:48.245 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 18:29:49.197 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 18:29:49.915 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 18:29:49.966 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

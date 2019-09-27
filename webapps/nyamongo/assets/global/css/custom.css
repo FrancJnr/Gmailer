@@ -1,0 +1,243 @@
+@import "../../fonts/font-awesome.css";
+@import "../../fonts/fajar-icons.css";
+@import "../../fonts/fonts.css";
+@import "http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Raleway:400,100,200,300,500,600,700,800,900|Lato:400,900,700,300,100";
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.login-block {
+    background: #1478BE; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #92CCF2, #1478BE); /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, #92CCF2, #1478BE); /!* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!/*/
+    float: left;
+    width: 100%;
+    padding: 3.125% 0;
+    background-image: url("../../img/slides/slide_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-position: center center;
+}
+
+section {
+    height: 100vh;
+}
+
+.banner-sec {
+    /*background: url(../../images/home-dark.png) no-repeat left bottom;*/
+    /*background-size: cover;*/
+    background: #1478BE; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #92CCF2, #1478BE); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #92CCF2, #1478BE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    min-height: 500px;
+    border-radius: 0 10px 10px 0;
+    padding: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    border-radius: 0 10px 10px 0;
+}
+
+.carousel-caption {
+    text-align: left;
+    left: 5%;
+}
+
+.login-sec {
+    padding: 50px 30px;
+    position: relative;
+}
+
+.login-sec .copy-text {
+    position: absolute;
+    width: 80%;
+    bottom: 0px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.login-sec .copy-text i {
+    color: #92CCF2;
+}
+
+.login-sec .copy-text a {
+    color: #1478BE;
+}
+
+.login-sec h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 30px;
+    color: #1478BE;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-sec h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #92CCF2;
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.btn-login {
+    background: #1478BE;
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner-text {
+    width: 70%;
+    position: absolute;
+    bottom: 40px;
+    padding-left: 20px;
+    background: #1478BE;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+.banner-text h2 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner-text h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #FFF;
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.banner-text p {
+    color: #fff;
+}
+
+/* Boxed */
+.boxed-tri-sec {
+    font-size: 12px;
+    background: #fff;
+    padding: 35px 22px 22px 22px;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    position: relative;
+    margin: 73px 0 0;
+}
+
+.boxed-tri-sec .pointer-icon {
+    position: absolute;
+    right: 33px;
+    top: -30px;
+}
+
+.pointer-icon {
+    background: #2991d6;
+}
+
+.pointer-icon:after {
+    border-top-color: #2991d6;
+}
+
+.pointer-icon {
+    border-radius: 3px;
+    color: #fff;
+    font-size: 35px;
+    height: 62px;
+    line-height: 65px;
+    text-align: center;
+    width: 67px;
+    position: relative;
+}
+
+.pointer-icon:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(41, 145, 214, 0);
+    border-width: 12px;
+    margin-left: -4px;
+    border-left: 0;
+}
+
+.pointer-icon .shadow {
+    background: #fff;
+    position: absolute;
+    left: -45px;
+    top: -20px;
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+    transform: rotate(137deg) scale(1.5) skew(29deg) translate(-1px);
+    -webkit-transform: rotate(137deg) scale(1.5) skew(29deg) translate(-1px);
+    -moz-transform: rotate(137deg) scale(1.5) skew(29deg) translate(-1px);
+    -o-transform: rotate(137deg) scale(1.5) skew(29deg) translate(-1px);
+    -ms-transform: rotate(137deg) scale(1.5) skew(29deg) translate(-1px);
+}
+
+.pointer-icon {
+    color: #fff;
+    font-size: 35px;
+    line-height: 65px;
+    text-align: center;
+}
+
+.pointer-icon:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(41, 145, 214, 0);
+    border-width: 12px;
+    margin-left: -4px;
+    border-left: 0;
+}
+
+/* Header */
+h2, .h2 {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.1;
+    color: #222222;
+}
+
+.heading {
+    margin: 0 auto;
+    max-width: 860px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+h2.light {
+    font-weight: 300;
+}
+
+.heading h2 {
+    margin-bottom: 7px;
+}

@@ -1,0 +1,651 @@
+28-Jun-2019 09:16:38.542 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-52-generic
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+28-Jun-2019 09:16:38.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+28-Jun-2019 09:16:38.553 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jun-2019 09:16:38.994 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 09:16:39.004 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Jun-2019 09:16:39.015 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 09:16:39.017 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Jun-2019 09:16:39.017 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2412 ms
+28-Jun-2019 09:16:39.065 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Jun-2019 09:16:39.065 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+28-Jun-2019 09:16:39.157 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+28-Jun-2019 09:16:39.398 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Jun-2019 09:16:39.403 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+28-Jun-2019 09:16:39.413 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+28-Jun-2019 09:16:40.910 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+28-Jun-2019 09:16:40.916 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+28-Jun-2019 09:16:40.983 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+28-Jun-2019 09:16:41.036 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [1,877] ms
+28-Jun-2019 09:16:41.037 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+28-Jun-2019 09:16:41.606 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:16:41.637 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [599] ms
+28-Jun-2019 09:16:41.637 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+28-Jun-2019 09:16:49.886 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:16:51.061 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [9,423] ms
+28-Jun-2019 09:16:51.061 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+28-Jun-2019 09:16:51.259 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:16:51.287 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [226] ms
+28-Jun-2019 09:16:51.287 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+28-Jun-2019 09:16:59.594 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 09:16:59.700 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:16:59.705 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:16:59.705 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:17:00.781 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [9,494] ms
+28-Jun-2019 09:17:00.782 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+28-Jun-2019 09:17:00.886 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:17:00.904 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [122] ms
+28-Jun-2019 09:17:00.905 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+28-Jun-2019 09:17:01.048 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:17:01.049 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [145] ms
+28-Jun-2019 09:17:01.049 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/college]
+28-Jun-2019 09:17:01.144 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+28-Jun-2019 09:17:08.596 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+28-Jun-2019 09:17:08.596 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+28-Jun-2019 09:17:08.597 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+28-Jun-2019 09:17:08.597 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+28-Jun-2019 09:17:08.597 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+28-Jun-2019 09:17:08.597 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+28-Jun-2019 09:17:08.716 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:17:10.234 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/college] has finished in [9,185] ms
+28-Jun-2019 09:17:10.234 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+28-Jun-2019 09:17:14.621 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:17:14.637 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [4,403] ms
+28-Jun-2019 09:17:14.637 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+28-Jun-2019 09:17:18.782 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:17:18.826 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [4,189] ms
+28-Jun-2019 09:17:18.826 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+28-Jun-2019 09:17:20.891 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:17:20.895 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [2,069] ms
+28-Jun-2019 09:17:20.912 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 09:17:20.964 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 09:17:20.966 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 41948 ms
+28-Jun-2019 09:29:50.070 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 09:29:50.143 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 09:29:50.161 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:29:50.162 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:29:56.213 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 09:29:56.244 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:29:56.247 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:29:56.247 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:29:56.285 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 09:35:26.457 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 09:35:26.458 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 09:35:26.459 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:35:26.459 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:35:26.495 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@5834f81]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@7ac11b78]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 09:35:28.447 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 09:35:28.474 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:35:28.478 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:35:28.479 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:35:28.519 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 09:41:30.947 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 09:41:30.947 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 09:41:30.948 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:41:30.948 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:41:30.951 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@5430bcac]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@1c613acd]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 09:41:32.917 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 09:41:32.944 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:41:32.947 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:41:32.947 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:41:32.970 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 09:49:59.193 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 09:49:59.193 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 09:49:59.194 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:49:59.194 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:49:59.197 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@3ceee966]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@14a07914]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 09:50:01.141 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 09:50:01.178 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:50:01.181 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:50:01.181 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:50:01.210 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 09:52:32.986 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 09:52:33.026 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 09:52:33.032 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Jun-2019 09:52:33.229 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 09:52:33.239 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:52:33.239 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 09:52:33.282 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 09:52:33.284 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 09:52:33.286 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 09:52:33.286 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 09:52:37.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+28-Jun-2019 09:52:37.381 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+28-Jun-2019 09:52:37.381 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+28-Jun-2019 09:52:37.381 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-52-generic
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Jun-2019 09:52:37.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jun-2019 09:52:37.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jun-2019 09:52:37.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Jun-2019 09:52:37.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+28-Jun-2019 09:52:37.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+28-Jun-2019 09:52:37.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+28-Jun-2019 09:52:37.383 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jun-2019 09:52:37.706 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 09:52:37.716 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Jun-2019 09:52:37.728 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 09:52:37.730 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Jun-2019 09:52:37.731 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1114 ms
+28-Jun-2019 09:52:37.760 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Jun-2019 09:52:37.760 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+28-Jun-2019 09:52:37.771 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+28-Jun-2019 09:52:37.825 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+28-Jun-2019 09:52:37.827 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+28-Jun-2019 09:52:37.833 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+28-Jun-2019 09:52:38.895 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+28-Jun-2019 09:52:38.902 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+28-Jun-2019 09:52:38.976 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+28-Jun-2019 09:52:39.030 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [1,257] ms
+28-Jun-2019 09:52:39.030 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+28-Jun-2019 09:52:39.474 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:39.509 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [478] ms
+28-Jun-2019 09:52:39.509 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+28-Jun-2019 09:52:42.765 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:42.861 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [3,352] ms
+28-Jun-2019 09:52:42.861 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+28-Jun-2019 09:52:42.933 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:42.954 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [92] ms
+28-Jun-2019 09:52:42.954 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+28-Jun-2019 09:52:45.406 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 09:52:45.478 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:45.481 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:52:45.482 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 09:52:45.517 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [2,562] ms
+28-Jun-2019 09:52:45.517 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+28-Jun-2019 09:52:45.621 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:45.622 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [105] ms
+28-Jun-2019 09:52:45.623 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+28-Jun-2019 09:52:45.685 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:45.686 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [64] ms
+28-Jun-2019 09:52:45.686 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/college]
+28-Jun-2019 09:52:45.704 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+28-Jun-2019 09:52:48.549 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+28-Jun-2019 09:52:48.549 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+28-Jun-2019 09:52:48.550 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+28-Jun-2019 09:52:48.550 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+28-Jun-2019 09:52:48.550 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+28-Jun-2019 09:52:48.550 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+28-Jun-2019 09:52:48.611 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:48.646 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/college] has finished in [2,960] ms
+28-Jun-2019 09:52:48.647 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+28-Jun-2019 09:52:51.256 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:51.260 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [2,614] ms
+28-Jun-2019 09:52:51.261 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+28-Jun-2019 09:52:53.162 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:53.168 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [1,908] ms
+28-Jun-2019 09:52:53.168 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+28-Jun-2019 09:52:54.237 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 09:52:54.240 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,072] ms
+28-Jun-2019 09:52:54.243 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 09:52:54.249 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 09:52:54.250 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 16519 ms
+28-Jun-2019 10:00:24.301 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 10:00:24.306 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 10:00:24.308 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:00:24.308 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:00:26.316 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 10:00:26.346 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 10:00:26.349 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:00:26.349 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:00:26.373 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 10:16:30.179 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 10:16:30.179 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 10:16:30.181 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:16:30.181 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:16:30.183 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@738e4b3b]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@5f1040f8]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 10:16:32.075 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 10:16:32.109 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 10:16:32.111 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:16:32.112 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:16:32.143 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 10:22:34.025 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 10:22:34.026 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 10:22:34.027 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:22:34.027 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:22:34.030 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@5551d4bb]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@18ffb8a7]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 10:22:35.874 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 10:22:35.903 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 10:22:35.905 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:22:35.905 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:22:35.928 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 10:24:36.402 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 10:24:36.403 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 10:24:36.404 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:24:36.404 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:24:36.406 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@18b42035]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@72ec9895]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 10:24:38.384 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 10:24:38.421 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 10:24:38.424 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:24:38.425 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:24:38.454 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 10:57:20.397 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 10:57:20.397 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 10:57:20.398 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:57:20.398 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 10:57:20.400 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@9da0c71]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@3fe5048f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 10:57:22.273 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 10:57:22.305 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 10:57:22.307 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:57:22.307 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 10:57:22.328 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:00:11.411 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:00:11.412 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:00:11.443 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:00:11.444 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:00:11.459 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@69a685ec]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@13335a91]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:00:14.778 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:00:14.811 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:00:14.814 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:00:14.814 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:00:14.836 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:02:37.746 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:02:37.746 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:02:37.748 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:02:37.748 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:02:37.750 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@3178b8d9]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@6f63c11f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:02:39.526 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:02:39.574 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:02:39.575 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:02:39.576 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:02:39.599 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:05:57.552 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:05:57.552 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:05:57.553 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:05:57.553 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:05:57.555 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@6d1a8a11]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@23a3f20a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:05:59.639 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:05:59.663 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:05:59.664 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:05:59.664 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:05:59.689 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:18:26.219 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:18:26.219 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:18:26.220 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:18:26.220 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:18:26.222 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@618017a8]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@34fb106e]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:18:28.240 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:18:28.264 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:18:28.266 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:18:28.266 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:18:28.293 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:22:29.859 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:22:29.859 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:22:29.861 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:22:29.861 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:22:29.863 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@1dbb6c1a]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@73d69e4c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:22:31.655 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:22:31.680 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:22:31.681 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:22:31.681 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:22:31.705 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:27:06.119 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:27:06.120 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:27:06.121 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:27:06.121 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:27:06.123 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@59020635]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@4f9f8c48]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:27:08.034 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:27:08.066 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:27:08.069 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:27:08.070 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:27:08.093 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:28:47.051 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:28:47.051 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:28:47.052 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:28:47.052 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:28:47.054 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@6b4d9580]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@2d5ec8a6]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:28:49.036 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:28:49.064 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:28:49.066 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:28:49.066 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:28:49.088 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:48:11.637 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:48:11.640 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:48:11.641 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:48:11.641 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:48:11.643 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@307d9f06]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@188e5d1b]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:48:13.734 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:48:13.765 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:48:13.767 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:48:13.767 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:48:13.799 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:48:57.830 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:48:57.830 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:48:57.831 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:48:57.831 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:48:57.833 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@343838df]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@51938309]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:48:59.884 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:48:59.916 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:48:59.918 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:48:59.918 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:48:59.940 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:50:27.951 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:50:27.952 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:50:27.953 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:50:27.953 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:50:27.955 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@14fcb8ea]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@5d50dcc7]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:50:29.815 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:50:29.840 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:50:29.842 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:50:29.842 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:50:29.869 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 11:54:20.714 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 11:54:20.715 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 11:54:20.716 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:54:20.716 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 11:54:20.717 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@4f6d2e42]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@b795868]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 11:54:22.603 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 11:54:22.628 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 11:54:22.631 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:54:22.632 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 11:54:22.666 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 12:06:48.787 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 12:06:48.788 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 12:06:48.789 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:06:48.789 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:06:48.791 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@42593cf4]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@659fd9e5]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 12:06:50.754 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 12:06:50.786 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 12:06:50.788 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:06:50.789 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:06:50.820 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 12:07:01.749 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 12:07:01.749 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 12:07:01.750 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:07:01.750 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:07:01.752 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@27990584]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@77bbd473]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 12:07:03.543 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 12:07:03.572 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 12:07:03.575 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:07:03.575 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:07:03.602 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 12:09:26.643 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 12:09:26.643 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 12:09:26.644 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:09:26.644 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:09:26.646 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@65edb5c7]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@655b6ec0]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 12:09:28.648 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 12:09:28.673 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 12:09:28.675 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:09:28.675 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:09:28.699 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 12:15:21.040 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 12:15:21.041 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 12:15:21.042 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:15:21.042 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:15:21.044 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@34758c18]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@5a58a5cf]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 12:15:22.990 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 12:15:23.016 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 12:15:23.018 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:15:23.018 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:15:23.047 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 12:16:40.209 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 12:16:40.209 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 12:16:40.210 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:16:40.210 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:16:40.212 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@b7c38e3]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@a8f0b19]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 12:16:42.186 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 12:16:42.229 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 12:16:42.231 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:16:42.231 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:16:42.256 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 12:26:58.225 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 12:26:58.226 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 12:26:58.227 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:26:58.227 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:26:58.229 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@3e6df6b3]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@1e609379]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 12:27:00.625 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 12:27:00.649 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 12:27:00.651 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:27:00.651 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:27:00.680 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 12:29:46.220 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] has started
+28-Jun-2019 12:29:46.221 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 12:29:46.221 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:29:46.221 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 12:29:46.223 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [babcock] created a ThreadLocal with key of type [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1] (value [com.sun.xml.ws.api.server.ThreadLocalContainerResolver$1@43df644f]) and a value of type [com.sun.xml.ws.api.server.Container.NoneContainer] (value [com.sun.xml.ws.api.server.Container$NoneContainer@29228db2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 12:29:48.319 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+28-Jun-2019 12:29:48.344 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jun-2019 12:29:48.345 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:29:48.345 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+28-Jun-2019 12:29:48.373 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/babcock] is completed
+28-Jun-2019 15:52:40.002 INFO [http-nio-8080-exec-139] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 15:52:41.523 INFO [http-nio-8080-exec-139] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 15:52:59.329 INFO [http-nio-8080-exec-140] org.baraza.reports.BWebReport.setParams Filter = filterid key = 4
+28-Jun-2019 15:52:59.509 INFO [http-nio-8080-exec-140] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 15:53:14.137 SEVERE [http-nio-8080-exec-140] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "tuition_fee" does not exist
+  Position: 22
+28-Jun-2019 15:53:14.138 SEVERE [http-nio-8080-exec-140] org.baraza.DB.BQuery.makeQuery SQL SELECT session_name, tuition_fee, attachment_fee, exam_fee, graduation_fee, extra_fees, approved, scharge_id, session_id, org_id
+FROM vw_scharges
+WHERE (session_id = '24') AND (org_id = '0')
+ORDER BY scharge_id
+28-Jun-2019 16:01:34.406 INFO [http-nio-8080-exec-146] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 16:01:34.411 INFO [http-nio-8080-exec-146] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 16:01:50.689 SEVERE [http-nio-8080-exec-143] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "vw_student_charges" does not exist
+  Position: 184
+28-Jun-2019 16:01:50.689 SEVERE [http-nio-8080-exec-143] org.baraza.DB.BQuery.makeQuery SQL SELECT student_id, student_name, course_level_name, course_name, tuition_fee, attachment_fee, exam_fee, graduation_fee, extra_fees, total_charge, sstudent_id, session_id, org_id
+FROM vw_student_charges
+WHERE (session_id = '24') AND (org_id = '0')
+ORDER BY sstudent_id
+28-Jun-2019 17:22:56.146 SEVERE [http-nio-8080-exec-144] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "tuition_fee" does not exist
+  Position: 66
+28-Jun-2019 17:22:56.149 SEVERE [http-nio-8080-exec-144] org.baraza.DB.BQuery.makeQuery SQL SELECT student_id, student_name, course_level_name, course_name, tuition_fee, attachment_fee, exam_fee, graduation_fee, extra_fees, total_charge, sstudent_id, session_id, org_id
+FROM vw_student_charges
+WHERE (session_id = '24') AND (org_id = '0')
+ORDER BY sstudent_id
+28-Jun-2019 17:22:59.435 SEVERE [http-nio-8080-exec-146] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "tuition_fee" does not exist
+  Position: 66
+28-Jun-2019 17:22:59.435 SEVERE [http-nio-8080-exec-146] org.baraza.DB.BQuery.makeQuery SQL SELECT student_id, student_name, course_level_name, course_name, tuition_fee, attachment_fee, exam_fee, graduation_fee, extra_fees, total_charge, sstudent_id, session_id, org_id
+FROM vw_student_charges
+WHERE (session_id = '24') AND (org_id = '0')
+ORDER BY sstudent_id
+28-Jun-2019 18:01:03.804 INFO [http-nio-8080-exec-147] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 18:01:04.305 INFO [http-nio-8080-exec-147] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 18:04:40.605 INFO [http-nio-8080-exec-137] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 18:04:40.673 INFO [http-nio-8080-exec-137] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 18:04:44.640 INFO [http-nio-8080-exec-144] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 18:04:44.661 INFO [http-nio-8080-exec-144] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 18:05:23.586 INFO [http-nio-8080-exec-142] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 18:05:23.590 INFO [http-nio-8080-exec-142] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 18:07:23.535 INFO [http-nio-8080-exec-140] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 18:07:23.539 INFO [http-nio-8080-exec-140] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 18:07:46.537 INFO [http-nio-8080-exec-139] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 18:07:46.540 INFO [http-nio-8080-exec-139] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 18:07:47.589 INFO [http-nio-8080-exec-137] org.baraza.reports.BWebReport.setParams Filter = filterid key = 24
+28-Jun-2019 18:07:47.591 INFO [http-nio-8080-exec-137] org.baraza.reports.BWebReport.getReport entityid | 0
+28-Jun-2019 18:13:43.832 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 18:13:43.906 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 18:13:43.991 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Jun-2019 18:13:44.759 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [college] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3f44909d]) and a value of type [java.lang.Class] (value [class report1_1558426693530_250891]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 18:13:44.818 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [college] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3f44909d]) and a value of type [java.lang.Class] (value [class student_payments_1558422170041_832848]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 18:13:44.819 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [college] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3f44909d]) and a value of type [java.lang.Class] (value [class student_charges_1561734430322_53627]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 18:13:44.819 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [college] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3f44909d]) and a value of type [java.lang.Class] (value [class student_charges_1561734256791_714522]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 18:13:44.819 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [college] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3f44909d]) and a value of type [java.lang.Class] (value [class student_charges_1561734256791_714522]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 18:13:44.820 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [college] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3f44909d]) and a value of type [java.lang.Class] (value [class session_charges_summary_1561452725658_103548]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 18:13:44.820 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [college] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3f44909d]) and a value of type [java.lang.Class] (value [class student_charges_1561733894431_840962]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Jun-2019 18:13:45.088 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+28-Jun-2019 18:13:45.206 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 18:13:45.207 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+28-Jun-2019 18:13:45.384 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 18:13:45.524 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+28-Jun-2019 18:13:46.103 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Jun-2019 18:13:46.104 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

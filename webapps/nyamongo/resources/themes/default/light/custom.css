@@ -1,0 +1,138 @@
+/* UEAB Colour Scheme */
+
+html, body, textarea, input { 	color:#2d342a; }
+a, a:hover, a:visited, a:link {color:#5383df;}
+header{
+	border-top:2px solid;
+	border-left:2px solid;
+	border-right:2px solid;
+	border-top-color:#c28d3d;
+	border-left-color:#c28d3d;
+	border-right-color:#c28d3d;
+	background:#2d342a;
+	/* the filter causes an overflow problem on IE9 http://stackoverflow.com/questions/3619383/internet-explorer-css-property-filter-ignores-overflowvisible
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#f1f1f1');*/
+	background:-webkit-gradient(linear, left top, left bottom, from(#446bb6), to(#2d499f));
+	background:-moz-linear-gradient(top,  #446bb6,  #2d499f);
+	background:-o-linear-gradient(top,  #446bb6,  #2d499f);
+}
+
+#content{
+	border-top-color:#c28d3d;
+	border-bottom-color:#c28d3d;
+	border-left-color:#c28d3d;
+	border-right-color:#c28d3d;	
+}
+
+footer{
+	color:#2d342a;
+}
+
+form label{
+	color:#2d342a;
+}
+
+.k-state-hover,
+.k-state-hover:hover,
+.k-splitbar-horizontal-hover:hover,
+.k-splitbar-vertical-hover:hover,
+.k-list > .k-state-hover,
+.k-state-focused,
+.k-marquee {
+  color: #F0C237;
+  background-color: #2d499f;
+  border-color: #c28d3d;
+}
+
+.k-state-selected,
+.k-list > .k-state-selected,
+.k-list > .k-state-focused,
+.k-panelbar .k-state-selected,
+.k-button:active,
+.k-ghost-splitbar-vertical,
+.k-ghost-splitbar-horizontal,
+.k-draghandle.k-state-selected:hover {
+	  background-color: #2d499f;
+	  border-color: #c28d3d;
+}
+
+.k-state-hover > .k-link, .k-other-month.k-state-hover .k-link {
+  color: #F0C237;
+}
+
+.k-state-active, .k-state-active:hover, .k-active-filter {
+  border-color: #c28d3d;
+}
+/* End of Judiciary Colour Scheme */
+
+.ui-helper-reset { 
+	line-height: 0.4; 
+}
+
+.k-grid td {
+    line-height: 1em;
+    padding: 0.4em 0.55em;
+}
+
+.breadcrumb li a {
+	font-size: 11px;
+}
+
+.form_content {
+	min-height:450px;
+}
+
+table#formtable td, table#formtable th{
+	border:0;
+	padding:3px 2px;
+	text-align:left;
+}
+
+#table_content {
+	padding-top:3px;
+}
+
+#grid_content {
+	padding-top:3px;
+}
+
+#reports td, #reports th{
+	padding:1px 1px;
+	text-align:left;
+	vertical-align: top;
+}
+
+#reports td > table {
+	background-color: transparent;
+}
+
+#reports table {
+	background-color: #FFFFFF;
+	background-image: none;
+}
+
+#gridtable td, #gridtable th{
+	padding:1px 1px;
+	text-align:left;
+	vertical-align: top;
+}
+
+#gridtable td > table {
+	background-color: transparent;
+}
+
+#gridtable table {
+	background-color: #FFFFFF;
+	background-image: none;
+}
+
+#calendar {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.noscreen {
+	display: none;
+}
+
+

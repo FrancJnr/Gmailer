@@ -1,0 +1,1765 @@
+17-Jun-2019 09:20:19.036 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+17-Jun-2019 09:20:19.036 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+17-Jun-2019 09:20:19.037 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@20afb6cd')
+17-Jun-2019 09:20:35.983 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+17-Jun-2019 09:20:35.983 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 11:43:52.579 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [38] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+35: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+36: 	web.init(request);
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [38] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+35: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+36: 	web.init(request);
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 11:44:16.356 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [38] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+35: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+36: 	web.init(request);
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [38] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+35: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+36: 	web.init(request);
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+ProfilePic cannot be resolved to a type
+37: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+38: 	Dashboard dash = new Dashboard(db);
+39: 
+40: 	ProfilePic pic = new ProfilePic();
+41: 	try{
+42: 	String image_url = pic.fetchImageUrl(request, context);
+43: 	System.out.println(image_url);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 11:44:41.711 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+36: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+37: 	web.init(request);
+38: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+39: 	Dashboard dash = new Dashboard(db);
+40: 
+41: 	ProfilePic pic = new ProfilePic();
+42: 	try{
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+36: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+37: 	web.init(request);
+38: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+39: 	Dashboard dash = new Dashboard(db);
+40: 
+41: 	ProfilePic pic = new ProfilePic();
+42: 	try{
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:13:28.762 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+36: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+37: 	web.init(request);
+38: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+39: 	Dashboard dash = new Dashboard(db);
+40: 
+41: 	ProfilePic pic = new ProfilePic();
+42: 	try{
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/a_students.jsp]
+db cannot be resolved to a variable
+36: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+37: 	web.init(request);
+38: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+39: 	Dashboard dash = new Dashboard(db);
+40: 
+41: 	ProfilePic pic = new ProfilePic();
+42: 	try{
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+An error occurred at line: [90] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+87: 	}
+88: 
+89: 	String fieldTitles = web.getFieldTitles();
+90: 	System.out.println(dash.);
+91: 	if(excelexport != null) reportexport = excelexport;
+92: 	if(reportexport != null) {
+93: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:15:18.159 SEVERE [http-nio-8080-exec-16] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a variable
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	Dashboard dash = new Dashboard(BDB db);
+41: 
+42: 	ProfilePic pic = new ProfilePic();
+43: 	try{
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+Syntax error on token "db", delete this token
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	Dashboard dash = new Dashboard(BDB db);
+41: 
+42: 	ProfilePic pic = new ProfilePic();
+43: 	try{
+
+
+An error occurred at line: [91] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+88: 	}
+89: 
+90: 	String fieldTitles = web.getFieldTitles();
+91: 	System.out.println(dash.);
+92: 	if(excelexport != null) reportexport = excelexport;
+93: 	if(reportexport != null) {
+94: 		out.println("	<script>");
+
+
+An error occurred at line: [91] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+88: 	}
+89: 
+90: 	String fieldTitles = web.getFieldTitles();
+91: 	System.out.println(dash.);
+92: 	if(excelexport != null) reportexport = excelexport;
+93: 	if(reportexport != null) {
+94: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a variable
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	Dashboard dash = new Dashboard(BDB db);
+41: 
+42: 	ProfilePic pic = new ProfilePic();
+43: 	try{
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+Syntax error on token "db", delete this token
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	Dashboard dash = new Dashboard(BDB db);
+41: 
+42: 	ProfilePic pic = new ProfilePic();
+43: 	try{
+
+
+An error occurred at line: [91] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+88: 	}
+89: 
+90: 	String fieldTitles = web.getFieldTitles();
+91: 	System.out.println(dash.);
+92: 	if(excelexport != null) reportexport = excelexport;
+93: 	if(reportexport != null) {
+94: 		out.println("	<script>");
+
+
+An error occurred at line: [91] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+88: 	}
+89: 
+90: 	String fieldTitles = web.getFieldTitles();
+91: 	System.out.println(dash.);
+92: 	if(excelexport != null) reportexport = excelexport;
+93: 	if(reportexport != null) {
+94: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:16:29.162 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:16:34.676 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard(db);
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:23:15.574 SEVERE [http-nio-8080-exec-11] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard();
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard();
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard();
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db = new BDB();
+41: 	Dashboard dash = new Dashboard();
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:23:53.171 SEVERE [http-nio-8080-exec-17] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db;
+41: 	Dashboard dash = new Dashboard();
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the generated java file: [/opt/projects/tomcat/work/Catalina/localhost/aua/org/apache/jsp/a_005fstudents_jsp.java]
+Only a type can be imported. com.dewcis.BDB resolves to a package
+
+An error occurred at line: [40] in the jsp file: [/a_students.jsp]
+BDB cannot be resolved to a type
+37: 	BWeb web = new BWeb(dbconfig, xmlfile,context);
+38: 	web.init(request);
+39: 	web.setMainPage(String.valueOf(pageContext.getAttribute("mainPage")));
+40: 	BDB db;
+41: 	Dashboard dash = new Dashboard();
+42: 
+43: 	ProfilePic pic = new ProfilePic();
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:24:51.001 SEVERE [http-nio-8080-exec-14] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:] with root cause
+ org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+dash cannot be resolved to a type
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+An error occurred at line: [92] in the jsp file: [/a_students.jsp]
+Syntax error on token ".", class expected after this token
+89: 	}
+90: 
+91: 	String fieldTitles = web.getFieldTitles();
+92: 	System.out.println(dash.);
+93: 	if(excelexport != null) reportexport = excelexport;
+94: 	if(reportexport != null) {
+95: 		out.println("	<script>");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:495)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:595)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:46:56.278 SEVERE [http-nio-8080-exec-39] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:52)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:48:03.623 SEVERE [http-nio-8080-exec-46] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [290]
+
+287: 
+288: <% if(web.getViewType().equals("DASHBOARD")) { %>
+289: 
+290: 	<%= dash.getDashboard(web) %>
+291: 
+292: 	<% if(web.hasDashboardItem("ATTENDANCE")) {%>
+293: 		<%@ include file="./assets/include/attendance.jsp" %>
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:52)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:51:46.062 SEVERE [http-nio-8080-exec-49] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [290]
+
+287: 
+288: <% if(web.getViewType().equals("DASHBOARD")) { %>
+289: 
+290: 	<%= dash.getDashboard(web) %>
+291: 
+292: 	<% if(web.hasDashboardItem("ATTENDANCE")) {%>
+293: 		<%@ include file="./assets/include/attendance.jsp" %>
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:52)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:52:08.106 SEVERE [http-nio-8080-exec-47] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:55)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:53:27.490 SEVERE [http-nio-8080-exec-56] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:55)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:53:57.365 SEVERE [http-nio-8080-exec-63] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:56)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:55:09.313 SEVERE [http-nio-8080-exec-64] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:56)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 12:55:50.549 SEVERE [http-nio-8080-exec-69] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:57)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 14:37:35.737 SEVERE [http-nio-8080-exec-79] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:57)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 16:44:51.177 SEVERE [http-nio-8080-exec-101] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [An exception occurred processing JSP page [/a_students.jsp] at line [290]
+
+287: 
+288: <% if(web.getViewType().equals("DASHBOARD")) { %>
+289: 
+290: 	<%= dash.getDashboard(web) %>
+291: 
+292: 	<% if(web.hasDashboardItem("ATTENDANCE")) {%>
+293: 		<%@ include file="./assets/include/attendance.jsp" %>
+
+
+Stacktrace:] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:57)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 16:47:49.584 SEVERE [http-nio-8080-exec-96] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:57)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 16:52:19.449 SEVERE [http-nio-8080-exec-109] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:57)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 16:53:22.629 SEVERE [http-nio-8080-exec-104] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.filterBuild(BQuery.java:333)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:242)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTileList(BWebDashboard.java:98)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:57)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 16:54:43.120 SEVERE [http-nio-8080-exec-113] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/aua] threw exception [java.lang.NullPointerException] with root cause
+ java.lang.NullPointerException
+	at org.baraza.DB.BQuery.makeQuery(BQuery.java:283)
+	at org.baraza.DB.BQuery.buildQuery(BQuery.java:245)
+	at org.baraza.DB.BQuery.<init>(BQuery.java:97)
+	at com.dewcis.BWebDashboard.getTile(BWebDashboard.java:29)
+	at com.dewcis.Dashboard.getDashboard(Dashboard.java:49)
+	at org.apache.jsp.a_005fstudents_jsp._jspService(a_005fstudents_jsp.java:459)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:386)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:330)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:610)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 16:55:06.800 INFO [localhost-startStop-6] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+17-Jun-2019 16:55:06.800 INFO [localhost-startStop-6] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+17-Jun-2019 16:55:18.189 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+17-Jun-2019 16:55:18.189 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+17-Jun-2019 16:55:18.190 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@56282524')
+17-Jun-2019 16:55:31.980 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Marking servlet [myFedhaClient] as unavailable
+17-Jun-2019 16:55:31.980 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [myFedhaClient] in web application [/college] threw load() exception
+ java.lang.ClassNotFoundException: com.dewcis.myfedha.myFedhaClient
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1172)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:546)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:527)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1044)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4998)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5312)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+17-Jun-2019 18:28:13.075 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+17-Jun-2019 18:28:13.075 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

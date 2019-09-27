@@ -1,0 +1,128 @@
+<APP name="AUA">
+	<MENU name="General Information">
+			<MENU  name="Degrees">18</MENU>
+			<MENU name="Applications">828</MENU>
+			<MENU name="Specializations">865</MENU>
+			<MENU name="Sponsors">870</MENU>
+			<MENU name="Registrations">855</MENU>
+	</MENU>
+
+	<DESK w="700" h="500" name="Degrees" key="18">
+		<GRID noorg="true" keyfield="degree_id" name="Degrees" orderby="degree_id" table="vw_degrees" secured="true">
+			<TEXTFIELD w="40" title="Degree ID">degree_id</TEXTFIELD>
+			<TEXTFIELD w="40" title="Degree Name">degree_name</TEXTFIELD>
+			<TEXTFIELD w="40" title="Degree Level">degree_level_name</TEXTFIELD>
+			<FORM noorg="true" keyfield="degree_id" name="Degrees" table="degrees">
+				<TEXTFIELD w="50" h="20" x="10" y="10" title="Degree ID">degree_id</TEXTFIELD>
+				<COMBOBOX noorg="true" w="250" h="20" lpfield="degree_level_name" x="190" y="10" lptable="degree_levels" title="Level Name">degree_level_id</COMBOBOX>
+				<TEXTFIELD w="430" h="20" x="10" y="30" title="Degree Name">degree_name</TEXTFIELD>
+				<COMBOBOX noorg="true" w="250" h="20" lpfield="major_name" x="190" y="10" lptable="majors" title="Specialisation">major_id</COMBOBOX>
+				<TEXTAREA w="430" h="70" x="10" y="50" title="Details">details</TEXTAREA>
+			</FORM>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="550" name="Applications" key="828">
+		<GRID noorg="true" keyfield="application_id" name="Applications" orderby="application_id" table="vw_applications" secured="true">
+			<TEXTFIELD w="75" title="Entity ID">entity_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Entity Name">entity_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Session ID">session_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Session Name">session_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="Middle Name">middle_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<CHECKBOX w="75" title="Finance Approved">finance_approved</CHECKBOX>
+			<CHECKBOX w="75" title="Open Application">open_application</CHECKBOX>
+			<CHECKBOX w="75" title="Closed">closed</CHECKBOX>
+			<CHECKBOX w="75" title="Emailed">emailed</CHECKBOX>
+			<CHECKBOX w="75" title="Paid">paid</CHECKBOX>
+			<TEXTDATE w="75" title="Application Date">application_date</TEXTDATE>
+			<CHECKBOX w="75" title="Picked">picked</CHECKBOX>
+			<TEXTTIMESTAMP w="75" title="Picked Date">picked_date</TEXTTIMESTAMP>
+			<TEXTFIELD w="75" title="Primary Telephone">primary_telephone</TEXTFIELD>
+			<TEXTFIELD w="75" title="Application ID">application_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Status">status</TEXTFIELD>
+			<CHECKBOX w="75" title="Sponsored">is_sponsored</CHECKBOX>
+	</GRID>
+</DESK>
+
+	<DESK w="700" h="550" name="Specializations" key="865">
+		<GRID keyfield="org_id" name="Specializations" table="vw_specializations" secured="true">
+			<TEXTFIELD w="75" title="Degree ID">degree_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Degree Name">degree_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Specialization ID">specialization_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Specialization Name">specialization_name</TEXTFIELD>
+		</GRID>
+	</DESK>
+
+	<DESK w="700" h="550" name="Sponsors" key="870">
+	<GRID keyfield="sponsor_id" name="Sponsors" table="vw_sponsors" secured="true">
+		<TEXTFIELD w="75" title="Sponsor Type ID">sponsor_type_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Sponsor Type Name">sponsor_type_name</TEXTFIELD>
+		<TEXTFIELD w="75" title="Sponsor ID">sponsor_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Org ID">org_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Sponsor Name">sponsor_name</TEXTFIELD>
+	</GRID>
+</DESK>
+<DESK w="700" h="500" name="Registrations" key="855">
+	<GRID noorg="true" keyfield="registration_id" limit="100" name="Registrations" orderby="registration_id desc" where="(existing_id is null AND is_rejected=false AND is_deferred=false)" tab.count="count(registration_id)" table="vw_registrations" secured="true">
+		<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+		<TEXTFIELD w="75" title="Middle Name">middle_name</TEXTFIELD>
+		<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+		<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+		<CHECKBOX w="75" title="Finance Approved">finance_approved</CHECKBOX>
+		<CHECKBOX w="75" title="Emailed">emailed</CHECKBOX>
+		<CHECKBOX w="75" title="Paid">paid</CHECKBOX>
+		<TEXTDATE w="75" title="Application Date">application_date</TEXTDATE>
+		<TEXTFIELD w="75" title="Narrative">narrative</TEXTFIELD>
+		<TEXTFIELD w="75" title="Primary Telephone">primary_telephone</TEXTFIELD>
+		<TEXTFIELD w="75" title="Application ID">application_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Status">status</TEXTFIELD>
+		<TEXTFIELD w="75" title="Denomination Name">denomination_name</TEXTFIELD>
+		<TEXTFIELD w="75" title="Sys Country Name">sys_country_name</TEXTFIELD>
+		<TEXTFIELD w="75" title="Registration ID">registration_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Phone Number">phone_number</TEXTFIELD>
+		<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
+		<TEXTFIELD w="75" title="Town">town</TEXTFIELD>
+		<TEXTDATE w="75" title="Birth Date">birth_date</TEXTDATE>
+		<TEXTFIELD w="75" title="Gender">gender</TEXTFIELD>
+		<TEXTFIELD w="75" title="Mobile Number">mobile_number</TEXTFIELD>
+		<TEXTFIELD w="75" title="Nationality ID">nationality_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Marital Status">marital_status</TEXTFIELD>
+		<TEXTFIELD w="75" title="Existing ID">existing_id</TEXTFIELD>
+		<TEXTTIMESTAMP w="75" title="Submit Date">submit_date</TEXTTIMESTAMP>
+		<TEXTFIELD w="75" title="Picture File">picture_file</TEXTFIELD>
+		<TEXTFIELD w="75" title="Account Number">account_number</TEXTFIELD>
+		<TEXTFIELD w="75" title="Degree ID">degree_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Sponsor ID">sponsor_id</TEXTFIELD>
+		<TEXTTIMESTAMP w="75" title="Accepted Date">accepted_date</TEXTTIMESTAMP>
+		<TEXTFIELD w="75" title="Site ID">site_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Specialization ID">specialization_id</TEXTFIELD>
+		<TEXTFIELD w="75" title="Form Data">form_data</TEXTFIELD>
+		</GRID>
+</DESK>
+
+<DESK noorg="true" w="700" h="500" name="Dashboard" key="100">
+
+	<FORM noorg="true" keyfield="application_id" name="applications" table="applications">
+		<TEXTFIELD w="150" x="10" h="20" y="30" title="Surname">surname</TEXTFIELD>
+		<TEXTFIELD w="150" x="290" h="20" y="30" title="Last Name">middle_name</TEXTFIELD>
+		<TEXTFIELD w="150" x="10" h="20" y="50" title="First Name">first_name</TEXTFIELD>
+		<TEXTFIELD w="430" x="10" h="20" y="70" title="Email">email</TEXTFIELD>
+	</FORM>
+		<GRID noorg="true" keyfield="entry_form_id" name="Applied Forms" user="entity_id" table="vw_entry_forms">
+		<TEXTFIELD w="350" title="Form Name">form_name</TEXTFIELD>
+		<TEXTTIMESTAMP w="150" title="Application Date">application_date</TEXTTIMESTAMP>
+		<TEXTFIELD w="75" title="Status">approve_status</TEXTFIELD>
+		<BROWSER noorg="true" baseurl="http://localhost:8080/aua/register.jsp?" blankpage="true" action="ENTRYFORM" linkfield="actionvalue" title="Form">entry_form_id</BROWSER>
+		<FILES password="enter" keyfield="sys_file_id" filetable="entry_forms" name="Documents" where="(table_name='entry_forms')" linkfield="table_id" params="table_name" repository="http://localhost:8080/repository/webdav/files/" table="sys_files" username="root">
+			<TEXTFIELD w="75" title="File ID">sys_file_id</TEXTFIELD>
+			<TEXTFIELD w="175" title="File Name">file_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="File Type">file_type</TEXTFIELD>
+			<TEXTFIELD w="75" title="File Size">file_size</TEXTFIELD>
+		</FILES>
+
+	</GRID>
+</DESK>
+
+</APP>

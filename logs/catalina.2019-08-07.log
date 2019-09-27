@@ -1,0 +1,277 @@
+07-Aug-2019 11:53:29.133 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+07-Aug-2019 11:53:29.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+07-Aug-2019 11:53:29.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+07-Aug-2019 11:53:29.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Aug-2019 11:53:29.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-54-generic
+07-Aug-2019 11:53:29.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Aug-2019 11:53:29.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+07-Aug-2019 11:53:29.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+07-Aug-2019 11:53:29.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+07-Aug-2019 11:53:29.137 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+07-Aug-2019 11:53:29.491 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Aug-2019 11:53:29.501 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Aug-2019 11:53:29.516 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+07-Aug-2019 11:53:29.517 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Aug-2019 11:53:29.518 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1181 ms
+07-Aug-2019 11:53:29.548 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Aug-2019 11:53:29.549 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+07-Aug-2019 11:53:29.584 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+07-Aug-2019 11:53:29.790 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+07-Aug-2019 11:53:29.791 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+07-Aug-2019 11:53:29.792 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+07-Aug-2019 11:53:31.125 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+07-Aug-2019 11:53:31.133 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+07-Aug-2019 11:53:31.192 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+07-Aug-2019 11:53:31.247 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [1,661] ms
+07-Aug-2019 11:53:31.248 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+07-Aug-2019 11:53:31.876 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:31.925 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [677] ms
+07-Aug-2019 11:53:31.925 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/auaold]
+07-Aug-2019 11:53:32.004 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+07-Aug-2019 11:53:34.349 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+07-Aug-2019 11:53:34.349 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+07-Aug-2019 11:53:34.349 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+07-Aug-2019 11:53:34.397 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:34.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/auaold] has finished in [2,492] ms
+07-Aug-2019 11:53:34.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+07-Aug-2019 11:53:38.330 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:39.415 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [4,998] ms
+07-Aug-2019 11:53:39.415 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+07-Aug-2019 11:53:39.564 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:39.592 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [177] ms
+07-Aug-2019 11:53:39.592 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+07-Aug-2019 11:53:44.588 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+07-Aug-2019 11:53:44.654 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:44.658 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+07-Aug-2019 11:53:44.658 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+07-Aug-2019 11:53:45.506 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [5,914] ms
+07-Aug-2019 11:53:45.506 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+07-Aug-2019 11:53:45.608 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:45.625 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [119] ms
+07-Aug-2019 11:53:45.625 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+07-Aug-2019 11:53:45.692 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:45.693 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [68] ms
+07-Aug-2019 11:53:45.693 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/college]
+07-Aug-2019 11:53:45.720 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+07-Aug-2019 11:53:49.494 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+07-Aug-2019 11:53:49.494 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+07-Aug-2019 11:53:49.494 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+07-Aug-2019 11:53:49.495 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+07-Aug-2019 11:53:49.495 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+07-Aug-2019 11:53:49.495 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+07-Aug-2019 11:53:49.554 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:53:50.240 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/college] has finished in [4,547] ms
+07-Aug-2019 11:53:50.241 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+07-Aug-2019 11:54:09.807 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:54:09.862 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [19,621] ms
+07-Aug-2019 11:54:09.862 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+07-Aug-2019 11:54:21.054 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:54:21.073 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [11,211] ms
+07-Aug-2019 11:54:21.073 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+07-Aug-2019 11:54:22.527 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Aug-2019 11:54:22.531 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,458] ms
+07-Aug-2019 11:54:22.536 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Aug-2019 11:54:22.549 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+07-Aug-2019 11:54:22.551 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 53032 ms
+07-Aug-2019 12:14:25.568 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeQuery Database executeQuery error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: "22O"
+  Position: 42
+07-Aug-2019 12:40:04.422 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "amount" does not exist
+  Position: 22
+07-Aug-2019 12:40:04.422 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.makeQuery SQL SELECT vote_head_id, amount, scharge_id, session_id, org_id
+FROM scharges
+WHERE session_id = 'MDIV2019' AND (org_id = '0')
+ORDER BY scharge_id
+07-Aug-2019 12:49:34.888 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "vote_head_name_disp" does not exist
+  Position: 91
+07-Aug-2019 12:49:34.889 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.makeQuery SQL SELECT vote_head_id as Id, vote_head_name||' ,'||amount  as Name FROM vote_heads ORDER BY vote_head_name_disp
+07-Aug-2019 12:55:37.323 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.formatData Query data field formating error : TEXTDECIMAL : vote_head_name : org.postgresql.util.PSQLException: Bad value for type double : Library Fees
+07-Aug-2019 12:55:45.996 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.formatData Query data field formating error : TEXTDECIMAL : vote_head_name : org.postgresql.util.PSQLException: Bad value for type double : Library Fees
+07-Aug-2019 12:56:17.094 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.formatData Query data field formating error : TEXTDECIMAL : vote_head_name : org.postgresql.util.PSQLException: Bad value for type double : Library Fees
+07-Aug-2019 12:57:22.197 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.formatData Query data field formating error : TEXTDECIMAL : vote_head_name : org.postgresql.util.PSQLException: Bad value for type double : EXAM FEES
+07-Aug-2019 12:57:29.936 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.recDelete Delete row error : org.postgresql.util.PSQLException: ERROR: update or delete on table "vote_heads" violates foreign key constraint "scharges_vote_head_id_fkey" on table "scharges"
+  Detail: Key (vote_head_id)=(1) is still referenced from table "scharges".
+07-Aug-2019 12:57:38.075 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.formatData Query data field formating error : TEXTDECIMAL : vote_head_name : org.postgresql.util.PSQLException: Bad value for type double : EXAM FEES
+07-Aug-2019 12:57:49.089 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.recDelete Delete row error : org.postgresql.util.PSQLException: ERROR: update or delete on table "vote_heads" violates foreign key constraint "scharges_vote_head_id_fkey" on table "scharges"
+  Detail: Key (vote_head_id)=(1) is still referenced from table "scharges".
+07-Aug-2019 14:05:17.752 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:05:17.752 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:05:17.753 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:17.753 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:20.124 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:05:20.124 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:05:20.124 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:20.124 SEVERE [http-nio-8080-exec-4] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:23.012 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:05:23.012 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:05:23.012 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:23.012 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:23.821 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:05:23.821 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:05:23.822 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:23.822 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:29.440 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:05:29.440 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:05:29.441 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:29.441 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:30.394 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:05:30.395 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:05:30.395 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:05:30.395 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:07:32.793 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:07:32.793 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:07:32.793 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:07:32.793 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:07:34.010 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:07:34.010 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:07:34.010 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:07:34.010 SEVERE [http-nio-8080-exec-7] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:07:45.051 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_key"
+  Detail: Key (session_id)=(2019PHDRel1) already exists.
+07-Aug-2019 14:07:45.051 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:07:45.052 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:07:45.052 SEVERE [http-nio-8080-exec-6] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:09:53.709 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.saveNewRec The SQL Exeption on new record vote_head_id : org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "scharges_session_id_vote_head_id_org_id_key"
+  Detail: Key (session_id, org_id, vote_head_id)=(2019PHDRel1, 0, 4) already exists.
+07-Aug-2019 14:09:53.709 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.saveNewRec The error code 0
+07-Aug-2019 14:09:53.710 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.formatData Query data field formating error : COMBOBOX : vote_head_id : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:09:53.710 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+07-Aug-2019 14:10:05.968 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:10:06.455 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:18:02.502 INFO [http-nio-8080-exec-7] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:18:02.541 INFO [http-nio-8080-exec-7] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:23:06.524 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:23:06.537 INFO [http-nio-8080-exec-6] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:25:24.488 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:25:24.493 INFO [http-nio-8080-exec-3] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:27:19.084 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:27:19.088 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:34:11.409 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:34:11.413 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:34:22.568 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:34:22.579 INFO [http-nio-8080-exec-8] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:39:37.465 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019PHDRel1
+07-Aug-2019 14:39:37.473 INFO [http-nio-8080-exec-2] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 14:42:29.209 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+07-Aug-2019 14:42:29.355 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 15:00:21.463 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+07-Aug-2019 15:00:21.804 INFO [http-nio-8080-exec-10] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 15:09:12.522 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+07-Aug-2019 15:09:12.528 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 15:09:29.321 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+07-Aug-2019 15:09:29.354 INFO [http-nio-8080-exec-4] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 15:09:33.499 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2019 ECDCHAP
+07-Aug-2019 15:09:33.503 INFO [http-nio-8080-exec-5] org.baraza.reports.BWebReport.getReport entityid | 0
+07-Aug-2019 16:06:58.867 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Aug-2019 16:07:01.573 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+07-Aug-2019 16:07:01.789 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Aug-2019 16:07:07.737 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class session_charges_summary_1565177969436_301874]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:07.808 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class session_charges_summary_1565177117055_907226]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:07.808 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class vw_student_charges_CROSSTAB0_1565179738341_33377]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:07.809 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class vw_student_charges_CROSSTAB0_1565179738341_33377]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:07.809 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class session_charges_summary_1565176975432_665016]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:07.810 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class session_charges_summary_1565176650139_459842]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:07.810 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class session_charges_summary_1565177640740_383190]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:07.811 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@387fbeb5]) and a value of type [java.lang.Class] (value [class vw_student_charges_CROSSTAB0_1563963507917_797735]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+07-Aug-2019 16:07:08.065 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+07-Aug-2019 16:07:08.487 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+07-Aug-2019 16:07:08.487 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+07-Aug-2019 16:07:09.525 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Aug-2019 16:07:10.205 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+07-Aug-2019 16:07:11.349 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Aug-2019 16:07:11.607 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

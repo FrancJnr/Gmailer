@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="vw_residence_bookings" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5c8d304d-afdd-42f8-8c3e-8509fe0c8f37">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="314"/>
+	<property name="ireport.y" value="120"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Times New Roman" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Times New Roman" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#CDEBEB" fontName="Times New Roman"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filterid" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgid" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgwhere" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="organd" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT vw_residence_bookings.residence_booking_id, vw_residence_bookings.org_id, vw_residence_bookings.sstudent_id, vw_residence_bookings.room_id, vw_residence_bookings.book_from, vw_residence_bookings.book_until, vw_residence_bookings.with_bedding, vw_residence_bookings.status, vw_residence_bookings.room_name, vw_residence_bookings.room_type_name, vw_residence_bookings.room_charge, vw_residence_bookings.student_name, vw_residence_bookings.degree_name, vw_residence_bookings.session_id, vw_residence_bookings.residence_dean, vw_residence_bookings.residence_name, vw_residence_bookings.student_id, vw_residence_bookings.degree_id, vw_residence_bookings.department_id, vw_residence_bookings.department_name, vw_residence_bookings.school_id, vw_residence_bookings.school_name, vw_residence_bookings.accomodation_charge
+FROM vw_residence_bookings
+WHERE session_id = '$P!{filterid}' AND vw_residence_bookings.approved = true;]]>
+	</queryString>
+	<field name="residence_booking_id" class="java.lang.Integer"/>
+	<field name="org_id" class="java.lang.Integer"/>
+	<field name="sstudent_id" class="java.lang.Integer"/>
+	<field name="room_id" class="java.lang.Integer"/>
+	<field name="book_from" class="java.sql.Date"/>
+	<field name="book_until" class="java.sql.Date"/>
+	<field name="with_bedding" class="java.lang.Boolean"/>
+	<field name="status" class="java.lang.Boolean"/>
+	<field name="room_name" class="java.lang.String"/>
+	<field name="room_type_name" class="java.lang.String"/>
+	<field name="room_charge" class="java.lang.Double"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="degree_name" class="java.lang.String"/>
+	<field name="session_id" class="java.lang.String"/>
+	<field name="residence_dean" class="java.lang.String"/>
+	<field name="residence_name" class="java.lang.String"/>
+	<field name="student_id" class="java.lang.String"/>
+	<field name="degree_id" class="java.lang.String"/>
+	<field name="department_id" class="java.lang.String"/>
+	<field name="department_name" class="java.lang.String"/>
+	<field name="school_id" class="java.lang.String"/>
+	<field name="school_name" class="java.lang.String"/>
+	<field name="accomodation_charge" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="238" y="10" width="289" height="41" uuid="3975fd6d-a020-4e5a-ac90-cf81e036dba1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Hostel Charge Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1" y="27" width="82" height="15" forecolor="#000000" uuid="ec73fb0b-9050-43b4-ba90-757f6500f575"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Session]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="83" y="27" width="99" height="15" uuid="70734016-63f2-4209-aa80-44c190d41e58"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{session_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="1" y="51" width="82" height="15" forecolor="#000000" uuid="b5905c00-b680-4da3-a76f-e0c4ab854404"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Programme]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="83" y="51" width="99" height="15" uuid="2baf7123-6228-4d66-a45f-6f6d1cb5da2b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{degree_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="1" y="73" width="82" height="15" forecolor="#000000" uuid="a8033aab-35f5-4f38-abcd-9535dbb090b2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[School ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="83" y="72" width="99" height="15" uuid="a292e2ae-c240-4206-8464-ec99e67d03c1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{school_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="25" width="802" height="1" uuid="00f61f00-8960-46e5-9061-f5341f8628cb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="1" y="0" width="69" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="2ea8648d-6a2e-4eb5-8826-2590eb32bdd8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="72" y="0" width="126" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="a28234eb-1c34-4932-a3ea-e1209e3e66cd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="0" width="52" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="3ce1fdaa-1a9b-4fe8-98f1-73986c6e5e2f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Room Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="388" y="0" width="48" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="60d19510-985a-439e-bb3b-63859d160216"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Room Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="438" y="0" width="89" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="86632fc8-8632-4291-ae02-1f85511d1df1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Booked From]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="527" y="0" width="89" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="c58d87da-755d-4839-bc60-72f8c14a214e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Book Until]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="735" y="0" width="67" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="22080b25-c64a-44cb-9f2b-1fc3a81f7bc0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Accomodation Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="691" y="0" width="43" height="25" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="d8a3f3d7-15ee-4456-ab53-29d4903eef9c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Room Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="617" y="1" width="73" height="24" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="70e9e2fc-7492-4ac5-930d-c42c190d4c80"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Personal Bedding]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="198" y="0" width="62" height="25" forecolor="#000000" uuid="c1f4d97e-086e-4c37-bc6b-081950ff598e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Hostel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="260" y="1" width="69" height="24" forecolor="#000000" uuid="f9435016-d63d-45b1-bd52-6cf4fd024e8b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Hostel Dean]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="73abfb59-d0c6-4498-bf54-1a6ca5e1d117"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="1" y="0" width="69" height="15" isPrintWhenDetailOverflows="true" uuid="bc03397b-b9eb-43d1-b635-c70fb4ba2b4b"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{student_id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="¤ #,##0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" x="735" y="0" width="67" height="15" uuid="159484af-cfd6-47d9-b3d6-5952957876a6"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{accomodation_charge}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="72" y="0" width="126" height="15" isPrintWhenDetailOverflows="true" uuid="1d15c828-8007-4cd0-b96a-7546fbffe304"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="333" y="0" width="52" height="15" isPrintWhenDetailOverflows="true" uuid="6a34e66f-5125-4aa5-b0e3-c7f6623a0211"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{room_type_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="388" y="0" width="48" height="15" isPrintWhenDetailOverflows="true" uuid="c4f6c5b9-f666-4375-a1a1-2d962593f624"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{room_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="438" y="0" width="89" height="15" isPrintWhenDetailOverflows="true" uuid="292d5280-4257-4ea5-abe0-d9a499b86347"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{book_from}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="527" y="0" width="89" height="15" isPrintWhenDetailOverflows="true" uuid="09a0e620-d660-46a2-887c-f63db3936da7"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{book_until}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="691" y="0" width="43" height="15" uuid="2c92e323-a949-4610-8bbc-d4700ef0db36"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{room_charge}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="617" y="0" width="73" height="15" uuid="948ff0ad-7f3b-4176-9680-77364f22b2b1"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{with_bedding}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="198" y="0" width="62" height="15" uuid="801ac76f-8913-451d-b3e0-e0e016ca876e"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{residence_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="260" y="0" width="69" height="15" uuid="e1128f3b-fa0c-4398-b723-e5cb23b1e78f"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{residence_dean}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="15" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="b6749d1d-212c-4180-9a8d-35772d5f12b1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="841" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="cf51f6c3-ff30-4a05-b11f-18e49d9b496e"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="771" y="1" width="40" height="20" forecolor="#736343" uuid="042757af-f3bc-471b-85df-7d7cacef0a3f"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="691" y="1" width="80" height="20" forecolor="#736343" uuid="0dde377f-24a1-4760-89f3-4be57a715df9"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE, d MMMMM yyyy HH:mm:ss Z">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="3322cf8e-9aeb-4d9c-8440-204e01fca50b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

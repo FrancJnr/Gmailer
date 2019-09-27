@@ -1,0 +1,111 @@
+<APP password="change_password" org="org_id" name="UMIS">
+	<MENU name="General Information">
+		<MENU name="Application">
+			<MENU name="School Information">2</MENU>
+			<MENU blankpage="true" name="1. Application Form" page="form.jsp">1</MENU>
+			<MENU name="2. Upload Passport">3</MENU>
+			<MENU name="3. Application Payment">10</MENU>
+			<MENU name="4. Exam Center">4</MENU>
+			<MENU name="5. Submit Details">115</MENU>
+			<MENU name="6. Print Registration">215</MENU>
+			<MENU name="7. Admisions Letter">20</MENU>
+			<MENU name="8. Acceptance Fees">22</MENU>
+		</MENU>
+	</MENU>
+	
+
+	<DESK w="700" h="500" name="Payments" key="10">
+		<GRID display="form" keyfield="application_id" w="530" name="Payments" lw="120" user="application_id" table="vw_applications">
+			<TEXTFIELD w="15" title="Application ID">application_id</TEXTFIELD>
+			<TEXTFIELD w="75" fnct="'Babcock University'::varchar" title="University">university_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Payee Name">entity_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Application For">selection_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">primary_email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Telephone">primary_telephone</TEXTFIELD>
+			<TEXTFIELD w="75" title="Session">session_id</TEXTFIELD>
+			<TEXTFIELD w="15" title="Payee ID">application_id</TEXTFIELD>
+			<CHECKBOX w="15" title="Approved">approved</CHECKBOX>
+			<CHECKBOX w="15" title="Paid">paid</CHECKBOX>
+			<TEXTFIELD w="80" title="Amount">amount</TEXTFIELD>
+			<TEXTTIMESTAMP w="80" title="Application Date">application_date</TEXTTIMESTAMP>
+		</GRID>
+		<GRID display="form" keyfield="application_id" w="530" name="Online Payments" lw="120" user="application_id" table="vw_applications">
+			<TEXTFIELD w="15" title="Application ID">application_id</TEXTFIELD>
+			<TEXTFIELD w="75" fnct="'Babcock University'::varchar" title="University">university_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Payee Name">entity_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Application For">selection_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">primary_email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Telephone">primary_telephone</TEXTFIELD>
+			<TEXTFIELD w="75" title="Session">session_id</TEXTFIELD>
+			<TEXTFIELD w="15" title="Payee ID">application_id</TEXTFIELD>
+			<CHECKBOX w="15" title="Approved">approved</CHECKBOX>
+			<CHECKBOX w="15" title="Paid">paid</CHECKBOX>
+			<TEXTFIELD w="80" title="Amount">amount</TEXTFIELD>
+			<TEXTTIMESTAMP w="80" title="Application Date">application_date</TEXTTIMESTAMP>
+			<TEXTFIELD w="80" title="Make Payment">pay_web</TEXTFIELD>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Exam Center" key="4">
+		<GRID noorg="true" keyfield="exam_center_id" name="Exam Centers" where="(is_active = true)" table="exam_centers">
+			<TEXTFIELD w="75" title="Exam Center ID">exam_center_id</TEXTFIELD>
+			<TEXTFIELD w="275" title="Exam Center Name">exam_center_name</TEXTFIELD>
+			<GRID noorg="true" keyfield="exam_date_id" name="Exam Dates" orderby="exam_date" where="(center_active = true) and (date_active = true) and (exam_date > current_date)" linkfield="exam_center_id" table="vw_exam_dates">
+				<TEXTDATE w="175" fnct="exam_date" title="Exam Date">exam_date_disp</TEXTDATE>
+				<TEXTFIELD w="175" title="Exam Center Name">exam_center_name</TEXTFIELD>
+				<ACTIONS>
+					<ACTION approval="exam_center_id" fnct="select_exam_date">Select Date</ACTION>
+				</ACTIONS>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Submit Application" key="115">
+		<GRID display="form" keyfield="registration_id" w="530" name="Submit Application" where="(submit_application = false)" user="registration_id" table="registrations">
+			<TEXTFIELD w="75" title="Application ID">registration_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="Other Names">other_names</TEXTFIELD>
+			<BROWSER baseurl="http://localhost:9090/form.jsp?action=ENTRYFORM" blankpage="true" action="ENTRYFORM" disabled="yes" linkfield="actionvalue" title="View Form">entry_form_id</BROWSER>
+			<ACTION action="Sumbit Application" fnct="submit_application" title="Submit Application">registration_id</ACTION>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Print Registration" key="215">
+		<GRID display="form" keyfield="registration_id" w="530" name="Print Registration" where="(submit_application = true)" lw="120" user="registration_id" table="registrations">
+			<TEXTFIELD w="75" title="Application ID">registration_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="Maiden Name">maiden_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Former Names">former_names</TEXTFIELD>
+			<TEXTFIELD w="75" title="Other Names">other_names</TEXTFIELD>
+			<JASPER reportfile="registration.jasper" name="Registration Report" linkfield="filterid"></JASPER>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Upload Passport Photo" key="3">
+		<FORM keyfield="entity_id" foredit="true" name="Upload Passport" delete="false" user="entity_id" table="entitys" maxfilesize="2097152">
+			<TEXTFIELD w="430" h="20" x="10" y="10" title="Full Name " enabled="false">entity_name</TEXTFIELD>
+			<PICTURE password="enterDHSrepository" access="enter2012" tab="Passport Photo" w="300" h="300" x="10" y="1" repository="http://localhost:9090/repository/webdav/pictures/" pictures="../repository/barazapictures" username="repository">picture_file</PICTURE>
+		</FORM>
+	</DESK>
+	<DESK w="700" h="500" name="Admisions Letter" key="20">
+		<GRID display="form" keyfield="registration_id" w="530" name="Admisions Letter" where="(isaccepted = true)" lw="120" user="registration_id" table="registrations">
+			<TEXTFIELD w="75" title="Application ID">registration_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="Maiden Name">maiden_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Former Names">former_names</TEXTFIELD>
+			<TEXTFIELD w="75" title="Other Names">other_names</TEXTFIELD>
+			<JASPER reportfile="admissions_letter.jasper" name="Admision Letter"></JASPER>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="500" name="Acceptance Fees" key="22">
+		<GRID display="form" keyfield="registration_id" w="530" name="Acceptance Fees" where="(isaccepted = true)" lw="120" user="registration_id" table="registrations">
+			<TEXTFIELD w="75" title="Application ID">registration_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
+			<TEXTFIELD w="75" title="Maiden Name">maiden_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Former Names">former_names</TEXTFIELD>
+			<TEXTFIELD w="75" title="Other Names">other_names</TEXTFIELD>
+			<TEXTFIELD w="75" title="Acceptance Fees">acceptance_fees</TEXTFIELD>
+			<TEXTFIELD w="75" fnct="(CASE WHEN af_success = '0' THEN 'Paid' ELSE 'Not yet paid' END)" title="Payment Status">payment_status</TEXTFIELD>
+		</GRID>
+	</DESK>
+</APP>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="vw_meal_session_charge_summary" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ffc0137c-8179-49b9-9401-4bf8898f643a">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="54"/>
+	<property name="ireport.y" value="142"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Times New Roman" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Times New Roman" fontSize="12"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filterid" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgid" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgwhere" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="organd" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT  vw_meals.session_id,
+vw_meals.student_name,  degree_name, degree_id, vw_meals.student_id, SUM(vw_meals.total)AS session_total
+FROM vw_meals
+WHERE session_id = '$P!{filterid}'
+GROUP BY vw_meals.session_id,
+vw_meals.student_name,  vw_meals.student_id, degree_name, degree_id]]>
+	</queryString>
+	<field name="session_id" class="java.lang.String"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="degree_name" class="java.lang.String"/>
+	<field name="degree_id" class="java.lang.String"/>
+	<field name="student_id" class="java.lang.String"/>
+	<field name="session_total" class="java.lang.Double"/>
+	<variable name="page_total" class="java.lang.Double" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{session_total}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="17" y="0" width="446" height="62" uuid="868a7260-477a-4949-bf7b-6e49ecf3418d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Meals  Charge Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="5" y="70" width="70" height="15" forecolor="#000000" uuid="4b92dfdb-f06d-4493-8ddc-0504046eb24a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Session ID:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="102" y="70" width="127" height="15" uuid="97aeb19c-9aeb-46dd-9036-f6178332b60d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{session_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="5" y="90" width="67" height="15" forecolor="#000000" uuid="c6b9acd1-7fd4-4e72-a668-5d3b2a7f7a6c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Degree ID:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" x="102" y="90" width="127" height="15" uuid="583c3c92-4108-4020-ad9e-d528a654b2f5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{degree_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="22" width="496" height="1" uuid="d2b34021-7a04-434e-ae2c-3be3af8d837e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="98" y="0" width="245" height="15" forecolor="#000000" uuid="84410ec1-6b28-44ac-874d-ad7e507aeb0c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="366" y="0" width="119" height="15" forecolor="#000000" uuid="a0e0fb97-cb17-4e30-ad20-1d43b82ebe3a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="4" y="0" width="90" height="15" forecolor="#000000" uuid="eb793913-23c7-4471-852b-2b827ee4e9f9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="15" uuid="ae9f425a-23ab-40d3-8309-c780cbd68e02"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="98" y="0" width="245" height="15" uuid="20489789-ca35-40f0-8bfb-851aca2ef5f1"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="¤ #,##0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" x="366" y="0" width="119" height="15" uuid="688fb560-6954-4f12-a7a3-37bdd1c8bcae"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{session_total}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="4" y="0" width="90" height="15" uuid="3bd78935-32cf-4d5f-9482-4ac3ce452ef1"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{student_id}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="-4" width="802" height="1" uuid="ebd4d796-dec5-4a40-989d-d9a0c44b123e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="366" y="3" width="100" height="20" uuid="a072b436-9125-413c-b2dd-ac4a6500fb1e"/>
+				<textFieldExpression><![CDATA[$V{page_total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="229" y="8" width="119" height="15" forecolor="#000000" uuid="5d227597-5b68-4225-b990-b19cdb51e894"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="823" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="31b657fb-e21b-46c4-9c91-01bb0a33bc6e"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="771" y="1" width="40" height="20" forecolor="#736343" uuid="5c8eac34-a47f-4aea-8dce-5302433c6b32"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="691" y="1" width="80" height="20" forecolor="#736343" uuid="b8e6f51c-2732-4320-9d7d-ed246650efd1"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE, d MMMMM yyyy HH:mm:ss Z">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="8c486e60-552b-424d-924a-e36240bcdccc"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

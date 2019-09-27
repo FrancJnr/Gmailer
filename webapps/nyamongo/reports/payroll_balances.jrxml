@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="payroll_balances" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Times New Roman" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Times New Roman" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filterid" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgid" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orgwhere" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="organd" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT vw_employee_month.person_title, vw_employee_month.employee_full_name, vw_employee_month.payment_mode_name, vw_employee_month.bank_name, vw_employee_month.branch_name, vw_employee_month.basic_salary, vw_employee_month.amount, vw_employee_month.doc_no, vw_employee_month.unpaid, vw_employee_month.is_paid
+FROM vw_employee_month]]>
+	</queryString>
+	<field name="person_title" class="java.lang.String"/>
+	<field name="employee_full_name" class="java.lang.String"/>
+	<field name="payment_mode_name" class="java.lang.String"/>
+	<field name="bank_name" class="java.lang.String"/>
+	<field name="branch_name" class="java.lang.String"/>
+	<field name="basic_salary" class="java.lang.Double"/>
+	<field name="amount" class="java.lang.Double"/>
+	<field name="doc_no" class="java.lang.String"/>
+	<field name="unpaid" class="java.lang.Double"/>
+	<field name="is_paid" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="66" y="0" width="446" height="62"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Payroll Balances Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="1" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Person Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="78" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Employee Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="155" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Payment Mode Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="232" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Bank Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="309" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Branch Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="386" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Basic Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="463" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="540" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Doc No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="617" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Unpaid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="694" y="0" width="77" height="15" forecolor="#000000"/>
+				<textElement>
+					<font size="10" fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Paid]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="1" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{person_title}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="78" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{employee_full_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="155" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{payment_mode_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="232" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bank_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="309" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{branch_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="386" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{basic_salary}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="463" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{amount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="540" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{doc_no}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="617" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{unpaid}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" x="694" y="0" width="77" height="15"/>
+					<textElement>
+						<font size="10" fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Boolean"><![CDATA[$F{is_paid}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="15" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="841" height="24" forecolor="#D0B48E" backcolor="#F2EBDF"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="771" y="1" width="40" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="691" y="1" width="80" height="20" forecolor="#736343"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE, d MMMMM yyyy HH:mm:ss Z">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

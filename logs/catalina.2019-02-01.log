@@ -1,0 +1,133 @@
+01-Feb-2019 05:53:59.613 INFO [http-nio-80-exec-6] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Feb-2019 12:13:56.989 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+01-Feb-2019 12:13:56.993 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-80"]
+01-Feb-2019 12:13:57.004 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Feb-2019 12:13:57.010 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Feb-2019 12:13:57.112 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@12570089]) and a value of type [java.lang.Class] (value [class instructors_1537959295756_935861]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+01-Feb-2019 12:13:57.114 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@12570089]) and a value of type [java.lang.Class] (value [class schools_1526391838579_901115]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+01-Feb-2019 12:13:57.114 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@12570089]) and a value of type [java.lang.Class] (value [class schools_1526391838579_901115]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+01-Feb-2019 12:13:57.114 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@12570089]) and a value of type [java.lang.Class] (value [class schools_1526391838579_901115]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+01-Feb-2019 12:13:57.115 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [aua] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@12570089]) and a value of type [java.lang.Class] (value [class grades_1537957366591_140514]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+01-Feb-2019 12:13:57.144 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-80"]
+01-Feb-2019 12:13:57.149 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+01-Feb-2019 12:13:57.164 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-80"]
+01-Feb-2019 12:13:57.166 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+01-Feb-2019 12:15:05.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+01-Feb-2019 12:15:05.945 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+01-Feb-2019 12:15:05.945 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+01-Feb-2019 12:15:05.945 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Feb-2019 12:15:05.945 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            3.10.0-957.1.3.el7.x86_64
+01-Feb-2019 12:15:05.945 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Feb-2019 12:15:05.946 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre
+01-Feb-2019 12:15:05.946 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-b12
+01-Feb-2019 12:15:05.946 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Feb-2019 12:15:05.946 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/tomcat
+01-Feb-2019 12:15:05.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/tomcat
+01-Feb-2019 12:15:05.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties
+01-Feb-2019 12:15:05.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Feb-2019 12:15:05.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Feb-2019 12:15:05.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Feb-2019 12:15:05.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Feb-2019 12:15:05.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+01-Feb-2019 12:15:05.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/tomcat
+01-Feb-2019 12:15:05.949 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/tomcat
+01-Feb-2019 12:15:05.949 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/tomcat/temp
+01-Feb-2019 12:15:05.949 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+01-Feb-2019 12:15:06.135 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-80"]
+01-Feb-2019 12:15:06.160 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Feb-2019 12:15:06.183 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Feb-2019 12:15:06.186 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Feb-2019 12:15:06.186 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1028 ms
+01-Feb-2019 12:15:06.234 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Feb-2019 12:15:06.234 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+01-Feb-2019 12:15:06.254 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/examples]
+01-Feb-2019 12:15:07.261 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:07.466 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/examples] has finished in [1,210] ms
+01-Feb-2019 12:15:07.466 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/manager]
+01-Feb-2019 12:15:07.600 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:07.624 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/manager] has finished in [158] ms
+01-Feb-2019 12:15:07.624 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/tomcat]
+01-Feb-2019 12:15:07.734 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:07.739 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/tomcat] has finished in [114] ms
+01-Feb-2019 12:15:07.739 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/docs]
+01-Feb-2019 12:15:07.842 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:07.845 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/docs] has finished in [105] ms
+01-Feb-2019 12:15:07.845 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/aua.backup]
+01-Feb-2019 12:15:13.257 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "250" for "maxActive" property, which is being ignored.
+01-Feb-2019 12:15:13.258 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+01-Feb-2019 12:15:13.258 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+01-Feb-2019 12:15:13.413 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:13.432 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/aua.backup] has finished in [5,587] ms
+01-Feb-2019 12:15:13.433 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/ROOT]
+01-Feb-2019 12:15:17.024 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:17.035 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/ROOT] has finished in [3,601] ms
+01-Feb-2019 12:15:17.035 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/host-manager]
+01-Feb-2019 12:15:17.102 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:17.104 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/host-manager] has finished in [69] ms
+01-Feb-2019 12:15:17.104 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/tomcat/webapps/aua]
+01-Feb-2019 12:15:20.113 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:15:20.124 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/tomcat/webapps/aua] has finished in [3,020] ms
+01-Feb-2019 12:15:20.135 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-80"]
+01-Feb-2019 12:15:20.160 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+01-Feb-2019 12:15:20.166 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 13979 ms
+01-Feb-2019 12:35:51.223 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context []
+01-Feb-2019 12:35:51.225 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] has started
+01-Feb-2019 12:35:54.466 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:35:54.474 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] is completed
+01-Feb-2019 12:35:54.474 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/aua]
+01-Feb-2019 12:35:54.475 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] has started
+01-Feb-2019 12:35:57.520 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Feb-2019 12:35:57.541 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/aua] is completed
+01-Feb-2019 12:56:20.218 INFO [http-nio-80-exec-12] org.baraza.web.BWeb.setOperations SELECT upd_access_level('1', '0', '1', '3280') 
+01-Feb-2019 12:56:20.278 INFO [http-nio-80-exec-12] org.baraza.web.BWeb.setOperations SELECT upd_access_level('16', '0', '1', '3280') 
+01-Feb-2019 12:56:20.299 INFO [http-nio-80-exec-12] org.baraza.web.BWeb.setOperations SELECT upd_access_level('17', '0', '1', '3280') 
+01-Feb-2019 12:56:20.328 INFO [http-nio-80-exec-12] org.baraza.web.BWeb.setOperations SELECT upd_access_level('18', '0', '1', '3280') 
+01-Feb-2019 12:56:20.348 INFO [http-nio-80-exec-12] org.baraza.web.BWeb.setOperations SELECT upd_access_level('20', '0', '1', '3280') 
+01-Feb-2019 13:01:51.506 INFO [http-nio-80-exec-18] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1177
+01-Feb-2019 13:01:51.763 INFO [http-nio-80-exec-18] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:01:57.693 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1177
+01-Feb-2019 13:01:57.715 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:02:00.720 INFO [http-nio-80-exec-12] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1177
+01-Feb-2019 13:02:00.733 INFO [http-nio-80-exec-12] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:02:55.541 INFO [http-nio-80-exec-18] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1487
+01-Feb-2019 13:02:55.552 INFO [http-nio-80-exec-18] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:02:58.768 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.setParams Filter = filterid key = 1487
+01-Feb-2019 13:02:58.774 INFO [http-nio-80-exec-20] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:04:03.683 INFO [http-nio-80-exec-13] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2018 MABTS
+01-Feb-2019 13:04:03.684 INFO [http-nio-80-exec-13] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 0
+01-Feb-2019 13:04:03.689 INFO [http-nio-80-exec-13] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:04:07.322 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2018 MABTS
+01-Feb-2019 13:04:07.323 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 0
+01-Feb-2019 13:04:07.330 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:04:09.467 INFO [http-nio-80-exec-17] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2018 MABTS
+01-Feb-2019 13:04:09.470 INFO [http-nio-80-exec-17] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 0
+01-Feb-2019 13:04:09.476 INFO [http-nio-80-exec-17] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:04:10.825 INFO [http-nio-80-exec-14] org.baraza.reports.BWebReport.setParams Filter = filterid key = 2018 MABTS
+01-Feb-2019 13:04:10.826 INFO [http-nio-80-exec-14] org.baraza.reports.BWebReport.setParams Filter = grade_id key = 0
+01-Feb-2019 13:04:10.836 INFO [http-nio-80-exec-14] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:05:54.952 INFO [http-nio-80-exec-12] org.baraza.web.BWeb.setOperations SELECT del_student('S2018101', '0', '') 
+01-Feb-2019 13:21:42.181 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.setParams Filter = filterid key = 
+01-Feb-2019 13:21:42.224 INFO [http-nio-80-exec-21] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:21:48.740 INFO [http-nio-80-exec-13] org.baraza.reports.BWebReport.setParams Filter = filterid key = 
+01-Feb-2019 13:21:48.747 INFO [http-nio-80-exec-13] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:21:48.924 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.setParams Filter = filterid key = 
+01-Feb-2019 13:21:48.931 INFO [http-nio-80-exec-19] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:21:53.296 INFO [http-nio-80-exec-17] org.baraza.reports.BWebReport.setParams Filter = filterid key = 
+01-Feb-2019 13:21:53.302 INFO [http-nio-80-exec-17] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:21:56.161 INFO [http-nio-80-exec-14] org.baraza.reports.BWebReport.setParams Filter = filterid key = 
+01-Feb-2019 13:21:56.165 INFO [http-nio-80-exec-14] org.baraza.reports.BWebReport.getReport entityid | 0
+01-Feb-2019 13:21:57.033 INFO [http-nio-80-exec-16] org.baraza.reports.BWebReport.setParams Filter = filterid key = 
+01-Feb-2019 13:21:57.038 INFO [http-nio-80-exec-16] org.baraza.reports.BWebReport.getReport entityid | 0

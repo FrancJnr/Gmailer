@@ -1,0 +1,135 @@
+/* here you can put your own css to customize and override the theme */
+
+/***
+Rounded Portlets
+***/
+/*
+.portlet {
+	border-radius: 4px !important;
+}
+
+.portlet .portlet-title {
+	border-radius: 4px 4px 0px 0px !important;
+}
+
+.portlet .portlet-body,
+.portlet .portlet-body .form-actions  {
+	border-radius: 0px 0px 4px 4px !important;
+}
+*/
+.col-title{
+	padding: 5px 20px;
+}
+.text-left {
+	text-align: left;
+}
+
+.form-section.background {
+	background: beige;
+	padding: 10px;
+}
+
+.white{
+	background: white;
+}
+
+.form-wizard .steps > li.done > a.step .number {
+	background-color: #00aeef;
+	color: #fff;
+}
+
+.main-menu ul li a {
+	text-decoration: none;
+}
+
+/*.icon-btn {*/
+	/*border: 1px solid #059DDC;*/
+	/*border-radius: 6px;*/
+	/*/!*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.18);*!/*/
+	/*box-shadow: none;*/
+/*}*/
+.pay-default{
+	border: 1px solid #444;
+	border-radius: 6px;
+	box-shadow: none;
+}
+
+.pay-default:hover{
+	border-color: #059DDC;
+	color: #444;
+	text-shadow: 0 1px 0px white;
+	box-shadow: 0 3px 6px #0084DC, 0 3px 6px #0084DC;
+}
+.pay-border{
+	border: 1px solid #059DDC;
+	border-radius: 6px;
+	box-shadow: none;
+}
+.pay-border:hover{
+	border-color: #059DDC;
+	color: #444;
+	text-shadow: 0 1px 0px white;
+	box-shadow: 0 3px 6px #0084DC, 0 3px 6px #0084DC;
+	/*box-shadow: none;*/
+}
+.pay-color{
+	color:#059DDC;
+}
+.pay-bg{
+	background-color:#059DDC;
+}
+.badge-pay{
+	background-color: #059DDC;
+	background-image: none;
+}
+
+/**
+*TOOLTIP CSS http://qtip2.com/demos
+**/
+
+.qtip-wiki{
+	max-width: 385px;
+}
+
+.qtip-wiki p{
+	margin: 0 0 6px;
+}
+
+.qtip-wiki h1{
+	font-size: 20px;
+	line-height: 1.1;
+	margin: 0 0 5px;
+}
+
+.qtip-wiki img{
+	float: left;
+	margin: 10px 10px 10px 0;
+}
+
+.qtip-wiki .info{
+	overflow: hidden;
+}
+
+.qtip-wiki p.note{
+	font-weight: 700;
+}
+/*Title Color*/
+.qtip-default .qtip-titlebar {
+	color: #ffffff;
+	background-color: #0645ad;
+}
+.qtip-default .qtip-content {
+	color: #ffffff;
+	background-color: #1cafec;
+}
+
+.qtip-default {
+	/*border: 1px solid #F1D031;*/
+	/*background-color: #FFFFA3;*/
+	/*color: #555;*/
+	border: 1px solid #0645ad;
+	background-color: #1cafec;
+	color: #ffffff;
+}
+
+

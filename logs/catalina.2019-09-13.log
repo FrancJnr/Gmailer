@@ -1,0 +1,596 @@
+13-Sep-2019 09:40:26.503 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+13-Sep-2019 09:40:26.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+13-Sep-2019 09:40:26.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+13-Sep-2019 09:40:26.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-62-generic
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_222-8u222-b10-1ubuntu1~18.04.1-b10
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/projects/tomcat
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/projects/tomcat
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/projects/tomcat/conf/logging.properties
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Sep-2019 09:40:26.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Sep-2019 09:40:26.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Sep-2019 09:40:26.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/projects/tomcat
+13-Sep-2019 09:40:26.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/projects/tomcat
+13-Sep-2019 09:40:26.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/projects/tomcat/temp
+13-Sep-2019 09:40:26.513 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Sep-2019 09:40:26.775 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Sep-2019 09:40:26.804 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Sep-2019 09:40:26.820 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Sep-2019 09:40:26.821 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Sep-2019 09:40:26.822 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1054 ms
+13-Sep-2019 09:40:26.857 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Sep-2019 09:40:26.858 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+13-Sep-2019 09:40:26.886 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/aua]
+13-Sep-2019 09:40:31.514 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:31.725 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/aua] has finished in [4,838] ms
+13-Sep-2019 09:40:31.726 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ueab]
+13-Sep-2019 09:40:34.382 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:34.462 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "sys_languages" does not exist
+  Position: 48
+13-Sep-2019 09:40:34.463 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT sys_language_id, sys_language_name FROM sys_languages ORDER BY sys_language_id
+13-Sep-2019 09:40:34.463 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "orgs" does not exist
+  Position: 20
+13-Sep-2019 09:40:34.464 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+13-Sep-2019 09:40:34.466 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ueab] has finished in [2,740] ms
+13-Sep-2019 09:40:34.466 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/umis]
+13-Sep-2019 09:40:34.489 SEVERE [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.startElement Begin event threw exception
+ java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+13-Sep-2019 09:40:34.490 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Parse error in context.xml for [/umis]
+ org.xml.sax.SAXParseException; systemId: file:/opt/projects/tomcat/webapps/umis/META-INF/context.xml; lineNumber: 10; columnNumber: 82; Error at (10, 82) : org.baraza.server.tomcat.BJDBCRealm
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:1968)
+	at org.apache.tomcat.util.digester.Digester.createSAXException(Digester.java:2000)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1253)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1518)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:531)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:488)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:732)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:310)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:395)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:108)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:140)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1140)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.baraza.server.tomcat.BJDBCRealm
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.apache.tomcat.util.digester.ObjectCreateRule.begin(ObjectCreateRule.java:116)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1250)
+	... 29 more
+
+13-Sep-2019 09:40:34.491 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.processContextConfig Occurred at line [10] column [82]
+13-Sep-2019 09:40:35.132 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+13-Sep-2019 09:40:35.133 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+13-Sep-2019 09:40:35.145 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/umis] startup failed due to previous errors
+13-Sep-2019 09:40:35.157 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/umis] has finished in [691] ms
+13-Sep-2019 09:40:35.157 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/babcock]
+13-Sep-2019 09:40:39.370 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14: JAX-WS servlet initializing
+13-Sep-2019 09:40:39.414 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:39.418 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+13-Sep-2019 09:40:39.418 INFO [localhost-startStop-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12: JAX-WS context listener initializing
+13-Sep-2019 09:40:40.132 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/babcock] has finished in [4,975] ms
+13-Sep-2019 09:40:40.133 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/docs]
+13-Sep-2019 09:40:40.227 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:40.239 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/docs] has finished in [106] ms
+13-Sep-2019 09:40:40.239 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/hotel]
+13-Sep-2019 09:40:42.603 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:42.617 INFO [localhost-startStop-1] com.dewcis.hotel.util.ServletInit.contextInitialized Context started
+13-Sep-2019 09:40:42.621 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "city_codes" does not exist
+  Position: 15
+13-Sep-2019 09:40:42.621 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT * FROM city_codes
+13-Sep-2019 09:40:42.776 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/hotel] has finished in [2,537] ms
+13-Sep-2019 09:40:42.777 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/repository]
+13-Sep-2019 09:40:44.298 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:44.318 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/repository] has finished in [1,542] ms
+13-Sep-2019 09:40:44.318 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/ROOT]
+13-Sep-2019 09:40:46.928 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:46.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/ROOT] has finished in [2,614] ms
+13-Sep-2019 09:40:46.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/manager]
+13-Sep-2019 09:40:46.993 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:47.012 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/manager] has finished in [79] ms
+13-Sep-2019 09:40:47.012 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/hschool]
+13-Sep-2019 09:40:47.061 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:47.071 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/hschool] has finished in [58] ms
+13-Sep-2019 09:40:47.071 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/examples]
+13-Sep-2019 09:40:47.264 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:47.286 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/examples] has finished in [215] ms
+13-Sep-2019 09:40:47.286 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/auaold]
+13-Sep-2019 09:40:47.301 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+13-Sep-2019 09:40:48.654 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+13-Sep-2019 09:40:48.654 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+13-Sep-2019 09:40:48.654 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = database Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+13-Sep-2019 09:40:48.712 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:48.716 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/auaold] has finished in [1,430] ms
+13-Sep-2019 09:40:48.716 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/college]
+13-Sep-2019 09:40:48.747 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Context/Realm} Setting property 'digest' to 'md5' did not find a matching property.
+13-Sep-2019 09:40:53.688 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+13-Sep-2019 09:40:53.688 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+13-Sep-2019 09:40:53.688 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = acharya Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+13-Sep-2019 09:40:53.688 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "150" for "maxActive" property, which is being ignored.
+13-Sep-2019 09:40:53.688 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property removeAbandoned is not used in DBCP2, use one or both of removeAbandonedOnBorrow or removeAbandonedOnMaintenance instead. Both have default value set to false. You have set value of "true" for "removeAbandoned" property, which is being ignored.
+13-Sep-2019 09:40:53.688 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = incentive Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "50" for "maxWait" property, which is being ignored.
+13-Sep-2019 09:40:53.874 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:53.947 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "sys_languages" does not exist
+  Position: 48
+13-Sep-2019 09:40:53.947 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT sys_language_id, sys_language_name FROM sys_languages ORDER BY sys_language_id
+13-Sep-2019 09:40:53.947 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: relation "orgs" does not exist
+  Position: 20
+13-Sep-2019 09:40:53.948 SEVERE [localhost-startStop-1] org.baraza.DB.BQuery.makeQuery SQL SELECT org_id FROM orgs WHERE is_active = true ORDER BY org_id
+13-Sep-2019 09:40:53.949 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/college] has finished in [5,233] ms
+13-Sep-2019 09:40:53.949 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/highschool]
+13-Sep-2019 09:40:57.402 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:57.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/highschool] has finished in [3,467] ms
+13-Sep-2019 09:40:57.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/projects/tomcat/webapps/host-manager]
+13-Sep-2019 09:40:57.461 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Sep-2019 09:40:57.473 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/projects/tomcat/webapps/host-manager] has finished in [56] ms
+13-Sep-2019 09:40:57.479 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Sep-2019 09:40:57.490 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Sep-2019 09:40:57.493 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 30670 ms
+13-Sep-2019 09:45:12.822 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "1:0"
+  Position: 47
+13-Sep-2019 09:45:32.218 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "24:0"
+  Position: 47
+13-Sep-2019 09:45:43.251 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery Get Table read and Metadata Error : org.postgresql.util.PSQLException: ERROR: column "qcouseid" does not exist
+  Hint: Perhaps you meant to reference the column "qcoursecheckpass.qcourseid".
+  Position: 91
+13-Sep-2019 09:45:43.252 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BQuery.makeQuery SQL SELECT yeartaken, courseid, coursetitle, instructorname, classoption, credithours, nogpa, qcouseid, studentid, org_id
+FROM qcoursecheckpass
+WHERE (studentid = 'PT/17/0001') AND (org_id = '0') AND (quarterid = 'null')
+ORDER BY yeartaken, courseid
+13-Sep-2019 09:52:05.670 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "24:0"
+  Position: 47
+13-Sep-2019 09:52:09.330 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "22:0"
+  Position: 47
+13-Sep-2019 09:52:16.578 INFO [http-nio-8080-exec-2] org.baraza.web.BWeb.setOperation SELECT insQStudent('2019/2020.1', 'PT/17/0001', '0')
+13-Sep-2019 09:52:16.854 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: You must change your password first before proceeding.
+  Where: PL/pgSQL function insqstudent(character varying,character varying,character varying) line 106 at RAISE
+13-Sep-2019 09:52:16.856 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "22:0"
+  Position: 47
+13-Sep-2019 09:58:13.732 INFO [http-nio-8080-exec-5] org.baraza.web.BWeb.setOperation SELECT insQStudent('2019/2020.1', 'PT/17/0001', '0')
+13-Sep-2019 09:58:13.792 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: permission denied for sequence qstudents_qstudentid_seq
+  Where: SQL statement "INSERT INTO qstudents(quarterid, studentdegreeid, studylevel, currbalance, charges, financenarrative, paymenttype, org_id)
+		VALUES ($1, mydegreeid, mystudylevel, mycurrbalance, mylatefees, mynarrative, 1, mystud.org_id)"
+PL/pgSQL function insqstudent(character varying,character varying,character varying) line 116 at SQL statement
+13-Sep-2019 09:58:13.794 SEVERE [http-nio-8080-exec-5] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "22:0"
+  Position: 47
+13-Sep-2019 10:03:13.777 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.778 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.779 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.780 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.780 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.780 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.780 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.781 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.782 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.783 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.783 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.783 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.783 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.783 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.784 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.784 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.784 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.784 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.785 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.785 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.785 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.786 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.786 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.786 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.786 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.787 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.787 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.787 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.787 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.787 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.787 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.788 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.789 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.790 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.791 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.792 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.793 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.794 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.795 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.795 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.795 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.795 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.795 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.795 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.796 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.796 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.796 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.796 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.796 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.796 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.796 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.797 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.798 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.799 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.800 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.801 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.802 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.803 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.803 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.803 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.803 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.803 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.803 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.803 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.804 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.805 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.806 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.807 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.808 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.809 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.810 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.811 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.812 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.813 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.814 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.815 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.816 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.816 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:03:13.816 SEVERE [http-nio-8080-exec-2] org.baraza.DB.BQuery.readField Data field read error : org.postgresql.util.PSQLException: The column name course_id || ', ' || course_title was not found in this ResultSet.
+13-Sep-2019 10:25:33.216 INFO [http-nio-8080-exec-8] org.baraza.web.BWeb.setOperation SELECT insQStudent('2019/2020.1', 'PT/17/0001', '0')
+13-Sep-2019 10:25:33.952 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "100:0"
+  Position: 47
+13-Sep-2019 10:25:45.189 INFO [http-nio-8080-exec-4] org.baraza.web.BWeb.setOperations SELECT updQStudent('2', 'PT/17/0001', 'null') 
+13-Sep-2019 10:25:45.364 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "23:0"
+  Position: 47
+13-Sep-2019 10:25:57.806 INFO [http-nio-8080-exec-3] org.baraza.web.BWeb.setOperations SELECT selQResidence('2526', 'PT/17/0001', '') 
+13-Sep-2019 10:25:57.873 SEVERE [http-nio-8080-exec-3] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: The study levels allowed are between 700 and 900 for your level 100
+  Where: PL/pgSQL function selqresidence(character varying,character varying,character varying) line 51 at RAISE
+13-Sep-2019 10:26:10.113 INFO [http-nio-8080-exec-4] org.baraza.web.BWeb.setOperations SELECT selQResidence('2527', 'PT/17/0001', '') 
+13-Sep-2019 10:26:10.217 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "49:0"
+  Position: 47
+13-Sep-2019 10:26:15.197 INFO [http-nio-8080-exec-2] org.baraza.web.BWeb.setOperations SELECT selQsabathclass('1', 'PT/17/0001', '') 
+13-Sep-2019 10:26:15.292 SEVERE [http-nio-8080-exec-8] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "24:0"
+  Position: 47
+13-Sep-2019 10:26:40.487 INFO [http-nio-8080-exec-7] org.baraza.web.BWeb.setOperations SELECT insqcourse('143870', 'PT/17/0001', '') 
+13-Sep-2019 10:26:40.589 SEVERE [http-nio-8080-exec-9] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "29:0"
+  Position: 47
+13-Sep-2019 10:34:08.771 INFO [http-nio-8080-exec-1] org.baraza.web.BWeb.setOperation SELECT insQClose('336222', 'PT/17/0001', '0')
+13-Sep-2019 10:34:09.648 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: You need to have financial approval to proceed
+  Where: PL/pgSQL function insqclose(character varying,character varying,character varying) line 97 at RAISE
+13-Sep-2019 10:34:09.650 SEVERE [http-nio-8080-exec-1] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "29:0"
+  Position: 47
+13-Sep-2019 10:34:21.684 SEVERE [http-nio-8080-exec-10] org.baraza.DB.BDB.executeFunction Database executeFunction error : org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "24:0"
+  Position: 47
+13-Sep-2019 16:10:29.247 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Sep-2019 16:10:29.403 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Sep-2019 16:10:29.410 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Sep-2019 16:10:29.891 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15: JAX-WS servlet destroyed
+13-Sep-2019 16:10:29.918 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+13-Sep-2019 16:10:29.919 INFO [localhost-startStop-2] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13: JAX-WS context listener destroyed
+13-Sep-2019 16:10:29.930 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Sep-2019 16:10:29.974 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Sep-2019 16:10:29.980 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Sep-2019 16:10:29.982 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

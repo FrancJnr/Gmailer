@@ -1,0 +1,14 @@
+{
+  "name": "fontello",
+  "homepage": "https://github.com/fontello/fontello",
+  "version": "7.0.0",
+  "_release": "7.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "7.0.0",
+    "commit": "2e07bf602648e6c062240654df5a25abf01fb682"
+  },
+  "_source": "https://github.com/fontello/fontello.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/fontello/fontello.git"
+}
