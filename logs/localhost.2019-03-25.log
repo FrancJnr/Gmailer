@@ -1,6 +1,0 @@
-25-Mar-2019 13:05:02.646 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-25-Mar-2019 13:05:02.647 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-25-Mar-2019 13:05:02.648 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@78f02cc6')
-25-Mar-2019 13:05:29.445 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.SecurityConstraint.findUncoveredHttpMethods For security constraints with URL pattern [/webdav/*] only the HTTP methods [HEAD CANCELUPLOAD MKCOL UNCHECKOUT POST CHECKIN CHECKOUT PROPFIND LOCK VERSION-CONTROL COPY REPORT PUT DELETE GETLIB MOVE GET UPDATE PROPPATCH UNLOCK] are covered. All other methods are uncovered.
-25-Mar-2019 18:40:47.937 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-25-Mar-2019 18:40:47.937 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

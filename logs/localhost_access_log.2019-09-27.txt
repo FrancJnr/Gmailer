@@ -1,9 +1,0 @@
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/ HTTP/1.1" 200 2458
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/assets/global/plugins/bootstrap-4.1.1/dist/css/bootstrap.min.css HTTP/1.1" 200 140930
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/assets/global/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 23739
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/assets/global/css/custom.css HTTP/1.1" 200 5363
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/assets/fonts/fajar-icons.css HTTP/1.1" 404 1125
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/assets/fonts/fonts.css HTTP/1.1" 404 1119
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/assets/fonts/font-awesome.css HTTP/1.1" 404 1126
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /favicon.ico HTTP/1.1" 404 1085
-127.0.0.1 - - [27/Sep/2019:08:57:53 +0300] "GET /highschool/assets/img/slides/slide_2.jpg HTTP/1.1" 200 104154
