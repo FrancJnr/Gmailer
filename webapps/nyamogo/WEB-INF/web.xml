@@ -12,11 +12,11 @@
 	</context-param>
 	<context-param>
 		<param-name>web_title</param-name>
-		<param-value>Nyamongo</param-value>
+		<param-value>Nyamogo</param-value>
 	</context-param>
 	<context-param>
 		<param-name>login_title</param-name>
-		<param-value>Nyamongo</param-value>
+		<param-value>Nyamogo</param-value>
 	</context-param>
 	<context-param>
 		<param-name>app_db</param-name>

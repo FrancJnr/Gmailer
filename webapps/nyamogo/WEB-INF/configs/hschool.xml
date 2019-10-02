@@ -1,4 +1,4 @@
-<APP noorg="false" password="change_password" name="hschool">
+<APP noorg="false" password="change_password" org="org_id" name="hschool">
 	<MENU background="red" name="School">
 		<MENU icon="fa fa-cogs font-black-sharp " name="Control Panel">
 			<MENU icon="fa fa-circle font-black-sharp" name="Streams">203</MENU>
@@ -25,7 +25,8 @@
 			<MENU icon="fa fa-circle font-black-sharp" name="Book Retrival">163</MENU>
 		</MENU>
 		<MENU icon="fa fa-book font-black-sharp " name="Accounts">
-			<MENU icon="fa fa-circle font-black-sharp" name="Payment Methods">178</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Letter Heads">263</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Payment Methods">118</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Accountants">168</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Fees Structure">173</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Fee Payments">183</MENU>
@@ -34,6 +35,7 @@
 			<MENU name="Payroll Balances">243</MENU>
 			<MENU name="Vw Books">248</MENU>
 			<MENU name="Vw Books Issuance">253</MENU>
+			<MENU name="Employees Report">258</MENU>
 		</MENU>
 	</MENU>
 	<DESK access="open" w="700" h="500" name="Dashboard" key="1">
@@ -943,10 +945,9 @@
 		</GRID>
 	</DESK>
 	<DESK w="700" h="550" name="Librarians" key="153">
-		<GRID keyfield="librarian_id" name="Librarians" table="librarians">
-			<TEXTFIELD w="75" title="Librarian ID">librarian_id</TEXTFIELD>
+		<GRID keyfield="librarian_id" name="Librarians" table="vw_librarians">
+			<TEXTFIELD w="75" title="ID">librarian_id</TEXTFIELD>
 			<TEXTFIELD w="75" title="Librarian Name">librarian_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Org ID">org_id</TEXTFIELD>
 			<TEXTFIELD w="75" title="Telno">telno</TEXTFIELD>
 			<TEXTFIELD w="75" title="Gender">gender</TEXTFIELD>
 			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
@@ -954,7 +955,11 @@
 			<FORM keyfield="librarian_id" name="Librarians" table="librarians">
 				<TEXTFIELD w="430" h="20" x="10" y="10" title="Librarian Name">librarian_name</TEXTFIELD>
 				<TEXTFIELD w="150" h="20" x="10" y="30" title="Telno">telno</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="290" y="30" title="Gender">gender</TEXTFIELD>
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Gender">gender
+					<DATA key="M">Male</DATA>
+					<DATA key="F">Female</DATA>
+					<DATA key="N">NOT SPECIFIC</DATA>
+				</COMBOLIST>
 				<TEXTFIELD w="150" h="20" x="10" y="50" title="Email">email</TEXTFIELD>
 				<CHECKBOX w="150" h="20" x="290" y="50" title="Active">is_active</CHECKBOX>
 				<TEXTAREA w="430" h="70" x="10" y="70" title="Details">details</TEXTAREA>
@@ -1041,7 +1046,7 @@
 		</GRID>
 	</DESK>
 	<DESK w="700" h="550" name="Accountants" key="168">
-		<GRID keyfield="accountant_id" name="Accountants" table="accountants">
+		<GRID keyfield="accountant_id" name="Accountants" table="vw_accountants">
 			<TEXTFIELD w="75" title="#ID">accountant_id</TEXTFIELD>
 			<TEXTFIELD w="75" title="Name">accountant_name</TEXTFIELD>
 			<TEXTFIELD w="75" title="Telno">telno</TEXTFIELD>
@@ -1050,7 +1055,11 @@
 			<FORM keyfield="accountant_id" name="Accountants" table="accountants">
 				<TEXTFIELD w="430" h="20" x="10" y="10" title="Accountant Name">accountant_name</TEXTFIELD>
 				<TEXTFIELD w="150" h="20" x="10" y="30" title="Telno">telno</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="290" y="30" title="Gender">gender</TEXTFIELD>
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Gender">gender
+					<DATA key="M">Male</DATA>
+					<DATA key="F">Female</DATA>
+					<DATA key="N">NOT SPECIFIC</DATA>
+				</COMBOLIST>
 				<TEXTFIELD w="150" h="20" x="10" y="50" title="Email">email</TEXTFIELD>
 				<CHECKBOX w="150" h="20" x="290" y="50" title="Active">is_active</CHECKBOX>
 				<TEXTAREA w="430" h="70" x="10" y="70" title="Details">details</TEXTAREA>
@@ -1064,13 +1073,17 @@
 			<TEXTFIELD w="75" title="Term">school_term_name</TEXTFIELD>
 			<TEXTDECIMAL w="75" title="Amount">amount</TEXTDECIMAL>
 			<CHECKBOX w="75" title="Current">is_current</CHECKBOX>
-			<FORM keyfield="fees_structure_id" name="Fees Structure" table="fees_structure">
-				<COMBOBOX w="430" h="20" lpfield="school_term_name" x="10" y="10" lptable="school_terms" title="Term">school_term_id</COMBOBOX>
-				<COMBOBOX w="430" h="20" lpfield="class_level_name" x="10" y="30" lptable="class_levels" title="Class Level">class_level_id</COMBOBOX>
-				<TEXTDECIMAL w="150" h="20" x="10" y="50" title="Amount">amount</TEXTDECIMAL>
-				<CHECKBOX w="150" h="20" x="10" y="70" title="Current">is_current</CHECKBOX>
-				<TEXTAREA w="430" h="70" x="10" y="90" title="Details">details</TEXTAREA>
-			</FORM>
+			<ACCORDION noorg="true" edit="false" keyfield="fees_structure_id" name="Fee Structure" linkfield="fees_structure_id">
+				<FORM keyfield="fees_structure_id" name="Fees Structure" table="fees_structure">
+					<COMBOBOX w="430" h="20" lpfield="school_term_name" x="10" y="10" lptable="school_terms" title="Term">school_term_id</COMBOBOX>
+					<COMBOBOX w="430" h="20" lpfield="class_level_name" x="10" y="30" lptable="class_levels" title="Class Level">class_level_id</COMBOBOX>
+					<CHECKBOX w="150" h="20" x="10" y="70" title="Current">is_current</CHECKBOX>
+				</FORM>
+				<GRID keyfield="fees_structure_id" name="Vote Heads" linkfield="fees_structure_id" collapse="in" table="fees_structure">
+					<COMBOBOX w="100" h="20" lpfield="vote_head_name" x="10" y="10" lptable="vote_heads" title="Vote Head">vote_head_id</COMBOBOX>
+					<TEXTDECIMAL w="150" h="20" x="10" y="70" title="Amount">amount</TEXTDECIMAL>
+				</GRID>
+			</ACCORDION>
 		</GRID>
 	</DESK>
 	<DESK w="700" h="550" name="Fee Payments" key="183">
@@ -1104,11 +1117,10 @@
 		</GRID>
 	</DESK>
 	<DESK w="700" h="550" name="School Calendar" key="193">
-		<GRID keyfield="calendar_year_id" name="Calendar Year" table="calendar_year">
-			<TEXTFIELD w="75" title="Calendar Year">calendar_year</TEXTFIELD>
+		<GRID keyfield="calendar_year_id" name="Calendar Year" table="vw_calendar_year">
+			<TEXTFIELD w="75" title="Calendar Year">calendar_year_name</TEXTFIELD>
 			<GRID keyfield="school_calendar_id" name="School Calendar" linkfield="calendar_year_id" table="vw_school_calendar">
 				<TEXTFIELD w="75" title="ID">school_calendar_id</TEXTFIELD>
-				<TEXTFIELD w="75" title="Calendar ">calendar_year_name</TEXTFIELD>
 				<TEXTFIELD w="75" title="Term">school_term_name</TEXTFIELD>
 				<TEXTDATE w="75" title="Start Date">start_date</TEXTDATE>
 				<TEXTDATE w="75" title="End Date">end_date</TEXTDATE>
@@ -1148,26 +1160,25 @@
 	</DESK>
 	<DESK w="700" h="550" name="Students" key="208">
 		<GRID keyfield="student_id" name="Students" table="vw_students">
-			<TEXTFIELD w="75" title="ID">student_id</TEXTFIELD>
+			<TEXTFIELD w="20" title="ID">student_id</TEXTFIELD>
+			<TEXTLINK w="75" title="Admission No">admission_no</TEXTLINK>
+			<TEXTFIELD w="75" title="Student Name">student_name</TEXTFIELD>
 			<TEXTFIELD w="75" title="Class">class_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Admission No">admission_no</TEXTFIELD>
-			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Second Name">second_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
 			<TEXTFIELD w="75" title="Gender">gender</TEXTFIELD>
 			<TEXTFIELD w="75" title="Address">address</TEXTFIELD>
 			<TEXTDATE w="75" title="Dob">dob</TEXTDATE>
-			<TEXTFIELD w="75" title="Father name">fname</TEXTFIELD>
-			<TEXTFIELD w="75" title="Father phone No">fphone_no</TEXTFIELD>
-			<TEXTFIELD w="75" title="Mother name">mname</TEXTFIELD>
-			<TEXTFIELD w="75" title="Mother phone No">mphone_no</TEXTFIELD>
 			<CHECKBOX w="75" title="Active">is_active</CHECKBOX>
+			<JASPER reportfile="student_details.jasper" name="Student Details"></JASPER>
 			<FORM keyfield="student_id" name="Students" cols="2" table="students">
 				<TEXTFIELD w="150" h="20" x="10" y="10" title="Admission No" span="true">admission_no</TEXTFIELD>
 				<TEXTFIELD w="150" h="20" x="10" y="30" title="First Name" span="true">first_name</TEXTFIELD>
 				<TEXTFIELD w="150" h="20" x="10" y="50" title="Second Name" span="true">second_name</TEXTFIELD>
 				<TEXTFIELD w="150" h="20" x="10" y="70" title="Surname" span="true">surname</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="10" y="90" title="Gender" span="true">gender</TEXTFIELD>
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Gender">gender
+					<DATA key="M">Male</DATA>
+					<DATA key="F">Female</DATA>
+					<DATA key="N">NOT SPECIFIC</DATA>
+				</COMBOLIST>
 				<TEXTFIELD w="150" h="20" x="10" y="110" title="Address" span="true">address</TEXTFIELD>
 				<TEXTDATE w="150" h="20" x="10" y="130" title="Dob" span="true">dob</TEXTDATE>
 				<TEXTFIELD w="150" h="20" x="10" y="150" title="Father name" span="true">fname</TEXTFIELD>
@@ -1230,41 +1241,45 @@
 	<DESK w="700" h="550" name="Employees" key="233">
 		<GRID keyfield="employee_id" name="Employees" table="vw_employees">
 			<TEXTFIELD w="75" title="ID">employee_id</TEXTFIELD>
-			<TEXTFIELD w="75" title="Person Title">person_title</TEXTFIELD>
-			<TEXTFIELD w="75" title="Surname">surname</TEXTFIELD>
-			<TEXTFIELD w="75" title="First Name">first_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Middle Name">middle_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Employee Full Name">employee_full_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Employee Email">employee_email</TEXTFIELD>
+			<TEXTFIELD w="75" title="Title">person_title</TEXTFIELD>
+			<TEXTFIELD w="75" title="Name">employee_full_name</TEXTFIELD>
 			<TEXTDATE w="75" title="Date Of Birth">date_of_birth</TEXTDATE>
-			<CHECKBOX w="75" title="Gender">gender</CHECKBOX>
+			<TEXTFIELD w="75" title="Gender">gender</TEXTFIELD>
 			<TEXTFIELD w="75" title="Phone">phone</TEXTFIELD>
-			<TEXTFIELD w="75" title="Marital Status">marital_status</TEXTFIELD>
-			<TEXTDATE w="75" title="Appointment Date">appointment_date</TEXTDATE>
-			<TEXTFIELD w="75" title="Bank">bank_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Branch">branch_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="M/S">marital_status</TEXTFIELD>
 			<TEXTFIELD w="75" title="Designation">employee_designation_name</TEXTFIELD>
 			<TEXTFIELD w="75" title="Category">employee_type_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Payment Mode">payment_mode_name</TEXTFIELD>
-			<FORM keyfield="employee_id" name="Employees" table="employees">
-				<TEXTFIELD w="150" h="20" x="10" y="90" title="Person Title">person_title</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="290" y="90" title="Surname">surname</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="10" y="110" title="First Name">first_name</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="290" y="110" title="Middle Name">middle_name</TEXTFIELD>
-				<COMBOBOX w="430" h="20" lpfield="employee_type_name" x="10" y="10" lptable="employee_types" title="Category">employee_type_id</COMBOBOX>
-				<COMBOBOX w="430" h="20" lpfield="employee_designation_name" x="10" y="30" lptable="employee_designations" title="Designation">employee_designation_id</COMBOBOX>
-				<COMBOBOX w="430" h="20" lpfield="payment_mode_name" x="10" y="50" lptable="payment_modes" title="Payment Mode">payment_mode_id</COMBOBOX>
-				<COMBOBOX w="430" h="20" lpfield="bank_branch_id" x="10" y="70" lptable="bank_branch" title="Bank Branch">bank_branch_id</COMBOBOX>
-				<TEXTDATE w="150" h="20" x="10" y="170" title="Date Of Birth">date_of_birth</TEXTDATE>
-				<CHECKBOX w="150" h="20" x="290" y="170" title="Gender" ischar="true">gender</CHECKBOX>
-				<TEXTFIELD w="430" h="20" x="10" y="190" title="Phone">phone</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="10" y="210" title="Marital Status">marital_status</TEXTFIELD>
-				<TEXTFIELD w="150" h="20" x="10" y="320" title="Identity Card">identity_card</TEXTFIELD>
-				<TEXTDATE w="150" h="20" x="290" y="210" title="Appointment Date">appointment_date</TEXTDATE>
-				<TEXTDECIMAL w="150" h="20" x="290" y="320" title="Basic Salary">basic_salary</TEXTDECIMAL>
-				<TEXTFIELD w="150" h="20" x="10" y="340" title="Bank Account">bank_account</TEXTFIELD>
-				<TEXTAREA w="430" h="70" x="10" y="440" title="Field Of Study">field_of_study</TEXTAREA>
-				<TEXTAREA w="430" h="70" x="10" y="250" title="Employment Terms">employment_terms</TEXTAREA>
+			<FORM keyfield="employee_id" name="Employees" cols="2" table="employees">
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Person Title" span="true">person_title
+					<DATA key="Mr">Mr</DATA>
+					<DATA key="Mrs">Mrs</DATA>
+					<DATA key="Dr">Dr</DATA>
+					<DATA key="Prof">Prof</DATA>
+				</COMBOLIST>
+				<TEXTFIELD w="150" h="20" x="290" y="90" title="Surname" span="true">surname</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="10" y="110" title="First Name" span="true">first_name</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="290" y="110" title="Middle Name" span="true">middle_name</TEXTFIELD>
+				<TEXTDATE w="150" h="20" x="10" y="170" title="Date Of Birth" span="true">date_of_birth</TEXTDATE>
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Gender">gender
+					<DATA key="M">Male</DATA>
+					<DATA key="F">Female</DATA>
+					<DATA key="N">NOT SPECIFIC</DATA>
+				</COMBOLIST>
+				<COMBOBOX cmb_fnct="bank_name||' ,'||branch_name " noorg="true" w="150" h="20" lpfield="bnk_brch" x="10" y="10" lptable="bank_branch" title="Bank" span="true">bank_branch_id</COMBOBOX>
+				<COMBOBOX w="150" h="20" lpfield="payment_mode_name" x="10" y="50" lptable="payment_modes" title="Payment Mode" span="true">payment_mode_id</COMBOBOX>
+				<COMBOBOX w="150" h="20" lpfield="employee_type_name" x="10" y="10" lptable="employee_types" title="Category" span="true">employee_type_id</COMBOBOX>
+				<COMBOBOX w="150" h="20" lpfield="employee_designation_name" x="10" y="30" lptable="employee_designations" title="Designation" span="true">employee_designation_id</COMBOBOX>
+				<TEXTFIELD w="150" h="20" x="10" y="190" title="Phone" span="true">phone</TEXTFIELD>
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Marital Status">marital_status
+					<DATA key="S">Single</DATA>
+					<DATA key="M">Married</DATA>
+				</COMBOLIST>
+				<TEXTFIELD w="150" h="20" x="10" y="320" title="Identity Card" span="true">identity_card</TEXTFIELD>
+				<TEXTDATE w="150" h="20" x="290" y="210" title="Appointment Date" span="true">appointment_date</TEXTDATE>
+				<TEXTDECIMAL w="150" h="20" x="290" y="320" title="Basic Salary" span="true">basic_salary</TEXTDECIMAL>
+				<TEXTFIELD w="150" h="20" x="10" y="340" title="Bank Account" span="true">bank_account</TEXTFIELD>
+				<TEXTAREA w="150" h="70" x="10" y="440" title="Field Of Study" span="true">field_of_study</TEXTAREA>
+				<TEXTAREA w="150" h="70" x="10" y="250" title="Employment Terms" span="true">employment_terms</TEXTAREA>
 			</FORM>
 		</GRID>
 	</DESK>
@@ -1276,7 +1291,7 @@
 				<ACTION fnct="process_payroll">Process Payroll</ACTION>
 			</ACTIONS>
 		</GRID>
-		<GRID keyfield="employee_month_id" name="Process Monthly Payments" table="vw_employee_month">
+		<GRID updatetable="employee_month" keyfield="employee_month_id" name="Processed Monthly Payments" table="vw_employee_month">
 			<TEXTFIELD w="20" title="ID">employee_id</TEXTFIELD>
 			<TEXTFIELD w="40" title="Title">person_title</TEXTFIELD>
 			<TEXTFIELD w="100" title="Employee Name">employee_full_name</TEXTFIELD>
@@ -1288,16 +1303,11 @@
 			<TEXTFIELD w="75" title="Bank Account">bank_account</TEXTFIELD>
 			<TEXTFIELD w="75" title="Phone">phone</TEXTFIELD>
 			<CHECKBOX w="75" title="Paid">is_paid</CHECKBOX>
-			<TEXTFIELD w="75" title="Doc No">doc_no</TEXTFIELD>
-			<TEXTDECIMAL w="75" title="Amount">amount</TEXTDECIMAL>
+			<EDITFIELD w="75" title="Doc No">doc_no</EDITFIELD>
+			<EDITFIELD w="75" title="Amount">amount</EDITFIELD>
 			<ACTIONS>
 				<ACTION jumpview="" fnct="process_payment">Process Payment</ACTION>
 			</ACTIONS>
-			<FORM keyfield="employee_month_id" name="Employee Month" table="employee_month">
-				<TEXTFIELD w="430" h="20" x="10" y="70" title="Doc No">doc_no</TEXTFIELD>
-				<TEXTDECIMAL w="150" h="20" x="10" y="160" title="Amount">amount</TEXTDECIMAL>
-				<TEXTAREA w="430" h="70" x="10" y="90" title="Details">details</TEXTAREA>
-			</FORM>
 		</GRID>
 		<JASPER reportfile="payroll_balances.jasper" name="payroll_balances"></JASPER>
 	</DESK>
@@ -1309,5 +1319,18 @@
 	</DESK>
 	<DESK w="700" h="550" name="Book Issuance" key="253">
 		<JASPER reportfile="vw_books_issuance.jasper" name="Book Issuance"></JASPER>
+	</DESK>
+	<DESK w="700" h="550" name="employees_report" key="258">
+		<JASPER reportfile="employees_report.jasper" name="employees_report"></JASPER>
+	</DESK>
+	<DESK w="700" h="550" name="Vote Heads" key="263">
+		<GRID keyfield="vote_head_id" name="Vote Heads" table="vote_heads">
+			<TEXTFIELD w="75" title="ID">vote_head_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Letter Head Name">vote_head_name</TEXTFIELD>
+			<FORM keyfield="vote_head_id" name="Vote Heads" table="vote_heads">
+				<TEXTFIELD w="430" h="20" x="10" y="10" title="Vote Head">vote_head_name</TEXTFIELD>
+				<TEXTAREA w="430" h="70" x="10" y="30" title="Details">details</TEXTAREA>
+			</FORM>
+		</GRID>
 	</DESK>
 </APP>
