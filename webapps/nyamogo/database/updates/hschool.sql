@@ -895,7 +895,6 @@ CREATE FUNCTION public.issue_book(character varying, character varying, characte
     AS $_$
 DECLARE
     msg                 varchar(120);
-    v_book              RECORD;
 BEGIN
     UPDATE books SET is_borrowed = true 
     FROM
@@ -904,6 +903,7 @@ BEGIN
     ) as a
     WHERE books.book_id = a.book_id;
     msg:='Book issued';
+    RETURN msg;
 END;
 $_$;
 
@@ -937,7 +937,6 @@ CREATE FUNCTION public.mark_book_return(character varying, character varying, ch
     AS $_$
 DECLARE
     msg                 varchar(120);
-    v_book              RECORD;
 BEGIN
     UPDATE books SET is_borrowed = false 
     FROM
@@ -946,6 +945,7 @@ BEGIN
     ) as a
     WHERE books.book_id = a.book_id;
     msg:='Book Returned';
+    RETURN msg;
 END;
 $_$;
 
@@ -1051,6 +1051,60 @@ $_$;
 
 
 ALTER FUNCTION public.process_payroll(character varying, character varying, character varying) OWNER TO postgres;
+
+--
+-- Name: staffs_login(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.staffs_login() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+    BEGIN
+        INSERT INTO entitys(entity_type_id, use_key_id,  org_id, entity_name, user_name, primary_email, primary_telephone,
+         is_active)
+        VALUES(9 ,9, 0, NEW.person_title||' '||NEW.surname||' '||NEW.first_name||' '||NEW.middle_name, NEW.person_title||NEW.surname||NEW.first_name||NEW.middle_name, '',  New.phone, true);
+        RETURN NEW;
+    END;
+$$;
+
+
+ALTER FUNCTION public.staffs_login() OWNER TO postgres;
+
+--
+-- Name: student_login(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.student_login() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+    BEGIN
+        INSERT INTO entitys(entity_type_id, use_key_id,  org_id, entity_name, user_name, primary_email, primary_telephone,
+         is_active)
+        VALUES(7, 7, 0, NEW.surname||' '||NEW.first_name||' '|| NEW.second_name, NEW.second_name||''||NEW.first_name, '', '', true);
+        RETURN NEW;
+    END;
+$$;
+
+
+ALTER FUNCTION public.student_login() OWNER TO postgres;
+
+--
+-- Name: teacher_login(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.teacher_login() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+    BEGIN
+        INSERT INTO entitys(entity_type_id, use_key_id,  org_id, entity_name, user_name, primary_email, primary_telephone,
+         is_active)
+        VALUES(8, 8, 0, NEW.teacher_name, NEW.teacher_name, NEW.teacher_name, New.telno, true);
+        RETURN NEW;
+    END;
+$$;
+
+
+ALTER FUNCTION public.teacher_login() OWNER TO postgres;
 
 --
 -- Name: upd_access_level(character varying, character varying, character varying, character varying); Type: FUNCTION; Schema: public; Owner: postgres
@@ -2653,11 +2707,9 @@ CREATE TABLE public.fees_structure (
     school_term_id integer,
     org_id integer,
     class_level_id integer,
-    amount real,
     fees_structure_year date,
     is_current boolean DEFAULT true,
-    details text,
-    vote_head_id integer
+    details text
 );
 
 
@@ -2683,6 +2735,44 @@ ALTER TABLE public.fees_structure_fees_structure_id_seq OWNER TO postgres;
 --
 
 ALTER SEQUENCE public.fees_structure_fees_structure_id_seq OWNED BY public.fees_structure.fees_structure_id;
+
+
+--
+-- Name: fees_structure_vote_heads; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.fees_structure_vote_heads (
+    fees_structure_vote_head_id integer NOT NULL,
+    org_id integer,
+    fees_structure_id integer,
+    vote_head_id integer,
+    amount real,
+    details text
+);
+
+
+ALTER TABLE public.fees_structure_vote_heads OWNER TO postgres;
+
+--
+-- Name: fees_structure_vote_heads_fees_structure_vote_head_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.fees_structure_vote_heads_fees_structure_vote_head_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.fees_structure_vote_heads_fees_structure_vote_head_id_seq OWNER TO postgres;
+
+--
+-- Name: fees_structure_vote_heads_fees_structure_vote_head_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.fees_structure_vote_heads_fees_structure_vote_head_id_seq OWNED BY public.fees_structure_vote_heads.fees_structure_vote_head_id;
 
 
 --
@@ -3970,6 +4060,46 @@ ALTER SEQUENCE public.sys_translations_sys_translation_id_seq OWNED BY public.sy
 
 
 --
+-- Name: teachers; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.teachers (
+    teacher_id integer NOT NULL,
+    teacher_name character varying(120),
+    org_id integer,
+    telno character varying(20),
+    gender character varying(2),
+    email character varying(50),
+    is_active boolean DEFAULT true,
+    details text
+);
+
+
+ALTER TABLE public.teachers OWNER TO postgres;
+
+--
+-- Name: teachers_teacher_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.teachers_teacher_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.teachers_teacher_id_seq OWNER TO postgres;
+
+--
+-- Name: teachers_teacher_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.teachers_teacher_id_seq OWNED BY public.teachers.teacher_id;
+
+
+--
 -- Name: tomcat_users; Type: VIEW; Schema: public; Owner: postgres
 --
 
@@ -4918,7 +5048,6 @@ CREATE VIEW public.vw_fees_structure AS
     school_terms.school_term_id,
     school_terms.school_term_name,
     fees_structure.fees_structure_id,
-    fees_structure.amount,
     fees_structure.org_id,
     fees_structure.fees_structure_year,
     fees_structure.is_current,
@@ -4929,6 +5058,30 @@ CREATE VIEW public.vw_fees_structure AS
 
 
 ALTER TABLE public.vw_fees_structure OWNER TO postgres;
+
+--
+-- Name: vw_fees_structure_vote_heads; Type: VIEW; Schema: public; Owner: postgres
+--
+
+CREATE VIEW public.vw_fees_structure_vote_heads AS
+ SELECT vw_fees_structure.class_level_id,
+    vw_fees_structure.class_level_name,
+    vw_fees_structure.school_term_id,
+    vw_fees_structure.school_term_name,
+    vw_fees_structure.fees_structure_id,
+    vw_fees_structure.org_id,
+    vw_fees_structure.fees_structure_year,
+    vw_fees_structure.is_current,
+    vote_heads.vote_head_id,
+    vote_heads.vote_head_name,
+    fees_structure_vote_heads.fees_structure_vote_head_id,
+    fees_structure_vote_heads.amount
+   FROM ((public.fees_structure_vote_heads
+     JOIN public.vw_fees_structure ON ((fees_structure_vote_heads.fees_structure_id = vw_fees_structure.fees_structure_id)))
+     JOIN public.vote_heads ON ((fees_structure_vote_heads.vote_head_id = vote_heads.vote_head_id)));
+
+
+ALTER TABLE public.vw_fees_structure_vote_heads OWNER TO postgres;
 
 --
 -- Name: vw_fields; Type: VIEW; Schema: public; Owner: postgres
@@ -5169,6 +5322,27 @@ CREATE VIEW public.vw_sys_emailed AS
 
 
 ALTER TABLE public.vw_sys_emailed OWNER TO postgres;
+
+--
+-- Name: vw_teachers; Type: VIEW; Schema: public; Owner: postgres
+--
+
+CREATE VIEW public.vw_teachers AS
+ SELECT teachers.teacher_id,
+    teachers.org_id,
+    teachers.teacher_name,
+    teachers.telno,
+        CASE
+            WHEN ((teachers.gender)::text = 'M'::text) THEN 'MALE'::text
+            ELSE 'FEMALE'::text
+        END AS gender,
+    teachers.email,
+    teachers.is_active,
+    teachers.details
+   FROM public.teachers;
+
+
+ALTER TABLE public.vw_teachers OWNER TO postgres;
 
 --
 -- Name: vw_workflow_approvals; Type: VIEW; Schema: public; Owner: postgres
@@ -5632,6 +5806,13 @@ ALTER TABLE ONLY public.fees_structure ALTER COLUMN fees_structure_id SET DEFAUL
 
 
 --
+-- Name: fees_structure_vote_heads fees_structure_vote_head_id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.fees_structure_vote_heads ALTER COLUMN fees_structure_vote_head_id SET DEFAULT nextval('public.fees_structure_vote_heads_fees_structure_vote_head_id_seq'::regclass);
+
+
+--
 -- Name: fields field_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -5842,6 +6023,13 @@ ALTER TABLE ONLY public.sys_translations ALTER COLUMN sys_translation_id SET DEF
 
 
 --
+-- Name: teachers teacher_id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.teachers ALTER COLUMN teacher_id SET DEFAULT nextval('public.teachers_teacher_id_seq'::regclass);
+
+
+--
 -- Name: vote_heads vote_head_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -5935,6 +6123,7 @@ COPY public.book_category (book_category_id, book_category_name, org_id, details
 2	ENGLISH SET BOOKS	\N	\N
 3	HISTORY REVISION BOOK	\N	\N
 4	KISWAHILI REVISION BOOK	\N	\N
+5	ENGLISH SET BOOKS	0	\N
 \.
 
 
@@ -5946,6 +6135,9 @@ COPY public.book_status (book_status_id, book_status_name, org_id, details) FROM
 1	GOOD	\N	Book in good condition 
 2	UNDER REPAIR	\N	Being repaired cannot be issued
 3	MISPLACED	\N	Lost book
+4	POOR 	0	\N
+5	GOOD	0	\N
+6	NEED REPAIR	0	\N
 \.
 
 
@@ -5955,6 +6147,7 @@ COPY public.book_status (book_status_id, book_status_name, org_id, details) FROM
 
 COPY public.books (book_id, org_id, book_category_id, isbn, book_title, author, book_status_id, details, book_edition, publisher_id, is_borrowed) FROM stdin;
 1	\N	3	0-7868-4907-X(pbk)	Peter and the star catchers	Dave Barry & Ridley Pearson	1	An English Novel 	1st	1	f
+2	0	5	235GXXNY	AN ENEMY OF THE PEOPLE	JOHN RUGANDA	5	\N	1st	2	f
 \.
 
 
@@ -5963,6 +6156,8 @@ COPY public.books (book_id, org_id, book_category_id, isbn, book_title, author, 
 --
 
 COPY public.books_issuance (books_issuance_id, org_id, book_id, librarian_id, loanee, issuance_date, return_date, days_exceeded, is_returned, return_condition, details) FROM stdin;
+2	0	2	0	4	2019-10-06	2019-10-26	\N	f	\N	\N
+3	0	2	0	6	2019-10-09	2019-10-18	\N	f	\N	\N
 \.
 
 
@@ -6061,6 +6256,7 @@ COPY public.employee_types (employee_type_id, org_id, employee_type_name) FROM s
 
 COPY public.employees (employee_id, employee_type_id, employee_designation_id, payment_mode_id, bank_branch_id, org_id, person_title, surname, first_name, middle_name, employee_full_name, employee_email, date_of_birth, gender, phone, marital_status, appointment_date, exit_date, employment_terms, identity_card, basic_salary, bank_account, picture_file, active, language, previous_sal_point, current_sal_point, halt_point, field_of_study) FROM stdin;
 1	2	1	2	1	0	Mr	Otieno	James	 Kamau	\N	\N	2019-10-07	M	078978645	S	2019-10-23	\N	\N	29593816	16000	160000000	\N	t	\N	\N	\N	\N	\N
+2	2	1	2	1	0	Mr	Katam	Ruth	Jepchirchir	\N	\N	2019-10-16	M	078978645	S	\N	\N	\N	456789	34000	0160000	\N	t	\N	\N	\N	\N	\N
 \.
 
 
@@ -6096,6 +6292,10 @@ COPY public.entity_subscriptions (entity_subscription_id, entity_type_id, entity
 1	0	0	0	\N
 2	0	1	0	\N
 4	1	3	0	\N
+5	7	4	0	\N
+6	1	5	0	\N
+7	8	6	0	\N
+8	9	7	0	\N
 \.
 
 
@@ -6132,7 +6332,11 @@ COPY public.entity_values (entity_value_id, entity_id, entity_field_id, org_id, 
 COPY public.entitys (entity_id, entity_type_id, use_key_id, sys_language_id, org_id, entity_name, user_name, primary_email, primary_telephone, super_user, entity_leader, no_org, function_role, date_enroled, is_active, last_login, entity_password, first_password, new_password, start_url, is_picked, locked_until, details) FROM stdin;
 1	0	0	0	0	repository	repository	repository@localhost	\N	f	t	f	\N	2019-09-19 09:29:12.395727	t	\N	b6f0038dfd42f8aa6ca25354cd2e3660	baraza	\N	\N	f	\N	\N
 3	1	1	0	0	Willis Olando	willis@gmail.com	willis@gmail.com	0702771424	f	f	f	\N	2019-10-01 17:31:30.633567	t	\N	d4a41f643f4eb8c7d3fd6e6c3b70b171	449L191AA	\N	\N	f	\N	\N
-0	0	0	0	0	root	root	root@localhost	\N	t	t	f	\N	2019-09-19 09:29:12.395727	t	2019-10-01 20:47:09.276296	b6f0038dfd42f8aa6ca25354cd2e3660	baraza	\N	\N	f	\N	\N
+0	0	0	0	0	root	root	root@localhost	\N	t	t	f	\N	2019-09-19 09:29:12.395727	t	2019-10-03 16:45:08.12293	b6f0038dfd42f8aa6ca25354cd2e3660	baraza	\N	\N	f	\N	\N
+4	7	7	0	0	OMOLO MERCY Odhiambo	OdhiamboMERCY			f	f	f	\N	2019-10-03 16:45:57.522634	t	\N	b80493d0730d8cb2dea2fee70a8eb138	474W46XK	\N	\N	f	\N	\N
+5	1	1	0	0	JAMES ODONGO	fchege22@gmail.com	fchege22@gmail.com	0702771424	f	f	f	\N	2019-10-03 16:50:25.6682	t	\N	535d1e24151241efa58710a664b98f6e	97G961WL	\N	\N	f	\N	\N
+6	8	8	0	0	James Waringo	James Waringo	James Waringo	0702771424	f	f	f	\N	2019-10-03 17:09:14.514884	t	\N	e082a82d131ff5b336532755f226d695	705F676NA	\N	\N	f	\N	\N
+7	9	9	0	0	Mr Katam Ruth Jepchirchir	MrKatamRuthJepchirchir		078978645	f	f	f	\N	2019-10-03 17:18:04.148224	t	\N	abf256fdf316990a6e150a373162cddf	86I984ES	\N	\N	f	\N	\N
 \.
 
 
@@ -6164,8 +6368,17 @@ COPY public.fee_payments (fee_payment_id, org_id, school_term_id, student_id, ac
 -- Data for Name: fees_structure; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.fees_structure (fees_structure_id, school_term_id, org_id, class_level_id, amount, fees_structure_year, is_current, details, vote_head_id) FROM stdin;
-1	1	0	1	\N	\N	t	\N	\N
+COPY public.fees_structure (fees_structure_id, school_term_id, org_id, class_level_id, fees_structure_year, is_current, details) FROM stdin;
+1	1	0	1	\N	t	\N
+\.
+
+
+--
+-- Data for Name: fees_structure_vote_heads; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.fees_structure_vote_heads (fees_structure_vote_head_id, org_id, fees_structure_id, vote_head_id, amount, details) FROM stdin;
+1	0	1	2	2300	\N
 \.
 
 
@@ -6190,8 +6403,8 @@ COPY public.forms (form_id, org_id, form_name, form_number, table_name, version,
 --
 
 COPY public.librarians (librarian_id, librarian_name, org_id, telno, gender, email, is_active, details) FROM stdin;
-1	JAMES ODONGO	0	0702771424	M	fchege22@gmail.com	t	\N
 4	Willis Olando	0	0702771424	F	willis@gmail.com	t	\N
+0	JAMES ODONGO	0	0702771424	M	fchege22@gmail.com	t	\N
 \.
 
 
@@ -6228,6 +6441,7 @@ COPY public.payment_modes (payment_mode_id, payment_mode_name, org_id, is_active
 
 COPY public.publishers (publisher_id, org_id, publisher_name, publisher_address) FROM stdin;
 1	\N	EAST AFRICAN PUBLISHERS	NAIROBI KENYA \r\nP.O.BOX 23456
+2	0	EAST AFRICAN PUBLISHERS	\N
 \.
 
 
@@ -6290,6 +6504,8 @@ COPY public.streams (stream_id, stream_name, org_id, is_active, details) FROM st
 
 COPY public.students (student_id, admission_no, org_id, first_name, second_name, surname, gender, address, dob, fname, mname, mphone_no, fphone_no, class_level_id, stream_id, is_suspended, is_active, details, picture_file) FROM stdin;
 2	2389	0	Francis	Chege	Kamau	M	240-20300	1992-10-17	JOHN KAMAU	MARGRET WAMBUI	0702771424	0702771424	1	1	f	t	\N	\N
+3	2345	0	Reagan	Odhiambo	Otieno	M	240-20300	2019-10-08	JOHN KAMAU	MARGRET WAMBUI	0702771424	0702771424	1	1	f	t	\N	\N
+11	4567	0	MERCY	Odhiambo	OMOLO	M	240-20300	2019-10-17	JOHN KAMAU	MARGRET WAMBUI	0702771424	0702771424	1	1	f	f	\N	\N
 \.
 
 
@@ -6408,6 +6624,26 @@ COPY public.sys_audit_trail (sys_audit_trail_id, user_id, user_ip, change_date, 
 56	0	127.0.0.1	2019-10-01 21:53:07.524504	vote_heads	1	INSERT	\N
 57	0	127.0.0.1	2019-10-01 21:53:20.144832	vote_heads	2	INSERT	\N
 58	0	127.0.0.1	2019-10-01 22:04:45.076074	fees_structure	1	INSERT	\N
+59	0	127.0.0.1	2019-10-03 16:22:28.504048	book_category	5	INSERT	\N
+60	0	127.0.0.1	2019-10-03 16:22:41.042162	book_status	4	INSERT	\N
+61	0	127.0.0.1	2019-10-03 16:22:49.86712	book_status	5	INSERT	\N
+62	0	127.0.0.1	2019-10-03 16:22:59.918116	book_status	6	INSERT	\N
+63	0	127.0.0.1	2019-10-03 16:23:13.453971	publishers	2	INSERT	\N
+64	0	127.0.0.1	2019-10-03 16:24:08.787022	books	2	INSERT	\N
+65	0	127.0.0.1	2019-10-03 16:25:27.867165	books	2	EDIT	\N
+66	0	127.0.0.1	2019-10-03 16:34:37.221707	students	3	INSERT	\N
+67	0	127.0.0.1	2019-10-03 16:45:57.927661	students	11	INSERT	\N
+68	0	127.0.0.1	2019-10-03 16:50:44.496333	books_issuance	2	INSERT	\N
+69	0	127.0.0.1	2019-10-03 16:50:52.409297	issue_book	2	FUNCTION	\N
+70	0	127.0.0.1	2019-10-03 16:51:38.280239	issue_book	2	FUNCTION	\N
+71	0	127.0.0.1	2019-10-03 16:51:51.22799	mark_book_return	2	FUNCTION	\N
+72	0	127.0.0.1	2019-10-03 16:52:44.000917	mark_book_return	2	FUNCTION	\N
+73	0	127.0.0.1	2019-10-03 17:09:14.591418	teachers	1	INSERT	\N
+74	0	127.0.0.1	2019-10-03 17:09:39.816878	books_issuance	3	INSERT	\N
+75	0	127.0.0.1	2019-10-03 17:18:04.217917	employees	2	INSERT	\N
+76	0	127.0.0.1	2019-10-03 17:22:03.04941	fees_structure	2	INSERT	\N
+77	0	127.0.0.1	2019-10-03 17:41:14.298189	fees_structure	1	INSERT	\N
+78	0	127.0.0.1	2019-10-03 17:41:22.96247	fees_structure_vote_heads	1	INSERT	\N
 \.
 
 
@@ -6755,6 +6991,10 @@ COPY public.sys_logins (sys_login_id, entity_id, login_time, login_ip, phone_ser
 5	0	2019-10-01 15:34:36.505415	127.0.0.1	\N	t	\N
 6	0	2019-10-01 17:10:11.223015	127.0.0.1	\N	t	\N
 7	0	2019-10-01 20:47:09.276296	127.0.0.1	\N	t	\N
+8	0	2019-10-03 16:21:14.978888	127.0.0.1	\N	t	\N
+9	0	2019-10-03 16:40:09.423619	127.0.0.1	\N	t	\N
+10	0	2019-10-03 16:44:05.121758	127.0.0.1	\N	t	\N
+11	0	2019-10-03 16:45:08.12293	127.0.0.1	\N	t	\N
 \.
 
 
@@ -7056,6 +7296,15 @@ COPY public.sys_translations (sys_translation_id, sys_app_id, sys_language_id, o
 
 
 --
+-- Data for Name: teachers; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.teachers (teacher_id, teacher_name, org_id, telno, gender, email, is_active, details) FROM stdin;
+1	James Waringo	0	0702771424	M	james@gmail.com	t	\N
+\.
+
+
+--
 -- Data for Name: use_keys; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -7161,28 +7410,28 @@ SELECT pg_catalog.setval('public.bank_branch_bank_branch_id_seq', 1, true);
 -- Name: book_category_book_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.book_category_book_category_id_seq', 4, true);
+SELECT pg_catalog.setval('public.book_category_book_category_id_seq', 5, true);
 
 
 --
 -- Name: book_status_book_status_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.book_status_book_status_id_seq', 3, true);
+SELECT pg_catalog.setval('public.book_status_book_status_id_seq', 6, true);
 
 
 --
 -- Name: books_book_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.books_book_id_seq', 1, true);
+SELECT pg_catalog.setval('public.books_book_id_seq', 2, true);
 
 
 --
 -- Name: books_issuance_books_issuance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.books_issuance_books_issuance_id_seq', 1, false);
+SELECT pg_catalog.setval('public.books_issuance_books_issuance_id_seq', 3, true);
 
 
 --
@@ -7252,7 +7501,7 @@ SELECT pg_catalog.setval('public.employee_types_employee_type_id_seq', 3, true);
 -- Name: employees_employee_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.employees_employee_id_seq', 1, true);
+SELECT pg_catalog.setval('public.employees_employee_id_seq', 2, true);
 
 
 --
@@ -7280,7 +7529,7 @@ SELECT pg_catalog.setval('public.entity_reset_entity_reset_id_seq', 1, false);
 -- Name: entity_subscriptions_entity_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.entity_subscriptions_entity_subscription_id_seq', 4, true);
+SELECT pg_catalog.setval('public.entity_subscriptions_entity_subscription_id_seq', 8, true);
 
 
 --
@@ -7301,7 +7550,7 @@ SELECT pg_catalog.setval('public.entity_values_entity_value_id_seq', 1, false);
 -- Name: entitys_entity_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.entitys_entity_id_seq', 3, true);
+SELECT pg_catalog.setval('public.entitys_entity_id_seq', 7, true);
 
 
 --
@@ -7330,6 +7579,13 @@ SELECT pg_catalog.setval('public.fee_payments_fee_payment_id_seq', 1, false);
 --
 
 SELECT pg_catalog.setval('public.fees_structure_fees_structure_id_seq', 1, true);
+
+
+--
+-- Name: fees_structure_vote_heads_fees_structure_vote_head_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.fees_structure_vote_heads_fees_structure_vote_head_id_seq', 1, true);
 
 
 --
@@ -7385,7 +7641,7 @@ SELECT pg_catalog.setval('public.picture_id_seq', 1, false);
 -- Name: publishers_publisher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.publishers_publisher_id_seq', 1, true);
+SELECT pg_catalog.setval('public.publishers_publisher_id_seq', 2, true);
 
 
 --
@@ -7420,7 +7676,7 @@ SELECT pg_catalog.setval('public.streams_stream_id_seq', 4, true);
 -- Name: students_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.students_student_id_seq', 2, true);
+SELECT pg_catalog.setval('public.students_student_id_seq', 11, true);
 
 
 --
@@ -7455,7 +7711,7 @@ SELECT pg_catalog.setval('public.sys_apps_sys_app_id_seq', 1, false);
 -- Name: sys_audit_trail_sys_audit_trail_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.sys_audit_trail_sys_audit_trail_id_seq', 58, true);
+SELECT pg_catalog.setval('public.sys_audit_trail_sys_audit_trail_id_seq', 78, true);
 
 
 --
@@ -7511,7 +7767,7 @@ SELECT pg_catalog.setval('public.sys_languages_sys_language_id_seq', 1, false);
 -- Name: sys_logins_sys_login_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.sys_logins_sys_login_id_seq', 7, true);
+SELECT pg_catalog.setval('public.sys_logins_sys_login_id_seq', 11, true);
 
 
 --
@@ -7547,6 +7803,13 @@ SELECT pg_catalog.setval('public.sys_reset_sys_reset_id_seq', 1, false);
 --
 
 SELECT pg_catalog.setval('public.sys_translations_sys_translation_id_seq', 1, false);
+
+
+--
+-- Name: teachers_teacher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.teachers_teacher_id_seq', 1, true);
 
 
 --
@@ -7901,6 +8164,14 @@ ALTER TABLE ONLY public.fee_payments
 
 ALTER TABLE ONLY public.fees_structure
     ADD CONSTRAINT fees_structure_pkey PRIMARY KEY (fees_structure_id);
+
+
+--
+-- Name: fees_structure_vote_heads fees_structure_vote_heads_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.fees_structure_vote_heads
+    ADD CONSTRAINT fees_structure_vote_heads_pkey PRIMARY KEY (fees_structure_vote_head_id);
 
 
 --
@@ -8293,6 +8564,14 @@ ALTER TABLE ONLY public.sys_translations
 
 ALTER TABLE ONLY public.sys_translations
     ADD CONSTRAINT sys_translations_sys_app_id_sys_language_id_org_id_referenc_key UNIQUE (sys_app_id, sys_language_id, org_id, reference);
+
+
+--
+-- Name: teachers teachers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.teachers
+    ADD CONSTRAINT teachers_pkey PRIMARY KEY (teacher_id);
 
 
 --
@@ -8890,6 +9169,20 @@ CREATE INDEX fees_structure_class_level_id ON public.fees_structure USING btree 
 
 
 --
+-- Name: fees_structure_fees_structure_id; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX fees_structure_fees_structure_id ON public.fees_structure_vote_heads USING btree (fees_structure_id);
+
+
+--
+-- Name: fees_structure_fees_vote_head_id; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX fees_structure_fees_vote_head_id ON public.fees_structure_vote_heads USING btree (vote_head_id);
+
+
+--
 -- Name: fees_structure_org_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -8904,10 +9197,10 @@ CREATE INDEX fees_structure_school_term_id ON public.fees_structure USING btree 
 
 
 --
--- Name: fees_structure_vote_head_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fees_structure_vote_heads_org_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX fees_structure_vote_head_id ON public.fees_structure USING btree (vote_head_id);
+CREATE INDEX fees_structure_vote_heads_org_id ON public.fees_structure_vote_heads USING btree (org_id);
 
 
 --
@@ -9226,6 +9519,13 @@ CREATE INDEX sys_translations_sys_language_id ON public.sys_translations USING b
 
 
 --
+-- Name: teachers_org_id; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX teachers_org_id ON public.teachers USING btree (org_id);
+
+
+--
 -- Name: vote_heads_org_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -9363,6 +9663,27 @@ CREATE TRIGGER ins_sys_reset AFTER INSERT ON public.sys_reset FOR EACH ROW EXECU
 --
 
 CREATE TRIGGER librarian_login BEFORE INSERT OR UPDATE ON public.librarians FOR EACH ROW EXECUTE PROCEDURE public.librarian_login();
+
+
+--
+-- Name: employees staff_login; Type: TRIGGER; Schema: public; Owner: postgres
+--
+
+CREATE TRIGGER staff_login BEFORE INSERT OR UPDATE ON public.employees FOR EACH ROW EXECUTE PROCEDURE public.staffs_login();
+
+
+--
+-- Name: students student_login; Type: TRIGGER; Schema: public; Owner: postgres
+--
+
+CREATE TRIGGER student_login BEFORE INSERT OR UPDATE ON public.students FOR EACH ROW EXECUTE PROCEDURE public.student_login();
+
+
+--
+-- Name: teachers teacher_login; Type: TRIGGER; Schema: public; Owner: postgres
+--
+
+CREATE TRIGGER teacher_login BEFORE INSERT OR UPDATE ON public.teachers FOR EACH ROW EXECUTE PROCEDURE public.teacher_login();
 
 
 --
@@ -9948,11 +10269,27 @@ ALTER TABLE ONLY public.fees_structure
 
 
 --
--- Name: fees_structure fees_structure_vote_head_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: fees_structure_vote_heads fees_structure_vote_heads_fees_structure_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.fees_structure
-    ADD CONSTRAINT fees_structure_vote_head_id_fkey FOREIGN KEY (vote_head_id) REFERENCES public.vote_heads(vote_head_id);
+ALTER TABLE ONLY public.fees_structure_vote_heads
+    ADD CONSTRAINT fees_structure_vote_heads_fees_structure_id_fkey FOREIGN KEY (fees_structure_id) REFERENCES public.fees_structure(fees_structure_id);
+
+
+--
+-- Name: fees_structure_vote_heads fees_structure_vote_heads_org_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.fees_structure_vote_heads
+    ADD CONSTRAINT fees_structure_vote_heads_org_id_fkey FOREIGN KEY (org_id) REFERENCES public.orgs(org_id);
+
+
+--
+-- Name: fees_structure_vote_heads fees_structure_vote_heads_vote_head_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.fees_structure_vote_heads
+    ADD CONSTRAINT fees_structure_vote_heads_vote_head_id_fkey FOREIGN KEY (vote_head_id) REFERENCES public.vote_heads(vote_head_id);
 
 
 --
@@ -10313,6 +10650,14 @@ ALTER TABLE ONLY public.sys_translations
 
 ALTER TABLE ONLY public.sys_translations
     ADD CONSTRAINT sys_translations_sys_language_id_fkey FOREIGN KEY (sys_language_id) REFERENCES public.sys_languages(sys_language_id);
+
+
+--
+-- Name: teachers teachers_org_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.teachers
+    ADD CONSTRAINT teachers_org_id_fkey FOREIGN KEY (org_id) REFERENCES public.orgs(org_id);
 
 
 --

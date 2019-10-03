@@ -1,33 +1,40 @@
 <APP>
 	<MENU background="red" name="School">
 		<MENU icon="fa fa-cogs font-black-sharp " name="Control Panel">
-			<MENU name="Librarians">null</MENU>
-			<MENU name="Class Levels">null</MENU>
-			<MENU name="School Calendar">null</MENU>
-			<MENU name="School Terms">null</MENU>
-			<MENU name="Streams">null</MENU>
-			<MENU name="Students">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Streams">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Class Levels">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="School Terms">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="School Calendar">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Students">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Librarians">null</MENU>
 		</MENU>
 		<MENU icon="fa fa-bars font-black-sharp " name="Payroll">name="Payroll">
-			<MENU icon="fa fa-circle font-black-sharp" name="Employees">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Employee Categories">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Employee Designations">null</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Payment Modes">null</MENU>
-			<MENU icon="fa fa-circle font-black-sharp" name="Employee Payment">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Bank Branch">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Employees">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Salary Payments">null</MENU>
 		</MENU>
 		<MENU icon="fa fa-book font-black-sharp " name="Library">
-			<MENU name="Book Category">null</MENU>
-			<MENU name="Book Status">null</MENU>
-			<MENU name="Publishers">null</MENU>
-			<MENU name="Books">null</MENU>
-			<MENU name="Books Issuance">null</MENU>
-			<MENU name="Book Retrival">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Book Category">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Book Status">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Publishers">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Books">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Books Issuance">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Book Retrival">null</MENU>
 		</MENU>
 		<MENU icon="fa fa-book font-black-sharp " name="Accounts">
-			<MENU name="Payment Methods">null</MENU>
-			<MENU name="Accountants">null</MENU>
-			<MENU name="Fees Structure">null</MENU>
-			<MENU name="Fee Payments">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Payment Methods">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Accountants">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Fees Structure">null</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Fee Payments">null</MENU>
 		</MENU>
-		<MENU icon="fa fa-folder-open font-black-sharp" name="Reports"></MENU>
+		<MENU icon="fa fa-folder-open font-black-sharp" name="Reports">
+			<MENU name="Payroll Balances">null</MENU>
+			<MENU name="Vw Books">null</MENU>
+			<MENU name="Vw Books Issuance">null</MENU>
+		</MENU>
 	</MENU>
 	<DESK w="700" h="500" name="Dashboard">
 		<DASHBOARD w="700" name="Dashboard">

@@ -6,7 +6,7 @@
 			<MENU icon="fa fa-circle font-black-sharp" name="School Terms">198</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="School Calendar">193</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Students">208</MENU>
-			<MENU icon="fa fa-circle font-black-sharp" name="Librarians">153</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Staffs">153</MENU>
 		</MENU>
 		<MENU icon="fa fa-bars font-black-sharp " name="Payroll">name="Payroll">
 			<MENU icon="fa fa-circle font-black-sharp" name="Employee Categories">213</MENU>
@@ -24,7 +24,7 @@
 			<MENU icon="fa fa-circle font-black-sharp" name="Books Issuance">148</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Book Retrival">163</MENU>
 		</MENU>
-		<MENU icon="fa fa-book font-black-sharp " name="Accounts">
+		<MENU icon="fa fa-money font-black-sharp " name="Accounts">
 			<MENU icon="fa fa-circle font-black-sharp" name="Letter Heads">263</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Payment Methods">118</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Accountants">168</MENU>
@@ -858,7 +858,6 @@
 				<TEXTFIELD w="430" h="20" x="10" y="50" title="Book Title">book_title</TEXTFIELD>
 				<TEXTFIELD w="430" h="20" x="10" y="70" title="Author">author</TEXTFIELD>
 				<COMBOBOX w="430" h="20" lpfield="book_status_name" x="10" y="90" lptable="book_status" title="Book Condition">book_status_id</COMBOBOX>
-				<TEXTFIELD w="150" h="20" x="10" y="180" title="Book Edition">book_edition</TEXTFIELD>
 				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Book Edition">book_edition
 					<DATA key="1st">1st EDITION</DATA>
 					<DATA key="2nd">2nd EDITION</DATA>
@@ -944,7 +943,7 @@
 			</FORM>
 		</GRID>
 	</DESK>
-	<DESK w="700" h="550" name="Librarians" key="153">
+	<DESK w="700" h="550" name="Staffs" key="153">
 		<GRID keyfield="librarian_id" name="Librarians" table="vw_librarians">
 			<TEXTFIELD w="75" title="ID">librarian_id</TEXTFIELD>
 			<TEXTFIELD w="75" title="Librarian Name">librarian_name</TEXTFIELD>
@@ -954,6 +953,44 @@
 			<CHECKBOX w="75" title="Active">is_active</CHECKBOX>
 			<FORM keyfield="librarian_id" name="Librarians" table="librarians">
 				<TEXTFIELD w="430" h="20" x="10" y="10" title="Librarian Name">librarian_name</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="10" y="30" title="Telno">telno</TEXTFIELD>
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Gender">gender
+					<DATA key="M">Male</DATA>
+					<DATA key="F">Female</DATA>
+					<DATA key="N">NOT SPECIFIC</DATA>
+				</COMBOLIST>
+				<TEXTFIELD w="150" h="20" x="10" y="50" title="Email">email</TEXTFIELD>
+				<CHECKBOX w="150" h="20" x="290" y="50" title="Active">is_active</CHECKBOX>
+				<TEXTAREA w="430" h="70" x="10" y="70" title="Details">details</TEXTAREA>
+			</FORM>
+		</GRID>
+		<GRID keyfield="teacher_id" name="Teachers" table="vw_teachers">
+			<TEXTFIELD w="75" title="ID">teacher_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Teacher Name">teacher_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Telno">telno</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<CHECKBOX w="75" title="Active">is_active</CHECKBOX>
+			<FORM keyfield="teacher_id" name="Teachers" table="teachers">
+				<TEXTFIELD w="430" h="20" x="10" y="10" title="Teacher Name">teacher_name</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="10" y="30" title="Telno">telno</TEXTFIELD>
+				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Gender">gender
+					<DATA key="M">Male</DATA>
+					<DATA key="F">Female</DATA>
+					<DATA key="N">NOT SPECIFIC</DATA>
+				</COMBOLIST>
+				<TEXTFIELD w="150" h="20" x="10" y="50" title="Email">email</TEXTFIELD>
+				<CHECKBOX w="150" h="20" x="290" y="50" title="Active">is_active</CHECKBOX>
+				<TEXTAREA w="430" h="70" x="10" y="70" title="Details">details</TEXTAREA>
+			</FORM>
+		</GRID>
+		<GRID keyfield="accountant_id" name="Accountants" table="vw_accountants">
+			<TEXTFIELD w="75" title="#ID">accountant_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="Name">accountant_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Telno">telno</TEXTFIELD>
+			<TEXTFIELD w="75" title="Gender">gender</TEXTFIELD>
+			<TEXTFIELD w="75" title="Email">email</TEXTFIELD>
+			<FORM keyfield="accountant_id" name="Accountants" table="accountants">
+				<TEXTFIELD w="430" h="20" x="10" y="10" title="Accountant Name">accountant_name</TEXTFIELD>
 				<TEXTFIELD w="150" h="20" x="10" y="30" title="Telno">telno</TEXTFIELD>
 				<COMBOLIST w="50" h="20" x="190" y="50" lw="50" title="Gender">gender
 					<DATA key="M">Male</DATA>
@@ -1071,7 +1108,6 @@
 			<TEXTFIELD w="75" title="ID">fees_structure_id</TEXTFIELD>
 			<TEXTFIELD w="75" title="Class Level">class_level_name</TEXTFIELD>
 			<TEXTFIELD w="75" title="Term">school_term_name</TEXTFIELD>
-			<TEXTDECIMAL w="75" title="Amount">amount</TEXTDECIMAL>
 			<CHECKBOX w="75" title="Current">is_current</CHECKBOX>
 			<ACCORDION noorg="true" edit="false" keyfield="fees_structure_id" name="Fee Structure" linkfield="fees_structure_id">
 				<FORM keyfield="fees_structure_id" name="Fees Structure" table="fees_structure">
@@ -1079,7 +1115,7 @@
 					<COMBOBOX w="430" h="20" lpfield="class_level_name" x="10" y="30" lptable="class_levels" title="Class Level">class_level_id</COMBOBOX>
 					<CHECKBOX w="150" h="20" x="10" y="70" title="Current">is_current</CHECKBOX>
 				</FORM>
-				<GRID keyfield="fees_structure_id" name="Vote Heads" linkfield="fees_structure_id" collapse="in" table="fees_structure">
+				<GRID keyfield="fees_structure_vote_head_id" name="Vote Heads" linkfield="fees_structure_id" collapse="in" table="fees_structure_vote_heads">
 					<COMBOBOX w="100" h="20" lpfield="vote_head_name" x="10" y="10" lptable="vote_heads" title="Vote Head">vote_head_id</COMBOBOX>
 					<TEXTDECIMAL w="150" h="20" x="10" y="70" title="Amount">amount</TEXTDECIMAL>
 				</GRID>
