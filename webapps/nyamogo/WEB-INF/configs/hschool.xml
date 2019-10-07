@@ -15,6 +15,10 @@
 			<MENU icon="fa fa-circle font-black-sharp" name="Bank Branch">228</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Employees">233</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Salary Payments">238</MENU>
+			<MENU icon="fa fa-folder-open font-black-sharp" name="Reports">
+				<MENU name="Payroll Balances">243</MENU>
+				<MENU name="Employees Report">258</MENU>
+			</MENU>
 		</MENU>
 		<MENU icon="fa fa-book font-black-sharp " name="Library">
 			<MENU icon="fa fa-circle font-black-sharp" name="Book Category">133</MENU>
@@ -23,20 +27,23 @@
 			<MENU icon="fa fa-circle font-black-sharp" name="Books">143</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Books Issuance">148</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Book Retrival">163</MENU>
+			<MENU icon="fa fa-folder-open font-black-sharp" name="Reports">
+				<MENU name="Books">278</MENU>
+				<MENU name="Books Issuance">283</MENU>
+			</MENU>
 		</MENU>
 		<MENU icon="fa fa-money font-black-sharp " name="Accounts">
 			<MENU icon="fa fa-circle font-black-sharp" name="Letter Heads">263</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Payment Methods">118</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Accountants">168</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Fees Structure">173</MENU>
+			<MENU icon="fa fa-circle font-black-sharp" name="Student Invoices">268</MENU>
 			<MENU icon="fa fa-circle font-black-sharp" name="Fee Payments">183</MENU>
+			<MENU icon="fa fa-folder-open font-black-sharp" name="Reports">
+				<MENU name="Fees Structure">273</MENU>
+			</MENU>
 		</MENU>
-		<MENU icon="fa fa-folder-open font-black-sharp" name="Reports">
-			<MENU name="Payroll Balances">243</MENU>
-			<MENU name="Vw Books">248</MENU>
-			<MENU name="Vw Books Issuance">253</MENU>
-			<MENU name="Employees Report">258</MENU>
-		</MENU>
+		<MENU name="Users">288</MENU>
 	</MENU>
 	<DESK access="open" w="700" h="500" name="Dashboard" key="1">
 		<DASHBOARD w="700" name="Dashboard">
@@ -1104,29 +1111,36 @@
 		</GRID>
 	</DESK>
 	<DESK w="700" h="550" name="Fees Structure" key="173">
-		<GRID keyfield="fees_structure_id" name="Fees Structure" table="vw_fees_structure">
-			<TEXTFIELD w="75" title="ID">fees_structure_id</TEXTFIELD>
-			<TEXTFIELD w="75" title="Class Level">class_level_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Term">school_term_name</TEXTFIELD>
-			<CHECKBOX w="75" title="Current">is_current</CHECKBOX>
-			<ACCORDION noorg="true" edit="false" keyfield="fees_structure_id" name="Fee Structure" linkfield="fees_structure_id">
-				<FORM keyfield="fees_structure_id" name="Fees Structure" table="fees_structure">
-					<COMBOBOX w="430" h="20" lpfield="school_term_name" x="10" y="10" lptable="school_terms" title="Term">school_term_id</COMBOBOX>
-					<COMBOBOX w="430" h="20" lpfield="class_level_name" x="10" y="30" lptable="class_levels" title="Class Level">class_level_id</COMBOBOX>
-					<CHECKBOX w="150" h="20" x="10" y="70" title="Current">is_current</CHECKBOX>
-				</FORM>
-				<GRID keyfield="fees_structure_vote_head_id" name="Vote Heads" linkfield="fees_structure_id" collapse="in" table="fees_structure_vote_heads">
-					<COMBOBOX w="100" h="20" lpfield="vote_head_name" x="10" y="10" lptable="vote_heads" title="Vote Head">vote_head_id</COMBOBOX>
-					<TEXTDECIMAL w="150" h="20" x="10" y="70" title="Amount">amount</TEXTDECIMAL>
-				</GRID>
-			</ACCORDION>
+		<GRID keyfield="calendar_year_id" name="Calendar Year" table="vw_calendar_year">
+			<TEXTFIELD w="75" title="Calendar Year">calendar_year_name</TEXTFIELD>
+			<GRID keyfield="fees_structure_id" name="Fees Structure" linkfield="calendar_year_id" table="vw_fee_structure_summary">
+				<TEXTFIELD w="20" title="ID">fees_structure_id</TEXTFIELD>
+				<TEXTFIELD w="75" title="Year">calendar_year_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Class Level">class_level_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Term">school_term_name</TEXTFIELD>
+				<TEXTDECIMAL w="75" title="Amount">total_fees</TEXTDECIMAL>
+				<ACTIONS>
+					<ACTION fnct="generate_fee_invoices">Generate Invoices</ACTION>
+				</ACTIONS>
+				<ACCORDION noorg="true" edit="false" keyfield="fees_structure_id" name="Fee Structure" linkfield="fees_structure_id">
+					<FORM keyfield="fees_structure_id" name="Fees Structure" linkfield="calendar_year_id" collapse="in" table="fees_structure">
+						<COMBOBOX w="430" h="20" lpfield="school_term_name" x="10" y="10" lptable="school_terms" title="Term">school_term_id</COMBOBOX>
+						<COMBOBOX w="430" h="20" lpfield="class_level_name" x="10" y="30" lptable="class_levels" title="Class Level">class_level_id</COMBOBOX>
+						<CHECKBOX w="150" h="20" x="10" y="70" title="Current">is_current</CHECKBOX>
+					</FORM>
+					<GRID keyfield="fees_structure_vote_head_id" name="Vote Heads" linkfield="fees_structure_id" collapse="in" table="fees_structure_vote_heads">
+						<COMBOBOX w="100" h="20" lpfield="vote_head_name" x="10" y="10" lptable="vote_heads" title="Vote Head">vote_head_id</COMBOBOX>
+						<TEXTDECIMAL w="150" h="20" x="10" y="70" title="Amount">amount</TEXTDECIMAL>
+					</GRID>
+				</ACCORDION>
+			</GRID>
 		</GRID>
 	</DESK>
 	<DESK w="700" h="550" name="Fee Payments" key="183">
 		<GRID keyfield="fee_payment_id" name="Fee Payments" table="vw_fee_payments">
 			<TEXTFIELD w="75" title="ID">fee_payment_id</TEXTFIELD>
 			<TEXTFIELD w="75" title="Received By">accountant_name</TEXTFIELD>
-			<TEXTFIELD w="75" title="Payment Method">payment_method_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="Payment Method">payment_mode_name</TEXTFIELD>
 			<TEXTFIELD w="75" title="Term">school_term_name</TEXTFIELD>
 			<TEXTDECIMAL w="75" title="Amount">amount</TEXTDECIMAL>
 			<TEXTFIELD w="75" title="Payed By">payed_by</TEXTFIELD>
@@ -1134,7 +1148,8 @@
 			<FORM keyfield="fee_payment_id" name="Fee Payments" table="fee_payments">
 				<COMBOBOX w="430" h="20" lpfield="school_term_name" x="10" y="10" lptable="school_terms" title="Term">school_term_id</COMBOBOX>
 				<COMBOBOX w="430" h="20" lpfield="student_name" x="10" y="30" lptable="vw_students" title="Student">student_id</COMBOBOX>
-				<COMBOBOX w="430" h="20" lpfield="payment_method_name" x="10" y="70" lptable="payment_methods" title="Payment Method">payment_method_id</COMBOBOX>
+				<COMBOBOX w="430" h="20" lpfield="accountant_name" x="10" y="50" lptable="accountants" title="Received By">accountant_id</COMBOBOX>
+				<COMBOBOX w="430" h="20" lpfield="payment_mode_name" x="10" y="70" lptable="payment_modes" title="Payment Method">payment_mode_id</COMBOBOX>
 				<TEXTFIELD w="150" h="20" x="290" y="90" title="Doc No">doc_no</TEXTFIELD>
 				<TEXTDECIMAL w="150" h="20" x="290" y="110" title="Amount">amount</TEXTDECIMAL>
 				<TEXTFIELD w="430" h="20" x="10" y="130" title="Payed By">payed_by</TEXTFIELD>
@@ -1366,6 +1381,46 @@
 			<FORM keyfield="vote_head_id" name="Vote Heads" table="vote_heads">
 				<TEXTFIELD w="430" h="20" x="10" y="10" title="Vote Head">vote_head_name</TEXTFIELD>
 				<TEXTAREA w="430" h="70" x="10" y="30" title="Details">details</TEXTAREA>
+			</FORM>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="550" name="Student Invoices" key="268">
+		<GRID keyfield="calendar_year_id" name="Calendar Year" table="vw_calendar_year">
+			<TEXTFIELD w="75" title="Calendar Year">calendar_year_name</TEXTFIELD>
+			<GRID keyfield="fees_structure_id" name="Category" linkfield="calendar_year_id" table="vw_fee_structure_summary">
+				<TEXTFIELD w="75" title="Year">calendar_year_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Class Level">class_level_name</TEXTFIELD>
+				<TEXTFIELD w="75" title="Term">school_term_name</TEXTFIELD>
+			</GRID>
+		</GRID>
+	</DESK>
+	<DESK w="700" h="550" name="fees_structure" key="273">
+		<JASPER reportfile="fees_structure.jasper" name="fees_structure"></JASPER>
+	</DESK>
+	<DESK w="700" h="550" name="books" key="278">
+		<JASPER reportfile="books.jasper" name="books"></JASPER>
+	</DESK>
+	<DESK w="700" h="550" name="books_issuance" key="283">
+		<JASPER reportfile="books_issuance.jasper" name="books_issuance"></JASPER>
+	</DESK>
+	<DESK w="700" h="550" name="Entitys" key="288">
+		<GRID keyfield="entity_id" name="Entitys" table="vw_entitys">
+			<TEXTFIELD w="75" title="User ID">entity_id</TEXTFIELD>
+			<TEXTFIELD w="75" title="User Type">entity_type_name</TEXTFIELD>
+			<TEXTFIELD w="75" title=" Name">entity_name</TEXTFIELD>
+			<TEXTFIELD w="75" title="User Name">user_name</TEXTFIELD>
+			<CHECKBOX w="75" title="Super User">super_user</CHECKBOX>
+			<TEXTFIELD w="75" title="First Password">first_password</TEXTFIELD>
+			<FORM keyfield="entity_id" name="Entitys" table="entitys">
+				<COMBOBOX w="430" h="20" lpfield="entity_type_name" x="10" y="10" lptable="entity_types" title="Entity Type ID">entity_type_id</COMBOBOX>
+				<TEXTFIELD w="430" h="20" x="10" y="70" title=" Name">entity_name</TEXTFIELD>
+				<TEXTFIELD w="430" h="20" x="10" y="90" title="User Name">user_name</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="10" y="130" title="Primary Telephone">primary_telephone</TEXTFIELD>
+				<CHECKBOX w="150" h="20" x="290" y="130" title="Super User">super_user</CHECKBOX>
+				<CHECKBOX w="150" h="20" x="10" y="150" title="Entity Leader">entity_leader</CHECKBOX>
+				<TEXTFIELD w="150" h="20" x="10" y="230" title="First Password">first_password</TEXTFIELD>
+				<TEXTFIELD w="150" h="20" x="290" y="230" title="New Password">new_password</TEXTFIELD>
+				<TEXTAREA w="430" h="70" x="10" y="290" title="Details">details</TEXTAREA>
 			</FORM>
 		</GRID>
 	</DESK>

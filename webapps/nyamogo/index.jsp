@@ -1105,12 +1105,11 @@ $(document).ready(function(){
 });
 </script>
 <script>
+	$("#myInput").hide();
 	document.getElementById("btn_search").onclick = function() { 
-		IF()
-	var x = document.getElementById("myInput").style.display = "none"; 
-	var y = document.getElementById("myInput").style.display = "initial"; 
-  
-        } 
+	$("#myInput").show();
+
+     } 
 </script>
 <!-- END JAVASCRIPTS -->
 <%

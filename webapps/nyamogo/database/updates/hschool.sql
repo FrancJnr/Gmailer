@@ -304,6 +304,29 @@ $$;
 ALTER FUNCTION public.first_password() OWNER TO postgres;
 
 --
+-- Name: generate_fee_invoices(character varying, character varying, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.generate_fee_invoices(character varying, character varying, character varying) RETURNS character varying
+    LANGUAGE plpgsql
+    AS $_$
+DECLARE 
+msg			VARCHAR(120);
+BEGIN
+	INSERT INTO student_fee_invoices (student_id, org_id, fee_structure_id, class_level_id)
+	SELECT student_id, 0, $1::int, students.class_level_id
+	FROM students 
+	INNER JOIN fees_structure ON students.class_level_id = fees_structure.class_level_id;
+	msg:='Student Invoices Generated';
+
+	RETURN msg;
+END;
+$_$;
+
+
+ALTER FUNCTION public.generate_fee_invoices(character varying, character varying, character varying) OWNER TO postgres;
+
+--
 -- Name: get_config_value(integer); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -2663,14 +2686,14 @@ CREATE TABLE public.fee_payments (
     school_term_id integer,
     student_id integer,
     accountant_id integer,
-    payment_method_id integer,
     invoice_no character varying(20),
     doc_no character varying(100),
     school_year character varying(4),
     amount real,
     payed_by character varying(120),
     date_payed date DEFAULT CURRENT_DATE,
-    details text
+    details text,
+    payment_mode_id integer
 );
 
 
@@ -2707,9 +2730,9 @@ CREATE TABLE public.fees_structure (
     school_term_id integer,
     org_id integer,
     class_level_id integer,
-    fees_structure_year date,
     is_current boolean DEFAULT true,
-    details text
+    details text,
+    calendar_year_id integer
 );
 
 
@@ -3260,6 +3283,43 @@ ALTER TABLE public.streams_stream_id_seq OWNER TO postgres;
 --
 
 ALTER SEQUENCE public.streams_stream_id_seq OWNED BY public.streams.stream_id;
+
+
+--
+-- Name: student_fee_invoices; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.student_fee_invoices (
+    student_fee_invoice_id integer NOT NULL,
+    student_id integer,
+    org_id integer,
+    fee_structure_id integer,
+    class_level_id integer
+);
+
+
+ALTER TABLE public.student_fee_invoices OWNER TO postgres;
+
+--
+-- Name: student_fee_invoices_student_fee_invoice_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.student_fee_invoices_student_fee_invoice_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.student_fee_invoices_student_fee_invoice_id_seq OWNER TO postgres;
+
+--
+-- Name: student_fee_invoices_student_fee_invoice_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.student_fee_invoices_student_fee_invoice_id_seq OWNED BY public.student_fee_invoices.student_fee_invoice_id;
 
 
 --
@@ -5039,6 +5099,76 @@ CREATE VIEW public.vw_entry_forms AS
 ALTER TABLE public.vw_entry_forms OWNER TO postgres;
 
 --
+-- Name: vw_students; Type: VIEW; Schema: public; Owner: postgres
+--
+
+CREATE VIEW public.vw_students AS
+ SELECT class_levels.class_level_id,
+    class_levels.class_level_name,
+    streams.stream_id,
+    streams.stream_name,
+    students.org_id,
+    students.student_id,
+    students.admission_no,
+    students.first_name,
+    students.second_name,
+    concat(class_levels.class_level_name, ' ', streams.stream_name) AS class_name,
+    students.surname,
+    concat(students.surname, ' ', students.second_name, ' ', students.first_name) AS student_name,
+        CASE
+            WHEN ((students.gender)::text = 'M'::text) THEN 'MALE'::text
+            ELSE 'FEMALE'::text
+        END AS gender,
+    students.address,
+    students.dob,
+    students.fname,
+    students.mname,
+    students.mphone_no,
+    students.fphone_no,
+    students.is_suspended,
+    students.is_active,
+    students.details,
+    students.picture_file
+   FROM ((public.students
+     JOIN public.class_levels ON ((students.class_level_id = class_levels.class_level_id)))
+     JOIN public.streams ON ((students.stream_id = streams.stream_id)));
+
+
+ALTER TABLE public.vw_students OWNER TO postgres;
+
+--
+-- Name: vw_fee_payments; Type: VIEW; Schema: public; Owner: postgres
+--
+
+CREATE VIEW public.vw_fee_payments AS
+ SELECT accountants.accountant_id,
+    accountants.accountant_name,
+    payment_modes.payment_mode_id,
+    payment_modes.payment_mode_name,
+    school_terms.school_term_id,
+    school_terms.school_term_name,
+    vw_students.student_id,
+    vw_students.student_name,
+    concat(vw_students.class_level_name, vw_students.stream_name) AS class_name,
+    fee_payments.org_id,
+    fee_payments.fee_payment_id,
+    fee_payments.invoice_no,
+    fee_payments.doc_no,
+    fee_payments.school_year,
+    fee_payments.amount,
+    fee_payments.payed_by,
+    fee_payments.date_payed,
+    fee_payments.details
+   FROM ((((public.fee_payments
+     LEFT JOIN public.accountants ON ((fee_payments.accountant_id = accountants.accountant_id)))
+     JOIN public.payment_modes ON ((fee_payments.payment_mode_id = payment_modes.payment_mode_id)))
+     JOIN public.school_terms ON ((fee_payments.school_term_id = school_terms.school_term_id)))
+     JOIN public.vw_students ON ((fee_payments.student_id = vw_students.student_id)));
+
+
+ALTER TABLE public.vw_fee_payments OWNER TO postgres;
+
+--
 -- Name: vw_fees_structure; Type: VIEW; Schema: public; Owner: postgres
 --
 
@@ -5049,10 +5179,12 @@ CREATE VIEW public.vw_fees_structure AS
     school_terms.school_term_name,
     fees_structure.fees_structure_id,
     fees_structure.org_id,
-    fees_structure.fees_structure_year,
+    calendar_year.calendar_year_id,
+    calendar_year.calendar_year_name,
     fees_structure.is_current,
     fees_structure.details
-   FROM ((public.fees_structure
+   FROM (((public.fees_structure
+     JOIN public.calendar_year ON ((fees_structure.calendar_year_id = calendar_year.calendar_year_id)))
      JOIN public.class_levels ON ((fees_structure.class_level_id = class_levels.class_level_id)))
      JOIN public.school_terms ON ((fees_structure.school_term_id = school_terms.school_term_id)));
 
@@ -5070,8 +5202,9 @@ CREATE VIEW public.vw_fees_structure_vote_heads AS
     vw_fees_structure.school_term_name,
     vw_fees_structure.fees_structure_id,
     vw_fees_structure.org_id,
-    vw_fees_structure.fees_structure_year,
     vw_fees_structure.is_current,
+    vw_fees_structure.calendar_year_id,
+    vw_fees_structure.calendar_year_name,
     vote_heads.vote_head_id,
     vote_heads.vote_head_name,
     fees_structure_vote_heads.fees_structure_vote_head_id,
@@ -5082,6 +5215,26 @@ CREATE VIEW public.vw_fees_structure_vote_heads AS
 
 
 ALTER TABLE public.vw_fees_structure_vote_heads OWNER TO postgres;
+
+--
+-- Name: vw_fee_structure_summary; Type: VIEW; Schema: public; Owner: postgres
+--
+
+CREATE VIEW public.vw_fee_structure_summary AS
+ SELECT vw_fees_structure_vote_heads.fees_structure_id,
+    vw_fees_structure_vote_heads.class_level_name,
+    vw_fees_structure_vote_heads.school_term_name,
+    sum(vw_fees_structure_vote_heads.amount) AS total_fees,
+    vw_fees_structure_vote_heads.is_current,
+    vw_fees_structure_vote_heads.org_id,
+    vw_fees_structure_vote_heads.calendar_year_name,
+    vw_fees_structure_vote_heads.calendar_year_id
+   FROM public.vw_fees_structure_vote_heads
+  GROUP BY vw_fees_structure_vote_heads.fees_structure_id, vw_fees_structure_vote_heads.class_level_name, vw_fees_structure_vote_heads.school_term_name, vw_fees_structure_vote_heads.is_current, vw_fees_structure_vote_heads.org_id, vw_fees_structure_vote_heads.calendar_year_name, vw_fees_structure_vote_heads.calendar_year_id
+  ORDER BY vw_fees_structure_vote_heads.fees_structure_id;
+
+
+ALTER TABLE public.vw_fee_structure_summary OWNER TO postgres;
 
 --
 -- Name: vw_fields; Type: VIEW; Schema: public; Owner: postgres
@@ -5199,42 +5352,48 @@ CREATE VIEW public.vw_school_calendar AS
 ALTER TABLE public.vw_school_calendar OWNER TO postgres;
 
 --
--- Name: vw_students; Type: VIEW; Schema: public; Owner: postgres
+-- Name: vw_student_fee_invoices; Type: VIEW; Schema: public; Owner: postgres
 --
 
-CREATE VIEW public.vw_students AS
+CREATE VIEW public.vw_student_fee_invoices AS
  SELECT class_levels.class_level_id,
     class_levels.class_level_name,
-    streams.stream_id,
-    streams.stream_name,
-    students.org_id,
-    students.student_id,
-    students.admission_no,
-    students.first_name,
-    students.second_name,
-    concat(class_levels.class_level_name, ' ', streams.stream_name) AS class_name,
-    students.surname,
-    concat(students.surname, ' ', students.second_name, ' ', students.first_name) AS student_name,
-        CASE
-            WHEN ((students.gender)::text = 'M'::text) THEN 'MALE'::text
-            ELSE 'FEMALE'::text
-        END AS gender,
-    students.address,
-    students.dob,
-    students.fname,
-    students.mname,
-    students.mphone_no,
-    students.fphone_no,
-    students.is_suspended,
-    students.is_active,
-    students.details,
-    students.picture_file
-   FROM ((public.students
-     JOIN public.class_levels ON ((students.class_level_id = class_levels.class_level_id)))
-     JOIN public.streams ON ((students.stream_id = streams.stream_id)));
+    vw_fees_structure_vote_heads.school_term_id,
+    vw_fees_structure_vote_heads.school_term_name,
+    vw_fees_structure_vote_heads.calendar_year_id,
+    vw_fees_structure_vote_heads.calendar_year_name,
+    vw_fees_structure_vote_heads.vote_head_id,
+    vw_fees_structure_vote_heads.vote_head_name,
+    vw_fees_structure_vote_heads.amount,
+    student_fee_invoices.student_fee_invoice_id,
+    student_fee_invoices.fee_structure_id,
+    vw_students.stream_id,
+    vw_students.stream_name,
+    vw_students.student_id,
+    vw_students.admission_no,
+    vw_students.first_name,
+    vw_students.second_name,
+    vw_students.class_name,
+    vw_students.surname,
+    vw_students.student_name,
+    vw_students.gender,
+    vw_students.address,
+    vw_students.dob,
+    vw_students.fname,
+    vw_students.mname,
+    vw_students.mphone_no,
+    vw_students.fphone_no,
+    vw_students.is_suspended,
+    vw_students.is_active,
+    vw_students.details,
+    vw_students.picture_file
+   FROM (((public.student_fee_invoices
+     JOIN public.class_levels ON ((student_fee_invoices.class_level_id = class_levels.class_level_id)))
+     JOIN public.vw_fees_structure_vote_heads ON ((student_fee_invoices.fee_structure_id = vw_fees_structure_vote_heads.fees_structure_id)))
+     JOIN public.vw_students ON ((student_fee_invoices.student_id = vw_students.student_id)));
 
 
-ALTER TABLE public.vw_students OWNER TO postgres;
+ALTER TABLE public.vw_student_fee_invoices OWNER TO postgres;
 
 --
 -- Name: vw_sub_fields; Type: VIEW; Schema: public; Owner: postgres
@@ -5890,6 +6049,13 @@ ALTER TABLE ONLY public.streams ALTER COLUMN stream_id SET DEFAULT nextval('publ
 
 
 --
+-- Name: student_fee_invoices student_fee_invoice_id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.student_fee_invoices ALTER COLUMN student_fee_invoice_id SET DEFAULT nextval('public.student_fee_invoices_student_fee_invoice_id_seq'::regclass);
+
+
+--
 -- Name: students student_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -6332,11 +6498,11 @@ COPY public.entity_values (entity_value_id, entity_id, entity_field_id, org_id, 
 COPY public.entitys (entity_id, entity_type_id, use_key_id, sys_language_id, org_id, entity_name, user_name, primary_email, primary_telephone, super_user, entity_leader, no_org, function_role, date_enroled, is_active, last_login, entity_password, first_password, new_password, start_url, is_picked, locked_until, details) FROM stdin;
 1	0	0	0	0	repository	repository	repository@localhost	\N	f	t	f	\N	2019-09-19 09:29:12.395727	t	\N	b6f0038dfd42f8aa6ca25354cd2e3660	baraza	\N	\N	f	\N	\N
 3	1	1	0	0	Willis Olando	willis@gmail.com	willis@gmail.com	0702771424	f	f	f	\N	2019-10-01 17:31:30.633567	t	\N	d4a41f643f4eb8c7d3fd6e6c3b70b171	449L191AA	\N	\N	f	\N	\N
-0	0	0	0	0	root	root	root@localhost	\N	t	t	f	\N	2019-09-19 09:29:12.395727	t	2019-10-03 16:45:08.12293	b6f0038dfd42f8aa6ca25354cd2e3660	baraza	\N	\N	f	\N	\N
 4	7	7	0	0	OMOLO MERCY Odhiambo	OdhiamboMERCY			f	f	f	\N	2019-10-03 16:45:57.522634	t	\N	b80493d0730d8cb2dea2fee70a8eb138	474W46XK	\N	\N	f	\N	\N
 5	1	1	0	0	JAMES ODONGO	fchege22@gmail.com	fchege22@gmail.com	0702771424	f	f	f	\N	2019-10-03 16:50:25.6682	t	\N	535d1e24151241efa58710a664b98f6e	97G961WL	\N	\N	f	\N	\N
 6	8	8	0	0	James Waringo	James Waringo	James Waringo	0702771424	f	f	f	\N	2019-10-03 17:09:14.514884	t	\N	e082a82d131ff5b336532755f226d695	705F676NA	\N	\N	f	\N	\N
 7	9	9	0	0	Mr Katam Ruth Jepchirchir	MrKatamRuthJepchirchir		078978645	f	f	f	\N	2019-10-03 17:18:04.148224	t	\N	abf256fdf316990a6e150a373162cddf	86I984ES	\N	\N	f	\N	\N
+0	0	0	0	0	root	root	root@localhost	\N	t	t	f	\N	2019-09-19 09:29:12.395727	t	2019-10-07 07:31:59.059887	b6f0038dfd42f8aa6ca25354cd2e3660	baraza	\N	\N	f	\N	\N
 \.
 
 
@@ -6360,7 +6526,8 @@ COPY public.et_fields (et_field_id, org_id, et_field_name, table_name, table_cod
 -- Data for Name: fee_payments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.fee_payments (fee_payment_id, org_id, school_term_id, student_id, accountant_id, payment_method_id, invoice_no, doc_no, school_year, amount, payed_by, date_payed, details) FROM stdin;
+COPY public.fee_payments (fee_payment_id, org_id, school_term_id, student_id, accountant_id, invoice_no, doc_no, school_year, amount, payed_by, date_payed, details, payment_mode_id) FROM stdin;
+1	0	1	2	1	\N	chq12345690	\N	10000	parent	2019-10-06	\N	2
 \.
 
 
@@ -6368,8 +6535,8 @@ COPY public.fee_payments (fee_payment_id, org_id, school_term_id, student_id, ac
 -- Data for Name: fees_structure; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.fees_structure (fees_structure_id, school_term_id, org_id, class_level_id, fees_structure_year, is_current, details) FROM stdin;
-1	1	0	1	\N	t	\N
+COPY public.fees_structure (fees_structure_id, school_term_id, org_id, class_level_id, is_current, details, calendar_year_id) FROM stdin;
+3	2	0	1	f	\N	1
 \.
 
 
@@ -6378,7 +6545,8 @@ COPY public.fees_structure (fees_structure_id, school_term_id, org_id, class_lev
 --
 
 COPY public.fees_structure_vote_heads (fees_structure_vote_head_id, org_id, fees_structure_id, vote_head_id, amount, details) FROM stdin;
-1	0	1	2	2300	\N
+5	0	3	2	12000	\N
+6	0	3	1	6000	\N
 \.
 
 
@@ -6495,6 +6663,17 @@ COPY public.streams (stream_id, stream_name, org_id, is_active, details) FROM st
 3	NORTH	0	t	\N
 4	SOUTH	0	t	\N
 2	WEST	0	t	\N
+\.
+
+
+--
+-- Data for Name: student_fee_invoices; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.student_fee_invoices (student_fee_invoice_id, student_id, org_id, fee_structure_id, class_level_id) FROM stdin;
+1	11	0	3	1
+2	3	0	3	1
+3	2	0	3	1
 \.
 
 
@@ -6644,6 +6823,16 @@ COPY public.sys_audit_trail (sys_audit_trail_id, user_id, user_ip, change_date, 
 76	0	127.0.0.1	2019-10-03 17:22:03.04941	fees_structure	2	INSERT	\N
 77	0	127.0.0.1	2019-10-03 17:41:14.298189	fees_structure	1	INSERT	\N
 78	0	127.0.0.1	2019-10-03 17:41:22.96247	fees_structure_vote_heads	1	INSERT	\N
+79	0	127.0.0.1	2019-10-06 21:23:29.489587	fees_structure_vote_heads	2	INSERT	\N
+80	0	127.0.0.1	2019-10-06 21:59:01.876401	fees_structure	2	INSERT	\N
+81	0	127.0.0.1	2019-10-06 21:59:14.38789	fees_structure_vote_heads	3	INSERT	\N
+82	0	127.0.0.1	2019-10-06 21:59:24.913885	fees_structure_vote_heads	4	INSERT	\N
+83	0	127.0.0.1	2019-10-06 22:05:25.095067	fees_structure	3	INSERT	\N
+84	0	127.0.0.1	2019-10-06 22:05:36.738979	fees_structure_vote_heads	5	INSERT	\N
+85	0	127.0.0.1	2019-10-06 22:05:45.908433	fees_structure_vote_heads	6	INSERT	\N
+86	0	127.0.0.1	2019-10-06 22:45:56.307998	generate_fee_invoices	3	FUNCTION	\N
+87	0	127.0.0.1	2019-10-06 23:22:48.368743	fee_payments	1	INSERT	\N
+88	0	127.0.0.1	2019-10-06 23:26:41.239421	fee_payments	1	EDIT	\N
 \.
 
 
@@ -6995,6 +7184,11 @@ COPY public.sys_logins (sys_login_id, entity_id, login_time, login_ip, phone_ser
 9	0	2019-10-03 16:40:09.423619	127.0.0.1	\N	t	\N
 10	0	2019-10-03 16:44:05.121758	127.0.0.1	\N	t	\N
 11	0	2019-10-03 16:45:08.12293	127.0.0.1	\N	t	\N
+12	0	2019-10-03 17:50:52.577059	127.0.0.1	\N	t	\N
+13	0	2019-10-04 12:06:57.12315	127.0.0.1	\N	t	\N
+14	0	2019-10-06 21:15:29.98848	127.0.0.1	\N	t	\N
+15	0	2019-10-06 21:34:01.398625	127.0.0.1	\N	t	\N
+16	0	2019-10-07 07:31:59.059887	127.0.0.1	\N	t	\N
 \.
 
 
@@ -7571,21 +7765,21 @@ SELECT pg_catalog.setval('public.et_fields_et_field_id_seq', 1, false);
 -- Name: fee_payments_fee_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.fee_payments_fee_payment_id_seq', 1, false);
+SELECT pg_catalog.setval('public.fee_payments_fee_payment_id_seq', 1, true);
 
 
 --
 -- Name: fees_structure_fees_structure_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.fees_structure_fees_structure_id_seq', 1, true);
+SELECT pg_catalog.setval('public.fees_structure_fees_structure_id_seq', 3, true);
 
 
 --
 -- Name: fees_structure_vote_heads_fees_structure_vote_head_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.fees_structure_vote_heads_fees_structure_vote_head_id_seq', 1, true);
+SELECT pg_catalog.setval('public.fees_structure_vote_heads_fees_structure_vote_head_id_seq', 6, true);
 
 
 --
@@ -7673,6 +7867,13 @@ SELECT pg_catalog.setval('public.streams_stream_id_seq', 4, true);
 
 
 --
+-- Name: student_fee_invoices_student_fee_invoice_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.student_fee_invoices_student_fee_invoice_id_seq', 3, true);
+
+
+--
 -- Name: students_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -7711,7 +7912,7 @@ SELECT pg_catalog.setval('public.sys_apps_sys_app_id_seq', 1, false);
 -- Name: sys_audit_trail_sys_audit_trail_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.sys_audit_trail_sys_audit_trail_id_seq', 78, true);
+SELECT pg_catalog.setval('public.sys_audit_trail_sys_audit_trail_id_seq', 88, true);
 
 
 --
@@ -7767,7 +7968,7 @@ SELECT pg_catalog.setval('public.sys_languages_sys_language_id_seq', 1, false);
 -- Name: sys_logins_sys_login_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.sys_logins_sys_login_id_seq', 11, true);
+SELECT pg_catalog.setval('public.sys_logins_sys_login_id_seq', 16, true);
 
 
 --
@@ -8324,6 +8525,14 @@ ALTER TABLE ONLY public.school_terms
 
 ALTER TABLE ONLY public.streams
     ADD CONSTRAINT streams_pkey PRIMARY KEY (stream_id);
+
+
+--
+-- Name: student_fee_invoices student_fee_invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.student_fee_invoices
+    ADD CONSTRAINT student_fee_invoices_pkey PRIMARY KEY (student_fee_invoice_id);
 
 
 --
@@ -9141,10 +9350,10 @@ CREATE INDEX fee_payments_org_id ON public.fee_payments USING btree (org_id);
 
 
 --
--- Name: fee_payments_payment_method_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fee_payments_payment_mode_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX fee_payments_payment_method_id ON public.fee_payments USING btree (payment_method_id);
+CREATE INDEX fee_payments_payment_mode_id ON public.fee_payments USING btree (payment_mode_id);
 
 
 --
@@ -9173,6 +9382,13 @@ CREATE INDEX fees_structure_class_level_id ON public.fees_structure USING btree 
 --
 
 CREATE INDEX fees_structure_fees_structure_id ON public.fees_structure_vote_heads USING btree (fees_structure_id);
+
+
+--
+-- Name: fees_structure_fees_structure_year; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX fees_structure_fees_structure_year ON public.fees_structure USING btree (calendar_year_id);
 
 
 --
@@ -9320,6 +9536,34 @@ CREATE INDEX school_terms_org_id ON public.school_terms USING btree (org_id);
 --
 
 CREATE INDEX streams_org_id ON public.streams USING btree (org_id);
+
+
+--
+-- Name: student_fee_fee_class_level_id; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX student_fee_fee_class_level_id ON public.student_fee_invoices USING btree (class_level_id);
+
+
+--
+-- Name: student_fee_fee_structure_id; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX student_fee_fee_structure_id ON public.student_fee_invoices USING btree (fee_structure_id);
+
+
+--
+-- Name: student_fee_invoices_org_id; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX student_fee_invoices_org_id ON public.student_fee_invoices USING btree (org_id);
+
+
+--
+-- Name: student_fee_invoices_student_id; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX student_fee_invoices_student_id ON public.student_fee_invoices USING btree (student_id);
 
 
 --
@@ -10221,11 +10465,11 @@ ALTER TABLE ONLY public.fee_payments
 
 
 --
--- Name: fee_payments fee_payments_payment_method_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: fee_payments fee_payments_payment_mode_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.fee_payments
-    ADD CONSTRAINT fee_payments_payment_method_id_fkey FOREIGN KEY (payment_method_id) REFERENCES public.payment_methods(payment_method_id);
+    ADD CONSTRAINT fee_payments_payment_mode_id_fkey FOREIGN KEY (payment_mode_id) REFERENCES public.payment_modes(payment_mode_id);
 
 
 --
@@ -10250,6 +10494,14 @@ ALTER TABLE ONLY public.fee_payments
 
 ALTER TABLE ONLY public.fees_structure
     ADD CONSTRAINT fees_structure_class_level_id_fkey FOREIGN KEY (class_level_id) REFERENCES public.class_levels(class_level_id);
+
+
+--
+-- Name: fees_structure fees_structure_fees_structure_year_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.fees_structure
+    ADD CONSTRAINT fees_structure_fees_structure_year_fkey FOREIGN KEY (calendar_year_id) REFERENCES public.calendar_year(calendar_year_id);
 
 
 --
@@ -10434,6 +10686,38 @@ ALTER TABLE ONLY public.school_terms
 
 ALTER TABLE ONLY public.streams
     ADD CONSTRAINT streams_org_id_fkey FOREIGN KEY (org_id) REFERENCES public.orgs(org_id);
+
+
+--
+-- Name: student_fee_invoices student_fee_invoices_class_level_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.student_fee_invoices
+    ADD CONSTRAINT student_fee_invoices_class_level_id_fkey FOREIGN KEY (class_level_id) REFERENCES public.class_levels(class_level_id);
+
+
+--
+-- Name: student_fee_invoices student_fee_invoices_fee_structure_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.student_fee_invoices
+    ADD CONSTRAINT student_fee_invoices_fee_structure_id_fkey FOREIGN KEY (fee_structure_id) REFERENCES public.fees_structure(fees_structure_id);
+
+
+--
+-- Name: student_fee_invoices student_fee_invoices_org_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.student_fee_invoices
+    ADD CONSTRAINT student_fee_invoices_org_id_fkey FOREIGN KEY (org_id) REFERENCES public.orgs(org_id);
+
+
+--
+-- Name: student_fee_invoices student_fee_invoices_student_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.student_fee_invoices
+    ADD CONSTRAINT student_fee_invoices_student_id_fkey FOREIGN KEY (student_id) REFERENCES public.students(student_id);
 
 
 --
